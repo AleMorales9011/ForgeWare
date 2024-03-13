@@ -19,11 +19,15 @@ Benefits:
 - Enhances security by ensuring consistent permission settings.
 - Reduces human error in manual user and directory creation.
 
+---
+
 ### [002-GIT-CREATING & PUSHING REPOSITORIES](https://github.com/AleMorales9011/01-DEVOPS-AWS/blob/5abedca77facd49710abf7a2f6a5a520ce22f852/002-GIT-CREATING%20%26%20PUSHING%20REPOSITORIES)
 
 Git is a version control system that tracks changes made to files over time. This means you can see exactly what modifications were made, by whom, and when.
 - It allows you to revert to previous versions of your project if necessary. This is a lifesaver if you accidentally introduce bugs or make unwanted changes.
 - Git is essential for collaboration, enabling multiple people to work on the same project simultaneously without conflicts. It facilitates merging changes from different developers and keeps track of everyone's contributions.
+
+---
 
 ### [003-ARCHITECTURE-BFF PATTERN]()
 

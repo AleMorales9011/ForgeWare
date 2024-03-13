@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Create a new repository on the command line
+# Create a new repository on the command line
 
 echo "# myrepo" >> README.md
 git init
@@ -10,7 +10,7 @@ git remote add origin https://github.com/username/reponame.git
 git push -u origin master
 
 
-### Pushing an existing repository from the command line
+# Pushing an existing repository from the command line
 
 
 git remote add origin https://github.com/username/reponame.git
@@ -18,3 +18,9 @@ git pull origin master --allow-unrelated-histories
 git commit -a -m "merge"
 git push -u origin master
 
+# Pull with Rebase (git pull --rebase):
+
+This command fetches the latest changes from the remote repository and then attempts to replay your local commits
+on top of the updated remote branch head.
+
+git pull origin <branch_name> --rebase

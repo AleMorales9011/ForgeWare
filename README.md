@@ -18,6 +18,10 @@ Benefits:
 - Improves efficiency by automating user and directory creation with permissions.
 - Enhances security by ensuring consistent permission settings.
 - Reduces human error in manual user and directory creation.
+- 
+![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FF00F6&color:FFF)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000?style=for-the-badge&logo=postgresql&logoColor=FF00F6&color:FFF)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=FF00F6&color:FFF)
 
 ---
 

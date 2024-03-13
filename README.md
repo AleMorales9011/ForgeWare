@@ -24,3 +24,5 @@ Git is a version control system that tracks changes made to files over time. Thi
 - Git is essential for collaboration, enabling multiple people to work on the same project simultaneously without conflicts. It facilitates merging changes from different developers and keeps track of everyone's contributions.
 
 ### [003-ARCHITECTURE-BFF PATTERN]()
+
+This project demonstrates how to use Azure DevOps and Terraform to implement the Backends for Frontends (BFF) pattern in Microsoft Azure. The BFF pattern is a software architecture pattern that allows you to create separate backend services for different front-end applications or interfaces. This approach helps improve your applications' maintainability, scalability, and performance.

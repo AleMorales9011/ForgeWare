@@ -16,3 +16,9 @@ Benefits:
 - Improves efficiency by automating user and directory creation with permissions.
 - Enhances security by ensuring consistent permission settings.
 - Reduces human error in manual user and directory creation.
+
+### [002-GIT-CREATING & PUSHING REPOSITORIES]()
+
+Git is a version control system that tracks changes made to files over time. This means you can see exactly what modifications were made, by whom, and when.
+It allows you to revert back to previous versions of your project if necessary. This is a lifesaver if you accidentally introduce bugs or make unwanted changes.
+Git is essential for collaboration, enabling multiple people to work on the same project simultaneously without conflicts. It facilitates merging changes from different developers and keeps track of everyone's contributions.

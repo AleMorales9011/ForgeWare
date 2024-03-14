@@ -1,5 +1,7 @@
+
+
 **Getting Started**
-## 01-DevOps
+### 01-DevOps
 Collection of **resources and tools for implementing DevOps practices** on the AWS cloud platform. Ideal for developers, operations professionals, and anyone interested in automating infrastructure provisioning, application deployments, and streamlining workflows on AWS.
 
 ---

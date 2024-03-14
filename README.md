@@ -1,4 +1,4 @@
-
+![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FF00F6&color:FFF)
 
 **Getting Started**
 ### 01-DevOps

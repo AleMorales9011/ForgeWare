@@ -1,6 +1,6 @@
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FF00F6&color:FFF)
 
-**Getting Started**
+Getting Started
 ### 01-DevOps
 Collection of **resources and tools for implementing DevOps practices** on the AWS cloud platform. Ideal for developers, operations professionals, and anyone interested in automating infrastructure provisioning, application deployments, and streamlining workflows on AWS.
 
@@ -11,16 +11,16 @@ This script automates the process of creating a new user, their home directory a
 
 **Features:**
 
-- Creates new users on the system.
-- Creates dedicated home directories for the users.
-- Sets permissions on the home directory and potentially subdirectories.
-- Can be customized to define specific permissions for the user, group, and others.
+>- Creates new users on the system.
+>- Creates dedicated home directories for the users.
+>- Sets permissions on the home directory and potentially subdirectories.
+>- Can be customized to define specific permissions for the user, group, and others.
 
 **Benefits:**
 
-- Improves efficiency by automating user and directory creation with permissions.
-- Enhances security by ensuring consistent permission settings.
-- Reduces human error in manual user and directory creation.
+>- Improves efficiency by automating user and directory creation with permissions.
+>- Enhances security by ensuring consistent permission settings.
+>- Reduces human error in manual user and directory creation.
 
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FF00F6&color:FFF)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000?style=for-the-badge&logo=postgresql&logoColor=FF00F6&color:FFF)

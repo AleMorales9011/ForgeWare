@@ -22,14 +22,6 @@ This script automates the process of creating a new user, their home directory a
 >- Enhances security by ensuring consistent permission settings.
 >- Reduces human error in manual user and directory creation.
 
-```python
-
-sudo mkdir /publico
-sudo mkdir /adm
-sudo mkdir /ven
-sudo mkdir /sec
-
-```
 
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FF00F6&color:FFF)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000?style=for-the-badge&logo=postgresql&logoColor=FF00F6&color:FFF)

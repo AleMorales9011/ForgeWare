@@ -22,7 +22,7 @@ This script automates the process of creating a new user, their home directory a
 >- Enhances security by ensuring consistent permission settings.
 >- Reduces human error in manual user and directory creation.
 
-```!# bin/bash
+```python
 
 sudo mkdir /publico
 sudo mkdir /adm

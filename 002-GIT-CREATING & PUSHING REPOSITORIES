@@ -6,17 +6,17 @@ echo "# myrepo" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
+git branch -M main
 git remote add origin https://github.com/username/reponame.git
-git push -u origin master
+git push -u origin main
 
 
 # Pushing an existing repository from the command line
 
 
 git remote add origin https://github.com/username/reponame.git
-git pull origin master --allow-unrelated-histories
-git commit -a -m "merge"
-git push -u origin master
+git branch -M main
+git push -u origin main
 
 # Pull with Rebase (git pull --rebase):
 

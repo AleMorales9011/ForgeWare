@@ -1,6 +1,8 @@
 ---
 ### Cloning a repository
-![]()
+
+![cloning a repo](https://github.com/AleMorales9011/01-DEVOPS-AWS/blob/a65ea31dc0630f24838b822e52372302da1cab12/002-GIT-CREATING%20%26%20PUSHING%20REPOSITORIES/cloning%20a%20repo.jpg)
+
 ---
 ### Create a new repository on the command line
 

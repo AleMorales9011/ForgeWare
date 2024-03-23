@@ -1,5 +1,3 @@
-![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FF00F6&color:FFF)
-
 Getting Started
 # 01-DevOps
 Collection of **resources and tools for implementing DevOps practices** on the AWS cloud platform. Ideal for developers, operations professionals, and anyone interested in automating infrastructure provisioning, application deployments, and streamlining workflows on AWS.

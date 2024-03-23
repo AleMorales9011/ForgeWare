@@ -1,6 +1,12 @@
-Getting Started
 # 01-DevOps
-Collection of **resources and tools for implementing DevOps practices** on the AWS cloud platform. Ideal for developers, operations professionals, and anyone interested in automating infrastructure provisioning, application deployments, and streamlining workflows on AWS.
+*What you will find*
+This repository is a comprehensive showcase of my proficiency in DevOps best practices and tools. A collection of projects demonstrating the automation of infrastructure provisioning, application deployments, and workflow streamlining using industry-standard DevOps tools.
+
+> [!NOTE]
+> Practical examples of how I leverage these tools to achieve:
+> `Efficiency´: Reduced manual tasks and streamlined workflows for faster development and deployment cycles.
+> `Reliability´: Consistent and error-free infrastructure and application configurations through code-driven automation.
+> `Collaboration´: Improved visibility and communication across development and operations teams.
 
 ---
 

@@ -4,9 +4,9 @@ This repository is a comprehensive showcase of my proficiency in DevOps best pra
 
 > [!NOTE]
 > Practical examples of how I leverage these tools to achieve:
-> `Efficiency´: Reduced manual tasks and streamlined workflows for faster development and deployment cycles.
-> `Reliability´: Consistent and error-free infrastructure and application configurations through code-driven automation.
-> `Collaboration´: Improved visibility and communication across development and operations teams.
+> Efficiency: Reduced manual tasks and streamlined workflows for faster development and deployment cycles.
+> Reliability: Consistent and error-free infrastructure and application configurations through code-driven automation.
+> Collaboration: Improved visibility and communication across development and operations teams.
 
 ---
 

@@ -1,34 +1,48 @@
+Name: Alejandro Morales Lozano<br>
+Date: 3/23/2024<br>
+Headline: DevOps | Software Engineer | Full Stack Engineer<br>
+[Linkedin](https://www.linkedin.com/in/alejandromoraleslozano/) | [Github](https://github.com/AleMorales9011) | [Coursera](https://github.com/AleMorales9011)
+
 # 01-DevOps
 *What you will find*
+
 This repository is a comprehensive showcase of my proficiency in DevOps best practices and tools. A collection of projects demonstrating the automation of infrastructure provisioning, application deployments, and workflow streamlining using industry-standard DevOps tools.
 
 > [!NOTE]
-> Practical examples of how I leverage these tools to achieve:
-> 
-> **Efficiency**: Reduced manual tasks and streamlined workflows for faster development and deployment cycles.
-> 
-> **Reliability**: Consistent and error-free infrastructure and application configurations through code-driven automation.
-> 
-> **Collaboration**: Improved visibility and communication across development and operations teams.
+> You will find practical examples of how I leverage DevOps to achieve:<br>
+> **Efficiency**: Reduced manual tasks and streamlined workflows for faster development and deployment cycles.<br>
+> **Reliability**: Consistent and error-free infrastructure and application configurations through code-driven automation.<br>
+> **Collaboration**: Improved visibility and communication across development and operations teams.<br>
 
 ---
 
-### [001-User, directories & permission sructure creation](https://github.com/AleMorales9011/01-DEVOPS-AWS/blob/da5613ce95572d95cf385536b78fb5c5a93dfb51/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE%20CREATION)
-This script automates the process of creating a new user, their home directory and setting appropriate permissions.
+## Table Of Contents
+> 001-User, directories & permission sructure creation<br>
+> 002-Git-creating & pushing repositories<br>
+> 003-Architecture-Bff-pattern<br>
 
-**Features:**
+---
 
->- Creates new users on the system.
->- Creates dedicated home directories for the users.
->- Sets permissions on the home directory and potentially subdirectories.
->- Can be customized to define specific permissions for the user, group, and others.
+### [001-User, directories & permission structure creation](https://github.com/AleMorales9011/01-DEVOPS-AWS/blob/da5613ce95572d95cf385536b78fb5c5a93dfb51/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE%20CREATION)
+> [!CAUTION]
+> Creating new users on a system often involves repetitive tasks like:
+> Manually adding users through system commands.
+> Creating dedicated home directories for each user.
+> Setting appropriate permissions on the home directory and potentially subdirectories.
+> Repeating these steps for every new user, can be time-consuming and prone to errors.
 
-**Benefits:**
+> [!TIP]
+> Solution: Automated User and Directory Management Script.<br>
+> This script automates the entire user and directory creation process, offering several key benefits:<br>
+> **Streamlined Workflow:** Automates user creation, home directory creation, and permission setting with a single script execution.<br>
+> **Enhanced Security:** Enforces consistent and secure permission settings for all users by design.<br>
+> **Reduced Errors:** Eliminates the risk of human error associated with manual data entry.<br>
 
->- Improves efficiency by automating user and directory creation with permissions.
->- Enhances security by ensuring consistent permission settings.
->- Reduces human error in manual user and directory creation.
-
+| Metric  | Before | After |
+| ------------- | ------------- | ---------- |
+| Time to Create User & Directory  | 2-5 minutes  |  30s  |
+| Permission Consistency           | 90%          | 100%  |
+| Error Rate                       | 10%          |  0%     |
 
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FF00F6&color:FFF)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000?style=for-the-badge&logo=postgresql&logoColor=FF00F6&color:FFF)

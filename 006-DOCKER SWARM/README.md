@@ -9,7 +9,7 @@ Running individual containers on multiple machines can be cumbersome. Docker Swa
 - Worker node script
   
 # Vagrant File
-First, we must create a Vagrantfile; which is a configuration file used with Vagrant, a tool for managing virtual machines. It acts as a blueprint for setting up your development environment.
+First, we must create a Vagrantfile; which is a configuration file used with Vagrant, a tool for managing virtual machines. It acts as a blueprint for setting up your development environment. In this case, we use it to create and set up 3 virtual machines in combination with bash scripts.
 
 ```ruby
 # -*- mode: ruby -*-
@@ -55,7 +55,7 @@ end
 ```
 
 # Docker
-This script is a convenient way to set up a system for working with Docker and Docker Compose, particularly for users who work with Vagrant and containerized environments. It streamlines the installation process and ensures the vagrant user has the necessary permissions to utilize Docker effectively.
+This script runs in the Vagrant file, and is a convenient way to set up a system for working with Docker and Docker Compose, particularly for users who work with Vagrant and containerized environments. It streamlines the installation process and ensures the vagrant user has the necessary permissions to utilize Docker effectively.
 
 ```ruby
 
@@ -68,7 +68,7 @@ sudo usermod -aG docker vagrant
 
 ```
 # Master
-This script initializes a Docker Swarm cluster in manager mode and generates a join token for worker nodes. The script stores the join token in a file on the manager node. 
+This script also runs in the vagrant file. It initializes a Docker Swarm cluster in manager mode and generates a join token for worker nodes. The script stores the join token in a file on the manager node. 
 
 ```ruby
 
@@ -83,7 +83,8 @@ This line of code instructs a machine to join an existing Docker Swarm cluster a
 
 ```ruby
 
-docker swarm join --token SWMTKN-1-3pj8k0i4tn77bd93a0yxhgh36hxuef5q5oyg1732rztnfy29ll-a94q0ipwgrjs4xikzyb4yb3n5 10.10.10.100:2377
+docker swarm join --token
+SWMTKN-1-3pj8k0i4tn77bd93a0yxhgh36hxuef5q5oyg1732rztnfy29ll-a94q0ipwgrjs4xikzyb4yb3n5 10.10.10.100:2377
 
 ```
 

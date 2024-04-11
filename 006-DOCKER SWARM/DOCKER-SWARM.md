@@ -27,10 +27,10 @@ Vagrant.configure("2") do |config|
   machines.each do |name, conf|
 # This line defines a virtual machine within the Vagrant configuration
     config.vm.define "#{name}" do |machine|
-# Sets the box (pre-built VM image) for the virtual machine using the "image" key from the current machine configuration 
+# Sets the box (pre-built VM image) for the virtual machine.
       machine.vm.box = "#{conf["image"]}"
       machine.vm.hostname = "#{name}"
-# Configures the network settings for the virtual machine. It creates a private network interface and assigns an IP address in the 10.10.10.x range
+# Configures the network settings for the virtual machine. 
       machine.vm.network "private_network", ip: "10.10.10.#{conf["ip"]}"
       machine.vm.provider "virtualbox" do |vb|
         vb.name = "#{name}"

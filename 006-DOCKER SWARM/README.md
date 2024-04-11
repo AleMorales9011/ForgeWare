@@ -7,7 +7,7 @@ Running individual containers on multiple machines can be cumbersome. Docker Swa
 - Define a unique IP for each machine
 - Pre-install docker on each machine
   
-# Vangrant File
+# Vagrant File
 A Vagrantfile is a configuration file used with Vagrant, a tool for managing virtual machines. It essentially acts as a blueprint for setting up your development environment.
 
 ```ruby

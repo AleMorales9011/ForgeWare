@@ -36,11 +36,11 @@ This repository is a comprehensive showcase of my proficiency in DevOps best pra
 
 **Advanced DevOps Tasks**
 
-- Cloud infrastructure management: Deep understanding of cloud platforms and services for scaling and managing applications in the cloud.
-- Security best practices: Implementing security measures throughout the development lifecycle (DevSecOps) to ensure secure deployments.
-- Disaster recovery (DR) and business continuity (BC): Designing and implementing DR/BC plans to minimize downtime in case of outages.
-- Metrics and analytics: Analyzing infrastructure and application metrics to identify trends and improve overall efficiency.
-- Tooling and automation expertise: Selecting and implementing best-in-class DevOps tools to automate a wide range of tasks and workflows.
+- [**Cloud infrastructure management:**]() Deep understanding of cloud platforms and services.
+- [**Security best practices:**]() Implementing security measures throughout the development lifecycle (DevSecOps).
+- [**Disaster recovery (DR) and business continuity (BC):**]() Designing and implementing DR/BC plans.
+- [**Metrics and analytics:**]() Analyzing infrastructure and application metrics to improve overall efficiency.
+- [**Tooling and automation expertise:**]() Automate a wide range of tasks and workflows.
 
 ---
 

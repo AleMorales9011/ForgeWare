@@ -9,7 +9,7 @@ Headline: DevOps | Software Engineer | Full Stack Engineer<br>
 This repository is a comprehensive showcase of my proficiency in DevOps best practices and tools. A collection of projects demonstrating the automation of infrastructure provisioning, application deployments, and workflow streamlining using industry-standard DevOps tools.
 
 > [!NOTE]
-> You will find practical examples of how I leverage DevOps to achieve:<br>
+> You will find practical examples of how to leverage DevOps to achieve:<br>
 > **Efficiency**: Reduced manual tasks and streamlined workflows for faster development and deployment cycles.<br>
 > **Reliability**: Consistent and error-free infrastructure and application configurations through code-driven automation.<br>
 > **Collaboration**: Improved visibility and communication across development and operations teams.<br>
@@ -18,23 +18,23 @@ This repository is a comprehensive showcase of my proficiency in DevOps best pra
 
 ## Table Of Contents
 
-**Beginner DevOps Engineer**
+**Beginner DevOps Tasks**
 
-- **Provisioning and managing infrastructure:** Setting up servers, and configuring cloud environments.
-- **Version control basics:** Utilizing version control systems (VCS) like Git for code management.
-- **Configuration management:** Automate infrastructure configuration and application deployment.<br>
-- **Basic scripting:** Writing scripts to automate repetitive configurations.<br>
-- **Monitoring and alerting:** Setting up basic monitoring tools to track system health.
+- [**Provisioning and managing infrastructure:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/003-ARCHITECTURE-BFF-PATTERN) Setting up servers, and configuring cloud environments.
+- [**Version control basics:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/002-GIT-CREATING%20%26%20PUSHING%20REPOSITORIES) Utilizing version control systems (VCS) like Git for code management.
+- [**Configuration management:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/003-ARCHITECTURE-BFF-PATTERN) Automate infrastructure configuration and application deployment.<br>
+- [**Basic scripting:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE) Writing scripts to automate repetitive configurations.<br>
+- [**Monitoring and alerting:**]() Setting up basic monitoring tools to track system health.
 
-**Intermediate DevOps Engineer**
+**Intermediate DevOps Tasks**
 
-- CI/CD pipeline automation: Building and implementing continuous integration (CI) and continuous delivery/deployment (CD) pipelines using tools like Jenkins, GitLab CI/CD, or CircleCI.
-- Containerization: Working with container technologies like Docker and Kubernetes to package and deploy applications in a consistent and portable way.
-- Infrastructure automation: Automating infrastructure provisioning and management using IaC tools for greater efficiency and repeatability.
-- Advanced scripting: Creating complex scripts to automate deployments, configuration management, and troubleshooting tasks.
-- Performance monitoring and optimization: Utilizing advanced monitoring tools to identify performance bottlenecks and optimize applications and infrastructure.
+- [**CI/CD pipeline automation:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/003-ARCHITECTURE-BFF-PATTERN) Building and implementing (CI/CD) pipelines.
+- [**Containerization:**]() Use Docker and Kubernetes to package and deploy applications.
+- [**Infrastructure automation:**]() Automating infrastructure provisioning and management using IaC tools
+- [**Advanced scripting:**]() Creating complex scripts to automate deployments, configuration management, and troubleshooting tasks.
+- [**Performance monitoring and optimization:**]() Utilizing advanced monitoring tools.
 
-**Advanced DevOps Engineer**
+**Advanced DevOps Tasks**
 
 - Cloud infrastructure management: Deep understanding of cloud platforms and services for scaling and managing applications in the cloud.
 - Security best practices: Implementing security measures throughout the development lifecycle (DevSecOps) to ensure secure deployments.

@@ -17,9 +17,30 @@ This repository is a comprehensive showcase of my proficiency in DevOps best pra
 ---
 
 ## Table Of Contents
-> 001-User, directories & permission sructure creation<br>
-> 002-Git-creating & pushing repositories<br>
-> 003-Architecture-Bff-pattern<br>
+
+**Beginner DevOps Engineer**
+
+> **Provisioning and managing infrastructure:** Setting up servers, configuring cloud environments (e.g., AWS, Azure) using infrastructure as code (IaC) tools like Terraform or CloudFormation.<br>
+> **Version control basics:** Utilizing version control systems (VCS) like Git for code management, understanding branching and merging.<br>
+> **Configuration management:** Implementing tools like Ansible or Puppet to automate infrastructure configuration and application deployment.<br>
+> **Basic scripting:** Writing scripts (e.g., Bash, Python) for simple tasks like automating repetitive configurations.<br>
+> **Monitoring and alerting:** Setting up basic monitoring tools to track system health and receive alerts for potential issues.
+
+**Intermediate DevOps Engineer**
+
+- CI/CD pipeline automation: Building and implementing continuous integration (CI) and continuous delivery/deployment (CD) pipelines using tools like Jenkins, GitLab CI/CD, or CircleCI.
+- Containerization: Working with container technologies like Docker and Kubernetes to package and deploy applications in a consistent and portable way.
+- Infrastructure automation: Automating infrastructure provisioning and management using IaC tools for greater efficiency and repeatability.
+- Advanced scripting: Creating complex scripts to automate deployments, configuration management, and troubleshooting tasks.
+- Performance monitoring and optimization: Utilizing advanced monitoring tools to identify performance bottlenecks and optimize applications and infrastructure.
+
+**Advanced DevOps Engineer**
+
+- Cloud infrastructure management: Deep understanding of cloud platforms and services for scaling and managing applications in the cloud.
+- Security best practices: Implementing security measures throughout the development lifecycle (DevSecOps) to ensure secure deployments.
+- Disaster recovery (DR) and business continuity (BC): Designing and implementing DR/BC plans to minimize downtime in case of outages.
+- Metrics and analytics: Analyzing infrastructure and application metrics to identify trends and improve overall efficiency.
+- Tooling and automation expertise: Selecting and implementing best-in-class DevOps tools to automate a wide range of tasks and workflows.
 
 ---
 

@@ -66,8 +66,7 @@ This repository is a comprehensive showcase of my proficiency in DevOps best pra
 | Error Rate                       | 10%          |  0%     |
 
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FF00F6&color:FFF)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000?style=for-the-badge&logo=postgresql&logoColor=FF00F6&color:FFF)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=FF00F6&color:FFF)
+
 
 ---
 

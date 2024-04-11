@@ -54,7 +54,7 @@ end
 
 ```
 
-# Docker
+# Docker Script
 This script runs in the Vagrant file, and is a convenient way to set up a system for working with Docker and Docker Compose, particularly for users who work with Vagrant and containerized environments. It streamlines the installation process and ensures the vagrant user has the necessary permissions to utilize Docker effectively.
 
 ```ruby
@@ -67,7 +67,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo usermod -aG docker vagrant
 
 ```
-# Master
+# Master Node Script
 This script also runs in the vagrant file. It initializes a Docker Swarm cluster in manager mode and generates a join token for worker nodes. The script stores the join token in a file on the manager node. 
 
 ```ruby
@@ -78,7 +78,7 @@ sudo docker swarm join-token worker | grep docker > /vagrant/worker.sh
 
 ```
 
-# Worker
+# Worker Script
 This line of code instructs a machine to join an existing Docker Swarm cluster as a worker node. this code instructs a worker node to join a Docker Swarm cluster managed by a node at 10.10.10.100:2377 using the provided join token.
 
 ```ruby

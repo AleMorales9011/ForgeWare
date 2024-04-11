@@ -60,10 +60,29 @@ This script is a convenient way to set up a system for working with Docker and D
 
 #!/bin/bash
 curl -fsSL https://get.docker.com | sudo bash
-sudo curl -fsSL "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -fsSL "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$
+(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo usermod -aG docker vagrant
 
 ```
 # Master
+This script initializes a Docker Swarm cluster in manager mode and generates a join token for worker nodes. The script stores the join token in a file on the manager node. 
+
+```ruby
+
+#!/bin/bash
+sudo docker swarm init --advertise-addr=10.10.10.100
+sudo docker swarm join-token worker | grep docker > /vagrant/worker.sh
+
+```
+
+# Worker
+This line of code instructs a machine to join an existing Docker Swarm cluster as a worker node. this code instructs a worker node to join a Docker Swarm cluster managed by a node at 10.10.10.100:2377 using the provided join token.
+
+```ruby
+
+docker swarm join --token SWMTKN-1-3pj8k0i4tn77bd93a0yxhgh36hxuef5q5oyg1732rztnfy29ll-a94q0ipwgrjs4xikzyb4yb3n5 10.10.10.100:2377
+
+```
 

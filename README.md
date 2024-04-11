@@ -20,11 +20,11 @@ This repository is a comprehensive showcase of my proficiency in DevOps best pra
 
 **Beginner DevOps Engineer**
 
-> **Provisioning and managing infrastructure:** Setting up servers, configuring cloud environments (e.g., AWS, Azure) using infrastructure as code (IaC) tools like Terraform or CloudFormation.<br>
-> **Version control basics:** Utilizing version control systems (VCS) like Git for code management, understanding branching and merging.<br>
-> **Configuration management:** Implementing tools like Ansible or Puppet to automate infrastructure configuration and application deployment.<br>
-> **Basic scripting:** Writing scripts (e.g., Bash, Python) for simple tasks like automating repetitive configurations.<br>
-> **Monitoring and alerting:** Setting up basic monitoring tools to track system health and receive alerts for potential issues.
+- **Provisioning and managing infrastructure:** Setting up servers, and configuring cloud environments.
+- **Version control basics:** Utilizing version control systems (VCS) like Git for code management.
+- **Configuration management:** Automate infrastructure configuration and application deployment.<br>
+- **Basic scripting:** Writing scripts to automate repetitive configurations.<br>
+- **Monitoring and alerting:** Setting up basic monitoring tools to track system health.
 
 **Intermediate DevOps Engineer**
 

@@ -31,7 +31,7 @@ This repository is a comprehensive showcase of my proficiency in DevOps best pra
 - [**CI/CD pipeline automation:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/003-ARCHITECTURE-BFF-PATTERN) Building and implementing (CI/CD) pipelines.
 - [**Containerization:**](https://github.com/AleMorales9011/01-DEVOPS/tree/a527f829037dc901f06556d97c87b7a72c00764a/005-%20DOCKER%20COMPOSE) Use Docker and Kubernetes to package and deploy applications.
 - [**Infrastructure automation:**](https://github.com/AleMorales9011/01-DEVOPS/tree/a527f829037dc901f06556d97c87b7a72c00764a/003-ARCHITECTURE-BFF-PATTERN) Automating infrastructure provisioning and management using IaC tools
-- [**Advanced scripting:**]() Creating complex scripts to automate deployments, configuration management, and troubleshooting tasks.
+- [**Advanced scripting:**]() Creating complex scripts to automate deployments and troubleshooting tasks.
 - [**Performance monitoring and optimization:**]() Utilizing advanced monitoring tools.
 
 **Advanced DevOps Tasks**

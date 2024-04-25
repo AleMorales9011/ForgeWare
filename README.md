@@ -1,7 +1,3 @@
-Name: Alejandro Morales Lozano<br>
-Headline: DevOps | Software Engineer | Full Stack Engineer<br>
-[Linkedin](https://www.linkedin.com/in/alejandromoraleslozano/) | [Github](https://github.com/AleMorales9011) | [Coursera](https://github.com/AleMorales9011)
-
 # 01-DevOps: 0 to 100 With Code Examples<br>
 ### Mastering Version Control, Containerization, and Automated Deployments with Code-Driven Infrastructure (CDI) Tutorials
 

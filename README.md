@@ -1,6 +1,10 @@
 # 01-DevOps: 0 to 100 With Code Examples<br>
 ### Mastering Version Control, Containerization, and Automated Deployments with Code-Driven Infrastructure (CDI) Tutorials
 
+![Devops-2022](https://github.com/AleMorales9011/01-DEVOPS/blob/9132c4b366c6a8d923e15699893b0cfe35ca40d6/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Devops-2022.jpg)
+
+DevOps was the most popular software methodology of 2022 Source – [Statista](https://www.statista.com/statistics/1292382/popular-technologies-in-the-devops-tech-stack/)
+
 *What you will find*
 
 Pre-built CI/CD Code Examples: Battle-tested code snippets for common DevOps tasks, designed to integrate seamlessly into your pipeline. Copy, paste, and customize for your specific infrastructure. Designed as a foundation to tackle even the most advanced DevOps challenges, regardless of industry or codebase size.
@@ -15,9 +19,7 @@ Pre-built CI/CD Code Examples: Battle-tested code snippets for common DevOps tas
 ![BashScript](https://img.shields.io/badge/bash%20script-0101?style=flat&logo=gnubash&logoColor=%23FFFFFF&labelColor=%23000000)
 
 
-## Why DevOps
-DevOps was the most popular software methodology of 2022
-![Devops-2022](https://github.com/AleMorales9011/01-DEVOPS/blob/9132c4b366c6a8d923e15699893b0cfe35ca40d6/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Devops-2022.jpg)
+
 
 ## Example Usage
 Using IaC principles to automate directory structures within your infrastructure.

@@ -3,7 +3,7 @@
 
 ![Devops-2022](https://github.com/AleMorales9011/01-DEVOPS/blob/9132c4b366c6a8d923e15699893b0cfe35ca40d6/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Devops-2022.jpg)
 
-DevOps was the most popular software methodology of 2022 Source – [Statista](https://www.statista.com/statistics/1292382/popular-technologies-in-the-devops-tech-stack/)
+Popularity of Software Methodologies in 2022 Source – [Statista](https://www.statista.com/statistics/1292382/popular-technologies-in-the-devops-tech-stack/)
 
 *What you will find*
 

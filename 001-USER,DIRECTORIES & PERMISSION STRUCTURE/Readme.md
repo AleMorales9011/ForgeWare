@@ -14,3 +14,25 @@ Diagram for the server's user, directories, and permissions structure.
 ![IAC](https://github.com/AleMorales9011/01-DEVOPS/blob/3db928f0ef958aa2028429bc991b9a47ed615849/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Basic%20Scripting%20(2).jpg)
 
 Source: Make by the author
+
+```ruby
+
+#!/bin/bash
+
+
+echo  "Creating directories..."
+echo ____________________________________________________
+
+sudo mkdir /public
+echo "Directorio `publico` criado"
+sudo mkdir /adm
+echo "Directorio `adm` criado"
+sudo mkdir /ven
+echo "Directorio `ven` criado"
+sudo mkdir /sec
+echo "Directorio `sec` criado"
+
+echo ____________________________________________________
+
+```
+

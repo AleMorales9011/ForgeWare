@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-echo  "Criando directorios..."
+echo  "Creating directories..."
 echo ____________________________________________________
 
-sudo mkdir /publico
+sudo mkdir /public
 echo "Directorio `publico` criado"
 sudo mkdir /adm
 echo "Directorio `adm` criado"

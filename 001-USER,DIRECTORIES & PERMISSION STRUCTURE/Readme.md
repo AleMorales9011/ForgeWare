@@ -9,4 +9,8 @@ Jane, the owner of "Crafty Corner," a small online craft store has been running 
 This script explores basic scripting concepts through practical examples in Bash, a common scripting language for Linux and macOS environments. Sample scripts demonstrate tasks relevant to DevOps, including file manipulation, system administration,
 
 ## Result
+Diagram for the server's user, directories, and permissions structure.
+
 ![IAC](https://github.com/AleMorales9011/01-DEVOPS/blob/3db928f0ef958aa2028429bc991b9a47ed615849/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Basic%20Scripting%20(2).jpg)
+
+Source: Make by the author

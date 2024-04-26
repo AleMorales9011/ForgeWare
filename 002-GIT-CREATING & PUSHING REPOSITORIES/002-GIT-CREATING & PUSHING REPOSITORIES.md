@@ -1,17 +1,19 @@
 
-### Cloning a repository
+# Abstract
+Git streamlines the software development process for companies by promoting efficient collaboration, code safety, and a clear development history. 
 
-> [!TIP]
-> Helpful advice for doing things better or more easily.
+- Collaboration: Multiple developers can work on the same codebase simultaneously. Git allows them to create separate branches for their modifications, preventing conflicts and ensuring a stable main code.
 
-![cloning a repo](https://github.com/AleMorales9011/01-DEVOPS-AWS/blob/a65ea31dc0630f24838b822e52372302da1cab12/002-GIT-CREATING%20%26%20PUSHING%20REPOSITORIES/cloning%20a%20repo.jpg)
+- Version History: Git tracks every change ever made to the code. This allows companies to revert to previous versions if necessary, or see how a specific feature evolved.
 
----
-### Create a new repository on the command line
+- Disaster Recovery:  If a critical error is introduced, Git allows developers to roll back to a working version of the codebase, minimizing downtime and data loss.
+
+- Code Sharing: Companies can use Git platforms like GitHub to share code privately within their teams or even publicly for open-source projects.
+
+## Create a new repository on the command line
 
 ```ruby
 
-echo "# myrepo" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
@@ -20,7 +22,7 @@ git remote add origin https://github.com/username/reponame.git
 git push -u origin main
 
 ```
----
+
 ### Pushing an existing repository from the command line
 
 > [!IMPORTANT]

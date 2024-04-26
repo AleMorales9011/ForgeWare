@@ -15,24 +15,62 @@ Diagram for the server's user, directories, and permissions structure.
 
 Source: Make by the author
 
+### Script
+The script below creates the above infrastructure 
+
 ```ruby
 
 #!/bin/bash
 
+# Creating directories
+sudo mkdir /public  # sudo execute the command with superuser privileges
+sudo mkdir /adm     # mkdir is the command for creating a directory
+sudo mkdir /sells
+sudo mkdir /operations
 
-echo  "Creating directories..."
-echo ____________________________________________________
+# Creating groups
+sudo groupadd GRP_ADM  # groupadd creates a new group
+sudo groupadd GRP_SELLS
+sudo groupadd GRP_OPS
 
-sudo mkdir /public
-echo "Directorio `publico` criado"
-sudo mkdir /adm
-echo "Directorio `adm` criado"
-sudo mkdir /ven
-echo "Directorio `ven` criado"
-sudo mkdir /sec
-echo "Directorio `sec` criado"
+# Creating users for the ADM group
+sudo useradd Jane -m -s /bin/bash -G GRP_ADM     # -m: This option tells useradd to create a home directory for the new user. The home directory will be created with the same name as the username.
+sudo useradd Devin  -m -s /bin/bash -G GRP_ADM   #  specifies the default shell for the new user 
+sudo useradd Bryan   -m -s /bin/bash -G GRP_ADM  #  -G This option adds the new user to a group
 
-echo ____________________________________________________
+# Creating users for the SELLS group
+sudo useradd debora -m -s /bin/bash -G GRP_SELLS
+sudo useradd sebastiana -m -s /bin/bash -G GRP_SELLS
+sudo useradd roberto -m -s /bin/bash -G GRP_SELLS
 
+# Creating users for the OPS group 
+sudo useradd josefina -m -s /bin/bash -G GRP_OPS
+sudo useradd amanda  -m -s /bin/bash -G GRP_OPS
+sudo useradd rogerio -m -s /bin/bash -G GRP_OPS
+
+# Specifying permissions for directories
+sudo chown root:GRP_ADM /adm    # chown(change owner) adds the root user as owner of the ADM group 
+sudo chown root:GRP_SELLS /sells
+sudo chown root:GRP_OPS /ops
+
+#  Managing permissions
+sudo chmod 770 /adm   # chmod modify the permissions assigned to files and directories in the system.
+sudo chmod 770 /sells # 770 is the permission string*  
+sudo chmod 770 /ops
+sudo chmod 777 /public
 ```
+### Permissions Strings
+The permissions string defines a specific access level for the owner, the group, and others on a file or directory.
 
+- 4 represents read only (r = 4 in binary)
+- 5 represents read and execute (r = 4, x = 1)
+- 7 represents all permissions (read, write, and execute)
+
+**Here's an example to illustrate:**
+
+Consider a permission string -rwxr--r--.
+
+The first character - indicates it's a regular file.
+Owner (first set of three): "rwx" - This translates to read, write, and execute permissions for the owner (user who owns the file).
+Group (second set of three): "r--" - This translates to read permission only for the group.
+Others (third set of three): "r--" - This translates to read permission only for others (users who are not the owner and not in the group).

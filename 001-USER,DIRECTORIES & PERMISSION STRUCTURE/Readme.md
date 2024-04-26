@@ -39,14 +39,14 @@ sudo useradd Devin  -m -s /bin/bash -G GRP_ADM   #  specifies the default shell 
 sudo useradd Bryan   -m -s /bin/bash -G GRP_ADM  #  -G This option adds the new user to a group
 
 # Creating users for the SELLS group
-sudo useradd debora -m -s /bin/bash -G GRP_SELLS
-sudo useradd sebastiana -m -s /bin/bash -G GRP_SELLS
-sudo useradd roberto -m -s /bin/bash -G GRP_SELLS
+sudo useradd Sarah -m -s /bin/bash -G GRP_SELLS
+sudo useradd Elijah -m -s /bin/bash -G GRP_SELLS
+sudo useradd Maya -m -s /bin/bash -G GRP_SELLS
 
 # Creating users for the OPS group 
-sudo useradd josefina -m -s /bin/bash -G GRP_OPS
-sudo useradd amanda  -m -s /bin/bash -G GRP_OPS
-sudo useradd rogerio -m -s /bin/bash -G GRP_OPS
+sudo useradd Noah -m -s /bin/bash -G GRP_OPS
+sudo useradd Amelia  -m -s /bin/bash -G GRP_OPS
+sudo useradd Bryan -m -s /bin/bash -G GRP_OPS
 
 # Specifying permissions for directories
 sudo chown root:GRP_ADM /adm    # chown(change owner) adds the root user as owner of the ADM group 
@@ -58,6 +58,7 @@ sudo chmod 770 /adm   # chmod modify the permissions assigned to files and direc
 sudo chmod 770 /sells # 770 is the permission string*  
 sudo chmod 770 /ops
 sudo chmod 777 /public
+
 ```
 ### Permissions Strings
 The permissions string defines a specific access level for the owner, the group, and others on a file or directory.

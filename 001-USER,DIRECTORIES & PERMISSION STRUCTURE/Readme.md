@@ -9,11 +9,19 @@ Jane, the owner of "Crafty Corner," a small online craft store has been running 
 This script explores basic scripting concepts through practical examples in Bash, a common scripting language for Linux and macOS environments. Sample scripts demonstrate tasks relevant to DevOps, including file manipulation, system administration,
 
 ## Result
-Diagram for the server's user, directories, and permissions structure.
 
-![IAC](https://github.com/AleMorales9011/01-DEVOPS/blob/93f2ed68c27cf3154b62a546ba59bc937f5caf0d/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Script-diagram.jpg)
+| Employees | Directory  | Group       | Permission |
+|-----------|------------|-------------|------------|
+|Noah       | operations | OPS         |   rwx (read,write,execute)      |
+|Amelia     | operations | OPS         |   rwx      |
+|Bryan      | operations | OPS         |   rwx      |
+|Jane       | adm        | ADM         |   rwx      |
+|Devin      | adm        | ADM         |   rwx      |
+|Bryan      | adm        | ADM         |   rwx      |
+|Noah       | sales      | SALES       |   rwx      |
+|Noah       | sales      | SALES       |   rwx      |
+|Noah       | sales      | SALES       |   rwx      |
 
-Source: Make by the author
 
 ### Script
 The script below creates the above infrastructure 
@@ -25,12 +33,12 @@ The script below creates the above infrastructure
 # Creating directories
 sudo mkdir /public  # sudo execute the command with superuser privileges
 sudo mkdir /adm     # mkdir is the command for creating a directory
-sudo mkdir /sells
+sudo mkdir /sales
 sudo mkdir /operations
 
 # Creating groups
 sudo groupadd GRP_ADM  # groupadd creates a new group
-sudo groupadd GRP_SELLS
+sudo groupadd GRP_SALES
 sudo groupadd GRP_OPS
 
 # Creating users for the ADM group
@@ -39,9 +47,9 @@ sudo useradd Devin  -m -s /bin/bash -G GRP_ADM   #  specifies the default shell 
 sudo useradd Bryan   -m -s /bin/bash -G GRP_ADM  #  -G This option adds the new user to a group
 
 # Creating users for the SELLS group
-sudo useradd Sarah -m -s /bin/bash -G GRP_SELLS
-sudo useradd Elijah -m -s /bin/bash -G GRP_SELLS
-sudo useradd Maya -m -s /bin/bash -G GRP_SELLS
+sudo useradd Sarah -m -s /bin/bash -G GRP_SALES
+sudo useradd Elijah -m -s /bin/bash -G GRP_SALES
+sudo useradd Maya -m -s /bin/bash -G GRP_SALES
 
 # Creating users for the OPS group 
 sudo useradd Noah -m -s /bin/bash -G GRP_OPS
@@ -50,12 +58,12 @@ sudo useradd Bryan -m -s /bin/bash -G GRP_OPS
 
 # Specifying permissions for directories
 sudo chown root:GRP_ADM /adm    # chown(change owner) adds the root user as owner of the ADM group 
-sudo chown root:GRP_SELLS /sells
+sudo chown root:GRP_SELLS /sales
 sudo chown root:GRP_OPS /ops
 
 #  Managing permissions
 sudo chmod 770 /adm   # chmod modify the permissions assigned to files and directories in the system.
-sudo chmod 770 /sells # 770 is the permission string*  
+sudo chmod 770 /sales # 770 is the permission string*  
 sudo chmod 770 /ops
 sudo chmod 777 /public
 

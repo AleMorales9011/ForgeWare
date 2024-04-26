@@ -11,7 +11,7 @@ This script explores basic scripting concepts through practical examples in Bash
 ## Result
 Diagram for the server's user, directories, and permissions structure.
 
-![IAC](https://github.com/AleMorales9011/01-DEVOPS/blob/3db928f0ef958aa2028429bc991b9a47ed615849/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Basic%20Scripting%20(2).jpg)
+![IAC](https://github.com/AleMorales9011/01-DEVOPS/blob/93f2ed68c27cf3154b62a546ba59bc937f5caf0d/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Script-diagram.jpg)
 
 Source: Make by the author
 

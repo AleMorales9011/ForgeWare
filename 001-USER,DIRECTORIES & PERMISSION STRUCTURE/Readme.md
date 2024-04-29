@@ -10,17 +10,17 @@ This script explores basic scripting concepts through practical examples in Bash
 
 ## Result
 
-| Employees | Directory  | Group       | Permission |
-|-----------|------------|-------------|------------|
-|Noah       | operations | OPS         |   rwx (read,write,execute)      |
-|Amelia     | operations | OPS         |   rwx      |
-|Bryan      | operations | OPS         |   rwx      |
-|Jane       | adm        | ADM         |   rwx      |
-|Devin      | adm        | ADM         |   rwx      |
-|Bryan      | adm        | ADM         |   rwx      |
-|Noah       | sales      | SALES       |   rwx      |
-|Noah       | sales      | SALES       |   rwx      |
-|Noah       | sales      | SALES       |   rwx      |
+| Employees | Directory         | Group       | Permission                    |
+|-----------|-------------------|-------------|-------------------------------|
+|Noah       | operations/public | OPS         | rwx (read,write,execute)      |
+|Amelia     | operations/public | OPS         | rwx                           |
+|Bryan      | operations/public | OPS         | rwx                           |
+|Jane       | adm       /public | ADM         | rwx                           |
+|Devin      | adm       /public | ADM         | rwx                           |
+|Bryan      | adm       /public | ADM         | rwx                           | 
+|Noah       | sales     /public | SALES       | rwx                           |
+|Noah       | sales     /public | SALES       | rwx                           |
+|Noah       | sales     /public | SALES       | rwx                           |
 
 
 ### Script
@@ -43,8 +43,8 @@ sudo groupadd GRP_OPS
 
 # Creating users for the ADM group
 sudo useradd Jane -m -s /bin/bash -G GRP_ADM     # -m: This option tells useradd to create a home directory for the new user. The home directory will be created with the same name as the username.
-sudo useradd Devin  -m -s /bin/bash -G GRP_ADM   #  specifies the default shell for the new user 
-sudo useradd Bryan   -m -s /bin/bash -G GRP_ADM  #  -G This option adds the new user to a group
+sudo useradd Devin  -m -s /bin/bash -G GRP_ADM   # -s /bin/bash: specifies the default shell for the new user 
+sudo useradd Bryan   -m -s /bin/bash -G GRP_ADM  #  -G: This option adds the new user to a group
 
 # Creating users for the SELLS group
 sudo useradd Sarah -m -s /bin/bash -G GRP_SALES

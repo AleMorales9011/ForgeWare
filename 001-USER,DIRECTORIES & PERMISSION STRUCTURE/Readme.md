@@ -6,9 +6,10 @@ Jane, the owner of "Crafty Corner," a small online craft store has been running 
 ![BashScript](https://img.shields.io/badge/bash%20script-0101?style=flat&logo=gnubash&logoColor=%23FFFFFF&labelColor=%23000000)
 
 ## Methodology
-This script explores basic scripting concepts through practical examples in Bash, a common scripting language for Linux and macOS environments. Sample scripts demonstrate tasks relevant to DevOps, including file manipulation, system administration,
+This script serves as an introduction to fundamental scripting concepts. It leverages a practical example written in Bash, a prevalent scripting language for Linux and macOS systems. The example focuses on a DevOps-related task, specifically file manipulation within the context of system administration.
 
 ## Result
+Below is the payroll table that Jane from which Jane needs to extract the information to create the user and permissions into the system.
 
 | Employees | Directory         | Group       | Permission                    |
 |-----------|-------------------|-------------|-------------------------------|

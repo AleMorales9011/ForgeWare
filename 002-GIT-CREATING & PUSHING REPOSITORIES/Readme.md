@@ -1,14 +1,7 @@
 
 # Abstract
-Git streamlines the software development process for companies by promoting efficient collaboration, code safety, and a clear development history. 
+Git streamlines the software development process for companies by promoting efficient collaboration, code safety, and a clear development history. Multiple developers can work on the same codebase simultaneously. Git allows them to create separate branches for their modifications, preventing conflicts and ensuring a stable main code. Git also tracks every change ever made to the code. This allows companies to revert to previous versions if necessary, or see how a specific feature evolved. In addition if a critical error is introduced, Git allows developers to roll back to a working version of the codebase, minimizing downtime and data loss.
 
-- Collaboration: Multiple developers can work on the same codebase simultaneously. Git allows them to create separate branches for their modifications, preventing conflicts and ensuring a stable main code.
-
-- Version History: Git tracks every change ever made to the code. This allows companies to revert to previous versions if necessary, or see how a specific feature evolved.
-
-- Disaster Recovery:  If a critical error is introduced, Git allows developers to roll back to a working version of the codebase, minimizing downtime and data loss.
-
-- Code Sharing: Companies can use Git platforms like GitHub to share code privately within their teams or even publicly for open-source projects.
 
 ## Create a new repository on the command line
 

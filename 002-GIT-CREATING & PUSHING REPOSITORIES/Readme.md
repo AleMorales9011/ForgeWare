@@ -11,7 +11,26 @@ Jane decide to use Git ( a version control tool) to solve the problem. Git promo
 Windows/macOS: Download and install Git from the official website ```https://git-scm.com/downloads.```
 Linux: Git is usually pre-installed on most Linux distributions. You can check by opening the terminal and typing ```git --version```. If not installed, use your package manager ```(e.g., sudo apt install git on Ubuntu)```. 
 
-## 
+## Initialize a Git repository:
+
+Open a terminal window and navigate to the folder where Jane wants to store her "Crafty Corner" data using the ```cd command (e.g., cd Documents/CraftyCorner).``` Then, type the following command to create a new Git repository:
+
+```ruby
+git init
+```
+This creates a hidden folder called .git where Git stores all its information.
+
+## Managing Data with Git
+Once the repository is set up, Jane can start using Git commands to manage her data:
+
+Adding Changes:
+```ruby
+git add
+```
+Let's say Jane updates a product description for a knitted scarf in a text file named scarf_description.txt. To tell Git to track this change, she can use: ```git add scarf_description.txt```
+
+This "stages" the file for the next commit.
+
 ## Create a new repository on the command line
 
 ```ruby

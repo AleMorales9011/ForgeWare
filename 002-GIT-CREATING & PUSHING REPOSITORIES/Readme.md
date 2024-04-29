@@ -7,7 +7,11 @@ After the adding the new hires to it's server to support the business growth in 
 ## Methodology
 Jane decide to use Git ( a version control tool) to solve the problem. Git promotes efficient collaboration, and a clear development history. Multiple employees can work on the same folder simultaneously. Git allows them to **create separate branches** for their modifications, **preventing conflicts**. Git also tracks every change ever made. So now Jane can know who did what and when. And measure the impact of changes.
 
+## Install Git (One-time setup):
+Windows/macOS: Download and install Git from the official website ```https://git-scm.com/downloads.```
+Linux: Git is usually pre-installed on most Linux distributions. You can check by opening the terminal and typing ```git --version```. If not installed, use your package manager ```(e.g., sudo apt install git on Ubuntu)```. 
 
+## 
 ## Create a new repository on the command line
 
 ```ruby

@@ -32,6 +32,33 @@ Let's say Jane updates a product description for a knitted scarf in a text file 
 
 This "stages" the file for the next commit.
 
+## Committing Changes:
+
+After adding any updated files, Jane can create a snapshot of her work with a descriptive message using: ```git commit -m "Updated scarf description with new color options"```
+
+```ruby
+git commit -m "My first commit"
+```
+The -m flag lets you add a commit message describing the changes.
+
+## Reverting Mistakes (Optional):
+
+Oops! Jane accidentally deleted a photo. No worries! She can use Git to go back to the previous commit with:
+
+```ruby
+git checkout HEAD~1
+```
+This command "checks out" the previous commit (represented by HEAD~1).
+
+## 4. Keeping Track of Progress:
+
+Jane can view the history of her commits with:
+
+```ruby
+git log
+```
+This shows a list of commits with their messages, allowing her to see how her data has evolved over time.
+
 ## Create a new repository on the command line
 
 ```ruby

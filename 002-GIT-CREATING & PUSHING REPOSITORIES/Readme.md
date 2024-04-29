@@ -1,6 +1,11 @@
 
 # Abstract
-Git **streamlines the software development process** for companies by promoting efficient collaboration, code safety, and a clear development history. Multiple developers can work on the same codebase simultaneously. Git allows them to **create separate branches** for their modifications, **preventing conflicts** and ensuring a stable main code. Git also tracks every change ever made to the code. This allows companies to revert to previous versions if necessary, or see how a specific feature evolved. In addition if a critical error is introduced, Git **allows developers to roll back** to a working version of the codebase, minimizing downtime and data loss.
+Jane, the owner of "Crafty Corner," a charming online craft store, has been juggling product photos, descriptions, and inventory through a mess of spreadsheets and email threads. It's become a nightmare to keep track of everything, especially with her growing product line.
+
+![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+
+## Methodology
+Jane decide to use Git ( a version control tool) to solve the problem. Git promotes efficient collaboration, code safety, and a clear development history. Multiple developers can work on the same codebase simultaneously. Git allows them to **create separate branches** for their modifications, **preventing conflicts** and ensuring a stable main code. Git also tracks every change ever made to the code. This allows companies to revert to previous versions if necessary, or see how a specific feature evolved. In addition if a critical error is introduced, Git **allows developers to roll back** to a working version of the codebase, minimizing downtime and data loss.
 
 
 ## Create a new repository on the command line

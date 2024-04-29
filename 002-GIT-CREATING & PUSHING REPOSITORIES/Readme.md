@@ -1,11 +1,11 @@
 
 # Abstract
-Jane, the owner of "Crafty Corner," a charming online craft store, has been juggling product photos, descriptions, and inventory through a mess of spreadsheets and email threads. It's become a nightmare to keep track of everything, especially with her growing product line.
+After the adding the new hires to it's server to support the business growth in the previous chapter. Jane, the owner of "Crafty Corner," a charming online craft store, has been juggling product photos, descriptions, and inventory through a mess of spreadsheets and email threads. It's become a nightmare to keep track of everything, especially with her growing product line. Employees are changing descriptions, fotos, changing prices and adding discounts and now Jane doesn't know th timeline of events. She doesnt know if the discounts were beneficial or not or which product desription is best or why changes were made in the first placce or by who. 
 
 ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 
 ## Methodology
-Jane decide to use Git ( a version control tool) to solve the problem. Git promotes efficient collaboration, code safety, and a clear development history. Multiple developers can work on the same codebase simultaneously. Git allows them to **create separate branches** for their modifications, **preventing conflicts** and ensuring a stable main code. Git also tracks every change ever made to the code. This allows companies to revert to previous versions if necessary, or see how a specific feature evolved. In addition if a critical error is introduced, Git **allows developers to roll back** to a working version of the codebase, minimizing downtime and data loss.
+Jane decide to use Git ( a version control tool) to solve the problem. Git promotes efficient collaboration, and a clear development history. Multiple employees can work on the same folder simultaneously. Git allows them to **create separate branches** for their modifications, **preventing conflicts**. Git also tracks every change ever made. So now Jane can know who did what and when. And measure the impact of changes.
 
 
 ## Create a new repository on the command line

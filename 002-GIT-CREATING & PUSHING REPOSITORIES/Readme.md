@@ -1,16 +1,16 @@
 
 # Abstract
-After the adding the new hires to it's server to support the business growth in the previous chapter. Jane, the owner of "Crafty Corner," a charming online craft store, has been juggling product photos, descriptions, and inventory through a mess of spreadsheets and email threads. It's become a nightmare to keep track of everything, especially with her growing product line. Employees are changing descriptions, fotos, changing prices and adding discounts and now Jane doesn't know th timeline of events. She doesnt know if the discounts were beneficial or not or which product desription is best or why changes were made in the first placce or by who. 
+After the adding the new hires to it's server to support the business growth in the previous chapter. Jane, the owner of "Crafty Corner," a charming online craft store, has been juggling product photos, descriptions, and inventory through a mess of spreadsheets and email threads. **It's become a nightmare to keep track of everything**, especially with her growing product line. Employees are changing descriptions, fotos, changing prices and adding discounts and now Jane doesn't know th timeline of events. She doesnt know if the discounts were beneficial or not or which product desription is best or why changes were made in the first placce or by who. 
 
 ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-35495E?style=for-the-badge&logo=ubuntu&logoColor=2CA5E0)
 
 ## Methodology
-Jane decide to use Git ( a version control tool) to solve the problem. Git promotes efficient collaboration, and a clear development history. Multiple employees can work on the same folder simultaneously. Git allows them to **create separate branches** for their modifications, **preventing conflicts**. Git also tracks every change ever made. So now Jane can know who did what and when. And measure the impact of changes.
+Jane decide to use Git ( a version control tool) to solve the problem. **Git promotes efficient collaboration**, and a clear development history. Multiple employees can work on the same folder simultaneously. Git allows them to **create separate branches** for their modifications, **preventing conflicts**. Git also tracks every change ever made. So now Jane can know who did what and when. And measure the impact of changes.
 
 ## Install Git (One-time setup):
-Windows/macOS: Download and install Git from the official website ```https://git-scm.com/downloads.```
-Linux: Git is usually pre-installed on most Linux distributions. You can check by opening the terminal and typing ```git --version```. If not installed, use your package manager ```(e.g., sudo apt install git on Ubuntu)```. 
+*Windows/macOS:* Download and install Git from the official website ```https://git-scm.com/downloads.```
+*Linux:* Git is usually pre-installed on most Linux distributions. You can check by opening the terminal and typing ```git --version```. If not installed, use your package manager ```(e.g., sudo apt install git on Ubuntu)```. 
 
 ## Initialize a Git repository:
 

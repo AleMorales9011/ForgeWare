@@ -60,7 +60,26 @@ git log
 This shows a list of commits with their messages, allowing her to see how her data has evolved over time.
 
 ## Remote Acces
-In the previous scenario Jane and its employees use git to collaborate using Git within the same server. Now, Jane has bought another computer so the operations deparment could make changessucha as add products, client informations and documents like contracts from their own work station. 
+In the previous scenario Jane and its employees use git to collaborate using Git within the same server. Now, Jane has bought another computer so the operations deparment could make changes such as adding products, client informations and documents like contracts from their own work station. 
+
+>[!Note]
+> The most common way to ue Git to collaborate is using remote acces to online hosting repositories such as Github, Gitlab or Azure Repo.However this is not the only way. In the following example Jane's employee will acces Crafty Corner repo from his operation work station.
+
+
+## Remote Acces using a Bare Git Repository
+### Server-side:
+Connect to your server and use 
+```ruby
+git init --bare <repository_name>.git # to create a bare repository directory (e.g., project.git).
+```
+### Client-side (Local Machines):
+Users can then clone the repository using 
+```ruby
+git clone ssh://server_username@server_ip/path/to/repository.git #(replace placeholders with your info).
+```
+After making changes locally, they push their commits with git push origin main (assuming the remote is named origin and the branch is main).
+
+## Remote Acces using a Git Web Hosting Service (GitHub) 
 
 ### 1 Clone the main repository:
 
@@ -88,40 +107,19 @@ By default, Git creates a branch named "master" when you initialize a repository
 git remote add origin <repo URL> # This command configures a remote repository.
 ```
 
-## Create a new repository on the command line
-
+### 5 Push changes directly (Use with Caution):
 ```ruby
-
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/username/reponame.git
-git push -u origin main
-
+git push origin <branch_name>
 ```
+This command pushes the employee's local commits directly to the remote repository. Here:
+```origin``` is the default shortcut for the remote repository.
+```<branch_name>``` specifies the branch they want to push their changes to (usually master for the main branch).
 
-### Pushing an existing repository from the command line
-
-> [!IMPORTANT]
-> command example
-
-![git-command](https://github.com/AleMorales9011/01-DEVOPS-AWS/blob/35bb6643e1b540ecf2530230dd3fb847c47bde02/002-GIT-CREATING%20%26%20PUSHING%20REPOSITORIES/git-command.jpg)
-```ruby
-
-git remote add origin https://github.com/username/reponame.git
-git branch -M main
-git push -u origin main
-
-```
----
 ### Pull with Rebase (git pull --rebase):
-
->This command fetches the latest changes from the remote repository and then attempts to replay your local commits
->on top of the updated remote branch head.
+This command fetches the latest changes from the remote repository and then attempts to replay your local commits
+on top of the updated remote branch head.
 
 ```ruby
-
 git pull origin <branch_name> --rebase
-
 ```
+# Conclussion

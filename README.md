@@ -27,18 +27,16 @@ Using IaC principles to automate directory structures within your infrastructure
 ```ruby
 #!/bin/bash
 
+# Creating directories
+sudo mkdir /public  # sudo execute the command with superuser privileges
+sudo mkdir /adm     # mkdir is the command for creating a directory
+sudo mkdir /sales
+sudo mkdir /operations
 
-echo  "Criando directorios..."
-echo ____________________________________________________
-
-sudo mkdir /publico
-echo "Directorio `publico` criado"
-sudo mkdir /adm
-echo "Directorio `adm` criado"
-sudo mkdir /ven
-echo "Directorio `ven` criado"
-sudo mkdir /sec
-echo "Directorio `sec` criado"
+# Creating groups
+sudo groupadd GRP_ADM  # groupadd creates a new group
+sudo groupadd GRP_SALES
+sudo groupadd GRP_OPS
 
 ```
 ## Table Of Contents

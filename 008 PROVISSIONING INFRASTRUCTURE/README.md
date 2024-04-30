@@ -1,13 +1,13 @@
 # Abstract
 Janes business Crafty Corner its growing and it time to take it online. In this chapter we will help Jane to design, provision, and manage cloud resources on a chosen cloud platform using Terraform configurations. The project emphasizes best practices for infrastructure as code (IaC) and demonstrates the benefits of managing infrastructure through code.
 
-# Methodology
+## Methodology
 This repository utilizes a practical learning approach, guiding users through the process of building cloud infrastructure for Crafty Corner on a cloud platform of their choice (e.g., AWS, Google Cloud Platform, Azure). The project will provide step-by-step instructions, explanations for each code block, and troubleshooting tips to ensure a successful learning experience.
 
-# What's Terraform?
+## What's Terraform?
 Infrastructure as Code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share. 
 
-## Prerequisites:
+### Prerequisites:
 
 An Azure subscription (https://azure.microsoft.com/en-us/free)<br>
 Terraform installed (https://developer.hashicorp.com/terraform/install)

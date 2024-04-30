@@ -1,5 +1,8 @@
-# Provisioning Infrastructure
+# Abstract
+Janes business Crafty Corner its growing and it time to take it online. In this chapter This repository provides a hands-on introduction to creating cloud infrastructure using Terraform, with a focus on small businesses like Crafty Corner, a fictional craft store. Through a step-by-step approach, learners will gain the necessary skills to design, provision, and manage cloud resources on a chosen cloud platform using Terraform configurations. The project emphasizes best practices for infrastructure as code (IaC) and demonstrates the benefits of managing infrastructure through code.
 
+# Methodology
+This repository utilizes a practical learning approach, guiding users through the process of building cloud infrastructure for Crafty Corner on a cloud platform of their choice (e.g., AWS, Google Cloud Platform, Azure).
 
 ```ruby
 # Terraform Settings Block

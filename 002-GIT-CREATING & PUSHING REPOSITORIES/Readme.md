@@ -59,6 +59,35 @@ git log
 ```
 This shows a list of commits with their messages, allowing her to see how her data has evolved over time.
 
+## Remote Acces
+In the previous scenario Jane and its employees use git to collaborate using Git within the same server. Now, Jane has bought another computer so the operations deparment could make changessucha as add products, client informations and documents like contracts from their own work station. 
+
+### 1 Clone the main repository:
+
+```ruby
+git clone <URL of Jane's repository>
+```
+This downloads a copy of the entire repository, including all branches and history, to the employee's local machine.
+
+### 2 Make changes and add files:
+
+The employee can use standard Git commands like:
+```ruby
+git add <filename> # to stage specific files for commit.
+git commit -m "Meaningful commit message" # to create a snapshot of their changes with a descriptive message
+```
+### 3 Renaming your branch 
+```ruby
+git branch -M main
+```
+By default, Git creates a branch named "master" when you initialize a repository. This command renames the current branch (which points to the "first commit") from "master" to "main".
+
+### 4 Configuring a remote repository
+
+```ruby
+git remote add origin <repo URL> # This command configures a remote repository.
+```
+
 ## Create a new repository on the command line
 
 ```ruby

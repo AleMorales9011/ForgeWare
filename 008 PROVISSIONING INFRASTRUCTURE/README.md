@@ -5,7 +5,15 @@ Janes business Crafty Corner its growing and it time to take it online. In this 
 This repository utilizes a practical learning approach, guiding users through the process of building cloud infrastructure for Crafty Corner on a cloud platform of their choice (e.g., AWS, Google Cloud Platform, Azure). The project will provide step-by-step instructions, explanations for each code block, and troubleshooting tips to ensure a successful learning experience.
 
 ## What's Terraform?
-Infrastructure as Code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share. 
+Infrastructure as Code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share.
+
+## Installing Terraform
+To install Terraform, find the [appropriate package for your system](https://developer.hashicorp.com/terraform/install) and download it as a zip archive.
+
+After downloading Terraform, unzip the package. Terraform runs as a single binary named terraform. Any other files in the package can be safely removed and Terraform will still function.
+
+>[!Note]
+> Finally, make sure that the terraform binary is available on your ```PATH```. This process will differ depending on your operating system.
 
 ### Prerequisites:
 

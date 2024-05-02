@@ -77,7 +77,7 @@ Users can then clone the repository using
 ```ruby
 git clone ssh://server_username@server_ip/path/to/repository.git #(replace placeholders with your info).
 ```
-After making changes locally, they push their commits with git push origin main (assuming the remote is named origin and the branch is main).
+After making changes locally, they push their commits with ```git push origin main``` (assuming the remote is named origin and the branch is main).
 
 ## Remote Acces using a Git Web Hosting Service (GitHub) 
 
@@ -115,9 +115,9 @@ This command pushes the employee's local commits directly to the remote reposito
 ```origin``` is the default shortcut for the remote repository.
 ```<branch_name>``` specifies the branch they want to push their changes to (usually master for the main branch).
 
-### Pull with Rebase (git pull --rebase):
-This command fetches the latest changes from the remote repository and then attempts to replay your local commits
-on top of the updated remote branch head.
+>[!Note]
+> Pull with Rebase (git pull --rebase):
+Sometimes when pushing changes you can get an error. Usually means that the remote branch is ahead of yours. So you need to pull changes first before push your new changes. ```git pull --rebase``` fetches the latest changes from the remote repository and then attempts to replay your local commits on top of the updated remote branch head.
 
 ```ruby
 git pull origin <branch_name> --rebase

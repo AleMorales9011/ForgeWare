@@ -1,5 +1,4 @@
-
-# Version Control Basics:  
+## Version Control Basics:  
 After the adding the new hires to it's server to support the business growth in the previous chapter. Jane, the owner of "Crafty Corner," has been juggling product photos, descriptions, and inventory through a mess of spreadsheets and email threads. 
 
 **It's become a nightmare to keep track of everything**. Employees are changing descriptions, photos, changing prices and adding discounts and now Jane doesn't know th timeline of events. She doesn't know if the discounts were beneficial or not or which product desription is best or why changes were made in the first placce or by who. 
@@ -138,5 +137,5 @@ Sometimes when pushing changes you can get an error. Usually means that the remo
 ```ruby
 git pull origin <branch_name> --rebase
 ```
-# Conclusion
+## Conclusion
 This Git tutorial has equipped you with the essential tools to manage your code effectively. By mastering these core Git concepts, you've unlocked a powerful way to manage projects, track progress, and collaborate efficiently. This foundation will serve you well as you explore more advanced Git features and delve deeper into the world of version control. Feel free to contribute! If you have suggestions, corrections, or want to share your own Git tips, feel free to submit a pull request to this repository.

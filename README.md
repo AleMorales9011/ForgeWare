@@ -54,7 +54,7 @@ sudo groupadd GRP_OPS
 - [**CI/CD pipeline automation:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/003-ARCHITECTURE-BFF-PATTERN) Building and implementing (CI/CD) pipelines.
 - [**Containerization:**](https://github.com/AleMorales9011/01-DEVOPS/tree/c6539dc6757d215e91aa030d36c1f48a2d120ba6/005-%20CONTEINERIZATION) Use Docker and Kubernetes to package and deploy applications.
 - [**Infrastructure automation:**](https://github.com/AleMorales9011/01-DEVOPS/blob/0df8472a347ad3f828caed087bbf9c32cb44eab1/008-INFRASTRUCTURE%20AUTOMATION/README.md) Automating infrastructure provisioning and management using IaC tools
-- [**Advanced scripting:**]() Creating complex scripts to automate deployments and troubleshooting tasks.
+- [**Advanced scripting:**](https://github.com/AleMorales9011/01-DEVOPS/blob/8f0ee0cb3c32f32a3711bf8ad350d8985582b7db/009-ADVANCED%20SCRIPTING/README.md) Creating complex scripts to automate deployments and troubleshooting tasks.
 - [**Performance monitoring and optimization:**]() Utilizing advanced monitoring tools.
 
 **Advanced DevOps Tasks**

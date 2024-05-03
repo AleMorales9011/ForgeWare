@@ -8,7 +8,13 @@ Jane, the owner of "Crafty Corner," a small online craft store has been running 
 ## Methodology
 This script shows fundamental scripting concepts. It leverages a practical example written in Bash, a prevalent language for Linux and macOS systems. The example focuses on a DevOps-related task, specifically file manipulation within the context of system administration.
 
-## Result
+## Table of Contents
+- Payroll Table
+- Script
+- Permissions Strings
+- Conclusion
+  
+## Payroll Table
 Below is the payroll table that Jane from which Jane needs to extract the information to create the user and permissions into the system.
 
 | Employees | Directory         | Group       | Permission                    |

@@ -4,11 +4,18 @@ Jane's business Crafty Corner its growing and it's time to take it online, but f
 ## Methodology
 This file shows fundamental concepts of infrastructure provisioning using Terraform. It leverages HCL, a prevalent language for infrastructure provisioning to build the infrastructure below.
 
+![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/bf5c286430d93b2bfe3ea4054a73b42836960ece/008%20PROVISIONING%20INFRASTRUCTURE/Backend%20for%20Fronteds%20model.png)
+BFF (Back end for frontends pattern)
 
 ## Table of contents
 - What's Terraform
 - Installing Terraform
  
+## Benefits of using the BFF pattern
+- **Improved maintainability:** By separating the backend into multiple services, you can change one service without affecting the others. This makes it easier to develop, test, and deploy changes.
+- **Increased scalability:** You can scale each backend service independently to meet the specific needs of the frontend application it serves.
+- **Enhanced performance:** By tailoring the backend services to the `specific requirements of each frontend`, you can improve the overall performance of your application
+
 ## Prerequisites:
 An Azure subscription (https://azure.microsoft.com/en-us/free)<br>
 Terraform installed (https://developer.hashicorp.com/terraform/install)

@@ -1,4 +1,4 @@
-## Docker Compose
+## Conteinarization
 Acme Corp was struggling with its complex application. Developers battled with inconsistent environments, leading to bugs. Deployments were slow and cumbersome, requiring manual intervention for each service. Docker Compose came to the rescue! With a single YAML file, Docker Compose ensured a uniform development environment for everyone, eliminating bugs caused by environment mismatches. Deploying the entire application became a one-click operation, streamlining the process significantly.
 
 ### 1. Install Docker Compose

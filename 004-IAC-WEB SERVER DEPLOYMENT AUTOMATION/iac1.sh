@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 ----------------------------------------------------------------------------------
 echo "Atualizando e instalando apache2 e unzip..."
 apt-get update

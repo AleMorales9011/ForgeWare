@@ -1,4 +1,4 @@
-## Abstract
+## Basic Scripting:
 Jane, the owner of "Crafty Corner," a small online craft store has been running her business from a single PC. Now she just hired new employees to support the growth of her store. She cannot afford to allow new employees to snoop around her files and data outside the scope of their work, so she needs an organized and structured way to add new users to her server.
 
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FCC624)

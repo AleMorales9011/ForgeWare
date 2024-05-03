@@ -14,13 +14,13 @@ To show a step-by-step process of how to use Git for version control management 
 - Installing Git (One-time setup)
 - Initializing a Git repository
 - Managing Data with Git
-- Committing Changes:
+- Committing Changes
 - Reverting Mistakes (Optional)
 - Keeping Track of Progress
 - Remote Access
-- Remote Acces using a Bare Git Repository
-- Remote Acces using a Git Web Hosting Service (GitHub)
-- Conclussion
+- Remote Access using a Bare Git Repository
+- Remote Access using a Git Web Hosting Service (GitHub)
+- Conclusion
 
 
 
@@ -66,7 +66,7 @@ git checkout HEAD~1
 ```
 This command "checks out" the previous commit (represented by HEAD~1).
 
-## 4. Keeping Track of Progress:
+## Keeping Track of Progress:
 
 Jane can view the history of her commits with:
 
@@ -75,14 +75,14 @@ git log
 ```
 This shows a list of commits with their messages, allowing her to see how her data has evolved over time.
 
-## Remote Acces
+## Remote Access
 In the previous scenario Jane and its employees use git to collaborate using Git within the same server. Now, Jane has bought another computer so the operations deparment could make changes such as adding products, client informations and documents like contracts from their own work station. 
 
 >[!Note]
 > The most common way to ue Git to collaborate is using remote acces to online hosting repositories such as Github, Gitlab or Azure Repo.However this is not the only way. In the following example Jane's employee will acces Crafty Corner repo from his operation work station.
 
 
-## Remote Acces using a Bare Git Repository
+## Remote Access using a Bare Git Repository
 ### Server-side:
 Connect to your server and use 
 ```ruby
@@ -95,7 +95,7 @@ git clone ssh://server_username@server_ip/path/to/repository.git #(replace place
 ```
 After making changes locally, they push their commits with ```git push origin main``` (assuming the remote is named origin and the branch is main).
 
-## Remote Acces using a Git Web Hosting Service (GitHub) 
+## Remote Access using a Git Web Hosting Service (GitHub) 
 
 ### 1 Clone the main repository:
 
@@ -138,5 +138,5 @@ Sometimes when pushing changes you can get an error. Usually means that the remo
 ```ruby
 git pull origin <branch_name> --rebase
 ```
-# Conclussion
+# Conclusion
 This Git tutorial has equipped you with the essential tools to manage your code effectively. By mastering these core Git concepts, you've unlocked a powerful way to manage projects, track progress, and collaborate efficiently. This foundation will serve you well as you explore more advanced Git features and delve deeper into the world of version control. Feel free to contribute! If you have suggestions, corrections, or want to share your own Git tips, feel free to submit a pull request to this repository.

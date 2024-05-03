@@ -79,7 +79,7 @@ Initialize the project, which downloads a plugin called a provider that lets Ter
  terraform init
 ```
 
-## Write configuration
+## Write configuration (main.tf)
  
 ```ruby
 # Terraform Settings Block contains Terraform settings, including the required providers Terraform will use
@@ -170,7 +170,28 @@ resource "azurerm_storage_container" "stmobileui001" {
 }
 
 ```
+## Variables (var.tf)
+Variable files separate configuration values from the main Terraform code. This allows to reuse the same Terraform codebase for multiple deployments by simply changing the variable values.
+
+```ruby
+variable "location" {
+  type = string
+  default = "westeurope"
+}
+
+variable "tags" {
+  type = map
+  default = {
+      "Ambiente" = "Desenvolvimento"
+      "Integracao" = "Processo Devops"
+      "Compania" = "Aula Devops"
+      "Area" = "Marketing"
+    }
+}
+```
+
 ![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/d6b93bf0c23a8f9d49fb552b3129d0794d37e0de/003-ARCHITECTURE-BFF-PATTERN/003-IMAGES/Resources%20created.jpg)
+
 
 ## Conclussion
 By leveraging Terraform's infrastructure as code (IaC) approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey. 

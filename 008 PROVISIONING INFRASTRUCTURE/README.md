@@ -5,6 +5,7 @@ Jane's business Crafty Corner its growing and it's time to take it online, but f
 This file shows fundamental concepts of infrastructure provisioning using Terraform. It leverages HCL, a prevalent language for infrastructure provisioning to build the infrastructure below.
 
 ![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/bf5c286430d93b2bfe3ea4054a73b42836960ece/008%20PROVISIONING%20INFRASTRUCTURE/Backend%20for%20Fronteds%20model.png)
+
 BFF (Back end for frontends pattern)
 
 ## Table of contents
@@ -72,11 +73,13 @@ Initialize the project, which downloads a plugin called a provider that lets Ter
 ## Write configuration
  
 ```ruby
-# Terraform Settings Block
+# Terraform Settings Block contains Terraform settings, including the required providers Terraform will use
+# to provision your infrastructure.
+
 terraform {
   required_version = ">= 1.0.0"
   required_providers {
-    azurerm = {
+    azurerm = {      # A plugin that Terraform uses to create and manage your resources.
       source  = "hashicorp/azurerm"
       version = ">= 2.0" # Optional but recommended in production
     }
@@ -88,7 +91,7 @@ provider "azurerm" {
 }
 
 # Create a Resource Group for desktop 
-resource "azurerm_resource_group" "rg-desktop-bknd-001" {
+resource "azurerm_resource_group" "rg-desktop-bknd-001" {  # Define components of your infrastructure
   location = "westeurope"
   name     = "rg-desktop-bknd-001"
   tags     = var.desktop_tags
@@ -160,4 +163,5 @@ resource "azurerm_storage_container" "stmobileui001" {
 ```
 
 # Conclussion
+By leveraging Terraform's infrastructure as code (IaC) approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey. 
 

@@ -9,8 +9,17 @@ This file shows fundamental concepts of infrastructure provisioning using Terraf
 BFF (Back end for frontends pattern)
 
 ## Table of contents
+- Benefits of using the BFF pattern
+- Prerequisites
 - What's Terraform
 - Installing Terraform
+- Installing Azure CLI
+- Autenticating with Azure CLI
+- Create a Service Principal
+- Set your environment variables
+- Initialize Terraform
+- Write configuration
+- Conclussion
  
 ## Benefits of using the BFF pattern
 - **Improved maintainability:** By separating the backend into multiple services, you can change one service without affecting the others. This makes it easier to develop, test, and deploy changes.

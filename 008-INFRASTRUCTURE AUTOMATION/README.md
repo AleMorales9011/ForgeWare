@@ -1,3 +1,8 @@
+## Infrastructure Automation
+Manually deploying a web server involves running several commands in a specific order. A Bash script can automate these steps, saving you time and effort, especially if you need to deploy Apache on multiple servers.
+
+```ruby
+
 #!/bin/bash
 ----------------------------------------------------------------------------------
 echo "Atualizando e instalando apache2 e unzip..."
@@ -15,3 +20,6 @@ unzip main.zip
 cd linux-site-dio-main
 cp -R * /var/www/html/
 ----------------------------------------------------------------------------------
+
+```
+## Conclussion

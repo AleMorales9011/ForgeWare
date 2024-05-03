@@ -45,7 +45,7 @@ sudo groupadd GRP_OPS
 
 - [**Basic scripting:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE) Writing scripts to automate repetitive configurations.<br>
 - [**Version control basics:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/002-GIT-CREATING%20%26%20PUSHING%20REPOSITORIES) Utilizing version control systems (VCS) like Git for code management.
-- [**Provisioning and managing infrastructure:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/003-ARCHITECTURE-BFF-PATTERN) Setting up servers, and configuring cloud environments.
+- [**Provisioning and managing infrastructure:**](https://github.com/AleMorales9011/01-DEVOPS/blob/main/008%20PROVISIONING%20INFRASTRUCTURE/README.md) Setting up servers, and configuring cloud environments.
 - [**Configuration management:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/003-ARCHITECTURE-BFF-PATTERN) Automate infrastructure configuration and application deployment.<br>
 - [**Monitoring and alerting:**]() Setting up basic monitoring tools to track system health.
 

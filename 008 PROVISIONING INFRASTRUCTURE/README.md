@@ -170,7 +170,7 @@ resource "azurerm_storage_container" "stmobileui001" {
 }
 
 ```
-![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/e616d839e7632ac88cc4e3c8617f0a2df944da4d/008%20PROVISIONING%20INFRASTRUCTURE/Backend%20for%20Fronteds%20model.png)
+![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/d6b93bf0c23a8f9d49fb552b3129d0794d37e0de/003-ARCHITECTURE-BFF-PATTERN/003-IMAGES/Resources%20created.jpg)
 
 ## Conclussion
 By leveraging Terraform's infrastructure as code (IaC) approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey. 

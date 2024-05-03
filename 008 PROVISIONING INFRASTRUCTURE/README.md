@@ -1,13 +1,18 @@
 # Provisioning and managing infrastructure: 
-Jane's business Crafty Corner its growing and it's time to take it online. In this chapter we will help Jane to design, provision, and manage cloud resources on a chosen cloud platform using Terraform configurations. The project emphasizes best practices for infrastructure as code (IaC) and demonstrates the benefits of managing infrastructure through code.
+Jane's business Crafty Corner its growing and it's time to take it online, but first she needs infrastructure to host her website. In this chapter we will help Jane to design, provision, and manage cloud resources on a chosen cloud platform using Terraform configurations. 
 
 ## Methodology
-This repository shows the process of building cloud infrastructure for Crafty Corner on a cloud platform of their choice (e.g., AWS, Google Cloud Platform, Azure). The project will provide step-by-step instructions, explanations for each code block, and troubleshooting tips.
+This file shows fundamental concepts of infrastructure provisioning using Terraform. It leverages HCL, a prevalent language for infrastructure provisioning to build the infrastructure below.
+
 
 ## Table of contents
 - What's Terraform
 - Installing Terraform
-- 
+ 
+## Prerequisites:
+An Azure subscription (https://azure.microsoft.com/en-us/free)<br>
+Terraform installed (https://developer.hashicorp.com/terraform/install)
+
 ## What's Terraform?
 Infrastructure as Code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share.
 
@@ -19,11 +24,46 @@ After downloading Terraform, unzip the package. Terraform runs as a single binar
 >[!Note]
 > Finally, make sure that the terraform binary is available on your ```PATH```. This process will differ depending on your operating system.
 
-### Prerequisites:
+## Installing Azure CLI 
+The Azure CLI will allow you to authenticate with Azure.
 
-An Azure subscription (https://azure.microsoft.com/en-us/free)<br>
-Terraform installed (https://developer.hashicorp.com/terraform/install)
+```ruby
+Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
+```
 
+## Autenticating with Azure CLI
+Terraform must authenticate to Azure to create infrastructure.
+
+```ruby
+az login
+```
+
+## Create a Service Principal
+Next, we need to create a Service Principal . An application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf. Update the <SUBSCRIPTION_ID> with the subscription ID you specified in the previous step.
+
+```ruby
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
+```
+## Set your environment variables
+A good practice HashiCorp recommends is setting these values as environment variables rather than saving them in your Terraform configuration to avoid passing sensitive info in the configuration code.
+
+```ruby
+
+$Env:ARM_CLIENT_ID = "<APPID_VALUE>"
+$Env:ARM_CLIENT_SECRET = "<PASSWORD_VALUE>"
+$Env:ARM_SUBSCRIPTION_ID = "<SUBSCRIPTION_ID>"
+$Env:ARM_TENANT_ID = "<TENANT_VALUE>"
+
+```
+## Initialize Terraform
+Initialize the project, which downloads a plugin called a provider that lets Terraform interact with the assigned provider.
+
+```ruby
+ terraform init
+```
+
+## Write configuration
+ 
 ```ruby
 # Terraform Settings Block
 terraform {

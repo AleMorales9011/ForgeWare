@@ -1,4 +1,4 @@
-# Abstract
+# Provisioning and managing infrastructure: 
 Janes business Crafty Corner its growing and it time to take it online. In this chapter we will help Jane to design, provision, and manage cloud resources on a chosen cloud platform using Terraform configurations. The project emphasizes best practices for infrastructure as code (IaC) and demonstrates the benefits of managing infrastructure through code.
 
 ## Methodology

@@ -43,7 +43,7 @@ sudo groupadd GRP_OPS
 
 **Beginner DevOps Tasks**
 
-- [**Basic scripting:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE) Writing scripts to automate repetitive configurations.<br>
+- [**Basic scripting:**](https://github.com/AleMorales9011/01-DEVOPS/tree/78c0be874b53c846b602aac8ab972aa9903d6598/001-Basic%20Scripting) Writing scripts to automate repetitive configurations.<br>
 - [**Version control basics:**](https://github.com/AleMorales9011/01-DEVOPS/tree/dfeebb970c5d2e188626a02a99f437fcc490cd9b/002-GIT-CREATING%20%26%20PUSHING%20REPOSITORIES) Utilizing version control systems (VCS) like Git for code management.
 - [**Provisioning and managing infrastructure:**](https://github.com/AleMorales9011/01-DEVOPS/blob/e5a2db3041f6fedaf159c9a1acaadc0a6a5d499c/003%20PROVISIONING%20INFRASTRUCTURE/README.md) Setting up servers, and configuring cloud environments.
 - [**Configuration management:**](https://github.com/AleMorales9011/01-DEVOPS/blob/67c1af58c389f7bf7e49145b1279acbcac14b40b/009-%20CONFIGURATION%20MANAGEMENT/README.md) Automate infrastructure configuration and application deployment.<br>

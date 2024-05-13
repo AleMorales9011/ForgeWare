@@ -137,7 +137,8 @@ The provided script is a Bash script for deploying the project.
 
 echo "Creating images..."
 
-docker build -t alemorales9011935/projeto-backend:1.0 backend/.  # Build docker image. Creates a self-contained executable package for running an application
+docker build -t alemorales9011935/projeto-backend:1.0 backend/.  # Build docker image.
+Creates a self-contained executable package for running an application
 docker build -t alemorales9011935/projeto-database:1.0 database/. 
 
 echo "Pushing images..."
@@ -147,7 +148,8 @@ docker push alemorales9011935/projeto-database:1.0
 
 echo "Creating Services..."
 
-kubectl apply -f ./services.yml --validate=false # Figure out how to achieve the desired state of the infrastucture we define.
+kubectl apply -f ./services.yml --validate=false # Figure out how to achieve
+the desired state of the infrastucture we define.
 
 echo "Criating Deployment"
 

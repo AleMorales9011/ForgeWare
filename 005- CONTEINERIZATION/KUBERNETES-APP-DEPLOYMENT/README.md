@@ -4,7 +4,16 @@ This project demonstrates the deployment of a multi-tier application on Kubernet
 ## Methodology
 Conteinerized Application deployment using Dockers and Kubernetes to illlustrate containerization best practices. All the required services for propper functioning of the application were created from scratch.
 
-## Results
+## Table Of Content
+- Persistent Volme Claim
+- MySQL Database Deployment
+- PHP Deployment
+- Load Balancer Service
+- MySQL Database Service
+- Deployment Script
+- Conclussion
+
+### Persistent Volme Claim
 The provided YAML snippet is a well-structured Persistent Volume Claim (PVC) requesting persistent storage in Kubernetes. This PVC effectively requests ```10 Gigabytes``` of persistent storage with ```ReadWriteOnce``` access for a single Pod at a time. The ```standard-rwo``` StorageClass dictates where and how this storage will be provisioned.
 
 ```ruby
@@ -103,7 +112,7 @@ spec:
   type: LoadBalancer # Type of Service
 
 ```
-### MySql Database Service
+### MySQL Database Service
 The configuration below creates a ClusterIP service for a MySQL database. A ClusterIP service is only accessible from within the Kubernetes cluster. Pods within the cluster can access the MySQL service at mysql-connection on port ```3306```. 
 
 ```ruby

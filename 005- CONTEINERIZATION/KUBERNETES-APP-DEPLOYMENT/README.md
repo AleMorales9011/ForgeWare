@@ -5,7 +5,7 @@ This project demonstrates the deployment of a multi-tier application on Kubernet
 Conteinerized Application deployment using Dockers and Kubernetes to illlustrate containerization best practices. All the required services for propper functioning of the application were created from scratch.
 
 ## Results
-The provided YAML defines several Kubernetes resources for deploying a MySQL database and a PHP application:
+The provided YAML snippet is a well-structured Persistent Volume Claim (PVC) requesting persistent storage in Kubernetes. This PVC effectively requests ```10 Gigabytes``` of persistent storage with ```ReadWriteOnce``` access for a single Pod at a time. The ```standard-rwo``` StorageClass dictates where and how this storage will be provisioned.
 
 ```ruby
 # Persistent Volume Claim to request persistent storage to kubernetes
@@ -21,8 +21,11 @@ spec:
       storage: 10Gi # Request 10 Gb of storage
   storageClassName: standard-rwo # Pre configured sorage class that proviions Read write once volumes
 
----
+```
+### MySQL Database Deployment
+This deployment creates pods running a MySQL container with persistent storage for the database data. The provided code snippet defines a deployment for a MySQL database container in Kubernetes. 
 
+```ruby
 # Mysql deployment
 apiVersion: apps/v1
 kind: Deployment
@@ -55,8 +58,11 @@ spec:
         persistentVolumeClaim:
           claimName: mysql-dados
 
----
+```
+### PHP Deployment
+The provided YAML defines a Kubernetes deployment configuration for a PHP application. This YAML describes a deployment that creates six pods running the container image alemorales9011935/projeto-backend:1.0. These pods will be labeled with app: php and will expose their application on port 80.
 
+```ruby
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -80,7 +86,7 @@ spec:
         ports:
         - containerPort: 80
 ```
-
+### Load Balancer Service
 The configuration below defines a php-Service. This configuration creates a ```LoadBalancer``` service for your PHP application. Kubernetes will work with your cloud provider to set up an external load balancer that will distribute traffic across multiple pods running the PHP application. The external IP address for accessing the service will be dynamically assigned by the cloud provider and can be retrieved later using ```kubectl get service php```.
 
 ```ruby
@@ -97,6 +103,7 @@ spec:
   type: LoadBalancer # Type of Service
 
 ```
+### MySql Database Service
 The configuration below creates a ClusterIP service for a MySQL database. A ClusterIP service is only accessible from within the Kubernetes cluster. Pods within the cluster can access the MySQL service at mysql-connection on port ```3306```. 
 
 ```ruby
@@ -122,25 +129,26 @@ The provided script is a Bash script for deploying the project.
 
 echo "Creating images..."
 
-docker build -t alemorales9011935/projeto-backend:1.0 backend/.
-docker build -t alemorales9011935/projeto-database:1.0 database/.
+docker build -t alemorales9011935/projeto-backend:1.0 backend/.  # Build docker image. Creates a self-contained executable package for running an application
+docker build -t alemorales9011935/projeto-database:1.0 database/. 
 
 echo "Pushing images..."
 
-docker push alemorales9011935/projeto-backend:1.0
+docker push alemorales9011935/projeto-backend:1.0 # Uploading a completed Docker image to a Docker registry.
 docker push alemorales9011935/projeto-database:1.0
 
 echo "Creating Services..."
 
-kubectl apply -f ./services.yml --validate=false
+kubectl apply -f ./services.yml --validate=false # Figure out how to achieve the desired state of the infrastucture we define.
 
 echo "Criating Deployment"
 
-kubectl apply -f ./deployment.yml --validate=false
+kubectl apply -f ./deployment.yml --validate=false # Controls the validation behaviour.
 
 ```
 
-
+## Conclussion
+This repository serves as a solid foundation for your Kubernetes deployment journey. By following the steps outlined here and leveraging the provided scripts, you can streamline your deployment process and ensure a consistent and scalable environment for your application. Feel free to adapt and extend these practices to suit your specific application needs and explore the vast functionalities offered by Kubernetes!
 
 
 

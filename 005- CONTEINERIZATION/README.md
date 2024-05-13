@@ -1,4 +1,4 @@
-## Conteinarization
+## Containerization
 In the past chapter Jane created it's infrastructure to take its company to the internet. Now, her team is struggling with its complex application. Developers are battling with inconsistent environments, leading to bugs. Deployments are slow and cumbersome, requiring manual intervention for each service. Docker Compose came to the rescue! With a single YAML file, Docker Compose ensured a uniform development environment for everyone, eliminating bugs caused by environment mismatches. Deploying the entire application became a one-click operation, streamlining the process significantly.
 
 ### 1. Install Docker Compose

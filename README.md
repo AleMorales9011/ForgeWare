@@ -1,28 +1,10 @@
-# 01-DevOps: 0 to 100 With Code Examples<br>
-### Mastering Version Control, Containerization, and Automated Deployments with Code-Driven Infrastructure (CDI) Tutorials
+## DevOps: Handbook <br>
+*Mastering Version Control, Containerization, and Automated Deployments with Code-Driven Infrastructure*
 
-![Devops-2022](https://github.com/AleMorales9011/01-DEVOPS/blob/9132c4b366c6a8d923e15699893b0cfe35ca40d6/001-USER%2CDIRECTORIES%20%26%20PERMISSION%20STRUCTURE/Devops-2022.jpg)
-
-Popularity of Software Methodologies in 2022 Source – [Statista](https://www.statista.com/statistics/1292382/popular-technologies-in-the-devops-tech-stack/)
-
-*What you will find*
-
-Pre-built CI/CD Code Examples: Battle-tested code snippets for common DevOps tasks, designed to integrate seamlessly into your pipeline. Copy, paste, and customize for your specific infrastructure. Designed as a foundation to tackle even the most advanced DevOps challenges, regardless of industry or codebase size.
-
-![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FCC624)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-35495E?style=for-the-badge&logo=ubuntu&logoColor=2CA5E0)
-![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-000.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-blue?style=for-the-badge&logo=microsoft%20azure&logoColor=blue&labelColor=FFFFFF&link=https%3A%2F%2Fimages.app.goo.gl%2FK7PN1jYJd57x4q7A8)
-![PL](https://img.shields.io/badge/PL%2FSQL-FFFFFF?style=for-the-badge&logo=oracle&logoColor=FF0000&labelColor=FFFFFF&color=FF0000)
-![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515)
-![BashScript](https://img.shields.io/badge/bash%20script-0101?style=flat&logo=gnubash&logoColor=%23FFFFFF&labelColor=%23000000)
-
-
-
+**Pre-built CI/CD** Code Examples: Battle-tested code snippets for common DevOps tasks, designed to **integrate seamlessly** into your pipeline. Copy, paste, and customize for your specific infrastructure. Designed as a foundation to tackle even the most advanced DevOps challenges, regardless of industry or codebase size.
 
 ## Example Usage
-Using IaC principles to automate directory structures within your infrastructure.
+Using IaC principles to **automate directory structures** within your infrastructure.
 
 ```ruby
 #!/bin/bash
@@ -67,6 +49,6 @@ sudo groupadd GRP_OPS
 
 
 # Conclusion
-Remember, DevOps is a cultural shift as much as a technical practice. By embracing collaboration, automation, and continuous improvement, you can empower your team to deliver high-quality software faster and more reliably. This repository serves as a springboard for your DevOps journey. Leverage the provided resources, experiment, learn from the community, and continuously refine your DevOps practices. Good luck!
+Remember, DevOps is a **cultural shift** as much as a technical practice. By **embracing collaboration**, automation, and continuous improvement, you can empower your team to deliver high-quality software faster and more reliably. This repository serves as a springboard for your **DevOps journey**. Leverage the provided resources, experiment, learn from the community, and continuously refine your DevOps practices. Good luck!
 
 

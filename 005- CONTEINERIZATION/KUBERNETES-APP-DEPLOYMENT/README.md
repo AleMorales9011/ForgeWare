@@ -128,7 +128,7 @@ spec:
   clusterIp: None
 
 ```
-## Deployment Script
+### Deployment Script
 The provided script is a Bash script for deploying the project.
 
 ```ruby

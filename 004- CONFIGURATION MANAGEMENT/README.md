@@ -1,8 +1,8 @@
 # Configuration Management
-In the past chapter we created infrastructure so Jane could take it's business online with a website. Now, she needs a way to make changes such as increase storage, update the operating system, update 3rd party services for better performance etc. This infrastructure changes are very common and time consuming so we will want to make it with the less amount of effort and friction as possible. To do that we can automate this process using Azure Devops.
+Now, Jane( a business owner) needs to easily update her **website's infrastructure** (storage, OS, services). Let's automate this with Azure DevOps to save time and effort.
 
 # Methodology
-In this recipe you can find a simple way to automate the infrastructure provisioning and configuration management using YML whiting Azure DevOps. Azure Pipelines provides a comprehensive and flexible solution for automating your software development lifecycle.
+In this recipe you can find a simple way to **automate the infrastructure provisioning** and configuration management using YML whiting Azure DevOps. 
 
 ```ruby
 
@@ -38,4 +38,4 @@ steps:
 
 ```
 # Conclusion
-By leveraging Azure Pipelines' features, you can achieve continuous integration and continuous delivery (CI/CD) for your projects, ensuring consistent and reliable deployments. We encourage you to explore the code, customize it for your specific needs, and contribute improvements.  The provided examples showcase common CI/CD workflows, but the possibilities are vast.
+By leveraging Azure Pipelines' features, you can achieve **continuous integration and continuous delivery (CI/CD)** for your projects, ensuring consistent and reliable deployments. We encourage you to explore the code, **customize it** for your specific needs, and contribute improvements.  The provided examples showcase **common CI/CD workflows**, but the possibilities are vast.

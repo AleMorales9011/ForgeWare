@@ -1,5 +1,14 @@
 ## Containerization
-In the past chapter Jane created it's infrastructure to take its company to the internet. Now, her team is struggling with its complex application. Developers are battling with inconsistent environments, leading to bugs. Deployments are slow and cumbersome, requiring manual intervention for each service. Docker Compose came to the rescue! With a single YAML file, Docker Compose ensured a uniform development environment for everyone, eliminating bugs caused by environment mismatches. Deploying the entire application became a one-click operation, streamlining the process significantly.
+Containerization is a way to package an application with everything it needs to run (code, libraries, settings) into a self-contained unit called a container. 
+
+## Abstract
+Jane's team overcame complex app issues with Docker Compose. It ensured consistent environments, eliminated bugs, and streamlined deployments with a single-click.
+
+## Table of Contents
+- Install Docker Compose
+- Create the YML file
+- Executing the script
+- Conclusion 
 
 ### 1. Install Docker Compose
 Before executing the yaml file it's important to install docker compose. This task is simply achieved by coding the following command into the terminal.

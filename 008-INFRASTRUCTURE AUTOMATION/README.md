@@ -1,6 +1,8 @@
 ## Infrastructure Automation
 Manually deploying a web server involves running several commands in a specific order. A Bash script can automate these steps, saving you time and effort, especially if you need to deploy Apache on multiple servers.
 
+## Web Server Deployment
+This Bash script provides a streamlined and automated approach to deploying an Apache web server.
 ```ruby
 
 #!/bin/bash
@@ -23,6 +25,6 @@ cp -R * /var/www/html/
 
 ```
 ## Conclussion
-This Bash script provides a streamlined and automated approach to deploying an Apache web server. It ensures consistency, reduces errors, and saves time compared to manual deployments. The script can be easily customized to fit your specific needs and integrated into larger automation workflows.
+Scripts ensure consistency, reduces errors, and saves time compared to manual deployments. The script can be easily customized to fit your specific needs and integrated into larger automation workflows.
 
 We welcome contributions to this project! Feel free to submit pull requests to improve the script's functionality or add features such as dependency installation or configuration management.

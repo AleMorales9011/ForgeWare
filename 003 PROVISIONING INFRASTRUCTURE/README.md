@@ -1,5 +1,5 @@
 ## Provisioning and managing infrastructure: 
-Jane's business Crafty Corner its growing and it's time to take it online, but first she needs infrastructure to host her website. In this chapter we will help Jane to design, provision, and manage cloud resources on a chosen cloud platform using Terraform configurations. 
+Jane's business Crafty Corner its growing and it's time to take it online, but first she needs **infrastructure to host her website**. In this chapter we will help Jane to **design, provision, and manage** cloud resources on a chosen cloud platform using Terraform configurations. 
 
 ## Methodology
 This file shows fundamental concepts of infrastructure provisioning using Terraform. It leverages HCL, a prevalent language for infrastructure provisioning to build the infrastructure below.

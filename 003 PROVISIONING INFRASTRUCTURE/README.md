@@ -1,4 +1,4 @@
-# Provisioning and managing infrastructure: 
+## Provisioning and managing infrastructure: 
 Jane's business Crafty Corner its growing and it's time to take it online, but first she needs infrastructure to host her website. In this chapter we will help Jane to design, provision, and manage cloud resources on a chosen cloud platform using Terraform configurations. 
 
 ## Methodology
@@ -194,5 +194,5 @@ variable "tags" {
 
 
 ## Conclussion
-By leveraging Terraform's infrastructure as code (IaC) approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey. 
+By leveraging Terraform's **infrastructure as code (IaC)** approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey. 
 

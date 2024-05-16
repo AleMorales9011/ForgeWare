@@ -1,6 +1,6 @@
 
 ## Advanced Scripting
-Running individual containers on multiple machines can be cumbersome. Docker Swarm eliminates the need to manually deploy containers on each node. A single-machine failure can bring down your entire application if your containers are running solely on that machine. Docker Swarm ensures high availability by automatically rescheduling containers to healthy nodes if a node fails. Docker Swarm simplifies container orchestration at scale, ensuring high availability, efficient resource utilization, and streamlined management of your containerized applications.
+Docker Swarm solves managing many containers. It **auto-deploys** across machines and reschedules containers if a machine fails, keeping your application running.  This simplifies managing large container deployments.
 
 ## Table of Contents
 - Vangrantfile
@@ -9,7 +9,7 @@ Running individual containers on multiple machines can be cumbersome. Docker Swa
 - Worker node script
   
 ## Vagrant File
-First, we must create a Vagrantfile; which is a configuration file used with Vagrant, a tool for managing virtual machines. It acts as a blueprint for setting up your development environment. In this case, we use it to create and set up 3 virtual machines in combination with bash scripts.
+First, we must create a Vagrantfile; which is a **configuration file** used with Vagrant, a tool for managing virtual machines. It acts as a blueprint for setting up your development environment. In this case, we use it to create and set up 3 virtual machines in combination with bash scripts.
 
 ```ruby
 # -*- mode: ruby -*-
@@ -55,7 +55,7 @@ end
 ```
 
 ## Docker Script
-This script runs in the Vagrant file, and is a convenient way to set up a system for working with Docker and Docker Compose, particularly for users who work with Vagrant and containerized environments. It streamlines the installation process and ensures the vagrant user has the necessary permissions to utilize Docker effectively.
+This Vagrant script simplifies Docker and Docker Compose setup for containerized workflows. It **automates installation** and ensures proper user permissions for Vagrant users.
 
 ```ruby
 
@@ -68,7 +68,7 @@ sudo usermod -aG docker vagrant
 
 ```
 ## Master Node Script
-This script also runs in the vagrant file. It initializes a Docker Swarm cluster in manager mode and generates a join token for worker nodes. The script stores the join token in a file on the manager node. 
+This script also runs in the vagrant file. It initializes a ```Docker Swarm cluster``` in manager mode and generates a join token for worker nodes. The script stores the join token in a file on the manager node. 
 
 ```ruby
 
@@ -79,7 +79,7 @@ sudo docker swarm join-token worker | grep docker > /vagrant/worker.sh
 ```
 
 ## Worker Script
-This line of code instructs a machine to join an existing Docker Swarm cluster as a worker node. this code instructs a worker node to join a Docker Swarm cluster managed by a node at 10.10.10.100:2377 using the provided join token.
+This line of code instructs a machine to join an existing Docker Swarm cluster as a ```worker node```. This code instructs a worker node to join a Docker Swarm cluster managed by a node at ```10.10.10.100:2377``` using the provided join token.
 
 ```ruby
 
@@ -89,4 +89,4 @@ SWMTKN-1-3pj8k0i4tn77bd93a0yxhgh36hxuef5q5oyg1732rztnfy29ll-a94q0ipwgrjs4xikzyb4
 ```
 
 ## Conclusion
-In conclusion, Docker Swarm tackles the challenges of managing containers across multiple machines. It streamlines deployment, ensures high availability through automatic failover, and optimizes resource utilization. By simplifying container orchestration at scale, Docker Swarm empowers you to effectively manage your containerized applications.
+Docker Swarm **tames complex container deployments**. It automates deployments, keeps apps running during failures, and efficiently uses resources, making container management a breeze.

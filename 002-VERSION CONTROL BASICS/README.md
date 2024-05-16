@@ -1,11 +1,6 @@
 ## Version Control Basics:  
 After the adding the new hires to it's server to support the business growth in the previous chapter. Jane, the owner of "Crafty Corner," has been juggling product photos, descriptions, and inventory through a mess of spreadsheets and email threads. 
 
-**It's become a nightmare to keep track of everything**. Employees are changing descriptions, photos, changing prices and adding discounts and now Jane doesn't know th timeline of events. She doesn't know if the discounts were beneficial or not or which product desription is best or why changes were made in the first placce or by who. 
-
-![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-35495E?style=for-the-badge&logo=ubuntu&logoColor=2CA5E0)
-
 ## Methodology
 To show a step-by-step process of how to use Git for version control management through a fictional situation. 
 

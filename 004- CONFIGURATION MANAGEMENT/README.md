@@ -7,10 +7,10 @@ In this recipe you can find a simple way to **automate the infrastructure provis
 ```ruby
 
 trigger:
-  - main  # This specifies that the pipeline will be triggered whenever there's a push to the main branch of your Git repository.
+  - main  # The pipeline will be triggered whenever there's a push to the main branch.
 
 pool:
-  vmImage: ubuntu-latest # Defines the virtual agent pool where the pipeline tasks will be executed.
+  vmImage: ubuntu-latest # Defines where the pipeline tasks will be executed.
 
 steps:
 - task: TerraformInstaller@1 # Installs a specific version of Terraform
@@ -19,7 +19,7 @@ steps:
 
 - task: TerraformTaskV4@4 # Executes Terraform commands.
   inputs: # Defines the input parameters for the task
-    provider: 'azurerm' # Tells Terraform to use the Azure Resource Manager provider for interacting with Azure resources.
+    provider: 'azurerm' # Tells Terraform to use the Azure Resource Manager provider.
     command: 'init' # Specifies the Terraform command to be executed. 
     backendServiceArm: 'bknd-prod-001(f97a229a-2aa9-47e7-ae31-76ed06c11e1d)'
     backendAzureRmResourceGroupName: 'rg-terraformdevops-001'

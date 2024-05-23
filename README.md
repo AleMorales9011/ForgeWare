@@ -49,6 +49,6 @@ sudo groupadd GRP_OPS
 
 
 # Conclusion
-Remember, DevOps is a **cultural shift** as much as a technical practice. By **embracing collaboration**, automation, and continuous improvement, you can empower your team to deliver high-quality software faster and more reliably. This repository serves as a springboard for your **DevOps journey**. Leverage the provided resources, experiment, learn from the community, and continuously refine your DevOps practices. Good luck!
+Remember, DevOps is a **cultural shift** as much as a technical practice. By **embracing collaboration**, automation, and continuous improvement, you can empower your team to deliver high-quality software faster and more reliably. This repository serves as a springboard for your **DevOps journey**. Leverage the provided resources, experiment, learn from the community, and continuously refine your DevOps practices. 
 
 

@@ -1,14 +1,13 @@
 ## Basic Scripting:
+
 Jane, the owner of "Crafty Corner," a small online craft store has been running her business from a single PC. Now she just hired new employees to support the growth of her store. She cannot afford to allow new employees to snoop around her files and data outside the scope of their work, so she needs an organized and structured way to add new users to her server.
 
-![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FCC624)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-35495E?style=for-the-badge&logo=ubuntu&logoColor=2CA5E0)
-![BashScript](https://img.shields.io/badge/bash%20script-0101?style=flat&logo=gnubash&logoColor=%23FFFFFF&labelColor=%23000000)
-
 ## Methodology
+
 This script shows fundamental scripting concepts. It leverages a practical example written in Bash, a prevalent language for Linux and macOS systems. The example focuses on a DevOps-related task, specifically file manipulation within the context of system administration.
 
 ## Table of Contents
+
 - Payroll Table
 - Script
 - Permissions Strings
@@ -31,6 +30,7 @@ Below is the payroll table that Jane from which Jane needs to extract the inform
 
 
 ### Script
+
 The script below creates the above infrastructure 
 
 ```ruby

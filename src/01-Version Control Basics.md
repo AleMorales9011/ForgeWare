@@ -1,4 +1,4 @@
-## Version Control Basics:  
+## Designing and Implementing a version control system:  
 After the adding the new hires to it's server to support the business growth in the previous chapter. Jane, the owner of "Crafty Corner," has been juggling product photos, descriptions, and inventory through a mess of spreadsheets and email threads. 
 
 ## Methodology

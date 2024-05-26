@@ -1,4 +1,4 @@
-## Provisioning and managing infrastructure: 
+## Deploying infrastructure with Terraform: 
 Jane's business Crafty Corner its growing and it's time to take it online, but first she needs **infrastructure to host her website**. In this chapter we will help Jane to **design, provision, and manage** cloud resources on a chosen cloud platform using Terraform configurations. 
 
 ## Methodology

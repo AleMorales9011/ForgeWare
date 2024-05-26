@@ -1,6 +1,6 @@
-## Basic Scripting:
+## Creating users, permissions, directories, and groups with Bash:
 
-Jane, the owner of "Crafty Corner," a small online craft store has been running her business from a single PC. Now she just hired new employees to support the growth of her store. She cannot afford to allow new employees to snoop around her files and data outside the scope of their work, so she needs an organized and structured way to add new users to her server.
+Jane, the owner of "Crafty Corner," just hired new employees to support the growth of her store. She cannot afford to allow new employees to snoop around, so she needs an organized and structured way to add new users to her server.
 
 ## Methodology
 

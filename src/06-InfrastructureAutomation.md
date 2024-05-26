@@ -3,6 +3,7 @@ Manually deploying a web server involves running several commands in a specific 
 
 ## Web Server Deployment
 This Bash script provides a streamlined and automated approach to deploying an Apache web server.
+
 ```ruby
 
 #!/bin/bash

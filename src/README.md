@@ -1,4 +1,4 @@
-![banner](https://github.com/AleMorales9011/FORGE-OPS/blob/b3ea1a4c67603b566e740a72ff104e034b9e616d/010-IMAGES/Forge-ops%20banner.jpg)
+![banner](https://github.com/AleMorales9011/FORGE-OPS/blob/2a4fbbd4f25619ec415851756db3f4ca42b24b75/src/images/Forge-ops%20banner.jpg)
 
 ## Forge-Ops
 Collection of resources and tools for implementing DevOps practices.

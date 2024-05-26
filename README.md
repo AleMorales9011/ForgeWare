@@ -1,8 +1,6 @@
-## DevOps: Handbook <br>
-*Mastering Version Control, Containerization, and Automated Deployments with Code-Driven Infrastructure*
 
-**Pre-built CI/CD** Code Examples: Battle-tested code snippets for common DevOps tasks, designed to **integrate seamlessly** into your pipeline. Copy, paste, and customize for your specific infrastructure. Designed as a foundation to tackle even the most advanced DevOps challenges, regardless of industry or codebase size.
-
+## Forge-Ops
+Collection of resources and tools for implementing DevOps practices.
 ## Example Usage
 Using IaC principles to **automate directory structures** within your infrastructure.
 
@@ -10,15 +8,15 @@ Using IaC principles to **automate directory structures** within your infrastruc
 #!/bin/bash
 
 # Creating directories
-sudo mkdir /public  # sudo execute the command with superuser privileges
-sudo mkdir /adm     # mkdir is the command for creating a directory
-sudo mkdir /sales
-sudo mkdir /operations
+sudo mkdir /dir_1  # sudo execute the command with superuser privileges
+sudo mkdir /dir_2     # mkdir is the command for creating a directory
+sudo mkdir /dir_3
+sudo mkdir /dir_4
 
 # Creating groups
-sudo groupadd GRP_ADM  # groupadd creates a new group
-sudo groupadd GRP_SALES
-sudo groupadd GRP_OPS
+sudo groupadd GRP_1  # groupadd creates a new group
+sudo groupadd GRP_2
+sudo groupadd GRP_3
 
 ```
 ## Table Of Contents

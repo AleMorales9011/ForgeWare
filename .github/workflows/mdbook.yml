@@ -5,7 +5,7 @@
 name: Deploy mdBook site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on schedule at 4:00 am Brazil time.
   schedule:
     cron: "0 1 * * *"
 

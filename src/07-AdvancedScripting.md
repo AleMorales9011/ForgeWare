@@ -1,5 +1,5 @@
 
-## Advanced Scripting
+## Setting deveelopping environment with Vagrant
 Docker Swarm solves managing many containers. It **auto-deploys** across machines and reschedules containers if a machine fails, keeping your application running.  This simplifies managing large container deployments.
 
 ## Table of Contents

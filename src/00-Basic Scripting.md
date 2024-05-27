@@ -1,4 +1,4 @@
-## Creating users, permissions, directories, and groups with Bash:
+## Automating the creation of users, permissions, directories, and groups with Bash:
 
 Jane, the owner of "Crafty Corner," just hired new employees to support the growth of her store. She cannot afford to allow new employees to snoop around, so she needs an organized and structured way to add new users to her server.
 

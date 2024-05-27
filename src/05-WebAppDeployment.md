@@ -1,4 +1,4 @@
-## Conteinerized App Deployment
+## Deploying a web application with kubernetes
 This project demonstrates the deployment of a **multi-tier application on Kubernetes**, a container orchestration platform. The application consists of a MySQL database and a PHP backend service.
 
 ## Methodology

@@ -1,4 +1,4 @@
-## Containerization
+## Containerizing an application with Docker
 Containerization is a way to package an application with everything it needs to run (code, libraries, settings) into a self-contained unit called a container. 
 
 ## Abstract

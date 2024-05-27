@@ -1,4 +1,4 @@
-# Configuration Management
+# Creating a CI/CD pipeline with Azure DevOps
 Now, Jane( a business owner) needs to easily update her **website's infrastructure** (storage, OS, services). Let's automate this with Azure DevOps to save time and effort.
 
 # Methodology

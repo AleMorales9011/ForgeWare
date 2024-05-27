@@ -11,6 +11,25 @@
 - Infrastructure provisioning is slow and inconsistent.
 - Deployments are manual and prone to human error.
 
+## Example Usage
+Using IaC principles to **automate directory structures** within your infrastructure.
+
+```ruby
+#!/bin/bash
+
+# Creating directories
+sudo mkdir /dir_1  # sudo execute the command with superuser privileges
+sudo mkdir /dir_2     # mkdir is the command for creating a directory
+sudo mkdir /dir_3
+sudo mkdir /dir_4
+
+# Creating groups
+sudo groupadd GRP_1  # groupadd creates a new group
+sudo groupadd GRP_2
+sudo groupadd GRP_3
+
+```
+
 ## Solution: 
 We will implement a ```fully automated``` onboarding and deployment pipeline using the following scripts:
 
@@ -47,27 +66,9 @@ To provide developers with a consistent development environment locally, Vagrant
 * **Efficient Delivery:** CI/CD pipeline automates builds, tests, and deployments.
 * **Consistent Development Environments:** Vagrant provides a uniform development experience for everyone.
 
+## Conclussion
 This combination of scripts automates the entire development and deployment process, saving time, increasing efficiency, and reducing errors. This allows your team to focus on developing innovative features for your e-commerce platform.
 
-
-## Example Usage
-Using IaC principles to **automate directory structures** within your infrastructure.
-
-```ruby
-#!/bin/bash
-
-# Creating directories
-sudo mkdir /dir_1  # sudo execute the command with superuser privileges
-sudo mkdir /dir_2     # mkdir is the command for creating a directory
-sudo mkdir /dir_3
-sudo mkdir /dir_4
-
-# Creating groups
-sudo groupadd GRP_1  # groupadd creates a new group
-sudo groupadd GRP_2
-sudo groupadd GRP_3
-
-```
 ## Table Of Contents
 
 **Beginner DevOps Tasks**
@@ -93,9 +94,5 @@ sudo groupadd GRP_3
 - [**Disaster recovery (DR) and business continuity (BC):**]() Designing and implementing DR/BC plans.
 - [**Metrics and analytics:**]() Analyzing infrastructure and application metrics to improve overall efficiency.
 - [**Tooling and automation expertise:**]() Automate a wide range of tasks and workflows.
-
-
-# Conclusion
-Remember, DevOps is a **cultural shift** as much as a technical practice. By **embracing collaboration**, automation, and continuous improvement, you can empower your team to deliver high-quality software faster and more reliably. This repository serves as a springboard for your **DevOps journey**. 
 
 

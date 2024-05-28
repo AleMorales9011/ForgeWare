@@ -22,21 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Lint & Link Check job
-  lint-and-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install required tools
-        run: |
-          sudo apt-get update && sudo apt-get install -y markdownlint
-      - name: Lint Markdown files
-        run: markdownlint "*.md"  
-      - name: Check for broken links
-        uses: gaurav-nelson/github-action-markdown-link-check@v1  
- 
-
-  # Build job 
+  # Build job (with linting and broken link checks)
   build:
     runs-on: ubuntu-latest
     env:
@@ -51,12 +37,19 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with mdBook
-        run: mdbook build
-      - name: Upload artifact
+      - name: Lint Markdown files
+        # Replace with your preferred linter (e.g., markdownlint, remark-lint)
+        run: markdownlint ./**/*.md  # Adjust the path if necessary
+      - name: Check for broken links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1  # Or another preferred action
+      - name: Build with mdBook (only if lint and link checks pass)
+        run: mdbook build  # Conditional execution upon successful checks (see below)
+        if: ${{ success() }}  # Ensures build runs only if linting and link checks passed
+      - name: Upload artifact (only if build succeeded)
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./book
+        if: ${{ success() }}
 
   # Deployment job 
   deploy:

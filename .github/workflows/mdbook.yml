@@ -34,10 +34,11 @@ jobs:
           cargo install --version ${MDBOOK_VERSION} mdbook
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
-      - name: Lint Markdown files
-        # Replace with your preferred linter (e.g., markdownlint, remark-lint)
-        run: markdownlint "*.md"  # Adjust the path if necessary
+        uses: actions/configure-pages@v  
+      - name: Install Markdownlint
+        run:  sudo apt-get update && sudo apt-get install -y markdownlint
+      - name: Check for proper lint
+        run:  markdownlint "*.md"
       - name: Check for broken links
         uses: gaurav-nelson/github-action-markdown-link-check@v1  # Or another preferred action
       - name: Build with mdBook (only if lint and link checks pass)

@@ -35,10 +35,12 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5 
-      - name: Install Markdownlint
-        run:  sudo apt-get update && sudo apt-get install -y markdownlint
+      - name: Install markdownlint
+        run:  npm install markdownlint --save-dev
       - name: Check for proper lint
-        run:  markdownlint "*.md"
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: '**/*.md'
       - name: Check for broken links
         uses: gaurav-nelson/github-action-markdown-link-check@v1  # Or another preferred action
       - name: Build with mdBook (only if lint and link checks pass)

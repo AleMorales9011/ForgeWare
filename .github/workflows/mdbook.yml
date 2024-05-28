@@ -37,7 +37,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Lint Markdown files
         # Replace with your preferred linter (e.g., markdownlint, remark-lint)
-        run: markdownlint ./*.md  # Adjust the path if necessary
+        run: markdownlint "*.md"  # Adjust the path if necessary
       - name: Check for broken links
         uses: gaurav-nelson/github-action-markdown-link-check@v1  # Or another preferred action
       - name: Build with mdBook (only if lint and link checks pass)

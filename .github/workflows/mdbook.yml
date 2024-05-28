@@ -1,3 +1,4 @@
+
 name: Deploy mdBook site with Linting & Link Checking
 
 on:
@@ -33,9 +34,7 @@ jobs:
         run: markdownlint "*.md"  
       - name: Check for broken links
         uses: gaurav-nelson/github-action-markdown-link-check@v1  
-      - name: Fail workflow if errors found (optional)
-        uses: stephendnicholas/failed@v1
-        if: failure()  
+ 
 
   # Build job 
   build:

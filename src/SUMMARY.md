@@ -9,7 +9,3 @@
 [Deploying a web application with Kubernetes](<05-WebAppDeployment.md>)
 [Automating Web App deployment with Bash](<06-InfrastructureAutomation.md>)
 [Setting developping environment with Vagrant](<07-AdvancedScripting.md>)
-
-
-
-

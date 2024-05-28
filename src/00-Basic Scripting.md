@@ -1,4 +1,4 @@
-## Automating the creation of users, permissions, directories, and groups with Bash:
+# Automating the creation of users, permissions, directories, and groups with Bash
 
 Jane, the owner of "Crafty Corner," just hired new employees to support the growth of her store. She cannot afford to allow new employees to snoop around, so she needs an organized and structured way to add new users to her server.
 
@@ -14,6 +14,7 @@ This script shows fundamental scripting concepts. It leverages a practical examp
 - Conclusion
   
 ## Payroll Table
+
 Below is the payroll table that Jane from which Jane needs to extract the information to create the user and permissions into the system.
 
 | Employees | Directory         | Group       | Permission                    |
@@ -23,15 +24,14 @@ Below is the payroll table that Jane from which Jane needs to extract the inform
 |Bryan      | operations/public | OPS         | rwx                           |
 |Jane       | adm       /public | ADM         | rwx                           |
 |Devin      | adm       /public | ADM         | rwx                           |
-|Bryan      | adm       /public | ADM         | rwx                           | 
+|Bryan      | adm       /public | ADM         | rwx                           |
 |Noah       | sales     /public | SALES       | rwx                           |
 |Noah       | sales     /public | SALES       | rwx                           |
 |Noah       | sales     /public | SALES       | rwx                           |
-
 
 ### Script
 
-The script below creates the above infrastructure 
+The script below creates the above infrastructure
 
 ```ruby
 
@@ -75,7 +75,9 @@ sudo chmod 770 /ops
 sudo chmod 777 /public
 
 ```
+
 ### Permissions Strings
+
 The permissions string defines a specific access level for the owner, the group, and others on a file or directory.
 
 - 4 represents read only (r = 4 in binary)
@@ -92,6 +94,7 @@ Group (second set of three): "r--" - This translates to read permission only for
 Others (third set of three): "r--" - This translates to read permission only for others (users who are not the owner and not in the group).
 
 ## Conclusion
+
 By utilizing Bash scripting for user account management on her server, Jane gains several advantages:
 
 - Security: Scripts allow her to define specific user permissions, restricting access to sensitive data outside an employee's designated tasks. This reduces the risk of accidental or intentional data breaches.

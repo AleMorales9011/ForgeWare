@@ -1,4 +1,5 @@
-## Basic Scripting:
+# Basic Scripting
+
 Jane, the owner of "Crafty Corner," a small online craft store has been running her business from a single PC. Now she just hired new employees to support the growth of her store. She cannot afford to allow new employees to snoop around her files and data outside the scope of their work, so she needs an organized and structured way to add new users to her server.
 
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FCC624)
@@ -6,15 +7,18 @@ Jane, the owner of "Crafty Corner," a small online craft store has been running 
 ![BashScript](https://img.shields.io/badge/bash%20script-0101?style=flat&logo=gnubash&logoColor=%23FFFFFF&labelColor=%23000000)
 
 ## Methodology
+
 This script shows fundamental scripting concepts. It leverages a practical example written in Bash, a prevalent language for Linux and macOS systems. The example focuses on a DevOps-related task, specifically file manipulation within the context of system administration.
 
 ## Table of Contents
+
 - Payroll Table
 - Script
 - Permissions Strings
 - Conclusion
   
 ## Payroll Table
+
 Below is the payroll table that Jane from which Jane needs to extract the information to create the user and permissions into the system.
 
 | Employees | Directory         | Group       | Permission                    |
@@ -24,14 +28,14 @@ Below is the payroll table that Jane from which Jane needs to extract the inform
 |Bryan      | operations/public | OPS         | rwx                           |
 |Jane       | adm       /public | ADM         | rwx                           |
 |Devin      | adm       /public | ADM         | rwx                           |
-|Bryan      | adm       /public | ADM         | rwx                           | 
+|Bryan      | adm       /public | ADM         | rwx                           |
 |Noah       | sales     /public | SALES       | rwx                           |
 |Noah       | sales     /public | SALES       | rwx                           |
 |Noah       | sales     /public | SALES       | rwx                           |
-
 
 ### Script
-The script below creates the above infrastructure 
+
+The script below creates the above infrastructure
 
 ```ruby
 
@@ -75,7 +79,9 @@ sudo chmod 770 /ops
 sudo chmod 777 /public
 
 ```
+
 ### Permissions Strings
+
 The permissions string defines a specific access level for the owner, the group, and others on a file or directory.
 
 - 4 represents read only (r = 4 in binary)
@@ -92,6 +98,7 @@ Group (second set of three): "r--" - This translates to read permission only for
 Others (third set of three): "r--" - This translates to read permission only for others (users who are not the owner and not in the group).
 
 ## Conclusion
+
 By utilizing Bash scripting for user account management on her server, Jane gains several advantages:
 
 - Security: Scripts allow her to define specific user permissions, restricting access to sensitive data outside an employee's designated tasks. This reduces the risk of accidental or intentional data breaches.

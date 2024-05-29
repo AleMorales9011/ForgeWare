@@ -1,10 +1,12 @@
 # Automating the creation of users, permissions, directories, and groups with Bash
 
-Jane, the owner of "Crafty Corner," just hired new employees to support the growth of her store. She cannot afford to allow new employees to snoop around, so she needs an organized and structured way to add new users to her server.
+There are several advantages to automating the creation of users, permissions, directories, and groups with Bash scripting.
+
+Manually creating these elements can be time-consuming, especially if you need to set up many users with the same configuration. Scripts allow you to automate repetitive tasks, saving you significant time and effort.
 
 ## Methodology
 
-This script shows fundamental scripting concepts. It leverages a practical example written in Bash, a prevalent language for Linux and macOS systems. The example focuses on a DevOps-related task, specifically file manipulation within the context of system administration.
+This script shows fundamental scripting concepts. It leverages a practical example written in Bash, a prevalent language for Linux and macOS systems.
 
 ## Table of Contents
 
@@ -19,15 +21,15 @@ Below is the payroll table that Jane from which Jane needs to extract the inform
 
 | Employees | Directory         | Group       | Permission                    |
 |-----------|-------------------|-------------|-------------------------------|
-|Noah       | operations/public | OPS         | rwx (read,write,execute)      |
-|Amelia     | operations/public | OPS         | rwx                           |
-|Bryan      | operations/public | OPS         | rwx                           |
-|Jane       | adm       /public | ADM         | rwx                           |
-|Devin      | adm       /public | ADM         | rwx                           |
-|Bryan      | adm       /public | ADM         | rwx                           |
-|Noah       | sales     /public | SALES       | rwx                           |
-|Noah       | sales     /public | SALES       | rwx                           |
-|Noah       | sales     /public | SALES       | rwx                           |
+|Noah       | frontend/public | frontend      | rwx (read,write,execute)      |
+|Amelia     | frontend/public | frontend      | rwx                           |
+|Bryan      | frontend/public | frontend      | rwx                           |
+|Jane       | backend /public | backend       | rwx                           |
+|Devin      | backend /public | backend       | rwx                           |
+|Bryan      | backend /public | backend       | rwx                           |
+|Noah       | ops     /public | ops           | rwx                           |
+|Noah       | ops     /public | ops           | rwx                           |
+|Noah       | ops     /public | ops           | rwx                           |
 
 ### Script
 
@@ -39,24 +41,24 @@ The script below creates the above infrastructure
 
 # Creating directories
 sudo mkdir /public  # sudo execute the command with superuser privileges
-sudo mkdir /adm     # mkdir is the command for creating a directory
-sudo mkdir /sales
-sudo mkdir /operations
+sudo mkdir /frontend     # mkdir is the command for creating a directory
+sudo mkdir /backend
+sudo mkdir /ops
 
 # Creating groups
-sudo groupadd GRP_ADM  # groupadd creates a new group
-sudo groupadd GRP_SALES
+sudo groupadd GRP_FRONTEND  # groupadd creates a new group
+sudo groupadd GRP_BACKEND
 sudo groupadd GRP_OPS
 
 # Creating users for the ADM group
-sudo useradd Jane -m -s /bin/bash -G GRP_ADM     # -m: This option tells useradd to create a home directory for the new user. The home directory will be created with the same name as the username.
-sudo useradd Devin  -m -s /bin/bash -G GRP_ADM   # -s /bin/bash: specifies the default shell for the new user 
-sudo useradd Bryan   -m -s /bin/bash -G GRP_ADM  #  -G: This option adds the new user to a group
+sudo useradd Jane -m -s /bin/bash -G GRP_FRONTEND     # -m: This option tells useradd to create a home directory for the new user. The home directory will be created with the same name as the username.
+sudo useradd Devin  -m -s /bin/bash -G GRP_FRONTEND   # -s /bin/bash: specifies the default shell for the new user 
+sudo useradd Bryan   -m -s /bin/bash -G GRP_FRONTEND  #  -G: This option adds the new user to a group
 
 # Creating users for the SELLS group
-sudo useradd Sarah -m -s /bin/bash -G GRP_SALES
-sudo useradd Elijah -m -s /bin/bash -G GRP_SALES
-sudo useradd Maya -m -s /bin/bash -G GRP_SALES
+sudo useradd Sarah -m -s /bin/bash -G GRP_BACKEND
+sudo useradd Elijah -m -s /bin/bash -G GRP_BACKEND
+sudo useradd Maya -m -s /bin/bash -G GRP_BACKEND
 
 # Creating users for the OPS group 
 sudo useradd Noah -m -s /bin/bash -G GRP_OPS
@@ -64,13 +66,13 @@ sudo useradd Amelia  -m -s /bin/bash -G GRP_OPS
 sudo useradd Bryan -m -s /bin/bash -G GRP_OPS
 
 # Specifying permissions for directories
-sudo chown root:GRP_ADM /adm    # chown(change owner) adds the root user as owner of the ADM group 
-sudo chown root:GRP_SELLS /sales
+sudo chown root:GRP_FRONTEND /frontend    # chown(change owner) adds the root user as owner of the ADM group 
+sudo chown root:GRP_BACKEND /backend
 sudo chown root:GRP_OPS /ops
 
 #  Managing permissions
-sudo chmod 770 /adm   # chmod modify the permissions assigned to files and directories in the system.
-sudo chmod 770 /sales # 770 is the permission string*  
+sudo chmod 770 /frontend   # chmod modify the permissions assigned to files and directories in the system.
+sudo chmod 770 /backend # 770 is the permission string*  
 sudo chmod 770 /ops
 sudo chmod 777 /public
 
@@ -97,8 +99,8 @@ Others (third set of three): "r--" - This translates to read permission only for
 
 By utilizing Bash scripting for user account management on her server, Jane gains several advantages:
 
-- Security: Scripts allow her to define specific user permissions, restricting access to sensitive data outside an employee's designated tasks. This reduces the risk of accidental or intentional data breaches.
-- Efficiency: Scripts automate repetitive tasks like user creation, saving her valuable time compared to manually configuring each account.
-- Accuracy: Scripts minimize human error by ensuring consistent configuration for each new user.
-- Organization: Scripts provide a documented and repeatable process for user management, promoting a clean and organized server environment.
-- Scalability: As "Crafty Corner" grows, scripts can easily adapt to accommodate additional users without manual intervention.
+- `Security:` Scripts allow her to define specific user permissions, restricting access to sensitive data outside an employee's designated tasks. This reduces the risk of accidental or intentional data breaches.
+- `Efficiency:` Scripts automate repetitive tasks like user creation, saving her valuable time compared to manually configuring each account.
+- `Accuracy:` Scripts minimize human error by ensuring consistent configuration for each new user.
+- `Organization:` Scripts provide a documented and repeatable process for user management, promoting a clean and organized server environment.
+- `Scalability:` As "Crafty Corner" grows, scripts can easily adapt to accommodate additional users without manual intervention.

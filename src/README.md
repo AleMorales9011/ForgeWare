@@ -1,4 +1,4 @@
-# ![banner](FORGE-OPS\src\images\Forge-ops banner.jpg)
+# ![ForgeOps_banner](https://github.com/AleMorales9011/FORGE-OPS/blob/e66a2fdb33821e3315b7207dd687d15858a7fd47/src/images/ForgeOps_banner.jpg)
 
 ## Streamlined Onboarding for SAAS Platform
 

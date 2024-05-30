@@ -32,7 +32,7 @@ BFF (Back end for frontends pattern)
 
 ## Prerequisites
 
-An Azure subscription (<https://azure.microsoft.com/en-us/free>)
+An Azure subscription (<https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account>)
 Terraform installed (<https://developer.hashicorp.com/terraform/install>)
 
 ## What's Terraform?

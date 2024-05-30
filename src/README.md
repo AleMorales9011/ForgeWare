@@ -1,4 +1,4 @@
-# ![ForgeOps_banner](https://github.com/AleMorales9011/FORGE-OPS/blob/e66a2fdb33821e3315b7207dd687d15858a7fd47/src/images/ForgeOps_banner.jpg)
+# ![ForgeOps_banner](images/ForgeOps_banner.jpg)
 
 ## Streamlined Onboarding for SAAS Platform
 
@@ -35,7 +35,7 @@ sudo groupadd GRP_3
 
 We will implement a ```fully automated``` onboarding and deployment pipeline using the following scripts:
 
-![DevOps_Journey](https://github.com/AleMorales9011/FORGE-OPS/blob/main/src/images/ForgeOps_diagram.png)
+![DevOps_Journey](images/ForgeOps_diagram.png)
 
 1.`Automating creation of users, directories, permissions and groups with Bash:`
 This script will automate the creation of new developer accounts on the system, assign them directories and permissions based on their role, and add them to relevant development groups. This eliminates manual setup and ensures consistency.

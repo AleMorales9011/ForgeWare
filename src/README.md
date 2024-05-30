@@ -71,12 +71,12 @@ To provide developers with a consistent development environment locally, Vagrant
 
 ## Benefits
 
-* **Faster Onboarding:** Developers are up and running quickly with a pre-configured environment.
-* **Reduced Errors:** Automated provisioning and deployment minimize human error.
-* **Improved Version Control:** Git ensures proper code tracking and collaboration.
-* **Scalable Infrastructure:** Terraform and Kubernetes handle scaling needs.
-* **Efficient Delivery:** CI/CD pipeline automates builds, tests, and deployments.
-* **Consistent Development Environments:** Vagrant provides a uniform development experience for everyone.
+1. `Faster Onboarding:` Developers are up and running quickly with a pre-configured environment.
+2. `Reduced Errors:` Automated provisioning and deployment minimize human error.
+3. `Improved Version Control:` Git ensures proper code tracking and collaboration.
+4. `Scalable Infrastructure:` Terraform and Kubernetes handle scaling needs.
+5. `Efficient Delivery:` CI/CD pipeline automates builds, tests, and deployments.
+6. `Consistent Development Environments:` Vagrant provides a uniform development experience for everyone.
 
 ## Conclussion
 

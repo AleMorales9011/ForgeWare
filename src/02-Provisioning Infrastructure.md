@@ -32,8 +32,8 @@ BFF (Back end for frontends pattern)
 
 ## Prerequisites
 
-An Azure subscription (<https://azure.microsoft.com>)
-Terraform installed (<https://developer.hashicorp.com/terraform/install>)
+An Azure subscription
+Terraform installed
 
 ## What's Terraform?
 

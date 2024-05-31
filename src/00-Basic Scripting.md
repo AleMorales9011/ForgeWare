@@ -1,8 +1,10 @@
 # Automating the creation of users, permissions, directories, and groups with Bash
 
-There are several advantages to automating the creation of users, permissions, directories, and groups with Bash scripting.
+A SaaS company would likely need to create groups, directories, and users for new employees with Linux in a scenario where they are using a self-hosted deployment model.
 
-Manually creating these elements can be time-consuming, especially if you need to set up many users with the same configuration. Scripts allow you to automate repetitive tasks, saving you significant time and effort.
+SaaS companies typically offer their software as a service, meaning it's hosted on the company's infrastructure and accessed by users through a web interface. However, some companies might choose a self-hosted model where they install and manage the SaaS application on their own Linux servers.
+
+In this self-hosted scenario, the company would need to create user accounts on the Linux server for each new employee. These accounts would grant them access to the specific resources and applications they need to do their jobs.
 
 ## Methodology
 
@@ -97,10 +99,6 @@ Others (third set of three): "r--" - This translates to read permission only for
 
 ## Conclusion
 
-By utilizing Bash scripting for user account management on her server, Jane gains several advantages:
+It's important to note that this scenario is less common for modern SaaS companies. Most SaaS companies would leverage a cloud-based deployment model where user management and access control are handled by the provider, eliminating the need for direct Linux administration. 
 
-- `Security:` Scripts allow her to define specific user permissions, restricting access to sensitive data outside an employee's designated tasks. This reduces the risk of accidental or intentional data breaches.
-- `Efficiency:` Scripts automate repetitive tasks like user creation, saving her valuable time compared to manually configuring each account.
-- `Accuracy:` Scripts minimize human error by ensuring consistent configuration for each new user.
-- `Organization:` Scripts provide a documented and repeatable process for user management, promoting a clean and organized server environment.
-- `Scalability:` As "Crafty Corner" grows, scripts can easily adapt to accommodate additional users without manual intervention.
+There might be some hybrid deployments where core functionalities are self-hosted on Linux servers while other aspects leverage cloud services. In such cases, user and group management on the Linux side might still be necessary.

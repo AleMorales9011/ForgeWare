@@ -6,6 +6,8 @@ SaaS companies typically offer their software as a service, meaning it's hosted 
 
 In this self-hosted scenario, the company would need to create user accounts on the Linux server for each new employee. These accounts would grant them access to the specific resources and applications they need to do their jobs.
 
+![ForgeOps_filemanagement](images/ForgeOps_filemanagement.png)
+
 ## Methodology
 
 This script shows fundamental scripting concepts. It leverages a practical example written in Bash, a prevalent language for Linux and macOS systems.

@@ -30,11 +30,6 @@ BFF (Back end for frontends pattern)
 - **Increased scalability:** You can scale each backend service independently to meet the specific needs of the frontend application it serves.
 - **Enhanced performance:** By tailoring the backend services to the `specific requirements of each frontend`, you can improve the overall performance of your application
 
-## Prerequisites
-
-An Azure subscription (<https://azure.microsoft.com/en-us/free>)
-Terraform installed (<https://developer.hashicorp.com/terraform/install>)
-
 ## What's Terraform?
 
 Infrastructure as Code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share.

@@ -1,4 +1,4 @@
-# ![ForgeOps_banner](images/ForgeOps_banner.jpg)
+# ![ForgeOps_banner](images/Forge-ops_banner-removebg-preview.png)
 
 ## Streamlined Onboarding for SAAS Platform
 

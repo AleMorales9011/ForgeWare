@@ -1,6 +1,6 @@
-# ![ForgeOps_banner](https://github.com/AleMorales9011/FORGE-OPS/blob/b3ea1a4c67603b566e740a72ff104e034b9e616d/010-IMAGES/Forge-ops%20banner.jpg)
+# ![ForgeOps_banner](https://github.com/AleMorales9011/ForgeOps/blob/64f408d1f4b92a6722a3e303f56ac0805c46aece/010-IMAGES/ForgeOps-removebg-preview.png)
 
-## Streamlined Onboarding for SAAS Platform
+# Streamlined Onboarding for SAAS Platform
 
 **Scenario:** Your company is a rapidly growing SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a streamlined deployment process.
 

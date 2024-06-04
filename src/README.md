@@ -1,10 +1,8 @@
 # ![ForgeOps_banner](images/Forge-ops_banner-removebg-preview.png)
 
-<<<<<<< HEAD
 ## Bussines Case: DevOps Journey for SAAS Platform
-=======
-# Streamlined Onboarding for SAAS Platform
->>>>>>> 6c1f17ce32f2917313988c11d41fd6eeda095111
+
+**Scenario:** Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 
 ## Objective
 
@@ -13,8 +11,6 @@ To walk you trough a common SAAS DevOps journey in a hands-on fashion trough a c
 1. User management, version control and inftractructure creation.
 2. Infractstructure automation, and CI/CD pipelines.
 3. Containerization and infrastucture management.
-
-**Scenario:** Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 
 **Challenges:**
 

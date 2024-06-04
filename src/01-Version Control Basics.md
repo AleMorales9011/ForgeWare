@@ -1,6 +1,10 @@
 # Implementing a version control system with Git/Github  
 
-`Version control` creates a history of all changes made to your files. You can easily revert to previous versions if something goes wrong or you decide you prefer an older iteration. This is like having a safety net for your work.
+After devs are added to the system now it's time to implement a `Version control` sytem.
+
+Version control creates a `history of all changes` made to your files. You can easily revert to previous versions if something goes wrong or you decide you prefer an older iteration.
+
+This is like having a `safety net` for your work.
 
 ## Methodology
 

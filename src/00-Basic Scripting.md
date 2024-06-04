@@ -1,27 +1,33 @@
 # Automating the creation of users, permissions, directories, and groups with Bash
 
-A SaaS company would likely need to create groups, directories, and users for new employees with Linux in a scenario where they are using a self-hosted deployment model.
+The main goal of DevOps is to `ship code faster` and efficiently.
 
-SaaS companies typically offer their software as a service, meaning it's hosted on the company's infrastructure and accessed by users through a web interface. However, some companies might choose a self-hosted model where they install and manage the SaaS application on their own Linux servers.
+However for that to happen first A SaaS company would likely need to create groups, directories, and users for new employees.
 
-In this self-hosted scenario, the company would need to create user accounts on the Linux server for each new employee. These accounts would grant them access to the specific resources and applications they need to do their jobs.
+A SAAS company might do this with Linux in a scenario where they are using a `self-hosted deployment` model.
+
+SaaS companies typically offer their software as a service, meaning it's hosted on the company's infrastructure and accessed by users through a web interface.
+
+However, some companies might choose a `self-hosted` model where they install and manage the SaaS application on their own Linux servers.
+
+In this self-hosted scenario, the company would need to create user accounts on the `Linux server` for each new employee. These accounts would grant them access to the specific resources and applications they need to do their jobs.
 
 ![ForgeOps_filemanagement](images/ForgeOps_filemanagement.png)
 
 ## Methodology
 
-This script shows fundamental scripting concepts. It leverages a practical example written in Bash, a prevalent language for Linux and macOS systems.
+The script below illustrates a possible solution for manage users in a Linux server with a bash.
 
 ## Table of Contents
 
-- Payroll Table
-- Script
-- Permissions Strings
-- Conclusion
+1. Payroll Table
+2. Script
+3. Permissions Strings
+4. Conclusion
   
 ## Payroll Table
 
-Below is the payroll table that Jane from which Jane needs to extract the information to create the user and permissions into the system.
+Below is the payroll table that will be used to create the user management script.
 
 | Employees | Directory         | Group       | Permission                    |
 |-----------|-------------------|-------------|-------------------------------|
@@ -39,7 +45,7 @@ Below is the payroll table that Jane from which Jane needs to extract the inform
 
 The script below creates the above infrastructure
 
-```ruby
+```bash
 
 #!/bin/bash
 
@@ -84,7 +90,7 @@ sudo chmod 777 /public
 
 ### Permissions Strings
 
-The permissions string defines a specific access level for the owner, the group, and others on a file or directory.
+The permissions string defines a `specific access` level for the owner, the group, and others on a file or directory.
 
 - 4 represents read only (r = 4 in binary)
 - 5 represents read and execute (r = 4, x = 1)
@@ -101,6 +107,6 @@ Others (third set of three): "r--" - This translates to read permission only for
 
 ## Conclusion
 
-It's important to note that this scenario is less common for modern SaaS companies. Most SaaS companies would leverage a cloud-based deployment model where user management and access control are handled by the provider, eliminating the need for direct Linux administration. 
+It's important to note that this scenario is `less common` for modern SaaS companies. Most SaaS companies would leverage a `cloud-based deployment` model where user management and access control are handled by the provider, eliminating the need for direct Linux administration.
 
-There might be some hybrid deployments where core functionalities are self-hosted on Linux servers while other aspects leverage cloud services. In such cases, user and group management on the Linux side might still be necessary.
+There might be some `hybrid deployments` where core functionalities are self-hosted on Linux servers while other aspects leverage cloud services. In such cases, user and group management on the Linux side might still be necessary.

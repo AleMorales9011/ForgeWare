@@ -1,26 +1,34 @@
 # ![ForgeOps_banner](images/ForgeOps_banner.jpg)
 
-## Streamlined Onboarding for SAAS Platform
+## Bussines Case: DevOps Journey for SAAS Platform
 
-**Scenario:** Your company is a rapidly growing SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a streamlined deployment process.
+## Objective
+
+To walk you trough a common SAAS DevOps journey in a hands-on fashion trough a collection of scripts and diagrams that could be easily replicate for customized sitations. This project aims to illustrate:
+
+1. User management, version control and inftractructure creation.
+2. Infractstructure automation, and CI/CD pipelines.
+3. Containerization and infrastucture management.
+
+**Scenario:** Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 
 **Challenges:**
 
-1. Manual user and environment setup is time-consuming and error-prone.
-2. Uncontrolled code versioning leads to confusion and difficulty in reverting changes.
-3. Infrastructure provisioning is slow and inconsistent.
-4. Deployments are manual and prone to human error.
+1. Manual user and environment setup is `time-consuming` and error-prone.
+2. Uncontrolled code versioning leads to `confusion and difficulty` in reverting changes.
+3. Infrastructure provisioning is `slow and inconsistent`.
+4. Deployments are manual and `prone to human error`.
 
 ## Example Usage
 
-Using IaC principles to **automate directory structures** within your infrastructure.
+Script example that illustrate how to use IaC principles to **automate directory structures** within your infrastructure.
 
-```ruby
+```bash
 #!/bin/bash
 
 # Creating directories
-sudo mkdir /dir_1  # sudo execute the command with superuser privileges
-sudo mkdir /dir_2     # mkdir is the command for creating a directory
+sudo mkdir /dir_1    # sudo execute the command with superuser privileges
+sudo mkdir /dir_2    # mkdir is the command for creating a directory
 sudo mkdir /dir_3
 sudo mkdir /dir_4
 
@@ -33,7 +41,7 @@ sudo groupadd GRP_3
 
 ## Solution
 
-We will implement a ```fully automated``` onboarding and deployment pipeline using the following scripts:
+We will implement a `fully automated` onboarding and deployment pipeline using the following scripts:
 
 ![DevOps_Journey](images/ForgeOps_diagram.png)
 
@@ -68,6 +76,12 @@ A Bash script will trigger the Azure DevOps pipeline upon code commit, automatin
 8.`Setting developing environment with Vagrant:`
 To provide developers with a consistent development environment locally, Vagrant will be used to create virtual machines pre-configured with all the necessary tools and dependencies.
 `ADVANCED` `VAGRANT` `IAC`
+
+## Final Infrastructure
+
+Our end goal with this business case project is to be able to replicate a Software Engineering pipeline like the one in the image below.
+
+![Final_Infrastructure](images/ForgeOps_final_infrastructure.png)
 
 ## Benefits
 

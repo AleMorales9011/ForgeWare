@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # ![ForgeOps_banner](images/ForgeOps_banner.jpg)
 
 ## Bussines Case: DevOps Journey for SAAS Platform
+=======
+# ![ForgeOps_banner](https://github.com/AleMorales9011/ForgeOps/blob/64f408d1f4b92a6722a3e303f56ac0805c46aece/010-IMAGES/ForgeOps-removebg-preview.png)
+
+# Streamlined Onboarding for SAAS Platform
+>>>>>>> 6c1f17ce32f2917313988c11d41fd6eeda095111
 
 ## Objective
 

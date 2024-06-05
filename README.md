@@ -1,4 +1,4 @@
-# ![ForgeOps_banner](images/ForgeOps_banner.jpg)
+# ![ForgeOps_banner](https://github.com/AleMorales9011/FORGE-OPS/blob/e1870a2dca92ea8c035b0f30b284d4afb019a498/src/images/Forge-ops_banner-removebg-preview.png)
 
 ## Bussines Case: DevOps Journey for SAAS Platform
 
@@ -43,7 +43,7 @@ sudo groupadd GRP_3
 
 We will implement a `fully automated` onboarding and deployment pipeline using the following scripts:
 
-![DevOps_Journey](images/ForgeOps_diagram.png)
+![DevOps_Journey](https://github.com/AleMorales9011/FORGE-OPS/blob/278e5fd944f771b2e465d0d554f45bdccdcbbccf/010-IMAGES/ForgeOps_Journey.png)
 
 1.`Automating creation of users, directories, permissions and groups with Bash:`
 This script will automate the creation of new developer accounts on the system, assign them directories and permissions based on their role, and add them to relevant development groups. This eliminates manual setup and ensures consistency.
@@ -81,7 +81,7 @@ To provide developers with a consistent development environment locally, Vagrant
 
 Our end goal with this business case project is to be able to replicate a Software Engineering pipeline like the one in the image below.
 
-![Final_Infrastructure](images/ForgeOps_final_infrastructure.png)
+![Final_Infrastructure](https://github.com/AleMorales9011/FORGE-OPS/blob/main/010-IMAGES/ForgeOps_final_infrastructure.png)
 
 ## Benefits
 

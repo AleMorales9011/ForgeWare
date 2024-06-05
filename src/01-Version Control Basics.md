@@ -22,12 +22,12 @@ To show a step-by-step process of how to use Git for version control management 
 
 ## 1 Install Git (One-time setup)
 
-*Windows/macOS:* Download and install Git from the official website ```https://git-scm.com/downloads.```
-*Linux:* Git is usually pre-installed on most Linux distributions. You can check by opening the terminal and typing ```git --version```. If not installed, use your package manager ```(e.g., sudo apt install git on Ubuntu)```.
+*Windows/macOS:* Download and install Git from the official website `https://git-scm.com/downloads.`
+*Linux:* Git is usually pre-installed on most Linux distributions. You can check by opening the terminal and typing `git --version`. If not installed, use your package manager `(e.g., sudo apt install git on Ubuntu)`.
 
 ## 2 Clone the main repository
 
-```ruby
+```bash
 git clone <URL of Jane's repository>
 ```
 
@@ -37,14 +37,14 @@ This downloads a copy of the entire repository, including all branches and histo
 
 The employee can use standard Git commands like:
 
-```ruby
+```bash
 git add <filename> # to stage specific files for commit.
 git commit -m "Meaningful commit message" # to create a snapshot of their changes with a descriptive message
 ```
 
 ## 4 Renaming your branch
 
-```ruby
+```bash
 git branch -M main
 ```
 

@@ -45,7 +45,7 @@ Below is the payroll table that will be used to create the user management scrip
 
 The script below creates the above infrastructure
 
-```bash
+```ruby
 
 #!/bin/bash
 

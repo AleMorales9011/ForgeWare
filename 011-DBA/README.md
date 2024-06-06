@@ -138,7 +138,7 @@ WHERE cr.Situacao = 1;
 ```
 ![view](https://github.com/AleMorales9011/ForgeOps/blob/c4d48b5979822a7da030d6242474d34450fea6ac/010-IMAGES/View.jpg)
 
-## 7. Conclussion
+## 7. Conclusion
 
 This repository has equipped you with a comprehensive understanding of MySQL, from its core concepts to `advanced functionalities`. You've explored data manipulation, querying, security, administration, and even explored how to leverage views for optimized data access. As you venture further, remember this repository serves as a `valuable reference`.  Feel free to revisit specific sections as needed.
 

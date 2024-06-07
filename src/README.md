@@ -1,6 +1,6 @@
-# ![ForgeOps_banner](images/Forge-ops_banner-removebg-preview.png)
+![ForgeOps_banner](images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
 
-## Bussines Case: DevOps Journey for SAAS Platform
+# Bussines Case: DevOps Journey for SAAS Platform
 
 **Scenario:** Your company is a `rapidly growing` SAAS platform. It would be best if you onboarded new developers quickly. And you are efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 

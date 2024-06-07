@@ -1,3 +1,5 @@
+![Image](images/side-view-man-living-as-digital-nomad.jpg)
+
 # Automating the creation of users, permissions, directories, and groups with Bash
 
 The main goal of DevOps is to `ship code faster` and efficiently.

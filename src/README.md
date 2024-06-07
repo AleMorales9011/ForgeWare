@@ -2,15 +2,15 @@
 
 ## Bussines Case: DevOps Journey for SAAS Platform
 
-**Scenario:** Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
+**Scenario:** Your company is a `rapidly growing` SAAS platform. It would be best if you onboarded new developers quickly. And you are efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 
 ## Objective
 
-To walk you trough a common SAAS DevOps journey in a hands-on fashion trough a collection of scripts and diagrams that could be easily replicate for customized sitations. This project aims to illustrate:
+To walk you through a common SAAS DevOps journey in a hands-on fashion through a collection of scripts and diagrams that could be easily replicated for customized situations. This project aims to illustrate:
 
-1. User management, version control and inftractructure creation.
+1. User management, version control, and infrastructure creation.
 2. Infractstructure automation, and CI/CD pipelines.
-3. Containerization and infrastucture management.
+3. Containerization and infrastructure management.
 
 **Challenges:**
 
@@ -21,9 +21,9 @@ To walk you trough a common SAAS DevOps journey in a hands-on fashion trough a c
 
 ## Example Usage
 
-Script example that illustrate how to use IaC principles to **automate directory structures** within your infrastructure.
+Script example illustrating how to use IaC principles to **automate directory structures** within your infrastructure.
 
-```bash
+```ruby
 #!/bin/bash
 
 # Creating directories

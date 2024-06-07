@@ -1,6 +1,8 @@
-# Deploying infrastructure with Terraform
+![Image](images/person-creating-online-content-with-their-pets.jpg)
 
-Jane's business Crafty Corner its growing and it's time to take it online, but first she needs **infrastructure to host her website**. In this chapter we will help Jane to **design, provision, and manage** cloud resources on a chosen cloud platform using Terraform configurations.
+# Deploying infrastructure with Terraform and Azure
+
+Terraform's ability to manage infrastructure as code (IaC) makes it ideal for deploying infrastructure in different environments (development, staging, production) and cloud vendors. Companies can leverage the same configuration files with environment-specific variables, ensuring consistency while allowing for variations between environments and vendors.
 
 ## Methodology
 
@@ -8,39 +10,38 @@ This file shows fundamental concepts of infrastructure provisioning using Terraf
 
 ![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/bf5c286430d93b2bfe3ea4054a73b42836960ece/008%20PROVISIONING%20INFRASTRUCTURE/Backend%20for%20Fronteds%20model.png)
 
-BFF (Back end for frontends pattern)
+BFF (Back end for frontend pattern)
 
 ## Table of contents
 
-- Benefits of using the BFF pattern
-- Prerequisites
-- What's Terraform
-- Installing Terraform
-- Installing Azure CLI
-- Autenticating with Azure CLI
-- Create a Service Principal
-- Set your environment variables
-- Initialize Terraform
-- Write configuration
-- Conclussion
+Benefits of using the BFF pattern
 
-## Benefits of using the BFF pattern
+1. Prerequisites
+2. What's Terraform
+3. Installing Terraform
+4. Installing Azure CLI
+5. Authenticating with Azure CLI
+6. Create a Service Principal
+7. Set your environment variables
+8. Initialize Terraform
+9. Write configuration
+10. Conclusion
 
-- **Improved maintainability:** By separating the backend into multiple services, you can change one service without affecting the others. This makes it easier to develop, test, and deploy changes.
-- **Increased scalability:** You can scale each backend service independently to meet the specific needs of the frontend application it serves.
-- **Enhanced performance:** By tailoring the backend services to the `specific requirements of each frontend`, you can improve the overall performance of your application
+## 1. Benefits of using the BFF pattern
 
-## Prerequisites
+A software company might use the Backend for Frontends (BFF) pattern by tailoring data and functionalities to each specific UI, BFF can lead to a more optimized and user-friendly experience for different user groups.
 
-An Azure subscription
-Terraform installed
+## 2. Prerequisites
 
-## What's Terraform?
+1. An Azure subscription
+2. Terraform installed
+
+## 3. What's Terraform?
 
 Infrastructure as Code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface.
 IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share.
 
-## Installing Terraform
+## 4. Installing Terraform
 
 To install Terraform, find the [appropriate package for your system](https://developer.hashicorp.com/terraform/install) and download it as a zip archive.
 
@@ -49,7 +50,7 @@ After downloading Terraform, unzip the package. Terraform runs as a single binar
 >[!Note]
 > Finally, make sure that the terraform binary is available on your ```PATH```. This process will differ depending on your operating system.
 
-## Installing Azure CLI
+## 5. Installing Azure CLI
 
 The Azure CLI will allow you to authenticate with Azure.
 
@@ -57,7 +58,7 @@ The Azure CLI will allow you to authenticate with Azure.
 Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
 ```
 
-## Autenticating with Azure CLI
+## 6. Autenticating with Azure CLI
 
 Terraform must authenticate to Azure to create infrastructure.
 
@@ -65,15 +66,15 @@ Terraform must authenticate to Azure to create infrastructure.
 az login
 ```
 
-## Create a Service Principal
+## 7. Create a Service Principal
 
-Next, we need to create a Service Principal . An application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf. Update the <SUBSCRIPTION_ID> with the subscription ID you specified in the previous step.
+Next, we need to create a Service Principal. An application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf. Update the <SUBSCRIPTION_ID> with the subscription ID you specified in the previous step.
 
 ```ruby
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
 ```
 
-## Set your environment variables
+## 8. Set your environment variables
 
 A good practice HashiCorp recommends is setting these values as environment variables rather than saving them in your Terraform configuration to avoid passing sensitive info in the configuration code.
 
@@ -86,7 +87,7 @@ $Env:ARM_TENANT_ID = "<TENANT_VALUE>"
 
 ```
 
-## Initialize Terraform
+## 9. Initialize Terraform
 
 Initialize the project, which downloads a plugin called a provider that lets Terraform interact with the assigned provider.
 
@@ -94,7 +95,7 @@ Initialize the project, which downloads a plugin called a provider that lets Ter
  terraform init
 ```
 
-## Write configuration (main.tf)
+## 10. Write configuration (main.tf)
 
 ```ruby
 # Terraform Settings Block contains Terraform settings, including the required providers Terraform will use
@@ -186,7 +187,7 @@ resource "azurerm_storage_container" "stmobileui001" {
 
 ```
 
-## Variables (var.tf)
+## 10. Variables (var.tf)
 
 Variable files separate configuration values from the main Terraform code. This allows to reuse the same Terraform codebase for multiple deployments by simply changing the variable values.
 
@@ -209,6 +210,6 @@ variable "tags" {
 
 ![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/d6b93bf0c23a8f9d49fb552b3129d0794d37e0de/003-ARCHITECTURE-BFF-PATTERN/003-IMAGES/Resources%20created.jpg)
 
-## Conclussion
+## 11. Conclusion
 
 By leveraging Terraform's **infrastructure as code (IaC)** approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey.

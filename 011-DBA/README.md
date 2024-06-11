@@ -1,8 +1,8 @@
-# Design, Modelling And Deployment Of A MySql Database.
+# Design, Modelling, And Deployment Of A MySql Database.
 
 10 minutes
 
-Database are one of the core pilars of every `system architecture`. For the vast majority of `SAAS products`, a database is essential for storing, managing, and utilizing data effectively to deliver a valuable service to their users. 
+Database are one of the core pillars of every `system architecture`. For most `SAAS products`, a database is essential for storing, managing, and utilizing data effectively to deliver a valuable service to their users. 
 
 ## Table of Contents
 1. Prerequisites
@@ -11,7 +11,7 @@ Database are one of the core pilars of every `system architecture`. For the vast
 4. Deploying A Database Via Script
 5. Inserting Data Via Script
 6. Creating A View For Easy Acces.
-7. Conclussion
+7. Conclusion
 
 ## 1. Prerequisites
 
@@ -49,7 +49,7 @@ CREATE TABLE Municipio (
 );
 
 CREATE TABLE Estado (
-ID_Estado INT NOT NULL AUTO_INCREMENT,
+ID_Estado INT NOT NULL AUTO_INCREMENT,  -- Tells the database to automatically generate a unique number for this column whenever a new record is inserted--
 Nome VARCHAR(50) NOT NULL,
 UF CHAR(2) NOT NULL,
 PRIMARY KEY (ID_Estado)
@@ -66,9 +66,9 @@ EndMunicipio INT NOT NULL,
 EndCEP CHAR(8) NOT NULL,
 Estado_ID INT NOT NULL,
 PRIMARY KEY (ID_Cliente),
-KEY fk_Cliente_Municipio1_idx (EndMunicipio),
-CONSTRAINT fk_Cliente_Municipio1_idx FOREIGN KEY (EndMunicipio) REFERENCES Municipio (ID_Municipio)
-);
+KEY fk_Cliente_Municipio1_idx (EndMunicipio), -- Creates an index on the EndMunicipio--
+CONSTRAINT fk_Cliente_Municipio1_idx FOREIGN KEY (EndMunicipio) REFERENCES Municipio (ID_Municipio) 
+); -- Ensures that the values in EndMunicipio always refer to existing municipalities --
 
 CREATE TABLE ContaReceber (
   ID_Conta INT NOT NULL AUTO_INCREMENT,
@@ -140,6 +140,6 @@ WHERE cr.Situacao = 1;
 
 ## 7. Conclusion
 
-This repository has equipped you with a comprehensive understanding of MySQL, from its core concepts to `advanced functionalities`. You've explored data manipulation, querying, security, administration, and even explored how to leverage views for optimized data access. As you venture further, remember this repository serves as a `valuable reference`.  Feel free to revisit specific sections as needed.
+This repository has equipped you with a comprehensive understanding of MySQL, from its core concepts to `advanced functionalities`. You've explored data manipulation, querying, security, administration, and even how to leverage views for optimized data access. As you venture further, remember this repository is a `valuable reference`.  Feel free to revisit specific sections as needed.
 
 

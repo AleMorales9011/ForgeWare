@@ -1,4 +1,4 @@
-![ForgeOps_banner](images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
+![ForgeOps_banner](images/Forgeware_banner-removebg-preview.png)
 
 # Bussines Case: DevOps Journey for SAAS Platform
 

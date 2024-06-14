@@ -1,14 +1,18 @@
-# Bussines Case: DevOps Journey for SAAS Platform
+![Introduction](images/female-freelancer-portrait.jpg)
 
-## Objective
+# Introduction
 
-To walk you through a common SAAS DevOps journey in a hands-on fashion through a collection of scripts and diagrams that the role that each of the De. This project aims to illustrate:
+20 minutes
 
-1. User management, version control, and infrastructure creation.
-2. Infractstructure automation, and CI/CD pipelines.
-3. Containerization and infrastructure management.
+Software Engineering is a complicated subject. It's hard to break through the myriad of technologies, frameworks, good practices, and programming languages. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those real-life applications so you get a sense of what you are dealing with.  
 
-## Scenario
+## What Forgeware is not
+
+1. A recipe to perform any task in a production environment.
+2. A resource to get Software Engineering proficiency
+3.  
+
+# Scenario: DevOps Journey for SAAS Platform
 
 Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 

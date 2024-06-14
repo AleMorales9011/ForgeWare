@@ -1,4 +1,4 @@
-![Forgeware](images/Forgeware_banner.png)
+![Forgeware](images/Forgeware_banner_final.png)
 
 # 1. Automating the creation of users, directories, permissions, and groups with Bash
 

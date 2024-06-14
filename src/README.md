@@ -22,6 +22,7 @@ sudo groupadd GRP_FRONTEND  # groupadd creates a new group
 sudo groupadd GRP_BACKEND
 sudo groupadd GRP_OPS
 ```
+<kbd><br>[See the full Solution][https://github.com/AleMorales9011/ForgeOps/blob/81092908b8b9a6ae5fbbc6679ce142b99c56e20c/src/00-Basic%20Scripting.md]<br></kbd>
 
 # Implementing a version control system with Git/Github
 We will use Git for version control and Github for a central repository. Developers will have access to the latest codebase and can track changes efficiently.

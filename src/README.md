@@ -99,12 +99,33 @@ services:
 Kubernetes will be used to orchestrate the deployment of Docker containers across multiple servers for scalability and high availability.
 `ADVANCED` `KUBERNETES` `DOCKER`
 
-7.`Automating Web App deployment with Bash`
+```ruby
+----------------------------------------------------------------------------------
+echo "Updating and installing apache2 and unzip..."
+apt-get update
+apt-get upgrade -y
+apt-get install apache2 -y
+apt-get install unzip -y
+----------------------------------------------------------------------------------
+echo "Getting the website from a remote repo..."
+cd /tmp
+wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
+----------------------------------------------------------------------------------
+echo "Unziping the file and pasting into the apache directory..."
+unzip main.zip
+cd linux-site-dio-main
+cp -R * /var/www/html/
+----------------------------------------------------------------------------------
+```
+
+# 7. Automating Web App deployment with Bash
+
 A Bash script will trigger the Azure DevOps pipeline upon code commit, automating the entire deployment process.
 `ADVANCED` `BASH` `LINUX` `AZURE DEVOPS`
 
+
 8.`Setting developing environment with Vagrant:`
-To provide developers with a consistent development environment locally, Vagrant will be used to create virtual machines pre-configured with all the necessary tools and dependencies.
+To provide developers with a consistent local development environment, Vagrant will be used to create virtual machines pre-configured with all the necessary tools and dependencies.
 `ADVANCED` `VAGRANT` `IAC`
 
 ## Final Infrastructure

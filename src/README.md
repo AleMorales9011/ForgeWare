@@ -1,55 +1,35 @@
 ![Forgeware](images/Forgeware_banner.png)
-## *Scenario:
-Your company is a `rapidly growing` SAAS platform. It would be best if you onboarded new developers quickly. And you are efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 
-## Objective
+# 1. Automating the creation of users, directories, permissions, and groups with Bash
 
-To walk you through a common SAAS DevOps journey in a hands-on fashion through a collection of scripts and diagrams that could be easily replicated for customized situations. This project aims to illustrate:
-
-1. User management, version control, and infrastructure creation.
-2. Infractstructure automation, and CI/CD pipelines.
-3. Containerization and infrastructure management.
-
-**Challenges:**
-
-1. Manual user and environment setup is `time-consuming` and error-prone.
-2. Uncontrolled code versioning leads to `confusion and difficulty` in reverting changes.
-3. Infrastructure provisioning is `slow and inconsistent`.
-4. Deployments are manual and `prone to human error`.
-
-## Example Usage
-
-Script example illustrating how to use IaC principles to **automate directory structures** within your infrastructure.
-
-```ruby
-#!/bin/bash
-
-# Creating directories
-sudo mkdir /dir_1    # sudo execute the command with superuser privileges
-sudo mkdir /dir_2    # mkdir is the command for creating a directory
-sudo mkdir /dir_3
-sudo mkdir /dir_4
-
-# Creating groups
-sudo groupadd GRP_1  # groupadd creates a new group
-sudo groupadd GRP_2
-sudo groupadd GRP_3
-
-```
-
-## Solution
-
-We will implement a `fully automated` onboarding and deployment pipeline using the following scripts:
-
-![DevOps_Journey](images/ForgeOps_diagram.png)
-
-1.`Automating creation of users, directories, permissions and groups with Bash:`
 This script will automate the creation of new developer accounts on the system, assign them directories and permissions based on their role, and add them to relevant development groups. This eliminates manual setup and ensures consistency.
 `BEGINNER` `BASH` `LINUX`
+
+```ruby
+# Creating directories
+sudo mkdir /public  # sudo execute the command with superuser privileges
+sudo mkdir /frontend     # mkdir is the command for creating a directory
+sudo mkdir /backend
+sudo mkdir /ops
+
+# Creating groups
+sudo groupadd GRP_FRONTEND  # groupadd creates a new group
+sudo groupadd GRP_BACKEND
+sudo groupadd GRP_OPS
+```
 
 2.`Implementing a version control system with Git/Github:`
 We will use Git for version control and Github for a central repository. Developers will have access to the latest codebase and can track changes efficiently.
 `BEGINNER` `GIT` `GITHUB`
+```ruby
+git clone <URL>
+git add <filename> # to stage specific files for commit.
+git commit -m "Meaningful commit message" # to create a snapshot of their changes with a descriptive message
+git branch -M main
+git remote add origin <repo URL> # This command configures a remote repository.
+git push origin <branch_name>
+```
+
 
 3.`Deploying infrastructure with Terraform:`
 Terraform will automate the provisioning of infrastructure like servers, databases, and storage on a chosen cloud platform. This ensures consistent and repeatable infrastructure deployment.

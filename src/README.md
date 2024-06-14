@@ -5,7 +5,7 @@
 
 Software Engineering is a complicated subject. It's hard to break through the `myriad of technologies`, frameworks, good practices, and programming languages. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those `real-life applications` so you get a sense of what you are dealing with. Please notice the scripts we provide are not meant to be used in any production environment. 
 
- # Automating the creation of users, directories, permissions, and groups with Bash
+# Automating the creation of users, directories, permissions, and groups with Bash
 
 This script will automate the creation of new developer accounts on the system, assign them directories and permissions based on their role, and add them to relevant development groups. This eliminates manual setup and ensures consistency.
 `BEGINNER` `BASH` `LINUX`
@@ -23,7 +23,7 @@ sudo groupadd GRP_BACKEND
 sudo groupadd GRP_OPS
 ```
 
-## Implementing a version control system with Git/Github
+# Implementing a version control system with Git/Github
 We will use Git for version control and Github for a central repository. Developers will have access to the latest codebase and can track changes efficiently.
 `BEGINNER` `GIT` `GITHUB`
 ```ruby

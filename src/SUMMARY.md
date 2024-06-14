@@ -1,6 +1,7 @@
 # Summary
 
 [Home](README.md)
+[Introduction](Introduction.md)
 [Automating creation of users, directories,permissions and groups with Bash](<00-Basic Scripting.md>)
 [Implementing a version control system with Git/Github](<01-Version Control Basics.md>)
 [Deploying infrastructure with Terraform](<02-Provisioning Infrastructure.md>)

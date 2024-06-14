@@ -1,18 +1,10 @@
 ![Introduction](images/female-freelancer-portrait.jpg)
 
-# Introduction
+# DevOps 
 
-20 minutes
+10 minutes
 
-Software Engineering is a complicated subject. It's hard to break through the `myriad of technologies`, frameworks, good practices, and programming languages. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those `real-life applications` so you get a sense of what you are dealing with.  
-
-## What Forgeware is not
-
-1. A recipe to perform any task in a production environment.
-2. A resource to get Software Engineering proficiency
-3. A study guide.  
-
-# Scenario: DevOps Journey for SAAS Platform
+## Scenario: DevOps Journey for SAAS Platform
 
 Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 

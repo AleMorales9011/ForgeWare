@@ -4,13 +4,13 @@
 
 20 minutes
 
-Software Engineering is a complicated subject. It's hard to break through the myriad of technologies, frameworks, good practices, and programming languages. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those real-life applications so you get a sense of what you are dealing with.  
+Software Engineering is a complicated subject. It's hard to break through the `myriad of technologies`, frameworks, good practices, and programming languages. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those `real-life applications` so you get a sense of what you are dealing with.  
 
 ## What Forgeware is not
 
 1. A recipe to perform any task in a production environment.
 2. A resource to get Software Engineering proficiency
-3.  
+3. A study guide.  
 
 # Scenario: DevOps Journey for SAAS Platform
 

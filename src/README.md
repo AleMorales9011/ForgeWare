@@ -57,12 +57,45 @@ Azure DevOps will be used to create a continuous integration and continuous deli
 `INTERMEDIATE` `AZURE DEVOPS` `DEVOPS`
 ```ruby
 
+- task: TerraformTaskV4@4 # Executes Terraform commands.
+  inputs: # Defines the input parameters for the task
+    provider: 'azurerm' # Tells Terraform to use the Azure Resource Manager provider.
+    command: 'init' # Specifies the Terraform command to be executed. 
+    backendServiceArm: 'bknd-prod-001(f97a229a-2aa9-47e7-ae31-76ed06c11e1d)'
+    backendAzureRmResourceGroupName: 'rg-terraformdevops-001'
+    backendAzureRmStorageAccountName: 'stterraformdevops01'
+    backendAzureRmContainerName: 'terraform'
+    backendAzureRmKey: 'y9d6HEg1PDSZBTjxfFG+vN4bctj1qPIHKVnB3a82SMhSJa1bJjvfsloJDw0J5pYzKfVbVVQwBYpC+AStA5P4pw=='
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'bknd-prod-001(1)(f97a229a-2aa9-47e7-ae31-76ed06c11e1d)'
+```
 
-5.`Containerizing an application with Docker:`
+# 5. Containerizing an application with Docker
+
 The application will be containerized using Docker, creating a self-contained package with all dependencies. This promotes portability and simplifies deployments.
 `INTERMEDIATE` `DOCKER` `LINUX`
 
-6.`Deploying a web application with Kubernetes:`
+```ruby
+version: '3.9'
+services:
+  apache:
+    image: httpd:latest
+    container_name: my-apache-app
+    ports:
+    - '8081:80'
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
+```
+
+# 6. Deploying a web application with Kubernetes
+
 Kubernetes will be used to orchestrate the deployment of Docker containers across multiple servers for scalability and high availability.
 `ADVANCED` `KUBERNETES` `DOCKER`
 

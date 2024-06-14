@@ -18,7 +18,7 @@ sudo groupadd GRP_BACKEND
 sudo groupadd GRP_OPS
 ```
 
-2.`Implementing a version control system with Git/Github:`
+# 2. Implementing a version control system with Git/Github
 We will use Git for version control and Github for a central repository. Developers will have access to the latest codebase and can track changes efficiently.
 `BEGINNER` `GIT` `GITHUB`
 ```ruby
@@ -31,13 +31,32 @@ git push origin <branch_name>
 ```
 
 
-3.`Deploying infrastructure with Terraform:`
-Terraform will automate the provisioning of infrastructure like servers, databases, and storage on a chosen cloud platform. This ensures consistent and repeatable infrastructure deployment.
+# 3. Deploying infrastructure with Terraform
+Terraform will automate infrastructure provisionings, such as servers, databases, and storage on a chosen cloud platform. This ensures consistent and repeatable infrastructure deployment.
 `INTERMEDIATE` `TERRAFORM` `CLOUD COMPUTING`
+```ruby
+# Create a Resource Group for desktop 
+resource "azurerm_resource_group" "rg-desktop-bknd-001" {  # Define components of your infrastructure
+  location = "westeurope"
+  name     = "rg-desktop-bknd-001"
+  tags     = var.desktop_tags
+}
 
-4.`Creation of CI/CD pipeline with Azure DevOps:`
+# Create a Resource Group for mobile 
+resource "azurerm_resource_group" "rg-mobile-bknd-001" {
+  location = "westeurope"
+  name     = "rg-mobile-bknd-001"
+  tags     = var.mobile_tags
+}
+```
+
+
+# 4. Creation of CI/CD pipeline with Azure DevOps
+
 Azure DevOps will be used to create a continuous integration and continuous delivery (CI/CD) pipeline. Upon code commit, the pipeline will automatically build, test, and deploy the application to a staging environment.
 `INTERMEDIATE` `AZURE DEVOPS` `DEVOPS`
+```ruby
+
 
 5.`Containerizing an application with Docker:`
 The application will be containerized using Docker, creating a self-contained package with all dependencies. This promotes portability and simplifies deployments.

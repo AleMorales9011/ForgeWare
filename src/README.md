@@ -22,11 +22,11 @@ sudo groupadd GRP_FRONTEND  # groupadd creates a new group
 sudo groupadd GRP_BACKEND
 sudo groupadd GRP_OPS
 ```
-<kbd><br>[See the full Solution][https://github.com/AleMorales9011/ForgeOps/blob/81092908b8b9a6ae5fbbc6679ce142b99c56e20c/src/00-Basic%20Scripting.md]<br></kbd>
-
 # Implementing a version control system with Git/Github
+
 We will use Git for version control and Github for a central repository. Developers will have access to the latest codebase and can track changes efficiently.
 `BEGINNER` `GIT` `GITHUB`
+
 ```ruby
 git clone <URL>
 git add <filename> # to stage specific files for commit.
@@ -36,10 +36,11 @@ git remote add origin <repo URL> # This command configures a remote repository.
 git push origin <branch_name>
 ```
 
-
 # Deploying infrastructure with Terraform
+
 Terraform will automate infrastructure provisionings, such as servers, databases, and storage on a chosen cloud platform. This ensures consistent and repeatable infrastructure deployment.
 `INTERMEDIATE` `TERRAFORM` `CLOUD COMPUTING`
+
 ```ruby
 # Create a Resource Group for desktop 
 resource "azurerm_resource_group" "rg-desktop-bknd-001" {  # Define components of your infrastructure
@@ -59,6 +60,7 @@ resource "azurerm_resource_group" "rg-mobile-bknd-001" {
 
 Azure DevOps will be used to create a continuous integration and continuous delivery (CI/CD) pipeline. Upon code commit, the pipeline will automatically build, test, and deploy the application to a staging environment.
 `INTERMEDIATE` `AZURE DEVOPS` `DEVOPS`
+
 ```ruby
 - task: TerraformTaskV4@4 # Executes Terraform commands.
   inputs: # Defines the input parameters for the task
@@ -96,6 +98,7 @@ services:
     - ./website:/usr/local/apache2/htdocs
 ```
 # Deploying a web application with Kubernetes
+
 Kubernetes will be used to orchestrate the deployment of Docker containers across multiple servers for scalability and high availability.
 `ADVANCED` `KUBERNETES` `DOCKER`
 
@@ -145,6 +148,7 @@ cp -R * /var/www/html/
 ```
 
 # Setting developing environment with Vagrant
+
 To provide developers with a consistent local development environment, Vagrant will be used to create virtual machines pre-configured with all the necessary tools and dependencies.
 `ADVANCED` `VAGRANT` `IAC`
 ```ruby

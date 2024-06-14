@@ -152,21 +152,5 @@ machines = {
 # Sets the Vagrant configuration version to "2" 
 Vagrant.configure("2") do |config|
 ```
-## Final Infrastructure
+![Forgeware](images/Forgeware_banner_final.png)
 
-Our end goal with this business case project is to be able to replicate a Software Engineering pipeline like the one in the image below.
-
-![Final_Infrastructure](images/ForgeOps_final_infrastructure.png)
-
-## Benefits
-
-1. `Faster Onboarding:` Developers are up and running quickly with a pre-configured environment.
-2. `Reduced Errors:` Automated provisioning and deployment minimize human error.
-3. `Improved Version Control:` Git ensures proper code tracking and collaboration.
-4. `Scalable Infrastructure:` Terraform and Kubernetes handle scaling needs.
-5. `Efficient Delivery:` CI/CD pipeline automates builds, tests, and deployments.
-6. `Consistent Development Environments:` Vagrant provides a uniform development experience for everyone.
-
-## Conclussion
-
-This combination of scripts automates the entire development and deployment process, saving time, increasing efficiency, and reducing errors. This allows your team to focus on developing innovative features for your e-commerce platform.

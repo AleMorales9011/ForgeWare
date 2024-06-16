@@ -1,10 +1,15 @@
 ![Introduction](images/female-freelancer-portrait.jpg)
-
 # DevOps 
 
-10 minutes
+20 minutes
 
-## Scenario: DevOps Journey for SAAS Platform
+# Introduction
+
+The Software Engineering market is like any other market. Everyone wants to be the first. Meaning? We must match our users' needs before our competitors do. For that to happen we need to `ship` quality `code faster`. And for that, we need to automate. 
+
+Simply put; anything that could be automated, must, normally that goes for three main operations. `Testing, Building, and Deployment`. The diagram below illustrates a core Software Development pipeline.
+
+![sdlc](images/sdlc.png)
 
 Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 

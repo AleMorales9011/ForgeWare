@@ -7,22 +7,14 @@
 
 The Software Engineering market is like any other market. Everyone wants to be the first. Meaning? We must match our users' needs before our competitors do. For that to happen we need to `ship` quality `code faster`. And for that, we need to automate. 
 
-Simply put; anything that could be automated, must, normally that goes for three main operations. `Testing, Building, and Deployment`. The diagram below illustrates a core Software Development pipeline.
+Simply put; anything that could be automated, must. Normally that goes for three main operations. `Testing, Building, and Deployment`. The diagram below illustrates a core Software Development pipeline along with its according phase of the SDLC (Software development Life Cycle).
 
-![sdlc](images/sdlc.png)
+![sdlc](images/Agile%2BDevOps.jpeg)
 
-Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
 
-## Challenges
+# Table of Contents
 
-1. Manual user and environment setup is `time-consuming` and error-prone.
-2. Uncontrolled code versioning leads to `confusion and difficulty` in reverting changes.
-3. Infrastructure provisioning is `slow and inconsistent`.
-4. Deployments are manual and `prone to human error`.
-
-## Solution
-
-We will implement a `fully automated` onboarding and deployment pipeline using the following scripts:
+In the upcoming chapters, we will demonstrate the use of some core DevOps practices and tools. 
 
 ![DevOps_Journey](https://github.com/AleMorales9011/FORGE-OPS/blob/278e5fd944f771b2e465d0d554f45bdccdcbbccf/010-IMAGES/ForgeOps_Journey.png)
 
@@ -58,17 +50,11 @@ A Bash script will trigger the Azure DevOps pipeline upon code commit, automatin
 To provide developers with a consistent local development environment, Vagrant will be used to create virtual machines pre-configured with all the necessary tools and dependencies.
 `ADVANCED` `VAGRANT` `IAC`
 
+# Conclussion
 
-## Benefits
+This combination of scripts automates the entire development and deployment process, saving time, increasing efficiency, and reducing errors. This allows software engineering teams to focus on developing innovative features faster and more efficiently.
 
-1. `Faster Onboarding:` Developers are up and running quickly with a pre-configured environment.
-2. `Reduced Errors:` Automated provisioning and deployment minimize human error.
-3. `Improved Version Control:` Git ensures proper code tracking and collaboration.
-4. `Scalable Infrastructure:` Terraform and Kubernetes handle scaling needs.
-5. `Efficient Delivery:` CI/CD pipeline automates builds, tests, and deployments.
-6. `Consistent Development Environments:` Vagrant provides a uniform development experience for everyone.
+# Next
 
-## Conclussion
-
-This combination of scripts automates the entire development and deployment process, saving time, increasing efficiency, and reducing errors. This allows your team to focus on developing innovative features for your e-commerce platform.
+We will use IAC concepts to automate the creation of users, directories, and groups with a Bash script.
 

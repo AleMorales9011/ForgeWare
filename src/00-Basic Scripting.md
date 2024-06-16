@@ -2,32 +2,22 @@
 
 # Automating the creation of users, permissions, directories, and groups with Bash
 
-The main goal of DevOps is to `ship code faster` and efficiently.
+20 minutes
 
-However for that to happen first A SaaS company would likely need to create groups, directories, and users for new employees.
+As we said before the main goal of DevOps is to `ship code faster` and efficiently.
 
-A SAAS company might do this with Linux in a scenario where they are using a `self-hosted deployment` model.
-
-SaaS companies typically offer their software as a service, meaning it's hosted on the company's infrastructure and accessed by users through a web interface.
-
-However, some companies might choose a `self-hosted` model where they install and manage the SaaS application on their own Linux servers.
+However for that to happen first software companies would likely need to create groups, directories, and users for new employees. A company might do this with Linux in a scenario where they are using a `self-hosted deployment` model. Some companies might choose a `self-hosted` model where they install and manage the SaaS application on their own Linux servers.
 
 In this self-hosted scenario, the company would need to create user accounts on the `Linux server` for each new employee. These accounts would grant them access to the specific resources and applications they need to do their jobs.
 
-![ForgeOps_filemanagement](images/ForgeOps_filemanagement.png)
-
-## Methodology
-
-The script below illustrates a possible solution for manage users in a Linux server with a bash.
-
-## Table of Contents
+# Table of Contents
 
 1. Payroll Table
 2. Script
 3. Permissions Strings
 4. Conclusion
   
-## Payroll Table
+# Payroll Table
 
 Below is the payroll table that will be used to create the user management script.
 
@@ -43,7 +33,7 @@ Below is the payroll table that will be used to create the user management scrip
 |Noah       | ops     /public | ops           | rwx                           |
 |Noah       | ops     /public | ops           | rwx                           |
 
-### Script
+# Script
 
 The script below creates the above infrastructure
 
@@ -90,7 +80,7 @@ sudo chmod 777 /public
 
 ```
 
-### Permissions Strings
+# Permissions Strings
 
 The permissions string defines a `specific access` level for the owner, the group, and others on a file or directory.
 
@@ -107,8 +97,12 @@ Owner (first set of three): "rwx" - This translates to read, write, and execute 
 Group (second set of three): "r--" - This translates to read permission only for the group.
 Others (third set of three): "r--" - This translates to read permission only for others (users who are not the owner and not in the group).
 
-## Conclusion
+# Conclusion
 
 It's important to note that this scenario is `less common` for modern SaaS companies. Most SaaS companies would leverage a `cloud-based deployment` model where user management and access control are handled by the provider, eliminating the need for direct Linux administration.
 
 There might be some `hybrid deployments` where core functionalities are self-hosted on Linux servers while other aspects leverage cloud services. In such cases, user and group management on the Linux side might still be necessary.
+
+# Next
+
+We will implement a version control System with Github.

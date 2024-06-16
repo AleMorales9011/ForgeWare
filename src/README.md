@@ -1,9 +1,9 @@
 ![Forgeware](images/Forgeware_banner_final.png)
-# Introduction
+# About Forgeware
 
 20 minutes
 
-Software Engineering is a complicated subject. It's hard to break through the `myriad of technologies`, frameworks, good practices, and programming languages. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those `real-life applications` so you get a sense of what you are dealing with. Please notice the scripts we provide are not meant to be used in any production environment. 
+Software Engineering is a complicated subject. Breaking through the `myriad of technologies`, frameworks, good practices, and programming languages is hard. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those `real-life applications` so you get a sense of what you are dealing with. Please notice, that the scripts we provide are not meant to be used in any production environment. 
 
 # Automating the creation of users, directories, permissions, and groups with Bash
 

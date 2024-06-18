@@ -169,5 +169,105 @@ public class Main {
 
 Subclasses can redefine inherited methods from their parent classes. By overriding methods, you can create more specialized classes that inherit core functionality from parent classes but customize specific behaviors.
 
+```java
+public class Animal {
+  public void makeSound() {
+    System.out.println("Generic animal sound");
+  }
+}
+
+public class Dog extends Animal {
+  @Override
+  public void makeSound() {
+    System.out.println("Woof!");
+  }
+}
+
+public class Cat extends Animal {
+  @Override
+  public void makeSound() {
+    System.out.println("Meow!");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Animal animal1 = new Animal();
+    animal1.makeSound(); // Generic sound
+
+    Animal animal2 = new Dog();  // Upcasting (treated as Animal at compile time)
+    animal2.makeSound(); // Overridden sound (Woof!) due to polymorphism at runtime
+
+    Cat cat = new Cat();
+    cat.makeSound(); // Meow!
+  }
+}
+```
+# Decision Structures
+
+ Allow your Java programs to make choices and execute different code blocks based on certain conditions.
+
+## If Statement
+```java
+
+int age = 20;
+if (age >= 18) {
+  System.out.println("You are eligible to vote.");
+}
+```
+## If Else 
+
+```java
+int number = 10;
+if (number > 0) {
+  System.out.println("The number is positive.");
+} else {
+  System.out.println("The number is non-positive.");
+}
+```
+## If Else If Statement
+
+```java
+char grade = 'A';
+if (grade == 'A') {
+  System.out.println("Excellent!");
+} else if (grade == 'B') {
+  System.out.println("Well done!");
+} else {
+  System.out.println("Keep practicing!");
+}
+```
+## Switch Statement
+
+1. Used for multi-way branching based on the value of an expression.
+2. Each `case` label checks for a specific value of the expression.
+3. An optional `break` statement prevents fall-through to the next case.
+4. A default `case` can handle situations where none of the other cases match.
+
+```java
+String day = "Monday";
+switch (day) {
+  case "Monday":
+  case "Tuesday":
+  case "Wednesday":
+  case "Thursday":
+  case "Friday":
+    System.out.println("It's a weekday!");
+    break;
+  case "Saturday":
+  case "Sunday":
+    System.out.println("It's a weekend!");
+    break;
+}
+
+```
+
+
+
+
+
+
+
+
 
 

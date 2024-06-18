@@ -1,3 +1,4 @@
+![]()
 # POO with Java
 
 1 hour
@@ -261,7 +262,11 @@ switch (day) {
 }
 
 ```
+# Conclussion
+Learning OOP with Java equips you with a powerful and adaptable approach to software development, preparing you for success in a wide range of programming endeavors.
 
+# Next
+We will discuss more advanced topics such as operators, data types, and repetition structures. 
 
 
 

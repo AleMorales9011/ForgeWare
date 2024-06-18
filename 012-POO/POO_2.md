@@ -11,5 +11,5 @@ Operators are special symbols that perform specific operations on values (operan
 
 | Name          | Symbol        | Example      |     
 | ------------- | ------------- | -------------|
-| Content Cell  | Content Cell  |------------- | 
-| Content Cell  | Content Cell  |------------- |
+| Sum           | Content Cell  |------------- | 
+| Substraction  | Content Cell  |------------- |

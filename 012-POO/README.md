@@ -1,4 +1,4 @@
-# POO
+# POO with Java
 
 1 hour
 
@@ -67,5 +67,32 @@ public class Main {  // Defines the entry point for the program. The execution s
   }
 }
 ```
+# Static Methods
 
+Static methods in Java are a special type of method that belongs to the class itself, rather than to an object of the class. This is useful when you want to call a method straight from the class without having to instantiate ( create) an object to do that. While static methods offer convenience, they can also lead to tight coupling between classes if overused. Favor non-static methods when dealing with object-specific data or behavior.
+
+```java
+public class MathUtils {
+
+  public static int add(int a, int b) { // declare static method add
+    return a + b;
+  }
+
+  public static double calculateArea(double radius) { //declare static method calculateArea
+    return Math.PI * radius * radius;  // Accessing a static member of Math class
+  }
+
+  public static final double PI = 3.14159;  // Static final variable (constant)
+}
+
+public class Main {
+  public static void main(String[] args) {
+    int sum = MathUtils.add(5, 3);  // Calling static methods without object
+    System.out.println("Sum: " + sum);
+    
+    double circleArea = MathUtils.calculateArea(10.0);
+    System.out.println("Circle Area: " + circleArea);
+  }
+}
+```
 

@@ -96,3 +96,78 @@ public class Main {
 }
 ```
 
+# Constructor Methods
+
+The primary purpose of constructors is to initialize the object's attributes with starting values. Classes and objects start with some default values (0 for numbers, false for boolean, and null for objects). If you don't want the class or object initialized like this,  you use a constructor.
+
+```java
+public class Car {
+  private String model;
+  private int year;
+
+  // Default constructor (no-arg)
+  public Car() {
+    // Assigning default values (optional)
+    this.model = "Unknown";
+    this.year = 2000;
+  }
+
+  // Parameterized constructor
+  public Car(String model, int year) {
+    this.model = model;
+    this.year = year;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    // Using default constructor
+    Car car1 = new Car();
+    System.out.println("Car 1: Model - " + car1.model + ", Year - " + car1.year);
+
+    // Using parameterized constructor
+    Car car2 = new Car("Tesla Model S", 2023);
+    System.out.println("Car 2: Model - " + car2.model + ", Year - " + car2.year);
+  }
+}
+```
+# Overloading Methods
+
+Sometimes you need a method to behave slightly differently according to the number and data types of parameters. By overloading methods, you can provide methods with the same name but specific functionalities based on the arguments provided. This makes code easier to understand and reduces the need for multiple methods with slightly different purposes.
+
+```java
+public class Calculator {
+
+  // Add two integers
+  public int add(int a, int b) {
+    return a + b;
+  }
+
+  // Add two doubles
+  public double add(double a, double b) {
+    return a + b;
+  }
+
+  // Add three integers (optional)
+  public int add(int a, int b, int c) {
+    return a + b + c;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Calculator calc = new Calculator();
+    int sumInt = calc.add(5, 3); // Calls the first add method (int, int)
+    double sumDouble = calc.add(2.5, 1.7); // Calls the second add method (double, double)
+    System.out.println("Integer sum: " + sumInt);
+    System.out.println("Double sum: "  + sumDouble);
+  }
+}
+```
+
+# Overriding Methods
+
+Subclasses can redefine inherited methods from their parent classes. By overriding methods, you can create more specialized classes that inherit core functionality from parent classes but customize specific behaviors.
+
+
+

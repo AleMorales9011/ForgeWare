@@ -139,6 +139,16 @@ public class AgeChecker {
   }
 }
 ```
+# Data Types
+
+Here are the most used data types. 
+
+| Data Type | Description            |  Example      |     
+|-----------|------------------------|---------------| 
+|  int      | interger values        |  1;45;465     |
+|  float    | decimal numbers        |  1,34;4,56    |
+|  char     | single characters      |  '1';'%'      |
+|  boolean  | logical values         |  true, value  |
 
 # Conclusion
 

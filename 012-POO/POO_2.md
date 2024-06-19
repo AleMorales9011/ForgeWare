@@ -5,7 +5,7 @@
 
 # Operators
 
-Operators are special symbols that perform specific operations on values (operands) and produce a result. They are the building blocks of expressions and statements in your Java code.
+Operators are special symbols that perform specific operations on values (operands) and produce results. They are the building blocks of expressions and statements in your Java code.
 
 ## Arithmetic
 
@@ -20,16 +20,14 @@ Operators are special symbols that perform specific operations on values (operan
 
 ## Operadores Relacionais
 
-|  Name    |  Symbol  |  Example |      
-|----------|----------|----------|
-| Equality |   3+5    |    +     |
-|    +     |   3+5    |    +     |
-|    +   |   3+5    |    +     |
-|    +   |   3+5    |    +     |
-|    +   |   3+5    |    +     |
-|    +   |   3+5    |    +     |
-|    +   |   3+5    |    +     |
-|    +   |   3+5    |    +     |
+|  Name                          |  Symbol  |  Example |  Value |      
+|--------------------------------|----------|----------|--------|
+| Equality                       |   ====   |  3===3   |  True  |
+| Inequality                     |   !=     |  3!=3    |  False |
+| Greater than                   |    >     |  5 > 7   |  False |
+| Less than                      |    <     |   5 < 7  |  True  |
+| Greater than or equal to       |    >=    |   5 >= 7 |  False |
+| Less than or equal to          |    <=    |   5 <= 7 |  True  |
 
 
 

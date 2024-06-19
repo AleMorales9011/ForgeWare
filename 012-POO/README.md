@@ -3,7 +3,7 @@
 
 1 hour
 
-POO (Object-oriented programming) allows developers to model software in a very similar fashion to the way we think. In terms of Classes( a category of something), objects (an element inside that category), attributes ( a characteristic of the element), and methods(something the element does). 
+POO (Object-oriented programming) allows developers to model software in a very similar fashion to the way we think. In terms of Classes( a category of something), objects (an element inside that category), attributes ( a characteristic of the component), and methods(something the element does). 
 
 # Class:
 

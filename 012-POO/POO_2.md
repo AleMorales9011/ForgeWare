@@ -96,6 +96,24 @@ count *= 5;
 |   x--      |  Use x and then substract 1 | 
 
 ```java
+public class IncrementDecrementExample {
+
+  public static void main(String[] args) {
+    int count = 5;
+
+    // Pre-increment: increment count by 1 and then assign the new value to result
+    int result = ++count;  // result becomes 6, count becomes 6
+
+    System.out.println("After pre-increment, count = " + count);  // Output: After pre-increment, count = 6
+
+    int anotherResult = count--;  // anotherResult gets the current value of count (6), then count is decremented to 5
+
+    System.out.println("After post-decrement, anotherResult = " + anotherResult);  // Output: After post-decrement, anotherResult = 6
+    System.out.println("After post-decrement, count = " + count);  // Output: After post-decrement, count = 5
+
+  }
+}
+
 ```
 
 # Logical
@@ -107,8 +125,23 @@ count *= 5;
 |  Not  |   !True        |  False     |
 
 ```java
+public class AgeChecker {
+
+  public static void main(String[] args) {
+    int age = 25;
+    boolean isAdult = age >= 18 && age < 65; // Combining conditions with AND
+
+    if (isAdult) {
+      System.out.println("You are an adult.");
+    } else {
+      System.out.println("You are not an adult.");
+    }
+  }
+}
 ```
 
 # Conclusion
+
+Operators are the essential tools that let you perform operations on data in your Java programs. Without them, you wouldn't be able to do basic things like calculations (addition, subtraction, etc.) or comparisons.
 
 # Next

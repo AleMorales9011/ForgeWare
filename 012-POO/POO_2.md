@@ -42,11 +42,12 @@ public class AreaCalculator {
 | Equality                       |   ====   |  3===3   |  True  |
 | Inequality                     |   !=     |  3!=3    |  False |
 | Greater than                   |    >     |  5 > 7   |  False |
-| Less than                      |    <     |   5 < 7  |  True  |
-| Greater than or equal to       |    >=    |   5 >= 7 |  False |
-| Less than or equal to          |    <=    |   5 <= 7 |  True  |
+| Less than                      |    <     |  5 < 7   |  True  |
+| Greater than or equal to       |    >=    |  5 >= 7  |  False |
+| Less than or equal to          |    <=    |  5 <= 7  |  True  |
 
 ```java
+
 public class RelationalOperatorExample {
 
   public static void main(String[] args) {
@@ -143,6 +144,8 @@ public class AgeChecker {
 
 Here are the most used data types. 
 
+# Primitive 
+
 | Data Type | Description            |  Example        |     
 |-----------|------------------------|-----------------| 
 |  int      | interger values        |  1;45;465       |
@@ -166,6 +169,34 @@ public class AreaCalculator {
 
     // Print the result with descriptive message
     System.out.println("The area of the rectangle is: " + area);
+  }
+}
+
+```
+# Non-Primitive
+
+| Data Type   | Description                      |  Example                        |     
+|-------------|----------------------------------|---------------------------------| 
+|  String     | Sequence of characers            |  "Hello World"                  |
+|  Array      | Ordered items(same data type)    |  int[] numbers = {1,2,3,4};     |
+|  Class      | Object blueprint                 |  public class  Classname {}     |
+|  Interface  | Specifies methods for a class    |  public interface Interfacename |
+
+```java
+
+public interface Drawable {
+  // Declare an abstract method without implementation
+  void draw();
+}
+
+public class Main {
+
+  public static void main(String[] args) {
+    // Create an object of a class implementing the interface
+    Drawable drawable = new Square();
+    
+    // Call the draw method through the interface reference
+    drawable.draw();
   }
 }
 

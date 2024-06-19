@@ -32,11 +32,11 @@ Operators are special symbols that perform specific operations on values (operan
 
 ## Attribution Operators
 
-| Example   | Use Case     |     
-|-----------|--------------|
-|   x+=3    |   x= x + 3   |
-|   x-=3    |   x= x - 3   | 
-|    *      |   3*5     |
-|    /      |   5/3     | 
-|    %      |   5%3     |
+| Example    | Use Case      |     
+|------------|---------------|
+|   x+=3     |   x = x + 3   |
+|   x-=3     |   x = x - 3   | 
+|   x*=3     |   x = x * 3   |
+|   x/=3     |   x = x / 3   | 
+|   x%=3     |   x = x % 3   |
 

@@ -9,7 +9,27 @@ Operators are special symbols that perform specific operations on values (operan
 
 ## Arithmetic
 
-| Name          | Symbol        | Example      |     
-| ------------- | ------------- | -------------|
-| Sum           | Content Cell  |------------- | 
-| Substraction  | Content Cell  |------------- |
+| Symbol | Example  |     
+|--------|----------|
+|    +   |   3+5    |
+|    -   |   5-3    | 
+|    *   |   3*5    |
+|    /   |   5/3    | 
+|    %   |   5%3    |
+
+
+## Operadores Relacionais
+
+|  Name    |  Symbol  |  Example |      
+|----------|----------|----------|
+| Equality |   3+5    |    +     |
+|    +     |   3+5    |    +     |
+|    +   |   3+5    |    +     |
+|    +   |   3+5    |    +     |
+|    +   |   3+5    |    +     |
+|    +   |   3+5    |    +     |
+|    +   |   3+5    |    +     |
+|    +   |   3+5    |    +     |
+
+
+

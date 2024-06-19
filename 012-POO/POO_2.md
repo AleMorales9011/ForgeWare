@@ -18,7 +18,7 @@ Operators are special symbols that perform specific operations on values (operan
 |    %   |   5%3    |
 
 
-# Relational Operators
+# Relational 
 
 |  Name                          |  Symbol  |  Example |  Value |      
 |--------------------------------|----------|----------|--------|
@@ -30,7 +30,7 @@ Operators are special symbols that perform specific operations on values (operan
 | Less than or equal to          |    <=    |   5 <= 7 |  True  |
 
 
-# Attribution Operators
+# Attribution
 
 | Example    | Use Case      |     
 |------------|---------------|
@@ -41,12 +41,14 @@ Operators are special symbols that perform specific operations on values (operan
 |   x%=3     |   x = x % 3   |
 
 
-## Increment and Decrement
+# Increment and Decrement
 
 | Example    | Use Case                    |     
 |------------|-----------------------------|
 |   ++x      |  Add 1 before using x       |
 |   x++      |  Use x and then adds 1      | 
 |   --x      |  Subtract 1 before using x  |
-|   x--      |   x = x / 3   | 
-|   x%=3     |   x = x % 3   |
+|   x--      |  Use x and then substract 1 | 
+
+# Logical
+

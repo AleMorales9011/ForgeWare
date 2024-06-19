@@ -12,7 +12,7 @@
   - [Setting development environment with Vagrant](<07-AdvancedScripting.md>)
 - [SGBD]()
 - [Q&A]()
-- [POO]()
+- [POO](08-POO_1.md)
 - [System Design]()
 - [Data Structures and Algorythms]()
   

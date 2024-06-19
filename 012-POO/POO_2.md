@@ -143,12 +143,33 @@ public class AgeChecker {
 
 Here are the most used data types. 
 
-| Data Type | Description            |  Example      |     
-|-----------|------------------------|---------------| 
-|  int      | interger values        |  1;45;465     |
-|  float    | decimal numbers        |  1,34;4,56    |
-|  char     | single characters      |  '1';'%'      |
-|  boolean  | logical values         |  true, value  |
+| Data Type | Description            |  Example        |     
+|-----------|------------------------|-----------------| 
+|  int      | interger values        |  1;45;465       |
+|  float    | decimal numbers        |  1,34F;4,56F    |
+|  double   | precise decimal numbers|  4,54;6,42      |
+|  char     | single characters      |  '1';'%'        |
+|  boolean  | logical values         |  true, value    |
+
+```java
+
+public class AreaCalculator {
+
+  public static void main(String[] args) {
+    // Declare variables with appropriate data types
+    int length = 10; // int for whole number (width)
+    double width = 5.2;  // double for decimal number (height)
+    double area;  // double to store the calculated area (decimal)
+
+    // Calculate the area
+    area = length * width;
+
+    // Print the result with descriptive message
+    System.out.println("The area of the rectangle is: " + area);
+  }
+}
+
+```
 
 # Conclusion
 

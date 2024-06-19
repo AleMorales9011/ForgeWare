@@ -52,3 +52,8 @@ Operators are special symbols that perform specific operations on values (operan
 
 # Logical
 
+| Name  | Example        |  Value     |     
+|-------|----------------|------------|
+|  And  |  True&&False   |  False     |
+|  Or   |  True||False   |  True      | 
+|  Not  |   !True        |  False     |

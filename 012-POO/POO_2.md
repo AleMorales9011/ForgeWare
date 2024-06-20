@@ -167,7 +167,7 @@ public class AreaCalculator {
     // Calculate the area
     area = length * width;
 
-    // Print the result with descriptive message
+    // Print the result with a descriptive message
     System.out.println("The area of the rectangle is: " + area);
   }
 }
@@ -177,7 +177,7 @@ public class AreaCalculator {
 
 | Data Type   | Description                      |  Example                        |     
 |-------------|----------------------------------|---------------------------------| 
-|  String     | Sequence of characers            |  "Hello World"                  |
+|  String     | Sequence of characters            |  "Hello World"                  |
 |  Array      | Ordered items(same data type)    |  int[] numbers = {1,2,3,4};     |
 |  Class      | Object blueprint                 |  public class  Classname {}     |
 |  Interface  | Specifies methods for a class    |  public interface Interfacename |
@@ -278,6 +278,18 @@ src
           - CustomerController.java
 
 ```
+
+# Acces Modifiers
+
+Keywords that define the accessibility of classes, methods, variables, and constructors within a program.
+
+|  Modifier   | Description                      |      
+|-------------|----------------------------------| 
+|  Public     | Everywhere                       |
+|  Private    | Within class only                |
+|  Protected  | Whithin the package              |
+|  Default    | Whithin the same package only    |
+
 
 # Conclusion
 

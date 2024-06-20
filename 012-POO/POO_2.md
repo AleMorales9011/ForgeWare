@@ -201,6 +201,39 @@ public class Main {
 }
 
 ```
+# Repetition Structures/ Loops
+
+Allow you to execute a block of code multiple times based on a certain condition
+
+# While loop 
+
+This is the most basic loop construct. It repeatedly executes a code block as long as a specified condition is evaluated as true. 
+
+```java
+while (condition) {
+  // code to be executed
+}
+```
+# do-while loop 
+
+Similar to the while loop, it guarantees that the code block is executed at least once, even if the condition is initially false.
+
+```java
+do {
+  // code to be executed
+} while (condition);
+
+```
+# for loop
+
+This loop combines initialization, condition checking, and increment/decrement in a concise syntax. It's often preferred for iterating a fixed number of times
+
+```java
+for (initialization; condition; increment/decrement) {
+  // code to be executed
+}
+```
+
 
 # Conclusion
 

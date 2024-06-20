@@ -291,6 +291,26 @@ Keywords that define the accessibility of classes, methods, variables, and const
 |  Default    | Whithin the same package only    |
 
 
+# Code Encapsulation
+
+Code encapsulation is a fundamental principle in object-oriented programming (OOP) that focuses on bundling data (attributes) and methods (functions) that operate on that data together within a class.
+
+```java
+
+public class ContaCorrente (Current Account) {
+  private double saldo; // Private attribute to store balance
+
+  public void depositar (deposit) (double valor) {
+    saldo += valor;
+  }
+
+  public double getSaldo (get balance) () {
+    return saldo;
+  }
+}
+
+```
+
 # Conclusion
 
 Operators are the essential tools that let you perform operations on data in your Java programs. Without them, you wouldn't be able to do basic things like calculations (addition, subtraction, etc.) or comparisons.

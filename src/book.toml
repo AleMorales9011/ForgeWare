@@ -5,7 +5,7 @@ description = "Collection of resources and tools for implementing DevOps practic
 
 [output.html]
 theme = "my-theme"
-default-theme = "ayu"
+default-theme = "dark"
 preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/AleMorales9011/ForgeWare"
 git-repository-icon = "fa-github"

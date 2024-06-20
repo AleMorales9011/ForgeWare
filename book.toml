@@ -4,7 +4,6 @@ authors = ["Alejandro Morales", "Amanda Estevez, Ailen Morales"]
 description = "Collection of resources and tools for implementing DevOps practices."
 
 [output.html]
-theme = "my-theme"
 default-theme = "ayu"
 preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/AleMorales9011/ForgeWare"

@@ -214,7 +214,7 @@ while (condition) {
   // code to be executed
 }
 ```
-# do-while loop 
+# Do-while loop 
 
 Similar to the while loop, it guarantees that the code block is executed at least once, even if the condition is initially false.
 
@@ -224,7 +224,7 @@ do {
 } while (condition);
 
 ```
-# for loop
+# For loop
 
 This loop combines initialization, condition checking, and increment/decrement in a concise syntax. It's often preferred for iterating a fixed number of times
 
@@ -234,6 +234,50 @@ for (initialization; condition; increment/decrement) {
 }
 ```
 
+# Package Structure
+
+Packages provide a logical way to group related classes, while directories on your disk reflect this structure.
+
+```ruby
+com
+  - yourcompany.ecommerce
+    - model
+      - Product.java
+      - Order.java
+      - Customer.java
+    - service
+      - ProductService.java
+      - OrderService.java
+      - CustomerService.java
+    - controller
+      - ProductController.java
+      - OrderController.java
+      - CustomerController.java
+```
+# Directory Structure
+
+Map directly to the package structure on disk. A package named `com.example.myapp` would have a corresponding directory structure like `com/example/myapp`. Each directory can contain Java source files (.java) and potentially subdirectories for sub-packages.
+
+```ruby
+
+src
+  - com
+    - yourcompany
+      - ecommerce
+        - model
+          - Product.java
+          - Order.java
+          - Customer.java
+        - service
+          - ProductService.java
+          - OrderService.java
+          - CustomerService.java
+        - controller
+          - ProductController.java
+          - OrderController.java
+          - CustomerController.java
+
+```
 
 # Conclusion
 

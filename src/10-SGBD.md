@@ -53,14 +53,28 @@ CREATE TABLE Customers (
 ```SQL
 ALTER TABLE Customers ADD city VARCHAR(50);
 ```
-# 
+# Drop
 
+```SQL
+DROP TABLE Customers;
+```
+# Rename
+
+```SQL
+RENAME TABLE Customers TO ClientList;
+```
+
+# Comment
+
+```SQL
+COMMENT ON TABLE ClientList IS 'Stores customer information';
+```
 
 # Deploying A Database Via Script
 
 Deploying a database via script offers a controlled, repeatable, and automated approach to `database management`. It  improves efficiency, reduces errors, and facilitates collaboration among developers and database administrators.
 
-```sql
+```SQL
 DROP DATABASE Loja;
 CREATE DATABASE Loja;
 

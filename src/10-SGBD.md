@@ -36,7 +36,7 @@ MySQL Workbench offers a comprehensive set of tools for modeling and `designing 
 
 In SQL, there are five main categories of commands, each serving a specific purpose in managing and interacting with databases. By understanding these different categories of SQL commands, you can effectively manage your database, ensuring proper data structure, manipulation, security, and retrieval capabilities.
 
-![](https://github.com/AleMorales9011/ForgeWare/blob/912757a3619eb391442ee6c245fb9dd5210d952b/src/images/SQL_101.jpeg)
+![SQL_101](images/SQL_101.jpeg)
 
 # DDL
 
@@ -131,7 +131,7 @@ CREATE TABLE ContaReceber (
 
 # Inserting Data Via Script
 
-Inserting data `via script` is a powerful and efficient way to manage data population within your database. It promotes `accuracy`, repeatability, and allows for integration with other processes, ultimately saving time and resources.
+Inserting data `via script` is a powerful and efficient way to manage the data population within your database. It promotes `accuracy`, and repeatability, and allows for integration with other processes, ultimately saving time and resources.
 
 ```sql
 USE Loja;

@@ -32,6 +32,30 @@ MySQL Workbench offers a comprehensive set of tools for modeling and `designing 
 
 ![DER_Loja](https://github.com/AleMorales9011/ForgeOps/blob/90f5aff585b8dfc155c6d801bb1f04f63da8f8b3/010-IMAGES/der_database_loja.png)
 
+# DDL
+
+Data Definition Language. It's a subset of SQL commands used to define and manage the structure of database objects, essentially acting as the blueprint for your data.
+
+# Create
+
+```SQL
+
+CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100),
+    phone_number VARCHAR(20)
+);
+
+```
+# Alter
+
+```SQL
+ALTER TABLE Customers ADD city VARCHAR(50);
+```
+# 
+
+
 # Deploying A Database Via Script
 
 Deploying a database via script offers a controlled, repeatable, and automated approach to `database management`. It  improves efficiency, reduces errors, and facilitates collaboration among developers and database administrators.

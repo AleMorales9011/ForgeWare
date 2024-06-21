@@ -1,5 +1,5 @@
 ![Banner](https://github.com/AleMorales9011/ForgeWare/blob/912757a3619eb391442ee6c245fb9dd5210d952b/src/images/medium-shot-man-living-as-digital-nomad.jpg)
-# SQL 101
+# SQL
 
 1 hour
 
@@ -72,3 +72,31 @@ GRANT SELECT ON products TO sales_rep;
 ```SQL
 REVOKE INSERT, DELETE ON products FROM sales_rep;
 ```
+
+# TCL
+
+Transaction Control Language in SQL. TCL commands are essential for managing transactions within a database. 
+
+```SQL
+
+BEGIN TRANSACTION;
+
+-- Deduct from account A
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 101;
+
+-- Create a savepoint after successful deduction
+SAVEPOINT after_deduction;
+
+-- Check account B's balance (optional for validation)
+SELECT balance FROM accounts WHERE account_id = 102;
+
+-- If balance check fails (optional error scenario)
+ROLLBACK TO SAVEPOINT after_deduction;
+
+-- If balance check succeeds (assuming no errors)
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 102;
+
+COMMIT;
+
+```
+

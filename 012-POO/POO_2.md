@@ -5,7 +5,7 @@
 
 # Operators
 
-Operators are special symbols that perform specific operations on values (operands) and produce results. They are the building blocks of expressions and statements in your Java code.
+Operators are `special symbols` that perform specific operations on values (operands) and produce results. They are the building `blocks of expressions` and statements in your Java code.
 
 # Arithmetic
 
@@ -142,7 +142,7 @@ public class AgeChecker {
 ```
 # Data Types
 
-Here are the most used data types. 
+Here are the most used `data types`. 
 
 # Primitive 
 
@@ -203,11 +203,11 @@ public class Main {
 ```
 # Repetition Structures/ Loops
 
-Allow you to execute a block of code multiple times based on a certain condition
+Allow you to execute a `block of code` multiple times based on a certain condition
 
 # While loop 
 
-This is the most basic loop construct. It repeatedly executes a code block as long as a specified condition is evaluated as true. 
+This is the most basic `loop construct`. It repeatedly executes a code block if a specified condition is evaluated as true. 
 
 ```java
 while (condition) {
@@ -216,7 +216,7 @@ while (condition) {
 ```
 # Do-while loop 
 
-Similar to the while loop, it guarantees that the code block is executed at least once, even if the condition is initially false.
+Similar to the while loop, it guarantees that the code block is executed at least once, even if the `condition` is initially false.
 
 ```java
 do {
@@ -226,7 +226,7 @@ do {
 ```
 # For loop
 
-This loop combines initialization, condition checking, and increment/decrement in a concise syntax. It's often preferred for iterating a fixed number of times
+This loop combines initialization, `condition checking`, and increment/decrement in a concise syntax. It's often preferred for iterating a fixed number of times
 
 ```java
 for (initialization; condition; increment/decrement) {
@@ -236,7 +236,7 @@ for (initialization; condition; increment/decrement) {
 
 # Package Structure
 
-Packages provide a logical way to group related classes, while directories on your disk reflect this structure.
+Packages provide a `logical way` to group related classes, while directories on your disk reflect this structure.
 
 ```ruby
 com
@@ -281,7 +281,7 @@ src
 
 # Acces Modifiers
 
-Keywords that define the accessibility of classes, methods, variables, and constructors within a program.
+Keywords that define the `accessibility of classes`, methods, variables, and constructors within a program.
 
 |  Modifier   | Description                      |      
 |-------------|----------------------------------| 
@@ -293,21 +293,90 @@ Keywords that define the accessibility of classes, methods, variables, and const
 
 # Code Encapsulation
 
-Code encapsulation is a fundamental principle in object-oriented programming (OOP) that focuses on bundling data (attributes) and methods (functions) that operate on that data together within a class.
+Code encapsulation is a `fundamental principle` in object-oriented programming (OOP) that focuses on bundling data (attributes) and methods (functions) that operate on that data together within a class. It sets `private methods` and attributes that will be accessed only within a class. This is useful when you `don't want` other objects from outside the class to access the class data like a bank account. Please take a look at the example below.
 
 ```java
 
-public class ContaCorrente (Current Account) {
-  private double saldo; // Private attribute to store balance
+public class Current Account {
+  private double balance; // Private attribute to store balance
 
-  public void depositar (deposit) (double valor) {
-    saldo += valor;
+  public void deposit (double amount) { // Deposits a given amount into the account balance
+    balance += amount;
   }
 
-  public double getSaldo (get balance) () {
+  public double getBalance () { // Retrieves balance from Current Account
     return saldo;
   }
 }
+
+```
+# Inheritance
+
+Allows you to create sub-classes that inherit attributes and methods from the superclasses.
+
+```java
+
+public class Account { // Superclass - defines generic account properties
+
+  private int accountNumber; // Account number
+
+  public void withdraw (double amount) {
+    // Implement logic to withdraw from the account
+  }
+}
+
+public class Current Account extends Account { // Subclass inherits from Account by "extending" it.
+
+  private double balance; // Specific to current accounts
+
+  public void deposit (double amount) {
+    // Implement logic to deposit into current account (can leverage withdraw from account)
+  }
+
+  @Override // Indicates method overrides the one in the superclass
+  public double getBalance () {
+    return balance;
+  }
+}
+
+```
+
+# Polyformism
+
+Allows objects to get different forms. We have already seen this concept in action in the overriding methods section. Here's a refresher.
+
+```java
+
+class Animal {
+  public void makeSound() {
+    System.out.println("Generic animal sound");
+  }
+}
+
+class Dog extends Animal {
+  @Override // This annotation indicates method overriding
+  public void makeSound() {
+    System.out.println("Woof!");
+  }
+}
+
+class Cat extends Animal {
+  @Override
+  public void makeSound() {
+    System.out.println("Meow!");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Animal animal1 = new Dog();  // Upcasting (assigning subclass to superclass)
+    Animal animal2 = new Cat();
+
+    animal1.makeSound(); // Output: Woof! (calls Dog's makeSound)
+    animal2.makeSound(); // Output: Meow! (calls Cat's makeSound)
+  }
+}
+
 
 ```
 
@@ -316,3 +385,6 @@ public class ContaCorrente (Current Account) {
 Operators are the essential tools that let you perform operations on data in your Java programs. Without them, you wouldn't be able to do basic things like calculations (addition, subtraction, etc.) or comparisons.
 
 # Next
+
+We will learn about abstract classes, interface definitions, and graphic interfaces. 
+

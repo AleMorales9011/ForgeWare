@@ -100,3 +100,23 @@ COMMIT;
 
 ```
 
+# Functions
+
+These functions come in handy for various tasks, such as calculating statistics, formatting output, and performing mathematical operations. 
+
+```SQL
+-- Min, Max, Avg price of all orders
+SELECT
+  MIN(price) AS min_price,
+  MAX(price) AS max_price,
+  AVG(price) AS avg_price
+FROM Orders;
+
+-- Total quantity and number of orders
+SELECT
+  SUM(quantity) AS total_quantity,
+  COUNT(*) AS number_of_orders
+FROM Orders;
+```
+ 
+

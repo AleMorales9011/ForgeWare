@@ -56,3 +56,19 @@ ORDER BY s.customer_id, s.order_date;
 ```
 ![window_functions](https://github.com/AleMorales9011/ForgeWare/blob/0ffa65f9b255708d1fac746bed43551d80b9c91c/src/images/windows_functions.jpg)
 
+# DCL
+
+DCL commands are used to manage access privileges for users and objects within a database
+
+# Grant
+
+```SQL
+
+GRANT SELECT ON products TO sales_rep;
+
+```
+# Revoque
+
+```SQL
+REVOKE INSERT, DELETE ON products FROM sales_rep;
+```

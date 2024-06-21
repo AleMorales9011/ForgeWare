@@ -1,97 +1,166 @@
-# ![ForgeOps_banner](https://github.com/AleMorales9011/FORGE-OPS/blob/e1870a2dca92ea8c035b0f30b284d4afb019a498/src/images/Forge-ops_banner-removebg-preview.png)
+![Forgeware](images/Forgeware_banner_final.png)
+# About Forgeware
 
-## Bussines Case: DevOps Journey for SAAS Platform
+20 minutes
 
-## Objective
+Software Engineering is a complicated subject. Breaking through the `myriad of technologies`, frameworks, good practices, and programming languages is hard. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those `real-life applications` so you get a sense of what you are dealing with. Please notice, that the scripts we provide are not meant to be used in any production environment. 
 
-To walk you trough a common SAAS DevOps journey in a hands-on fashion trough a collection of scripts and diagrams that could be easily replicate for customized sitations. This project aims to illustrate:
+# Automating the creation of users, directories, permissions, and groups with Bash
 
-1. User management, version control and inftractructure creation.
-2. Infractstructure automation, and CI/CD pipelines.
-3. Containerization and infrastucture management.
-
-**Scenario:** Your company is a `rapidly growing` SAAS platform. You need to onboard new developers quickly. And efficiently, providing them with a fully functional development environment. And a `streamlined deployment` process.
-
-**Challenges:**
-
-1. Manual user and environment setup is `time-consuming` and error-prone.
-2. Uncontrolled code versioning leads to `confusion and difficulty` in reverting changes.
-3. Infrastructure provisioning is `slow and inconsistent`.
-4. Deployments are manual and `prone to human error`.
-
-## Example Usage
-
-Script example that illustrate how to use IaC principles to **automate directory structures** within your infrastructure.
-
-```bash
-#!/bin/bash
-
-# Creating directories
-sudo mkdir /dir_1    # sudo execute the command with superuser privileges
-sudo mkdir /dir_2    # mkdir is the command for creating a directory
-sudo mkdir /dir_3
-sudo mkdir /dir_4
-
-# Creating groups
-sudo groupadd GRP_1  # groupadd creates a new group
-sudo groupadd GRP_2
-sudo groupadd GRP_3
-
-```
-
-## Solution
-
-We will implement a `fully automated` onboarding and deployment pipeline using the following scripts:
-
-![DevOps_Journey](https://github.com/AleMorales9011/FORGE-OPS/blob/278e5fd944f771b2e465d0d554f45bdccdcbbccf/010-IMAGES/ForgeOps_Journey.png)
-
-1.`Automating creation of users, directories, permissions and groups with Bash:`
 This script will automate the creation of new developer accounts on the system, assign them directories and permissions based on their role, and add them to relevant development groups. This eliminates manual setup and ensures consistency.
 `BEGINNER` `BASH` `LINUX`
 
-2.`Implementing a version control system with Git/Github:`
+```ruby
+# Creating directories
+sudo mkdir /public  # sudo execute the command with superuser privileges
+sudo mkdir /frontend     # mkdir is the command for creating a directory
+sudo mkdir /backend
+sudo mkdir /ops
+
+# Creating groups
+sudo groupadd GRP_FRONTEND  # groupadd creates a new group
+sudo groupadd GRP_BACKEND
+sudo groupadd GRP_OPS
+```
+# Implementing a version control system with Git/Github
+
 We will use Git for version control and Github for a central repository. Developers will have access to the latest codebase and can track changes efficiently.
 `BEGINNER` `GIT` `GITHUB`
 
-3.`Deploying infrastructure with Terraform:`
-Terraform will automate the provisioning of infrastructure like servers, databases, and storage on a chosen cloud platform. This ensures consistent and repeatable infrastructure deployment.
+```ruby
+git clone <URL>
+git add <filename> # to stage specific files for commit.
+git commit -m "Meaningful commit message" # to create a snapshot of their changes with a descriptive message
+git branch -M main
+git remote add origin <repo URL> # This command configures a remote repository.
+git push origin <branch_name>
+```
+
+# Deploying infrastructure with Terraform
+
+Terraform will automate infrastructure provisionings, such as servers, databases, and storage on a chosen cloud platform. This ensures consistent and repeatable infrastructure deployment.
 `INTERMEDIATE` `TERRAFORM` `CLOUD COMPUTING`
 
-4.`Creation of CI/CD pipeline with Azure DevOps:`
+```ruby
+# Create a Resource Group for desktop 
+resource "azurerm_resource_group" "rg-desktop-bknd-001" {  # Define components of your infrastructure
+  location = "westeurope"
+  name     = "rg-desktop-bknd-001"
+  tags     = var.desktop_tags
+}
+
+# Create a Resource Group for mobile 
+resource "azurerm_resource_group" "rg-mobile-bknd-001" {
+  location = "westeurope"
+  name     = "rg-mobile-bknd-001"
+  tags     = var.mobile_tags
+}
+```
+# Creation of CI/CD pipeline with Azure DevOps
+
 Azure DevOps will be used to create a continuous integration and continuous delivery (CI/CD) pipeline. Upon code commit, the pipeline will automatically build, test, and deploy the application to a staging environment.
 `INTERMEDIATE` `AZURE DEVOPS` `DEVOPS`
 
-5.`Containerizing an application with Docker:`
+```ruby
+- task: TerraformTaskV4@4 # Executes Terraform commands.
+  inputs: # Defines the input parameters for the task
+    provider: 'azurerm' # Tells Terraform to use the Azure Resource Manager provider.
+    command: 'init' # Specifies the Terraform command to be executed. 
+    backendServiceArm: 'bknd-prod-001(f97a229a-2aa9-47e7-ae31-76ed06c11e1d)'
+    backendAzureRmResourceGroupName: 'rg-terraformdevops-001'
+    backendAzureRmStorageAccountName: 'stterraformdevops01'
+    backendAzureRmContainerName: 'terraform'
+    backendAzureRmKey: 'y9d6HEg1PDSZBTjxfFG+vN4bctj1qPIHKVnB3a82SMhSJa1bJjvfsloJDw0J5pYzKfVbVVQwBYpC+AStA5P4pw=='
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'bknd-prod-001(1)(f97a229a-2aa9-47e7-ae31-76ed06c11e1d)'
+```
+# Containerizing an application with Docker
+
 The application will be containerized using Docker, creating a self-contained package with all dependencies. This promotes portability and simplifies deployments.
 `INTERMEDIATE` `DOCKER` `LINUX`
 
-6.`Deploying a web application with Kubernetes:`
+```ruby
+version: '3.9'
+services:
+  apache:
+    image: httpd:latest
+    container_name: my-apache-app
+    ports:
+    - '8081:80'
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
+```
+# Deploying a web application with Kubernetes
+
 Kubernetes will be used to orchestrate the deployment of Docker containers across multiple servers for scalability and high availability.
 `ADVANCED` `KUBERNETES` `DOCKER`
 
-7.`Automating Web App deployment with Bash`
+```ruby
+echo "Creating images..."
+
+docker build -t alemorales9011935/projeto-backend:1.0 backend/.  # Build docker image.
+Creates a self-contained executable package for running an application
+docker build -t alemorales9011935/projeto-database:1.0 database/. 
+
+echo "Pushing images..."
+
+docker push alemorales9011935/projeto-backend:1.0 # Uploading a completed Docker image to a Docker registry.
+docker push alemorales9011935/projeto-database:1.0
+
+echo "Creating Services..."
+
+kubectl apply -f ./services.yml --validate=false # Figure out how to achieve
+the desired state of the infrastucture we define.
+
+echo "Criating Deployment"
+
+kubectl apply -f ./deployment.yml --validate=false # Controls the validation behaviour.
+```
+# Automating Web App deployment with Bash
+
 A Bash script will trigger the Azure DevOps pipeline upon code commit, automating the entire deployment process.
 `ADVANCED` `BASH` `LINUX` `AZURE DEVOPS`
 
-8.`Setting developing environment with Vagrant:`
-To provide developers with a consistent development environment locally, Vagrant will be used to create virtual machines pre-configured with all the necessary tools and dependencies.
+```ruby
+----------------------------------------------------------------------------------
+echo "Updating and installing apache2 and unzip..."
+apt-get update
+apt-get upgrade -y
+apt-get install apache2 -y
+apt-get install unzip -y
+----------------------------------------------------------------------------------
+echo "Getting the website from a remote repo..."
+cd /tmp
+wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
+----------------------------------------------------------------------------------
+echo "Unziping the file and pasting into the apache directory..."
+unzip main.zip
+cd linux-site-dio-main
+cp -R * /var/www/html/
+----------------------------------------------------------------------------------
+```
+
+# Setting developing environment with Vagrant
+
+To provide developers with a consistent local development environment, Vagrant will be used to create virtual machines pre-configured with all the necessary tools and dependencies.
 `ADVANCED` `VAGRANT` `IAC`
+```ruby
+# Creates an object of 3 virtual machines with memory 1024, unique IP and assigns a docker image
 
-## Final Infrastructure
+machines = {
+  "master" => {"memory" => "1024", "cpu" => "1", "ip" => "100", "image" => "bento/ubuntu-22.04"},
+  "node01" => {"memory" => "1024", "cpu" => "1", "ip" => "101", "image" => "bento/ubuntu-22.04"},
+  "node02" => {"memory" => "1024", "cpu" => "1", "ip" => "102", "image" => "bento/ubuntu-22.04"}
+}
+# Sets the Vagrant configuration version to "2" 
+Vagrant.configure("2") do |config|
+```
+![Forgeware](images/Forgeware_banner_final.png)
 
-Our end goal with this business case project is to be able to replicate a Software Engineering pipeline like the one in the image below.
-
-![Final_Infrastructure](https://github.com/AleMorales9011/FORGE-OPS/blob/main/010-IMAGES/ForgeOps_final_infrastructure.png)
-
-## Benefits
-
-1. `Faster Onboarding:` Developers are up and running quickly with a pre-configured environment.
-2. `Reduced Errors:` Automated provisioning and deployment minimize human error.
-3. `Improved Version Control:` Git ensures proper code tracking and collaboration.
-4. `Scalable Infrastructure:` Terraform and Kubernetes handle scaling needs.
-5. `Efficient Delivery:` CI/CD pipeline automates builds, tests, and deployments.
-6. `Consistent Development Environments:` Vagrant provides a uniform development experience for everyone.
-
-## Conclussion
-
-This combination of scripts automates the entire development and deployment process, saving time, increasing efficiency, and reducing errors. This allows your team to focus on developing innovative features for your e-commerce platform.

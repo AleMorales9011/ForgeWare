@@ -32,6 +32,12 @@ MySQL Workbench offers a comprehensive set of tools for modeling and `designing 
 
 ![DER_Loja](https://github.com/AleMorales9011/ForgeOps/blob/90f5aff585b8dfc155c6d801bb1f04f63da8f8b3/010-IMAGES/der_database_loja.png)
 
+# SQL 101
+
+In SQL, there are five main categories of commands, each serving a specific purpose in managing and interacting with databases. By understanding these different categories of SQL commands, you can effectively manage your database, ensuring proper data structure, manipulation, security, and retrieval capabilities.
+
+![](https://github.com/AleMorales9011/ForgeWare/blob/912757a3619eb391442ee6c245fb9dd5210d952b/src/images/SQL_101.jpeg)
+
 # DDL
 
 Data Definition Language. It's a subset of SQL commands used to define and manage the structure of database objects, essentially acting as the blueprint for your data.

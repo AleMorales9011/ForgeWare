@@ -32,15 +32,15 @@ MySQL Workbench offers a comprehensive set of tools for modeling and `designing 
 
 ![DER_Loja](images/der_database_loja.png)
 
-# SQL 101
+# SQL Categories
 
-In SQL, there are five main categories of commands, each serving a specific purpose in managing and interacting with databases. By understanding these different categories of SQL commands, you can effectively manage your database, ensuring proper data structure, manipulation, security, and retrieval capabilities.
+In SQL, there are five main categories of commands, each serving a specific purpose in managing and interacting with databases. By understanding these different categories of SQL commands, you can effectively manage your database, ensuring proper `data structure`, manipulation, `security`, and retrieval capabilities.
 
 ![SQL_101](images/SQL_101.jpeg)
 
-# DDL
+# DML
 
-Data Definition Language. It's a subset of SQL commands used to define and manage the structure of database objects, essentially acting as the blueprint for your data.
+DML stands for Data Manipulation Language. It's a category of languages used in computer programs or by database users to interact with data in a database. Its main commands are SELECT; `INSERT`; `UPDATE`; and `DELETE`.
 
 # Create
 

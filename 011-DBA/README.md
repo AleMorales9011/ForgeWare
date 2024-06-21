@@ -139,13 +139,11 @@ WHERE cr.Situacao = 1;
 ```
 ![view](https://github.com/AleMorales9011/ForgeOps/blob/c4d48b5979822a7da030d6242474d34450fea6ac/010-IMAGES/View.jpg)
 
-# SQL 101
-![SQL_101](https://github.com/AleMorales9011/ForgeWare/blob/5fdba6315f26400323ad8aee40bb66d42c588316/src/images/SQL_101.jpeg)
-
-# 
-
 # Conclusion
 
 This repository has equipped you with a comprehensive understanding of MySQL, from its core concepts to `advanced functionalities`. You've explored data manipulation, querying, security, administration, and even how to leverage views for optimized data access. As you venture further, remember this repository is a `valuable reference`.  Feel free to revisit specific sections as needed.
 
+# Next
+
+We will explore the SQL language in detail.
 

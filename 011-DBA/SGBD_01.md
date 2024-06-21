@@ -3,9 +3,13 @@
 
 1 hour
 
+By learning commands within their category, you can see how they relate to each other and their overall purpose. For instance, DDL commands for creating tables (like CREATE) complement DML commands for inserting data (like INSERT) into those tables.  This fosters a deeper understanding of how different commands work together to manage a database
+
 ![SQL_101](https://github.com/AleMorales9011/ForgeWare/blob/912757a3619eb391442ee6c245fb9dd5210d952b/src/images/SQL_101.jpeg)
 
 # Window Functions
+
+Window functions in SQL are powerful tools that allow you to perform calculations on a set of rows related to the current row within a result set.
 
 ```SQL
 -- Sample table with sales data

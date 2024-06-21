@@ -13,6 +13,7 @@
 - [SGBD]()
 - [Q&A]()
 - [POO](08-POO_1.md)
+- [POO](09-POO_2.md)
 - [System Design]()
 - [Data Structures and Algorythms]()
   

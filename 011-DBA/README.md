@@ -139,8 +139,10 @@ WHERE cr.Situacao = 1;
 ```
 ![view](https://github.com/AleMorales9011/ForgeOps/blob/c4d48b5979822a7da030d6242474d34450fea6ac/010-IMAGES/View.jpg)
 
-# Sql Basics
+# SQL 101
+![SQL_101](https://github.com/AleMorales9011/ForgeWare/blob/5fdba6315f26400323ad8aee40bb66d42c588316/src/images/SQL_101.jpeg)
 
+# 
 
 # Conclusion
 

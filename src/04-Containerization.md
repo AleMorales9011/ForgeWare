@@ -1,19 +1,29 @@
-# Containerizing an application with Docker
+![banner](images/banner_1.jpg)
 
-Containerization is a way to package an application with everything it needs to run (code, libraries, settings) into a self-contained unit called a container.
+# Containerizing With Docker
 
-## Abstract
+Docker containers are `self-contained` units that include everything an application needs to run, from its code to its `libraries` and dependencies. This makes them highly portable and allows them to run consistently on any system with Docker installed, regardless of the underlying operating system. Simply put, it solves the *"It worked on my machine"* problem.
 
-Jane's team overcame complex app issues with Docker Compose. It ensured consistent environments, eliminated bugs, and streamlined deployments with a single-click.
+![docker_meme](images/docker_meme.jpg)
 
-## Table of Contents
+Here's an example of a simple Dockerfile that runs a Nginx web server
 
-- Install Docker Compose
-- Create the YML file
-- Executing the script
-- Conclusion
+```yaml
+# Use the official nginx image as the base
+FROM nginx:latest
 
-### 1. Install Docker Compose
+# Copy the contents of the current directory to /usr/share/nginx/html in the container
+COPY . /usr/share/nginx/html
+
+# Expose port 80 (the default web server port)
+EXPOSE 80
+
+# Run the nginx command
+CMD ["nginx", "-g", "daemon off;"]
+
+```
+
+# Install Docker Compose
 
 Before executing the yaml file it's important to install docker compose. This task is simply achieved by coding the following command into the terminal.
 

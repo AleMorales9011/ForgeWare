@@ -24,6 +24,8 @@ CMD ["nginx", "-g", "daemon off;"]
 ```
 # Docker Concepts
 
+![docker architecture](images/docker_architecture.jpg)
+
 | Name          | Description                           |
 |---------------|---------------------------------------|
 | Container     | A box filled with dependencies          |
@@ -36,6 +38,7 @@ CMD ["nginx", "-g", "daemon off;"]
 | Objects       | Instances of things like images       |
 | Storage       | A place to keep files                 |
 
+![dockerfile workflow](images/dockerfile_workflow.jpg)
 
 # Install Docker Compose
 

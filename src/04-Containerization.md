@@ -22,6 +22,20 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 ```
+# Docker Concepts
+
+| Name          | Description                           |
+|---------------|---------------------------------------|
+| Container     | A box filled with dependencies          |
+| Client        | Where we run docker commands          |
+| Host          | Where containers live                 |
+| Daemon        | Who manages docker operations         |
+| Registry      | Where images live                     |
+| Images        | A container blueprint                 |
+| Dockerfile    | Who creates images                    |
+| Objects       | Instances of things like images       |
+| Storage       | A place to keep files                 |
+
 
 # Install Docker Compose
 

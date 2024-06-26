@@ -1,4 +1,4 @@
-![Forgeware](https://github.com/AleMorales9011/ForgeWare/blob/b6b4ebe8bf4f12096af66a66807a2eee6d00b12d/src/images/Forgeware_banner_final.png)
+![Forgeware](https://github.com/AleMorales9011/ForgeWare/blob/ca55f605bab845ee4bd78bf40825d096f631054d/010-IMAGES/readme_banner.png)
 # About Forgeware
 
 20 minutes

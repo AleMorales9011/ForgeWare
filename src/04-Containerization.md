@@ -67,11 +67,14 @@ sudo docker pull hello-world
 sudo docker images
 
 ```
+![sudo-docker-images](images/sudo-docker-images.jpg)
+
 # Running the image
 
 ```ruby
 sudo docker run hello-world
 ```
+![sudo-run-hello-world](images/sudo-docker-run-hello-world.jpg)
 
 # Running an Interactive Image in the Background
 
@@ -79,6 +82,10 @@ In most cases, you'll likely use the `-d` or `-it` flags along with the `run` co
 
 1. Use `-d` for background processes or services.
 2. Use `-it` to start a container in the foreground and interact with it like a regular terminal session.
+
+Use `sudo docker --help` to see all commands and `sudo docker <command> --help` to see all available flags(options) for the command. 
+
+![sudo-docker-help](images/docker-help.jpg)
 
 
 

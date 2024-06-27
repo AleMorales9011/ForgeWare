@@ -48,7 +48,7 @@ Docker Engine is a lower-level tool, geared towards system administrators. On th
 
 The easiest way to install Docker is with a convenience script they provide.
 
-```bash
+```ruby
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
@@ -57,19 +57,19 @@ sudo sh get-docker.sh
 
 By pulling an image from a public repository like Docker Hub, you can quickly deploy a pre-built application without having to manually install all the dependencies yourself. Let's pull the `hello-world` image.
 
-```bash
+```ruby
 sudo docker pull hello-world
 ```
 
 # Checking the images
 
-```bash
+```ruby
 sudo docker images
 
 ```
 # Running the image
 
-```bash
+```ruby
 sudo docker run hello-world
 ```
 

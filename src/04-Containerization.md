@@ -28,7 +28,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 | Name          | Description                           |
 |---------------|---------------------------------------|
-| Container     | A box filled with dependencies          |
+| Container     | A box filled with dependencies        |
 | Client        | Where we run docker commands          |
 | Host          | Where containers live                 |
 | Daemon        | Who manages docker operations         |
@@ -39,6 +39,40 @@ CMD ["nginx", "-g", "daemon off;"]
 | Storage       | A place to keep files                 |
 
 ![dockerfile workflow](images/dockerfile_workflow.jpg)
+
+# Docker Engine vs Docker Desktop
+
+Docker Engine is a lower-level tool, geared towards system administrators. On the other hand, Docker Desktop provides a user-friendly interface and additional tools for developers.
+
+# Installing Docker Engine
+
+The easiest way to install Docker is with a convenience script they provide.
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+
+# Pulling a Docker Image
+
+By pulling an image from a public repository like Docker Hub, you can quickly deploy a pre-built application without having to manually install all the dependencies yourself. Let's pull the `hello-world` image.
+
+```bash
+sudo docker pull hello-world
+```
+# Checking the images
+
+```bash
+sudo docker images
+
+```
+# Running the image
+
+```bash
+sudo docker run hello-world
+```
+
+#   
 
 # Install Docker Compose
 

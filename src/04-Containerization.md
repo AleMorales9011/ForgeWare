@@ -60,6 +60,7 @@ By pulling an image from a public repository like Docker Hub, you can quickly de
 ```bash
 sudo docker pull hello-world
 ```
+
 # Checking the images
 
 ```bash
@@ -72,7 +73,16 @@ sudo docker images
 sudo docker run hello-world
 ```
 
-#   
+# Running an Interactive Image in the Background
+
+In most cases, you'll likely use the `-d` or `-it` flags along with the `run` command.
+
+1. Use `-d` for background processes or services.
+2. Use `-it` to start a container in the foreground and interact with it like a regular terminal session.
+
+
+
+
 
 # Install Docker Compose
 
@@ -82,7 +92,7 @@ Before executing the yaml file it's important to install docker compose. This ta
 apt install docker-compose
 ```
 
-### 2. Create the YML file
+# Create the YML file
 
 After docker-compose is installed we must create the yaml file that will contain the infrastructure we desire to create. The script below shows an example of an Apache web server container deployment.
 
@@ -98,7 +108,7 @@ services:
     - ./website:/usr/local/apache2/htdocs
 ```
 
-### 3. Executing the script
+# Executing the script
 
 Finally, we must execute the script so our infrastructure( in this case our Apache web server) will be created. We can do that by typing the following command into the console.
 
@@ -106,7 +116,7 @@ Finally, we must execute the script so our infrastructure( in this case our Apac
 docker-compose up -d
 ```
 
-## Conclusion
+# Conclusion
 
 Docker Compose manages adding or removing service instances with ease. Finally, version control of the YAML configuration file simplified version management for all their services.
 In short, Docker Compose helped Acme Corp. achieve faster development cycles, smoother deployments, and better scalability for their application.

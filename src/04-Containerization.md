@@ -2,26 +2,12 @@
 
 # Containerizing With Docker Engine
 
-Docker containers are `self-contained` units that include everything an application needs to run, from its code to its `libraries` and dependencies. This makes them highly portable and allows them to run consistently on any system with Docker installed, regardless of the underlying operating system. Simply put, it solves the *"It worked on my machine"* problem.
+Docker containers are `self-contained` units that include everything an application needs to run, from its code to its `libraries` and dependencies.
+
+Simply put, it solves the *"It worked on my machine"* problem.
 
 ![docker_meme](images/docker_meme.jpg)
 
-Here's an example of a simple Dockerfile that runs a Nginx web server
-
-```yaml
-# Use the official nginx image as the base
-FROM nginx:latest
-
-# Copy the contents of the current directory to /usr/share/nginx/html in the container
-COPY . /usr/share/nginx/html
-
-# Expose port 80 (the default web server port)
-EXPOSE 80
-
-# Run the nginx command
-CMD ["nginx", "-g", "daemon off;"]
-
-```
 # Docker Concepts
 
 ![docker architecture](images/docker_architecture.jpg)

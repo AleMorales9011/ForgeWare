@@ -1,6 +1,6 @@
 ![banner](images/banner_1.jpg)
 
-# Containerizing With Docker
+# Containerizing With Docker Engine
 
 Docker containers are `self-contained` units that include everything an application needs to run, from its code to its `libraries` and dependencies. This makes them highly portable and allows them to run consistently on any system with Docker installed, regardless of the underlying operating system. Simply put, it solves the *"It worked on my machine"* problem.
 
@@ -83,11 +83,24 @@ In most cases, you'll likely use the `-d` or `-it` flags along with the `run` co
 1. Use `-d` for background processes or services.
 2. Use `-it` to start a container in the foreground and interact with it like a regular terminal session.
 
+# Docker --Help
 Use `sudo docker --help` to see all commands and `sudo docker <command> --help` to see all available flags(options) for the command. 
 
 ![sudo-docker-help](images/docker-help.jpg)
 
+# Usefull Docker Commands
 
+| Name                                       | Description                           |
+|--------------------------------------------|---------------------------------------|
+| docker rm `id`                             | Removes containers                    |
+| docker rmi `name`                          | Removes images                        |
+| docker ps                                  | List containers                       |
+| docker stop `id`                           | Stop a running container              |
+| docker run `-dti --name container image`   | Name a container                      |
+| docker exec `-ti Ubuntu /bin/bash`         | Executes bash with Ubuntu             |
+| docker                                     | Who creates images                    |
+| docker Objects                             | Instances of things like images       |
+| docker Storage                             | A place to keep files                 |
 
 
 

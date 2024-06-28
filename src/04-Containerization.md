@@ -90,23 +90,23 @@ Use `sudo docker --help` to see all commands and `sudo docker <command> --help` 
 
 # Usefull Docker Commands
 
-| Name                                       | Description                           |
-|--------------------------------------------|---------------------------------------|
-| docker rm `id`                             | Removes containers                    |
-| docker rmi `name`                          | Removes images                        |
-| docker ps                                  | List containers                       |
-| docker stop `id`                           | Stop a running container              |
-| docker run `-dti --name container image`   | Name a container                      |
-| docker exec `-ti Ubuntu /bin/bash`         | Executes bash with Ubuntu             |
-| docker                                     | Who creates images                    |
-| docker Objects                             | Instances of things like images       |
-| docker Storage                             | A place to keep files                 |
+| Name                                       | Description                              |
+|--------------------------------------------|------------------------------------------|
+| docker rm `id`                             | Removes containers                       |
+| docker rmi `name`                          | Removes images                           |
+| docker ps                                  | List containers                          |
+| docker stop `id`                           | Stop a running container                 |
+| docker run `-dti --name container image`   | Name a container                         |
+| docker exec `-ti Ubuntu /bin/bash`         | Executes bash inside Ubuntu              |
+| docker exec `Ubuntu mkdir /destiny`        | Creates a `destiny` inside the container |
+| docker `cp file container:/destiny`        |           | 
+| docker Storage                             | A place to keep files                    |
 
 
 
 # Install Docker Compose
 
-Before executing the yaml file it's important to install docker compose. This task is simply achieved by coding the following command into the terminal.
+Before executing the yaml file it's important to install docker compose. This task is achieved by coding the following command into the terminal.
 
 ```ruby
 apt install docker-compose

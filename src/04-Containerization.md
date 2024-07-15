@@ -100,11 +100,13 @@ docker pull mysql
 # Running a MySQL container
 
 ```ruby
-docker run -e MYSQL_ROOT_PASWORD=password --container name -d -p 3306:3306
+docker run -e MYSQL_ROOT_PASWORD=password --container name -d -p 3306:3306 imagename
 ```
 1. `-e` Sets environmental variables.
 2. `-d` Executes the database in the background.
 3. `-p` Opens a port to communicate with the database. 
+
+
 
 # Install Docker Compose
 

@@ -76,19 +76,35 @@ Use `sudo docker --help` to see all commands and `sudo docker <command> --help` 
 
 # Usefull Docker Commands
 
-| Name                                       | Description                              |
-|--------------------------------------------|------------------------------------------|
-| docker rm `id`                             | Removes containers                       |
-| docker rmi `name`                          | Removes images                           |
-| docker ps                                  | List containers                          |
-| docker stop `id`                           | Stop a running container                 |
-| docker run `-dti --name container image`   | Name a container                         |
-| docker exec `-ti Ubuntu /bin/bash`         | Executes bash inside Ubuntu              |
-| docker exec `Ubuntu mkdir /destiny`        | Creates a `destiny` inside the container |
-| docker `cp file container:/destiny`        |           | 
-| docker Storage                             | A place to keep files                    |
+| Name                                                 | Description                              |
+|------------------------------------------------------|------------------------------------------|
+| docker rm `id`                                       | Removes containers                       |
+| docker rmi `name`                                    | Removes images                           |
+| docker ps                                            | List containers                          |
+| docker stop `id`                                     | Stop a running container                 |
+| docker run `-dti --name container image`             | Name a container                         |
+| docker exec `-ti Ubuntu /bin/bash`                   | Executes bash inside Ubuntu              |
+| docker exec `Ubuntu mkdir /destiny`                  | Creates a `destiny` inside the container |
+| docker `cp file container:/destiny`                  | Copy to container from local machine     | 
+| docker `cp container:/originfolder/file newfilename` | Copy to local machine from container     | 
+| docker pull debian:9                                 | Pulls specific Debian container version  | 
 
+# Installing a MYSQL container
 
+Running a MYSQL database in a container prevents conflicts with other software or system-wide configurations.
+
+```ruby
+docker pull mysql
+```
+
+# Running a MySQL container
+
+```ruby
+docker run -e MYSQL_ROOT_PASWORD=password --container name -d -p 3306:3306
+```
+1. `-e` Sets environmental variables.
+2. `-d` Executes the database in the background.
+3. `-p` Opens a port to communicate with the database. 
 
 # Install Docker Compose
 

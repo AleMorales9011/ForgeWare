@@ -28,7 +28,7 @@ Simply put, it solves the *"It worked on my machine"* problem.
 
 # Docker Engine vs Docker Desktop
 
-Docker Engine is a lower-level tool, geared towards system administrators. On the other hand, Docker Desktop provides a user-friendly interface and additional tools for developers.
+Docker Engine is a lower-level tool, geared towards system administrators. On the other hand, Docker Desktop provides developers with a user-friendly interface and additional tools.
 
 # Installing Docker Engine
 
@@ -36,12 +36,12 @@ The easiest way to install Docker is with a convenience script they provide.
 
 ```ruby
 curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
+sudo sh get-docker. sh
 ```
 
 # Pulling a Docker Image
 
-By pulling an image from a public repository like Docker Hub, you can quickly deploy a pre-built application without having to manually install all the dependencies yourself. Let's pull the `hello-world` image.
+By pulling an image from a public repository like Docker Hub, you can quickly deploy a pre-built application without manually installing all the dependencies. Let's pull the `hello-world` image.
 
 ```ruby
 sudo docker pull hello-world
@@ -64,7 +64,7 @@ sudo docker run hello-world
 
 # Running an Interactive Image in the Background
 
-In most cases, you'll likely use the `-d` or `-it` flags along with the `run` command.
+In most cases, you'll likely use the `-d` or `-its flags along with the `run` command.
 
 1. Use `-d` for background processes or services.
 2. Use `-it` to start a container in the foreground and interact with it like a regular terminal session.
@@ -86,7 +86,7 @@ Use `sudo docker --help` to see all commands and `sudo docker <command> --help` 
 | docker exec `-ti Ubuntu /bin/bash`                   | Executes bash inside Ubuntu              |
 | docker exec `Ubuntu mkdir /destiny`                  | Creates a `destiny` inside the container |
 | docker `cp file container:/destiny`                  | Copy to container from local machine     | 
-| docker `cp container:/originfolder/file newfilename` | Copy to local machine from container     | 
+| docker `cp container:/originfolder/file new-filename` | Copy to local machine from container     | 
 | docker pull debian:9                                 | Pulls specific Debian container version  | 
 
 # Installing a MYSQL container
@@ -94,17 +94,42 @@ Use `sudo docker --help` to see all commands and `sudo docker <command> --help` 
 Running a MYSQL database in a container prevents conflicts with other software or system-wide configurations.
 
 ```ruby
-docker pull mysql
+docker pull MySQL
 ```
 
 # Running a MySQL container
 
 ```ruby
-docker run -e MYSQL_ROOT_PASWORD=password --container name -d -p 3306:3306 imagename
+docker run -e MYSQL_ROOT_PASWORD=password --container name -d -p 3306:3306 image-name
 ```
 1. `-e` Sets environmental variables.
 2. `-d` Executes the database in the background.
 3. `-p` Opens a port to communicate with the database. 
+
+
+# Accesing MYSQL to create a Database
+
+Executing bash inside the MySQL container to manage the database.
+
+```ruby
+docker exec -it container-name bash 
+```
+
+# Login to MYSQL to create a new database
+
+After accessing bash we must login into MySQL to be able to manage our databases via SQL. After inserting the command below we will be prompted to insert the `root` user password.
+
+```ruby
+MySQL -u root -p --protocol=tcp
+```
+
+# Troubleshooting connection issues
+
+Docker assign an IP to every container soWe can troubleshoot any connection issues with the `inspect` command
+
+```ruby
+
+
 
 
 

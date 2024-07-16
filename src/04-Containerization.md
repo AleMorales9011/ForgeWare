@@ -115,9 +115,17 @@ Executing bash inside the MySQL container to manage the database.
 docker exec -it container-name bash 
 ```
 
+# MYSQL client
+
+Another way to interact with the database is through the Mysql client.
+
+```ruby
+apt -y install mysql-client
+```
+
 # Login to MYSQL to create a new database
 
-After accessing bash we must login into MySQL to be able to manage our databases via SQL. After inserting the command below we will be prompted to insert the `root` user password.
+After accessing bash we must login into MySQL to be able to manage our databases via SQL. After inserting the command below we will be prompted to insert the `root` user password. 
 
 ```ruby
 MySQL -u root -p --protocol=tcp
@@ -125,10 +133,15 @@ MySQL -u root -p --protocol=tcp
 
 # Troubleshooting connection issues
 
-Docker assign an IP to every container soWe can troubleshoot any connection issues with the `inspect` command
+Docker assigns an IP to every container to be able to connect with other distributed systems independently. To troubleshoot any connection issues we must use the `inspect` command.
 
 ```ruby
+docker inspect container-name
+```
 
+# Data storage in containers
+
+Containers are ephemeral, meaning their data is lost when the container stops. Mounts allow you to persist data beyond the container's lifecycle. A mount is a way to share data or files between the host system and the container. It essentially creates a link between a directory or file on the host machine and a directory within the container.
 
 
 

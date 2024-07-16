@@ -143,8 +143,22 @@ docker inspect container-name
 
 Containers are ephemeral, meaning their data is lost when the container stops. Mounts allow you to persist data beyond the container's lifecycle. A mount is a way to share data or files between the host system and the container. It essentially creates a link between a directory or file on the host machine and a directory within the container.
 
+```ruby
+docker run -e MYSQL_PASSWORD=your-password --name container-name -d -p 3306:3306 --volume=/host-path -A:/container-path image-name
+```
+# Mount Types
 
+1. Bind: Binds a directory from the container to a directory in the host (example above)
 
+```ruby
+docker run -v /hostdir:/containerdir image-name
+``` 
+2. Named: Manually created volumes inside a standard directory.
+
+```ruby
+docker volume create volume-name # Creates volumes
+docker run -v volume-name:/container-directory image name # Refeerences the created volume
+```
 
 # Install Docker Compose
 

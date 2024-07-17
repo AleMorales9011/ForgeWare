@@ -166,13 +166,16 @@ Apache also referred to as `Apache HTTP Server`, is a free and open-source softw
 
 It then sends this information back to your browser, which interprets it and displays the webpage. 
 
-## Interesting Fact 
+```ruby
+
+docker pull httpd # Pulls the official Apache container from the docker hub
+
+```
+
+# Interesting Fact 
 
 Apache is a core component of the `LAMP` stack, a popular combination of open-source software for building websites. `LAMP` stands for Linux (operating system), Apache (webserver), MySQL (database), and PHP (programming language).
 
-```ruby
-docker pull httpd # Pull the official Apache container from the docker hub
-```
 
 # Bindind a local volume to an Apache Web Server Container
 
@@ -185,7 +188,34 @@ docker run --name container-name -d -p 80:80 --volume=host-volume-path -A:/usr/l
 2. -d: Runs the container in the background
 3. /usr/local/apache2/htdocs: The standard directory for file storage in the Apache container.
 4. httpd: The image name
-   
+
+# CPU and Memory Optimization
+
+Resource optimization is important for containerized apps since an over-expanding container could hinder the performance of the whole system.
+
+```ruby
+docker update container-name -m 128M --cpus 0.2
+docker stats container-name # Provide container stats
+
+```
+1. -m 128M: Limit the memory to 128mb
+2. --cpus 0.2: Limit the cpu usage to 20%
+
+# Stress Testing 
+
+Stress testing helps us understand how a containerized application behaves under heavy load. This can reveal bottlenecks in CPU, memory, or disk usage. The command `stress` is a `stress test generator` that simulates heavy workloads to see how your system responds.
+
+```ruby
+apt install -y stress
+stress --cpu 1 --vm-bytes 50m --vm 1 --vm-bytes 50m  
+```
+1. --cpu 1: Cpus to stress
+2. --vm-bytes: Bytes volume to stress
+3. --vm 1: Memory stress
+
+
+
+
 # Install Docker Compose
 
 Before executing the yaml file it's important to install docker compose. This task is achieved by coding the following command into the terminal.

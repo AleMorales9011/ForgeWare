@@ -160,6 +160,32 @@ docker volume create volume-name # Creates volumes
 docker run -v volume-name:/container-directory image name # Refeerences the created volume
 ```
 
+# Pulling an Apache Container
+
+Apache also referred to as `Apache HTTP Server`, is a free and open-source software that powers a large chunk of websites. When you type a web address into your browser, Apache receives the request and fetches the relevant files (like HTML, CSS, and images) that make up the webpage.
+
+It then sends this information back to your browser, which interprets it and displays the webpage. 
+
+## Interesting Fact 
+
+Apache is a core component of the `LAMP` stack, a popular combination of open-source software for building websites. `LAMP` stands for Linux (operating system), Apache (webserver), MySQL (database), and PHP (programming language).
+
+```ruby
+docker pull httpd # Pull the official Apache container from the docker hub
+```
+
+# Bindind a local volume to an Apache Web Server Container
+
+By binding a local folder on your machine (where you're developing your website) to the `Apache` container's document root (the folder where it looks for website files), you can make changes to your code and see them reflected immediately in your web browser without needing to rebuild the `container image` or copy files back and forth. This allows for a much faster development workflow.
+
+```ruby
+docker run --name container-name -d -p 80:80 --volume=host-volume-path -A:/usr/local/apache2/htdocs httpd
+```
+1. host-volume-path: Where the website files are
+2. -d: Runs the container in the background
+3. /usr/local/apache2/htdocs: The standard directory for file storage in the Apache container.
+4. httpd: The image name
+   
 # Install Docker Compose
 
 Before executing the yaml file it's important to install docker compose. This task is achieved by coding the following command into the terminal.
@@ -170,7 +196,7 @@ apt install docker-compose
 
 # Create the YML file
 
-After docker-compose is installed we must create the yaml file that will contain the infrastructure we desire to create. The script below shows an example of an Apache web server container deployment.
+After installing docker-compose, we must create the YAML file containing the infrastructure we desire to create. The script below shows an example of an Apache web server container deployment.
 
 ```ruby
 version: '3.9'

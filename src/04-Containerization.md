@@ -213,7 +213,28 @@ stress --cpu 1 --vm-bytes 50m --vm 1 --vm-bytes 50m
 2. --vm-bytes: Bytes volume to stress
 3. --vm 1: Memory stress
 
+# Docker Info, Logs, Top
+Here are some useful docker commands for managing containers.
 
+```ruby
+docker info # Shows server info
+docker logs container-name # Shows container logs
+docker top container name # Shows container processes
+```
+# Networking
+
+In containerized environments, like Docker, multiple containers are often used to build applications. Each container typically runs a single service, but these services often need to communicate with each other to function properly. This is where container networking comes in.
+
+```ruby
+docker network -ls # List networks
+docker inspect network-name # List containers within the network
+docker network create new-network # Create a new network
+```
+Container isolation: Network isolation allows you to define which containers can communicate, and how. For example; a container running a database might not need access to the internet. Also, if a container gets compromised by malware, network isolation can limit the attacker's ability to spread to other containers on the system.  
+
+```ruby
+docker run -dti -name container-name --network network-name image-name # Creates a container inside a defined network
+```
 
 
 # Install Docker Compose

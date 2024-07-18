@@ -162,7 +162,7 @@ docker run -v volume-name:/container-directory image name # Refeerences the crea
 
 # Pulling an Apache Container
 
-Apache also referred to as `Apache HTTP Server`, is a free and open-source software that powers a large chunk of websites. When you type a web address into your browser, Apache receives the request and fetches the relevant files (like HTML, CSS, and images) that make up the webpage.
+Apache, also called `Apache HTTP Server`, is free and open-source software that powers many websites. When you type a web address into your browser, Apache receives the request and fetches the relevant files (like HTML, CSS, and images) that make up the webpage.
 
 It then sends this information back to your browser, which interprets it and displays the webpage. 
 
@@ -223,7 +223,7 @@ docker top container name # Shows container processes
 ```
 # Networking
 
-In containerized environments, like Docker, multiple containers are often used to build applications. Each container typically runs a single service, but these services often need to communicate with each other to function properly. This is where container networking comes in.
+In containerized environments, like Docker, `multiple containers` are often used to build applications. Each container typically runs a single service, but these services often need to communicate with each other to function properly. This is where container networking comes in.
 
 ```ruby
 docker network -ls # List networks
@@ -235,6 +235,22 @@ Container isolation: Network isolation allows you to define which containers can
 ```ruby
 docker run -dti -name container-name --network network-name image-name # Creates a container inside a defined network
 ```
+
+# Dockerfile
+
+A Dockerfile is a text document that contains instructions for building a `Docker image`. It essentially acts like a recipe that Docker follows to create a `customized environment` for your application to run in. 
+
+Common instructions involve:
+1. FROM: Specifying the base `image` to start from (like Ubuntu or a pre-built image).
+2. COPY: Copying files from your `local machine` into the image.
+3. RUN: Executing commands within the image to install dependencies, configure the `environment`, etc.
+4. EXPOSE: Defining ports that the application running in the container will listen on.
+5. CMD or ENTRYPOINT: Specifying the command to run when the `container starts` (like launching your application).
+
+```yaml
+nano dockerfile # Creates a dockerfle
+```
+
 
 
 # Install Docker Compose

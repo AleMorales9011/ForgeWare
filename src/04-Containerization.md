@@ -86,7 +86,7 @@ Use `sudo docker --help` to see all commands and `sudo docker <command> --help` 
 | docker exec `-ti Ubuntu /bin/bash`                   | Executes bash inside Ubuntu              |
 | docker exec `Ubuntu mkdir /destiny`                  | Creates a `destiny` inside the container |
 | docker `cp file container:/destiny`                  | Copy to container from local machine     | 
-| docker `cp container:/originfolder/file new-filename` | Copy to local machine from container     | 
+| docker `cp container:/originfolder/file new-filename`| Copy to local machine from container     | 
 | docker pull debian:9                                 | Pulls specific Debian container version  | 
 
 # Installing a MYSQL container
@@ -167,9 +167,7 @@ Apache, also called `Apache HTTP Server`, is free and open-source software that 
 It then sends this information back to your browser, which interprets it and displays the webpage. 
 
 ```ruby
-
 docker pull httpd # Pulls the official Apache container from the docker hub
-
 ```
 
 # Interesting Fact 
@@ -254,19 +252,27 @@ nano dockerfile # Creates a dockerfle
 2. Editing a Dockerfile example that creates an Ubuntu and Python image.
 
 ```yml
-
 FROM ubuntu
 RUN apt update && apt install -y python3 && apt clean
 COPY app.py /apt/app.py
 CMD phyton3 apt/app.py
-
 ```
+
 3. Building a Dockerfile
 
+The basic syntax for docker build is:
 ```bash
-
-
+docker build [OPTIONS] <context>
+# Example
+docker build . -t ubuntu-python
 ```
+
+1. `<context>` is typically the path to the directory containing your `Dockerfile`. By default, the current directory is used if not specified.
+There are several options available to customize the `build process`, such as:
+2. -t: Tag the resulting `image` with a name and version.
+3. -f: Specify an alternative `Dockerfile` location.
+
+
 
 
 # Install Docker Compose

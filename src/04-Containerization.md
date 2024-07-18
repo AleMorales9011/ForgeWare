@@ -274,7 +274,6 @@ There are several options available to customize the `build process`, such as:
 
 
 
-
 # Install Docker Compose
 
 Before executing the yaml file it's important to install docker compose. This task is achieved by coding the following command into the terminal.

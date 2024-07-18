@@ -247,10 +247,26 @@ Common instructions involve:
 4. EXPOSE: Defining ports that the application running in the container will listen on.
 5. CMD or ENTRYPOINT: Specifying the command to run when the `container starts` (like launching your application).
 
-```yaml
+1. Creating a Dockerfile
+```bash
 nano dockerfile # Creates a dockerfle
 ```
+2. Editing a Dockerfile example that creates an Ubuntu and Python image.
 
+```yml
+
+FROM ubuntu
+RUN apt update && apt install -y python3 && apt clean
+COPY app.py /apt/app.py
+CMD phyton3 apt/app.py
+
+```
+3. Building a Dockerfile
+
+```bash
+
+
+```
 
 
 # Install Docker Compose

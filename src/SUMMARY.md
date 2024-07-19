@@ -7,6 +7,7 @@
   - [Deploying infrastructure with Terraform](<02-Provisioning Infrastructure.md>)
   - [Creation of CI/CD pipeline with Azure DevOps](<03-Configuration management.md>)
   - [Containerizing an application with Docker](<04-Containerization.md>)
+  - [Performance & Optimization](<04-Monitoring & Optimization.md>)
   - [Deploying a web application with Kubernetes](<05-WebAppDeployment.md>)
   - [Automating Web App deployment with Bash](<06-InfrastructureAutomation.md>)
   - [Setting development environment with Vagrant](<07-AdvancedScripting.md>)

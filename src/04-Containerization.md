@@ -41,7 +41,7 @@ sudo sh get-docker. sh
 
 # Pulling a Docker Image
 
-By pulling an image from a public repository like Docker Hub, you can quickly deploy a pre-built application without manually installing all the dependencies. Let's pull the `hello-world` image.
+Pulling an image from a public repository like Docker Hub allows you to quickly deploy a pre-built application without manually installing all the dependencies. Let's draw the `hello-world` image.
 
 ```ruby
 sudo docker pull hello-world
@@ -264,7 +264,7 @@ The basic syntax for docker build is:
 ```bash
 docker build [OPTIONS] <context>
 # Example
-docker build . -t ubuntu-python
+docker build. -t ubuntu-python
 ```
 
 1. `<context>` is typically the path to the directory containing your `Dockerfile`. By default, the current directory is used if not specified.
@@ -272,9 +272,17 @@ There are several options available to customize the `build process`, such as:
 2. -t: Tag the resulting `image` with a name and version.
 3. -f: Specify an alternative `Dockerfile` location.
 
+# Docker Compose
+A tool used to define and run multi-container applications. Employs a YAML file to configure "services" (essentially, containers) and their relationships. Docker Compose revolves around three main components that work together to define and run your multi-container application:
 
+1. Services: These are the fundamental `building blocks` of your application, representing individual containers.
+2. Networks:  Docker Compose can create virtual networks for your `containers` to communicate with each other securely. This eliminates the need for complex manual network configuration.
+3. Volumes: As mentioned earlier, `volumes` allow you to persist data outside the container itself.  You map a directory on the host machine to a directory within the container. This ensures data isn't lost when the container restarts.
 
-# Install Docker Compose
+# Dockerfile vs Docker Compose 
+In essence, Dockerfile provides the building blocks (images), and Docker Compose orchestrates them to run a multi-container application efficiently.
+
+# Installing Docker Compose
 
 Before executing the yaml file it's important to install docker compose. This task is achieved by coding the following command into the terminal.
 
@@ -282,14 +290,14 @@ Before executing the yaml file it's important to install docker compose. This ta
 apt install docker-compose
 ```
 
-# Create the YML file
+# Create the Compose file
 
 After installing docker-compose, we must create the YAML file containing the infrastructure we desire to create. The script below shows an example of an Apache web server container deployment.
 
 ```ruby
 version: '3.9'
 services:
-  apache:
+  Apache:
     image: httpd:latest
     container_name: my-apache-app
     ports:
@@ -308,5 +316,8 @@ docker-compose up -d
 
 # Conclusion
 
-Docker Compose manages adding or removing service instances with ease. Finally, version control of the YAML configuration file simplified version management for all their services.
-In short, Docker Compose helped Acme Corp. achieve faster development cycles, smoother deployments, and better scalability for their application.
+Docker offers a standardized approach to packaging, deploying, and running applications.  This has revolutionized how software is built and delivered, making it a vital tool for developers and operations teams today.
+
+# Next 
+
+We will see how to perform container monitoring and optimization.

@@ -1,4 +1,4 @@
-![banner](/images/1.jpg)
+![banner](images/1.jpg)
 # Performance & Optimization
 
 By monitoring container performance metrics like CPU, memory, and network usage, you can identify and troubleshoot issues before they impact users. This proactive approach helps prevent outages and ensures a high level of service quality for your applications.

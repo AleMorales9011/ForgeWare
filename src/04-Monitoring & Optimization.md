@@ -1,4 +1,4 @@
-![banner](https://github.com/AleMorales9011/ForgeWare/blob/ae4320647b35dca238a9e5d6076db00bcc6bb4db/src/images/1.jpg)
+![banner](/images/1.jpg)
 # Performance & Optimization
 
 By monitoring container performance metrics like CPU, memory, and network usage, you can identify and troubleshoot issues before they impact users. This proactive approach helps prevent outages and ensures a high level of service quality for your applications.

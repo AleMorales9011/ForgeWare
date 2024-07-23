@@ -114,6 +114,57 @@ services:
       - monitoring
 
 ```
+# Service Break-Down
 
+Node exporter
+
+```yaml
+# This file defines a Docker Compose service configuration in version 3.8
+version: '3.8'
+
+# Define a custom network named "monitoring"
+networks:
+  monitoring:
+    driver: bridge  # Uses the default bridge networking mode
+
+# Define a volume named "prometheus_data" with no configuration (empty dictionary)
+volumes:
+  prometheus_data: {}
+
+# Define a service named "node-exporter"
+services:
+  node-exporter:
+    # Use the official prom/node-exporter image with the latest tag
+    image: prom/node-exporter:latest
+
+    # Set the container name to "node-exporter" for easier identification
+    container_name: node-exporter
+
+    # Restart the container automatically unless it's stopped manually
+    restart: unless-stopped
+
+    # Mount volumes to expose host system information to the container
+    volumes:
+      - /proc:/host/proc:ro  # Read-only access to process information
+      - /sys:/host/sys:ro    # Read-only access to system information
+      - /:/rootfs:ro        # Read-only access to the entire root filesystem
+
+    # Override default paths for collecting metrics within the container
+    command:
+      - '--path.procfs=/host/proc'  # Set procfs path to mounted host directory
+      - '--path.rootfs=/rootfs'    # Set rootfs path to mounted host directory
+      - '--path.sysfs=/host/sys'    # Set sysfs path to mounted host directory
+      # Exclude specific mount points from filesystem collector (avoids duplicates)
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+
+    # Map container port 9100 to host port 9100
+    ports:
+      - 9100:9100
+
+    # Connect the container to the "monitoring" network
+    networks:
+      - monitoring
+
+```
 
 

@@ -114,9 +114,7 @@ services:
       - monitoring
 
 ```
-# Service Break-Down
-
-Node exporter
+# Service Break-Down: Node exporter
 
 ```yaml
 # This file defines a Docker Compose service configuration in version 3.8
@@ -166,5 +164,50 @@ services:
       - monitoring
 
 ```
+# Prometheus
 
+```yml
+# This section defines the configuration for a Prometheus container.
+
+prometheus:
+  # Defines the image to be used for the container. Here, it uses the official prom/prometheus image with the "latest" tag.
+  image: prom/prometheus:latest
+
+  # Sets the user ID inside the container to 1001. 
+  user: "1001"
+
+  # Defines environment variables for the container.
+  environment:
+    - PUID=1001  # Sets the user ID inside the container to 1001 (matches the user specified above).
+    - PGID=1001  # Sets the group ID inside the container to 1001 (likely to match the user).
+
+  # Defines the container name to be "prometheus".
+  container_name: prometheus
+
+  # Specifies the restart policy for the container. In this case, it will restart only if it stops unexpectedly.
+  restart: unless-stopped
+
+  # Defines volumes to be mounted into the container.
+  volumes:
+    - ~/promgrafnode/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml  # Mounts the local file prometheus.yml from ~/promgrafnode/prometheus directory to /etc/prometheus/prometheus.yml inside the container. This allows configuration file updates without rebuilding the image.
+    - ~/promgrafnode/prometheus:/prometheus  # Mounts the local directory ~/promgrafnode/prometheus to /prometheus inside the container. This allows persistence of data collected by Prometheus.
+
+  # Defines the command to be executed when starting the container.
+  command:
+    - '--config.file=/etc/prometheus/prometheus.yml'  # Specifies the path to the Prometheus configuration file.
+    - '--storage.tsdb.path=/prometheus'  # Defines the location for storing time series data collected by Prometheus.
+    - '--web.console.libraries=/etc/prometheus/console_libraries'  # Sets the directory containing console libraries.
+    - '--web.console.templates=/etc/prometheus/consoles'  # Sets the directory containing console templates.
+    - '--web.enable-lifecycle'  # Enables Prometheus web UI lifecycle management features.
+
+  # Defines port mappings for the container.
+  ports:
+    - 9090:9090  # Maps port 9090 on the host machine to port 9090 inside the container. This allows access to the Prometheus web UI.
+
+  # Defines the network that the container will be connected to.
+  networks:
+    - monitoring  # Connects the container to the network named "monitoring".
+
+
+```
 

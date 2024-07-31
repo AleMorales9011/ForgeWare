@@ -2,7 +2,44 @@
 # Security
 
 # Infrastructure as Code (IaC) Security
-1. Secure configuration management: Using tools like Ansible, Puppet, or Chef to enforce security configurations and policies.
+
+1. Secure configuration management: Using tools like Ansible, Puppet, or Chef to enforce security configurations and policies. Here's an example of securing a SHH server with Ansible.
+
+```yml
+- name: Secure SSH Server
+  hosts: servers
+  become: yes
+
+  tasks:
+    - name: Disable password authentication
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^PasswordAuthentication yes'
+        line: 'PasswordAuthentication no'
+
+    - name: Require SSH key-based authentication
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^PubkeyAuthentication no'
+        line: 'PubkeyAuthentication yes'
+
+    - name: Set strong SSH ciphers
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^Ciphers'
+        line: 'Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.com'
+
+    - name: Set strong MACs
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^MACs'
+        line: 'MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128@openssh.com'
+
+    - name: Restart SSH service
+      service:
+        name: sshd
+        state: restarted
+```
 2. Immutable infrastructure: Building systems with immutable components to reduce the attack surface.
 3. Secret management: Implementing secure methods to store and manage sensitive information.
 

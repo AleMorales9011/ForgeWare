@@ -1,6 +1,7 @@
 ![banner](images/banner_1.jpg)
 
 # Containerizing With Docker Engine
+2 hours
 
 Docker containers are `self-contained` units that include everything an application needs to run, from its code to its `libraries` and dependencies.
 

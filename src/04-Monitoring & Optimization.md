@@ -1,7 +1,7 @@
 ![banner](images/1.jpg)
 # Performance & Optimization
 
-By monitoring container performance metrics like CPU, memory, and network usage, you can identify and troubleshoot issues before they impact users. This proactive approach helps prevent outages and ensures a high level of service quality for your applications.
+By monitoring container performance metrics like CPU, memory, and network usage, you can identify and troubleshoot issues before they impact users. This proactive approach helps prevent outages and ensures high service quality for your applications.
 
 # Requirements
 
@@ -13,7 +13,7 @@ By monitoring container performance metrics like CPU, memory, and network usage,
 
 # Folder Structure
 
-A well-defined structure promotes modularity.  Each service or component can reside in its own directory,  encapsulating its configuration files, Dockerfile, and any related scripts.  This promotes reusability and independent development of each service.
+A well-defined structure promotes modularity.  Each service or component can reside in its directory, encapsulating its configuration files, Dockerfile, and related scripts.  This promotes reusability and independent development of each service.
 
 ```bash
 #! bin\bash
@@ -29,9 +29,9 @@ echo "Folder Structure Created"
 
 ```
 
-# Docker-Compose file
+# Grafana
 
-We will write all the dependencies we need in the docker-compose file and it will be created for us like magic.
+In essence, Grafana empowers you to turn raw data into actionable insights. By providing a centralized platform for visualization, exploration, and alerting, it helps you make data-driven decisions and optimize your systems. 
 
 ```yml
 version: '3.8' 

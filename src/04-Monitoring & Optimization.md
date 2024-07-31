@@ -152,6 +152,6 @@ Importing a Dashboard is arguably the fastest way to get started with Grafana. T
 # Node Exporter Full
 By providing a starting point for system monitoring, the Node Exporter Full dashboard accelerates the process of gaining valuable insights from your infrastructure.
 
-![node-exporter-full](images/dashboard_grafana)
+![node-exporter-full](images/dashboard_grafana.jpg)
 
 

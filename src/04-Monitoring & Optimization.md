@@ -140,18 +140,18 @@ services:
 
 Once logged in to Grafana by browsing to `your-container-ip-addres:grafana-port` Prometheus can be added as a data source by navigating to `Home > Connections > Data Sorces > Add Data Source`. Then the URL where Prometheus is active must be provided. Usually `your-container-ip-address: prometheus-port`.
 
-![data-sources]()
+![data-sources](images/add_datasource_grafana.jpg)
 
 
 # Importing a Dashboard
 
 Importing a Dashboard is arguably the fastest way to get started with Grafana. To do that navigate to `Home > Dashboards > New`. 
 
-![importing-dashboard]() 
+![importing-dashboard](images/import_dashboard_grafana.jpg) 
 
 # Node Exporter Full
 By providing a starting point for system monitoring, the Node Exporter Full dashboard accelerates the process of gaining valuable insights from your infrastructure.
 
-![node-exporter-full]()
+![node-exporter-full](images/dashboard_grafana)
 
 

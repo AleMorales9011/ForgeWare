@@ -6,8 +6,6 @@ Docker containers are `self-contained` units that include everything an applicat
 
 Simply put, it solves the *"It worked on my machine"* problem.
 
-![docker_meme](images/docker_meme.jpg)
-
 # Docker Concepts
 
 ![docker architecture](images/docker_architecture.jpg)

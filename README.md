@@ -3,7 +3,32 @@
 
 20 minutes
 
-Software Engineering is a complicated subject. Breaking through the `myriad of technologies`, frameworks, good practices, and programming languages is hard. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those `real-life applications` so you get a sense of what you are dealing with. Please notice, that the scripts we provide are not meant to be used in any production environment. 
+Software Engineering is a complicated subject. Breaking through the `myriad of technologies`, frameworks, good practices, and programming languages is hard. Forgeware exists to demystify Software Engineering in a hands-on way. We try to demonstrate concepts in real-life scenarios and show the code behind those `real-life applications` so you get a sense of what you are dealing with. As you know, the scripts we provide are not meant to be used in any production environment. 
+
+<details>
+  <summary><h1>Table of Contents</h1></summary>
+ 
+1. Introduction
+2. Automating the creation of users, directories, permissions, and groups with Bash
+3. Implementing a version control system with Git
+4. Deploying infrastructure with Terraform
+5. Creation of CI/CD pipeline with Azure DevOps
+6. Containerizing an application with Docker
+7. Performance & Optimization
+8. Deploying a web application with Kubernetes
+9. Automating Web App deployment with Bash
+10. Setting development environment with Vagrant
+11. Security
+12. SGBD
+13. Q&A
+14. POO
+15. POO-II
+16. POO-III
+17. System Design
+18. Data Structures and Algorithms.
+</details>
+
+Understanding and mastering the most commonly used configuration scripts is akin to learning the foundation of system administration and DevOps. By starting with these, you'll equip yourself with a powerful toolkit for managing systems efficiently and effectively.
 
 # Automating the creation of users, directories, permissions, and groups with Bash
 

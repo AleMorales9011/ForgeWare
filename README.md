@@ -1,4 +1,4 @@
-![Forgeware](images/Forgeware_banner_final.png)
+![Forgeware](https://github.com/AleMorales9011/ForgeWare/blob/8b28eab5af0761a9d01b7572d0f37484a9fe6834/src/images/Forgeware_banner_final.png)
 # About Forgeware
 
 20 minutes
@@ -162,5 +162,5 @@ machines = {
 # Sets the Vagrant configuration version to "2" 
 Vagrant.configure("2") do |config|
 ```
-![Forgeware](images/Forgeware_banner_final.png)
+![Forgeware](https://github.com/AleMorales9011/ForgeWare/blob/8b28eab5af0761a9d01b7572d0f37484a9fe6834/src/images/Forgeware_banner_final.png)
 

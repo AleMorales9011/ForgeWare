@@ -6,7 +6,7 @@ The `software engineering` landscape is constantly evolving.
 
 Understanding learning theory empowers one to `learn faster` and fosters continuous growth and adaptation.
 
-# Simulation Based Training
+# 1. Simulation Based Training
 
 `Simulation-based training`, as the name suggests, is a training method that creates `realistic imitations` of real-world scenarios. 
 
@@ -40,7 +40,7 @@ The SIM also illustrates the point of `diminishing returns` (the point where you
 Knowing the `diminishing return` point is critical in determining when to stop investing in learning a topic; therefore, it saves us both time and effort to learn things we don't need.   
 
 
-# Reuse not Redo
+# 2. Reuse not Redo
 
 Reusing existing components or designs accelerates `development cycles`, as engineers can focus on new features or improvements rather than starting from scratch. Reusing resources often translates to financial savings in labor, materials, and time. 
 
@@ -61,7 +61,9 @@ As the `field matures`, accumulating solutions and novel inquiries provide engin
 | Failure is not acceptable           | Failure is acceptable                 |
 | Priority Value/Time                 | Priority  Recognition/Time            |
 
+# 3. Input Quality
 
+Pattern recognition aligns with your level and chunks you can swallow
 
 
 

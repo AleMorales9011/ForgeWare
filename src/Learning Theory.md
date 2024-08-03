@@ -28,4 +28,10 @@ The SIM also illustrates the point of diminishing returns (the point where your 
 
 Reusing existing components or designs accelerates development cycles, as engineers can focus on new features or improvements rather than starting from scratch. Reusing resources often translates to financial savings in labor, materials, and time. The chart below illustrates the number of Machine Learning papers uploaded to Arxiv (a popular public repository of research papers).
 
-![]()
+![machine learning papers](images/machine-learning-papers-overtime.png)
+
+It is noteworthy that the function describing this phenomenon exhibits exponential growth. Consequently, an increasing number of papers leads to a correspondingly exponential increase in potential paper production. As the field matures, accumulating solutions and novel inquiries provide engineers with an expanding resource base for knowledge reapplication.
+
+
+
+

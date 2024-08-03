@@ -11,7 +11,7 @@ Simulation-based training, as the name suggests, is a training method that creat
 
 Pareto's Law, often called the 80/20 rule, suggests that 80% of your results come from 20% of your efforts. While this ratio might vary, the core idea remains: a small input often yields a disproportionately large output. To maximize learning we must apply Parettos's law and weight skills by relevance and order them accordingly. 
 
-![classical learnng](images/WEIGHT%20VS%20SKILL.png)
+![classical learnng](images/CLASSIC.jpg)
 
 
 

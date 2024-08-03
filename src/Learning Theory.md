@@ -32,6 +32,19 @@ Reusing existing components or designs accelerates development cycles, as engine
 
 It is noteworthy that the function describing this phenomenon exhibits exponential growth. Consequently, an increasing number of papers leads to a correspondingly exponential increase in potential paper production. As the field matures, accumulating solutions and novel inquiries provide engineers with an expanding resource base for knowledge reapplication.
 
+# Engineering vs Research
+
+| Engineers                           |  Research                             |
+|-------------------------------------|---------------------------------------|
+| Problems are known                  | Problems are unknown                  |
+| Execution-based                     | Research-based                        |                 
+| Failure is not acceptable           | Failure is acceptable                 |
+| Priority Value/Time                 | Priority  Recognition/Time            |
+
+
+
+
+
 
 
 

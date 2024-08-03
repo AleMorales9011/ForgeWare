@@ -19,4 +19,5 @@
   - [POO](10-POO_3.md)
 - [System Design]()
 - [Data Structures and Algorythms]()
+- [Learning Theory](<Learning Theory.md>)
   

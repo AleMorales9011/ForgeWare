@@ -21,11 +21,11 @@ This small change changes the learning function from linear to exponential. That
 
 ![simulation based learning](images/SIM.png)
 
-## Diminishing Returns 
-The SIM also illustrates the point of diminishing returns. The point where your effort starts to bring less value.  
+The SIM also illustrates the point of diminishing returns (the point where your effort starts to bring less value). Knowing the diminishing return point is critical in determining when to stop investing in learning a topic; therefore, it saves us both time and effort to learn things we don't need.   
 
 
 # Reuse not Redo
 
-Reusing existing components or designs accelerates development cycles, as engineers can focus on new features or improvements rather than starting from scratch.
-Cost reduction: Reusing resources often translates to financial savings in terms of labor, materials, and time.
+Reusing existing components or designs accelerates development cycles, as engineers can focus on new features or improvements rather than starting from scratch. Reusing resources often translates to financial savings in labor, materials, and time. The chart below illustrates the number of Machine Learning papers uploaded to Arxiv (a popular public repository of research papers).
+
+![]()

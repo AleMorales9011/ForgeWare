@@ -98,10 +98,12 @@ Cloud environments often store critical data, making them prime targets for cybe
 
 Security testing helps uncover weaknesses and vulnerabilities in software that could be exploited by malicious actors. Regular security testing can help prevent data breaches and other security incidents by proactively identifying and mitigating risks.
 
+| Security Configuration              | Description                                                  | Example                                                                          | 
+|-------------------------------------|--------------------------------------------------------------|----------------------------------------------------------------------------------| 
+| Vulnerability Scanning              | Regularly scanning systems and applications                  | Use `OpenVAS` or `Nessus` to scan for vulnerabilities.                           | 
+| Penetration Testing                 | Conducting simulated attacks to identify weaknesses.         | Use `Metasploit to simulate various attack scenarios                               | 
+| Security Groups (NACLs)             | Configuring security groups and NACLs                        | ----                                                                             |
 
-1. Vulnerability scanning: Regularly scanning systems and applications for vulnerabilities.
-2. Penetration testing: Conducting simulated attacks to identify weaknesses.
-3. Security audits: Performing regular security assessments.
 
 # DevSecOps Practices
 

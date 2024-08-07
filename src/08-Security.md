@@ -9,39 +9,47 @@ DevOps, focusing on speed and efficiency, can inadvertently introduce `security 
 1. Secure configuration management: Using tools like Ansible, Puppet, or Chef to enforce security configurations and policies. Here's an example of Ansible securing an SHH server.
 
 ```yml
+# This playbook secures the SSH server on target hosts.
 - name: Secure SSH Server
-  hosts: servers
-  become: yes
+  hosts: servers  # This playbook targets hosts in the "servers" group.
+  become: yes     # Tasks require elevated privileges (sudo).
 
   tasks:
+    # Disable password authentication (more secure with key-based auth)
     - name: Disable password authentication
       lineinfile:
         path: /etc/ssh/sshd_config
-        regexp: '^PasswordAuthentication yes'
-        line: 'PasswordAuthentication no'
+        regexp: '^PasswordAuthentication yes'  # Find lines starting with "PasswordAuthentication yes"
+        line: 'PasswordAuthentication no'      # Replace with "PasswordAuthentication no"
 
+    # Require SSH key-based authentication for improved security
     - name: Require SSH key-based authentication
       lineinfile:
         path: /etc/ssh/sshd_config
-        regexp: '^PubkeyAuthentication no'
-        line: 'PubkeyAuthentication yes'
+        regexp: '^PubkeyAuthentication no'     # Find lines starting with "PubkeyAuthentication no"
+        line: 'PubkeyAuthentication yes'       # Replace with "PubkeyAuthentication yes"
 
+    # Set strong ciphers for secure encryption
     - name: Set strong SSH ciphers
       lineinfile:
         path: /etc/ssh/sshd_config
-        regexp: '^Ciphers'
-        line: 'Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.com'
+        regexp: '^Ciphers'                     # Find lines starting with "Ciphers"
+        line: 'Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,chacha20-poly1305@openssh.com'  # Replace with recommended ciphers
 
+    # Set strong MACs for message authentication
     - name: Set strong MACs
       lineinfile:
         path: /etc/ssh/sshd_config
-        regexp: '^MACs'
-        line: 'MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128@openssh.com'
+        regexp: '^MACs'                        # Find lines starting with "MACs"
+        line: 'MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128@openssh.com'  # Replace with recommended MACs
 
+    # Restart SSH service to apply changes
     - name: Restart SSH service
       service:
         name: sshd
         state: restarted
+
+
 ```
 2. Immutable infrastructure: Building systems with immutable components to reduce the attack surface.
 3. Secret management: Implementing secure methods to store and manage sensitive information.

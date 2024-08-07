@@ -7,17 +7,15 @@ DevOps, focusing on speed and efficiency, can inadvertently introduce `security 
 # Infrastructure as Code (IaC)
 Infrastructure as Code (IaC) brings significant efficiency, consistency, and reproducibility advantages. However, it also introduces new security challenges such as the amplification of errors, and increased attack surface due to the high amount of pieces interconnected in distributed systems.
 
-# Secure IAC
+| Security Configuration    | Description                                                  | Example                                                                                 |
+|---------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Security by Design        | Enforce security configurations                              | Least privilege using `sudo` for specific commands. Firewall using `iptables` or `ufw`  | 
+| Continuous Monitoring     | Monitor IAC for security risks                               | Use `fail2ban` to detect and block brute-force attacks. Log análisis                    |
+| Immutable Infrastructure  | Immutable components to reduce the attack surface            | Use `Ansible` for `infrastructure provisioning` and updates.                            |
+| Secret Management         | Implementing secure methods to manage credentials            | Use `Ansible Vault` to encrypt sensitive data in configuration files                    |
 
-1. Security by Design: When using tools like Ansible, Puppet, Chef, or Terraform to enforce security the configurations and policies that are detailed below.
-2. Continuous Monitoring: Monitor IAC for signs of compromise and unauthorized access. 
-3. Immutable infrastructure: Building systems with immutable components to reduce the attack surface.
-4. Secret management: Implementing secure methods to store and manage sensitive information.
-
-
-
+This playbook secures the SSH server on target hosts.
 ```yml
-# This playbook secures the SSH server on target hosts.
 - name: Secure SSH Server
   hosts: servers  # This playbook targets hosts in the "servers" group.
   become: yes     # Tasks require elevated privileges (sudo).
@@ -61,11 +59,18 @@ Infrastructure as Code (IaC) brings significant efficiency, consistency, and rep
 ```
 
 # Application Security
-1. Code analysis: Using static and dynamic code analysis tools to identify vulnerabilities.
-2. Secure coding practices: Adhering to secure coding standards and guidelines.
-3. Dependency management: Keeping software dependencies up-to-date and patched.
+
+Applications often handle sensitive information such as financial data, personal information, and intellectual property. A compromised application can lead to significant data breaches with severe consequences.
+
+| Security Configuration    | Description                                                  | Example                                                                                 |
+|---------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Code Analysis             | Using code analysis tools to identify vulnerabilities.       | Use `cppcheck` , `clang-tidy`, or `Valgrind`to find potential issues.                   | 
+| Secure Coding Practices   | Adhering to secure coding standards and guidelines           | Use coding standards like `OWASP`                                                       |
+| Dependency Management     | Keeping software dependencies up-to-date and patched         | Use `apt` or `yum` to update system packages                                            |
+
 
 # Network Security
+
 1. Firewall configuration: Implementing and managing firewalls to protect network perimeters.
 2. Intrusion detection and prevention systems (IDPS): Deploying and managing IDPS to detect and prevent attacks.
 3. Network segmentation: Isolating critical systems and data to limit the impact of breaches.

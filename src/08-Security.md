@@ -7,10 +7,14 @@ DevOps, focusing on speed and efficiency, can inadvertently introduce `security 
 # Infrastructure as Code (IaC)
 Infrastructure as Code (IaC) brings significant efficiency, consistency, and reproducibility advantages. However, it also introduces new security challenges such as the amplification of errors, and increased attack surface due to the high amount of pieces interconnected in distributed systems.
 
-# Secure Configuration Management
+# Secure IAC
 
-1. Security by Design: Using tools like Ansible, Puppet, or Chef to enforce security configurations and policies. 
+1. Security by Design: When using tools like Ansible, Puppet, Chef, or Terraform to enforce security the configurations and policies that are detailed below.
 2. Continuous Monitoring: Monitor IAC for signs of compromise and unauthorized access. 
+3. Immutable infrastructure: Building systems with immutable components to reduce the attack surface.
+4. Secret management: Implementing secure methods to store and manage sensitive information.
+
+
 
 ```yml
 # This playbook secures the SSH server on target hosts.
@@ -55,8 +59,6 @@ Infrastructure as Code (IaC) brings significant efficiency, consistency, and rep
 
 
 ```
-2. Immutable infrastructure: Building systems with immutable components to reduce the attack surface.
-3. Secret management: Implementing secure methods to store and manage sensitive information.
 
 # Application Security
 1. Code analysis: Using static and dynamic code analysis tools to identify vulnerabilities.

@@ -2,10 +2,15 @@
 
 # Security
 
-DevOps, focusing on speed and efficiency, can inadvertently introduce `security risks` if not managed carefully. In essence, security is not an afterthought in DevOps; it's an integral part of the process. Organizations can achieve faster, more secure software delivery by prioritizing security from the outset.
+DevOps, focusing on speed and efficiency, can inadvertently introduce `security risks` if not managed carefully. 
+
+In essence, security is not an afterthought in `DevOps`; it's an integral part of the process. Organizations can achieve faster, more secure software delivery by prioritizing security from the outset.
 
 # Infrastructure as Code (IaC)
-Infrastructure as Code (IaC) brings significant efficiency, consistency, and reproducibility advantages. However, it also introduces new security challenges such as the amplification of errors, and increased attack surface due to the high amount of pieces interconnected in distributed systems.
+
+Infrastructure as Code (IaC) brings significant efficiency, consistency, and reproducibility advantages. 
+
+However, it also introduces new security challenges such as the amplification of errors, and increased `attack surface` due to the high amount of pieces interconnected in distributed systems.
 
 | Security Configuration    | Description                                                  | Example                                                                                 |
 |---------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
@@ -60,20 +65,24 @@ This playbook secures the SSH server on target hosts.
 
 # Application Security
 
-Applications often handle sensitive information such as financial data, personal information, and intellectual property. A compromised application can lead to significant data breaches with severe consequences.
+Applications often handle `sensitive information` such as financial data, personal information, and intellectual property. A compromised application can lead to significant data breaches with severe consequences.
 
 | Security Configuration    | Description                                                  | Example                                                                                 |
 |---------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| Code Analysis             | Using code analysis tools to identify vulnerabilities.       | Use `cppcheck` , `clang-tidy`, or `Valgrind`to find potential issues.                   | 
+| Code Analysis             | Using code analysis tools to identify vulnerabilities.       | Use `cppcheck`, `clang-tidy`, or `Valgrind`to find potential issues.                    | 
 | Secure Coding Practices   | Adhering to secure coding standards and guidelines           | Use coding standards like `OWASP`                                                       |
 | Dependency Management     | Keeping software dependencies up-to-date and patched         | Use `apt` or `yum` to update system packages                                            |
 
 
 # Network Security
 
-1. Firewall configuration: Implementing and managing firewalls to protect network perimeters.
-2. Intrusion detection and prevention systems (IDPS): Deploying and managing IDPS to detect and prevent attacks.
-3. Network segmentation: Isolating critical systems and data to limit the impact of breaches.
+Network security prevents unauthorized access to confidential data, protecting sensitive information from theft or misuse.
+
+| Security Configuration    | Description                                                  | Example                                                                                 |
+|---------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Code Analysis             | Using code analysis tools to identify vulnerabilities.       | Use `cppcheck`, `clang-tidy`, or `Valgrind`to find potential issues.                    | 
+| Secure Coding Practices   | Adhering to secure coding standards and guidelines           | Use coding standards like `OWASP`                                                       |
+| Dependency Management     | Keeping software dependencies up-to-date and patched         | Use `apt` or `yum` to update system packages                                            |
 
 # Cloud Security
 1. Identity and access management (IAM): Implementing strong IAM controls to protect cloud resources.

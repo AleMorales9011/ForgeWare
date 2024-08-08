@@ -1,3 +1,0 @@
-default: true
-MD013: # disable the line length rule
-  line_length: false

@@ -1,4 +1,4 @@
-![banner]()
+![banner](images/4.jpg)
 
 # Disaster Recovery Plan and Business Continuity
 

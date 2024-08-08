@@ -12,6 +12,8 @@
   - [Automating Web App deployment with Bash](<06-InfrastructureAutomation.md>)
   - [Setting development environment with Vagrant](<07-AdvancedScripting.md>)
   - [Security](<08-Security.md>)
+  - [Disaster Recovery Plan](<09-Disaster Recovery Plan.md>)
+  - [Metrics and Analytics](<10-Metrics & Analytics.md>)
 - [SGBD](10-SGBD.md)
 - [Q&A]()
 - [POO](08-POO_1.md)

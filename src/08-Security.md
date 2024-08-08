@@ -117,8 +117,14 @@ DevSecOps is a software development approach that integrates `security` into the
 
 # Additional Skills
 
-1. Cryptography: Understanding cryptographic principles and algorithms.
-2. Compliance: Knowledge of relevant security regulations and standards (e.g., GDPR, PCI DSS).
-3. Automation: Using automation tools to streamline security tasks.
+| Security Configuration              | Description                                                  | Example                                                                          | 
+|-------------------------------------|--------------------------------------------------------------|----------------------------------------------------------------------------------| 
+| Cryptography                        | Understanding `cryptographic` principles to protect data     | `SSH key-based` authentication                                                   | 
+| Compliance                          | Adhering to relevant security regulations and standards      | Comply with `PCI` and `DSS`                                                      | 
+| Automation                          | Using tools and scripts to streamline security tasks         | Vulnerability scanning with `OpenSCAP`                                           |
+
+
+
+
 
 

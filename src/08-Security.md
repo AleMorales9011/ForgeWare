@@ -60,6 +60,7 @@ This playbook secures the SSH server on target hosts.
 
 
 ```
+![Secure_ssh_server](images/Secure_ssh_server..jpg)
 
 # Application Security
 

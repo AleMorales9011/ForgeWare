@@ -4,13 +4,11 @@
 
 DevOps, focusing on speed and efficiency, can inadvertently introduce `security risks` if not managed carefully. 
 
-In essence, security is not an afterthought in `DevOps`; it's an integral part of the process. Organizations can achieve faster, more secure software delivery by prioritizing security from the outset.
-
 # Infrastructure as Code (IaC)
 
 Infrastructure as Code (IaC) brings significant efficiency, consistency, and reproducibility advantages. 
 
-However, it also introduces new security challenges such as the amplification of errors, and increased `attack surface` due to the high amount of pieces interconnected in distributed systems.
+However, it also introduces new security challenges such as the amplification of errors and increased `attack surface` due to the high amount of pieces interconnected in distributed systems.
 
 | Security Configuration    | Description                                                  | Example                                                                                 |
 |---------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
@@ -86,7 +84,7 @@ Network security prevents unauthorized access to confidential data, protecting s
 
 # Cloud Security
 
-Cloud environments often store critical data, making them prime targets for cyberattacks. A breach can lead to significant financial losses, reputational damage, and legal consequences.
+Cloud environments often store `critical data`, making them prime targets for cyberattacks. A breach can lead to significant financial losses, reputational damage, and legal consequences.
 
 | Security Configuration              | Description                                                  | Example                                                                          | 
 |-------------------------------------|--------------------------------------------------------------|----------------------------------------------------------------------------------| 
@@ -101,15 +99,21 @@ Security testing helps uncover weaknesses and vulnerabilities in software that c
 | Security Configuration              | Description                                                  | Example                                                                          | 
 |-------------------------------------|--------------------------------------------------------------|----------------------------------------------------------------------------------| 
 | Vulnerability Scanning              | Regularly scanning systems and applications                  | Use `OpenVAS` or `Nessus` to scan for vulnerabilities.                           | 
-| Penetration Testing                 | Conducting simulated attacks to identify weaknesses.         | Use `Metasploit to simulate various attack scenarios                               | 
+| Penetration Testing                 | Conducting simulated attacks to identify weaknesses.         | Use `Metasploit to simulate various attack scenarios                             | 
 | Security Groups (NACLs)             | Configuring security groups and NACLs                        | ----                                                                             |
 
 
 # DevSecOps Practices
 
-1. Shift-left security: Incorporating security into the early stages of development.
-2. Continuous integration and continuous delivery (CI/CD) pipeline security: Integrating security checks into the CI/CD pipeline.
-3. Incident response: Developing and practicing incident response plans.
+DevSecOps is a software development approach that integrates `security` into the entire development lifecycle.
+
+| Security Configuration              | Description                                                  | Example                                                                          | 
+|-------------------------------------|--------------------------------------------------------------|----------------------------------------------------------------------------------| 
+| Shift-left security                 | Incorporating security into the early stages of development  | Use tools like `linter` to check for potential vulnerabilities in code.          | 
+| CI/CD Testing                       | Integrating security checks into the CI/CD pipeline          | Use tools like `checkmarx` to scan code for vulnerabilities during the build     | 
+| Incident response                   | Developing and practicing incident response plans            | Use `Ansible` to automate incident response.                                     |
+
+
 
 # Additional Skills
 

@@ -1,6 +1,6 @@
-![]()
-
+![banner](images/5.jpg)
 # Metrics and Analytics
+
 Metrics and analytics are the lifeblood of DevOps. They provide the data-driven insights needed to optimize software delivery pipelines, improve efficiency, and enhance overall product quality.
 
 # Metrics
@@ -19,7 +19,7 @@ These metrics provide a foundation. The specific metrics you track will depend o
 | Test Case Execution Time            | Total test execution time / # of test cases      | Average time taken to run a test case                      |
 
 # Next
-
+We will..
 
 
 

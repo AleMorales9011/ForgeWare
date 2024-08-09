@@ -1,7 +1,7 @@
-# Execution
+# Test Case Execution
 
 1. Set up the test environment.
-2. Design and execute test case.
+2. Design and execute the test case.
 ![image](https://github.com/user-attachments/assets/99ec716f-12b6-44ec-bd84-c8245b2ab973)
 3. Report results and bugs.
 

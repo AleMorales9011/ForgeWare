@@ -1,4 +1,4 @@
-![banner]()
+![banner](images/6.jpg)
 # SDLC & Testing
 
 The `Software Development Lifecycle` is a process used to create software that meets the stakeholders' requirements cost-efficiently, avoiding rework and waste of resources.

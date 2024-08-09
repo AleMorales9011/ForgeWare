@@ -22,7 +22,7 @@ Terraform's ability to manage `Infrastructure as code (IaC)` makes it ideal for 
 
 # Benefits of using the BFF pattern
 
-A software company might use the Backend for Frontends (BFF) pattern by tailoring data and functionalities to each specific UI(desktop vs mobile).
+A software company might use the `Backend for Frontends (BFF)` pattern by tailoring data and functionalities to each specific UI(desktop vs mobile).
 
 # Prerequisites
 
@@ -31,11 +31,11 @@ A software company might use the Backend for Frontends (BFF) pattern by tailorin
 
 # What's Terraform?
 
-`Infrastructure as Code (IaC)` tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to manage your infrastructure consistently by defining resource configurations that you can version, reuse, and share.
+`Infrastructure as Code (IaC)` tools allow you to manage infrastructure with configuration files that you can version, reuse, and share rather than through a graphical user interface. 
 
 # Installing Terraform
 
-To install Terraform, find the [appropriate package for your system](https://developer.hashicorp.com/terraform/install) and download it as a zip archive. After downloading Terraform, unzip the package. Terraform runs as a single binary named terraform. 
+To install Terraform, find the [appropriate package for your system](https://developer.hashicorp.com/terraform/install) and download it as a zip archive. After downloading Terraform, unzip the package. 
 
 # Installing Azure CLI
 
@@ -55,7 +55,9 @@ az login
 
 # Create a Service Principal
 
-Next, we need to create a `Service Principal`. An application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf. Update the `<SUBSCRIPTION_ID>` with the subscription ID you specified in the previous step.
+Next, we need to create a `Service Principal`. An application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf. 
+
+Update the `<SUBSCRIPTION_ID>` with the subscription ID you specified in the previous step.
 
 ```ruby
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
@@ -63,7 +65,7 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIP
 
 # Set your environment variables
 
-A good practice HashiCorp recommends is setting these values as environment variables rather than saving them in your Terraform configuration to avoid passing sensitive info in the configuration code.
+A good practice HashiCorp recommends is setting these values as `environment variables` rather than saving them in your Terraform configuration to avoid passing sensitive info in the configuration code.
 
 ```ruby
 
@@ -195,12 +197,10 @@ variable "tags" {
 }
 ```
 
-![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/d6b93bf0c23a8f9d49fb552b3129d0794d37e0de/003-ARCHITECTURE-BFF-PATTERN/003-IMAGES/Resources%20created.jpg)
-
 # Conclusion
 
-By leveraging Terraform's Infrastructure as code (IaC) approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey.
+By leveraging Terraform's Infrastructure as code (IaC) approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments.
 
 # Next
 
-We will create a CI/CD pipeline with Azure DevOps. 
+CI/CD pipelines. Which is arguably the most important skill for DevOps engineers to master.

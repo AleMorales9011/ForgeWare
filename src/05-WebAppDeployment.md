@@ -1,12 +1,16 @@
-# Deploying a web application with kubernetes
+![banner](images/9.jpg)
 
-This project demonstrates the deployment of a **multi-tier application on Kubernetes**, a container orchestration platform. The application consists of a MySQL database and a PHP backend service.
+# Deploying a web application with Kubernetes
 
-## Methodology
+60 minutes
 
-Conteinerized Application deployment using **Dockers and Kubernetes** to illlustrate containerization best practices. All the required services for propper functioning of the application were created from scratch.
+This project demonstrates the deployment of a `multi-tier application` on Kubernetes, a container orchestration platform. The application consists of a MySQL database and a PHP backend service.
 
-## Table Of Content
+# Methodology
+
+Containerized Application deployment using `Dockers and Kubernetes` to illustrate containerization best practices. All the required services for the proper functioning of the application were created from scratch.
+
+# Table Of Content
 
 - Persistent Volme Claim
 - MySQL Database Deployment
@@ -14,14 +18,16 @@ Conteinerized Application deployment using **Dockers and Kubernetes** to illlust
 - Load Balancer Service
 - MySQL Database Service
 - Deployment Script
-- Conclussion
+- Conclusion
 
-### Persistent Volme Claim
+# Persistent Volme Claim
 
-The provided YAML snippet is a **well-structured Persistent Volume Claim (PVC)** requesting persistent storage in Kubernetes. This PVC effectively requests ```10 Gigabytes``` of persistent storage with ```ReadWriteOnce``` access for a single Pod at a time. The ```standard-rwo``` StorageClass dictates where and how this storage will be provisioned.
+The provided YAML snippet is a well-structured Persistent Volume Claim (PVC) requesting persistent storage in Kubernetes. 
+
+This PVC effectively requests `10 Gigabytes` of persistent storage with `ReadWriteOnce` access for a single Pod at a time. The `standard-two` StorageClass dictates where and how this storage will be provisioned.
 
 ```ruby
-# Persistent Volume Claim to request persistent storage to kubernetes
+# Persistent Volume Claim to request persistent storage to Kubernetes
 apiVersion: v1 
 kind: PersistentVolumeClaim
 metadata:
@@ -36,9 +42,9 @@ spec:
 
 ```
 
-### MySQL Database Deployment
+# MySQL Database Deployment
 
-This deployment creates pods running a **MySQL container** with persistent storage for the database data. The provided code snippet defines a deployment for a MySQL database container in Kubernetes.
+This deployment creates pods running a `MySQL container` with persistent storage for the database data. The provided code snippet defines a deployment for a `MySQL` database container in Kubernetes.
 
 ```ruby
 # Mysql deployment
@@ -75,9 +81,9 @@ spec:
 
 ```
 
-### PHP Deployment
+# PHP Deployment
 
-The provided YAML defines a **Kubernetes deployment** configuration for a PHP application. This YAML describes a deployment that creates six pods running the container image alemorales9011935/projeto-backend:1.0. These pods will be labeled with ```app: php``` and will expose their application on port 80.
+The provided YAML defines a `Kubernetes deployment` configuration for a PHP application. This YAML describes a deployment that creates six pods running the container image alemorales9011935/projeto-backend:1.0. These pods will be labeled with `app: php` and will expose their application on `port 80`.
 
 ```ruby
 apiVersion: apps/v1
@@ -104,9 +110,13 @@ spec:
         - containerPort: 80
 ```
 
-### Load Balancer Service
+# Load Balancer Service
 
-The configuration below defines a ```php-Service```. This configuration creates a ```LoadBalancer``` service for your PHP application. Kubernetes will work with your cloud provider to set up an **external load balancer** that will distribute traffic across multiple pods running the PHP application. The external IP address for accessing the service will be dynamically assigned by the cloud provider and can be retrieved later using ```kubectl get service php```.
+The configuration below defines a `php-Service`. This configuration creates a ```LoadBalancer``` service for your PHP application. 
+
+Kubernetes will work with your cloud provider to set up an `external load balancer` that will distribute traffic across multiple pods running the PHP application. 
+
+The external IP address for accessing the service will be dynamically assigned by the cloud provider and can be retrieved later using `kubectl get service php`.
 
 ```ruby
 apiVersion: v1 
@@ -123,9 +133,9 @@ spec:
 
 ```
 
-### MySQL Database Service
+# MySQL Database Service
 
-The configuration below creates a **ClusterIP Service** for a MySQL database. A ClusterIP service is only accessible from within the Kubernetes cluster. Pods within the cluster can access the MySQL service at mysql-connection on port ```3306```.
+The configuration below creates a `ClusterIP Service` for a MySQL database. A ClusterIP service is only accessible from within the Kubernetes cluster. Pods within the cluster can access the MySQL service at mysql-connection on port `3306`.
 
 ```ruby
 apiVersion: v1
@@ -171,6 +181,6 @@ kubectl apply -f ./deployment.yml --validate=false # Controls the validation beh
 
 ```
 
-## Conclussion
+# Conclussion
 
-This repository serves as a **solid foundation** for your Kubernetes deployment journey. By following the steps outlined here and leveraging the provided scripts, you can streamline your deployment process and ensure a **consistent and scalable environment** for your application. Feel free to adapt and extend these practices to suit your specific application needs and explore the vast functionalities offered by Kubernetes.
+This repository serves as a `solid foundation` for Kubernetes deployment. 

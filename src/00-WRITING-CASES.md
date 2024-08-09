@@ -1,7 +1,7 @@
 ## Create a Test Case Template for Jira
 
 ### Previously
-In the previous chapter([click here to read it](https://github.com/amandaestevez/softwareqa/blob/3881ac15dfa8e1b06ae15f38b52bbf23335505bf/00-SOFTWARE-DEVELOPMENT-LIFECYCLE-SDLC/001-SLDC-TESTING-%26-QA.md)), you saw the main activities that *ZippyBank's* testing team worked on throughout the entire Software Development Lifecycle (SDLC). Now you will go through their test case.
+In the previous chapter, you saw the main activities that *ZippyBank's* testing team worked on throughout the entire Software Development Lifecycle (SDLC). Now you will go through their test case.
 
 
 ## Abstract

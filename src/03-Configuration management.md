@@ -1,10 +1,8 @@
+![banner](images/8.jpg)
+
 # Creating a CI/CD pipeline with Azure DevOps
 
-Now, Jane( a business owner) needs to easily update her **website's infrastructure** (storage, OS, services). Let's automate this with Azure DevOps to save time and effort.
-
-## Methodology
-
-In this recipe you can find a simple way to **automate the infrastructure provisioning** and configuration management using YML whiting Azure DevOps.
+It's a methodology that automates the `software development` process, from building and testing to deployment. By automating repetitive tasks, `CI/CD` significantly reduces the time it takes to get new features or bug fixes into production.
 
 ```ruby
 
@@ -40,6 +38,10 @@ steps:
 
 ```
 
-## Conclusion
+# Conclusion
 
-By leveraging Azure Pipelines' features, you can achieve **continuous integration and continuous delivery (CI/CD)** for your projects, ensuring consistent and reliable deployments. We encourage you to explore the code, **customize it** for your specific needs, and contribute improvements.  The provided examples showcase **common CI/CD workflows**, but the possibilities are vast.
+By leveraging Azure Pipelines' features, you can achieve continuous integration and continuous delivery (CI/CD) for your projects, ensuring consistent and reliable deployments. We encourage you to explore the code, customize it for your specific needs, and contribute improvements.  The provided examples showcase common CI/CD workflows, but the possibilities are vast.
+
+# Next
+Containerization with Docker. 
+

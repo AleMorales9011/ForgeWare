@@ -314,7 +314,7 @@ By comparing these features, users can select the most suitable performance test
 
 A web application for ordering cat food charges users and places an order when an HTTP GET request is issued to the following URL:
 
-http://www.catsupplies.com/order?brand=xxxxx&quantity=xxxxx
+
 
 A malicious website could add snippets like this to their site:
 

@@ -1,7 +1,7 @@
 ![banner](images/1.jpg)
 # Performance & Optimization
 
-By monitoring container performance metrics like CPU, memory, and network usage, you can identify and troubleshoot issues before they impact users. This proactive approach helps prevent outages and ensures high application service quality.
+By monitoring container performance metrics like `CPU`, `memory`, and `network usage`, you can identify and troubleshoot issues before they impact users. 
 
 # Requirements
 
@@ -12,7 +12,7 @@ By monitoring container performance metrics like CPU, memory, and network usage,
 
 # Folder Structure
 
-A well-defined structure promotes modularity.  Each service or component can reside in its directory, encapsulating its configuration files, Dockerfile, and related scripts.  This promotes reusability and independent development of each service.
+A well-defined structure promotes modularity. Each service or component can reside in its directory, encapsulating its `configuration files`, Dockerfile, and related scripts.  
 
 ```bash
 #! bin\bash
@@ -32,7 +32,7 @@ echo "Folder Structure Created"
 
 # Grafana
 
-Grafana empowers you to turn raw data into actionable insights. By providing a centralized platform for visualization, exploration, and alerting, it helps you make data-driven decisions and optimize your systems. 
+Grafana empowers you to turn raw data into `actionable insights`. By providing a centralized platform for visualization, exploration, and alerting, it helps you make data-driven decisions and optimize your systems. 
 
 ![grafana-dashboard](images/grafana-dashboard.png)
 
@@ -57,7 +57,7 @@ volumes:
 
 # Prometheus
 
-Prometheus provides a robust and efficient solution for monitoring and alerting, making it a popular choice for organizations of all sizes. Here's how to spin up prometheus with a docker-compose file.
+`Prometheus` provides a robust and efficient solution for monitoring and alerting. Here's how to spin up `Prometheus` with a docker-compose file.
 
 ```yml
 services:
@@ -82,7 +82,7 @@ volumes:
 
 # Prometheus.YML
 
-Prometheus.yml is the configuration file that defines the core behavior of a Prometheus server. It dictates how Prometheus collects, stores, and processes metrics. It is the blueprint for your Prometheus instance.
+Prometheus.yml is the configuration file that defines the core behavior of a Prometheus server. It dictates how Prometheus collects, stores, and processes metrics. 
 
 ```yml
 
@@ -114,7 +114,9 @@ scrape_configs:
 
 # Node Exporter
 
-Node Exporter is a crucial component in the Prometheus ecosystem, primarily designed to collect and expose metrics about the underlying host machine. It's essentially a bridge between your hardware and the powerful analysis capabilities of Prometheus.
+`Node Exporter` is a crucial component in the Prometheus ecosystem, primarily designed to `collect` and `expose metrics` about the underlying host machine. 
+
+It's essentially a bridge between your hardware and the powerful analysis capabilities of Prometheus.
 
 ```yml
 services:
@@ -138,7 +140,9 @@ services:
 ```
 # Grafana: Data Sources
 
-Once logged in to Grafana by browsing to `your-container-ip-addres:grafana-port` Prometheus can be added as a data source by navigating to `Home > Connections > Data Sorces > Add Data Source`. Then the URL where Prometheus is active must be provided. Usually `your-container-ip-address: prometheus-port`.
+Once logged in to Grafana by browsing to `your-container-ip-addres:grafana-port` Prometheus can be added as a data source by navigating to `Home > Connections > Data Sorces > Add Data Source`. 
+
+Then the URL where Prometheus is active must be provided. Usually `your-container-ip-address: prometheus-port`.
 
 ![data-sources](images/add_datasource_grafana.jpg)
 
@@ -153,5 +157,8 @@ Importing a Dashboard is arguably the fastest way to get started with Grafana. T
 By providing a starting point for system monitoring, the Node Exporter Full dashboard accelerates the process of gaining valuable insights from your infrastructure.
 
 ![node-exporter-full](images/dashboard_grafana.jpg)
+
+# Next
+Deploying a web application with Kubernetes. How to deploy a multi-tier app with Kubernetes.
 
 

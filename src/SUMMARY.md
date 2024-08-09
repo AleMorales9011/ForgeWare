@@ -23,6 +23,7 @@
   - [Industry Knowledge](<03-INDUSTRY-KNOWLEDGE.md>)
   - [Design Strategies](<04-DESIGN-STRATEGIES.md>)
   - [Statement Coverage](<05-STATEMENT-COVERAGE.md>)
+  - [Types](<06-TYPES.md>)
 - [POO](08-POO_1.md)
   - [POO](09-POO_2.md)
   - [POO](10-POO_3.md)

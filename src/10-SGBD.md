@@ -40,13 +40,9 @@ In SQL, there are five main categories of commands, each serving a specific purp
 
 ![SQL_101](images/SQL_101.jpeg)
 
-# DML
-
-DML stands for `Data Manipulation Language`. It's a category of languages used in computer programs or by database users to interact with data in a database. Its main commands are `SELECT`; `INSERT`; `UPDATE`; and `DELETE`.
-
-| DML(Data Manipulation)                                         | Data Manipulation                       |                                    |                                      |   
-|--------------------------------------------------------------- |-----------------------------------------|------------------------------------|--------------------------------------|
-| `SELECT` column1 `FROM` table;                                 | `SELECT` column1 `FROM` table           |                                                     |                      
+| DML(Data Manipulation)                                         | DDL(Data Definition Language)                                                                 |   
+|--------------------------------------------------------------- |-----------------------------------------------------------------------------------------------|
+| `SELECT` column1 `FROM` table;                                 | `CREATE VIEW` view_name `AS SELECT` column1, column2, `FROM` table_name `WHERE` condition;    |                      
 | `INSERT INTO` table_name `VALUES` value1;                      | 
 | `UPDATE` table_name `SET` column1 = value1, `WHERE` condition; |              
 | `DELETE FROM` table_name `WHERE` condition;                    |                    

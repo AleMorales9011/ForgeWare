@@ -1,12 +1,12 @@
 ![Image](images/side-view-man-living-as-digital-nomad.jpg)
 
-# Automating the creation of users, permissions, directories, and groups with Bash
+# User Management Automation
 
-20 minutes
+40 minutes
 
 As we said before the main goal of DevOps is to `ship code faster` and efficiently.
 
-However for that to happen first software companies would likely need to create groups, directories, and users for new employees. A company might do this with Linux in a scenario where they are using a `self-hosted deployment` model. Some companies might choose a `self-hosted` model where they install and manage the SaaS application on their own Linux servers.
+However for that to happen first software companies would likely need to create groups, directories, and users for new employees. A company might do this with Linux in a scenario where they are using a `self-hosted deployment` model. 
 
 In this self-hosted scenario, the company would need to create user accounts on the `Linux server` for each new employee. These accounts would grant them access to the specific resources and applications they need to do their jobs.
 
@@ -15,7 +15,8 @@ In this self-hosted scenario, the company would need to create user accounts on 
 1. Payroll Table
 2. Script
 3. Permissions Strings
-4. Conclusion
+4. Example
+5. Conclusion
   
 # Payroll Table
 
@@ -88,7 +89,7 @@ The permissions string defines a `specific access` level for the owner, the grou
 - 5 represents read and execute (r = 4, x = 1)
 - 7 represents all permissions (read, write, and execute)
 
-**Here's an example to illustrate:**
+# Example
 
 Consider a permission string -rwxr--r--.
 
@@ -105,4 +106,4 @@ There might be some `hybrid deployments` where core functionalities are self-hos
 
 # Next
 
-We will implement a version control System with Github.
+Version control System with Github. How to easily keep track of all the code in your system and collaborate with other developers in a professional software development environment.

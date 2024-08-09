@@ -1,4 +1,4 @@
-![banner](banner_8.jpg)
+![banner](images/banner_8.jpg)
 # Setting developing environment with Vagrant
 
 60 minutes 

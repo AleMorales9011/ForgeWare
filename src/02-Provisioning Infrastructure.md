@@ -2,17 +2,9 @@
 
 # Deploying infrastructure with Terraform and Azure
 
-30 minutes
+60 minutes
 
-Terraform's ability to manage infrastructure as code (IaC) makes it ideal for deploying infrastructure in different environments (development, staging, production) and cloud vendors. Companies can leverage the same configuration files with environment-specific variables, ensuring consistency while allowing for variations between environments and vendors.
-
-# Methodology
-
-This file shows fundamental concepts of infrastructure provisioning using Terraform. It leverages HCL, a prevalent language for infrastructure provisioning to build the infrastructure below.
-
-![Infrastructure](https://github.com/AleMorales9011/01-DEVOPS/blob/bf5c286430d93b2bfe3ea4054a73b42836960ece/008%20PROVISIONING%20INFRASTRUCTURE/Backend%20for%20Fronteds%20model.png)
-
-BFF (Back end for frontend pattern)
+Terraform's ability to manage `Infrastructure as code (IaC)` makes it ideal for deploying `infrastructure` in different environments (development, staging, production) and cloud vendors.
 
 # Table of contents
 
@@ -30,7 +22,7 @@ BFF (Back end for frontend pattern)
 
 # Benefits of using the BFF pattern
 
-A software company might use the Backend for Frontends (BFF) pattern by tailoring data and functionalities to each specific UI(desktop vs mobile), BFF can lead to a more optimized and user-friendly experience for different user groups. It allows to have a backend for each frontend, hence the name BFF.
+A software company might use the Backend for Frontends (BFF) pattern by tailoring data and functionalities to each specific UI(desktop vs mobile).
 
 # Prerequisites
 
@@ -39,19 +31,11 @@ A software company might use the Backend for Frontends (BFF) pattern by tailorin
 
 # What's Terraform?
 
-Infrastructure as Code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface.
-IaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share.
-
-A simple
+`Infrastructure as Code (IaC)` tools allow you to manage infrastructure with configuration files rather than through a graphical user interface. IaC allows you to manage your infrastructure consistently by defining resource configurations that you can version, reuse, and share.
 
 # Installing Terraform
 
-To install Terraform, find the [appropriate package for your system](https://developer.hashicorp.com/terraform/install) and download it as a zip archive.
-
-After downloading Terraform, unzip the package. Terraform runs as a single binary named terraform. Any other files in the package can be safely removed and Terraform will still function.
-
->[!Note]
-> Finally, make sure that the terraform binary is available on your ```PATH```. This process will differ depending on your operating system.
+To install Terraform, find the [appropriate package for your system](https://developer.hashicorp.com/terraform/install) and download it as a zip archive. After downloading Terraform, unzip the package. Terraform runs as a single binary named terraform. 
 
 # Installing Azure CLI
 
@@ -71,7 +55,7 @@ az login
 
 # Create a Service Principal
 
-Next, we need to create a Service Principal. An application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf. Update the <SUBSCRIPTION_ID> with the subscription ID you specified in the previous step.
+Next, we need to create a `Service Principal`. An application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf. Update the `<SUBSCRIPTION_ID>` with the subscription ID you specified in the previous step.
 
 ```ruby
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
@@ -192,7 +176,7 @@ resource "azurerm_storage_container" "stmobileui001" {
 
 # Variables (var.tf)
 
-Variable files separate configuration values from the main Terraform code. This allows to reuse the same Terraform codebase for multiple deployments by simply changing the variable values.
+Variable files separate configuration values from the main `Terraform code`. This allows to reuse the same Terraform codebase for multiple deployments by simply changing the variable values.
 
 ```ruby
 variable "location" {
@@ -215,7 +199,7 @@ variable "tags" {
 
 # Conclusion
 
-By leveraging Terraform's **infrastructure as code (IaC)** approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey.
+By leveraging Terraform's Infrastructure as code (IaC) approach, you can achieve consistent, repeatable, and version-controlled infrastructure deployments. I encourage you to explore the code, contribute improvements, and leverage this repository as a starting point for your own Terraform journey.
 
 # Next
 

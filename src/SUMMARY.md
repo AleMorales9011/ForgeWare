@@ -21,7 +21,7 @@
   - [Industry Knowledge](<03-INDUSTRY-KNOWLEDGE.md>)
   - [Design Strategies](<04-DESIGN-STRATEGIES.md>)
   - [Statement Coverage](<05-STATEMENT-COVERAGE.md>)
-  - [Types](<06-TYPES.md>)
+  - [Techniques, Types, and Levels](https://github.com/amandaestevez/ForgeWare/blob/2e23364654a9e3cd47798b9e45089b9519b03e1a/src/06-TECHNIQUES-TYPES-AND-LEVELS.md)
   - [Jira](<07-JIRA.md>)
   - [Automation](<AUTOMATION.md>)
 - [POO](08-POO_1.md)

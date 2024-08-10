@@ -1,5 +1,7 @@
 # Test Techniques, Types, and Levels
 
+- Execution: manual or automated.
+  
 - Techniques: Specific methods used to execute tests - White Box, Black Box, Grey Box.
 
 - Types: Categories of testing based on different objectives - Functional, Non-functional.

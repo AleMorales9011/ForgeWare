@@ -19,6 +19,15 @@ Testing & QA throughout the entire SDLC:
 |                 |                     |                     | Analysis           |                  |                    |
 |                 |                     |                     | Reporting          |                  |                    |
 
+# Execution
+
+1. Design the test case.
+2. Set up the test environment.
+3. Execute the test.
+4. Report results and bugs.
+5. Fix bugs and retest.
+6. Clean up the test environment.
+
 # Next
 
 How to write and execute test cases.

@@ -17,7 +17,6 @@
 - [SGBD](10-SGBD.md)
 - [QA](<SLDC & Testing.md>)
   - [Execution](<Execution.md>)
-  - [Techniques](<01-TECHNIQUES.md>)
   - [Agile](<02-AGILE.md>)
   - [Industry Knowledge](<03-INDUSTRY-KNOWLEDGE.md>)
   - [Design Strategies](<04-DESIGN-STRATEGIES.md>)

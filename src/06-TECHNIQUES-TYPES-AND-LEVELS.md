@@ -14,6 +14,8 @@
 
 # Functional
 
+Evaluates the functions that a component or system should perform.
+
 | TECHNIQUE | DESCRIPTION | 
 |-----------|-------------|
 | Unit Testing | Tests individual units of code (functions, modules) | 
@@ -22,6 +24,8 @@
 | Acceptance Testing | Verifies if the system meets user requirements. | 
 
 # Non-Functional
+
+Evaluates attributes other than functional characteristics of a component or system. It tests “how well the system behaves”.
 
 | TECHNIQUE | DESCRIPTION |
 |-----------|-------------|

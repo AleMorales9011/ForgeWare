@@ -2,15 +2,13 @@
 
 ![image](https://github.com/user-attachments/assets/f4cae73d-8573-4484-9d45-61520511d3fc)
 
-| TECHNIQUE | DESCRIPTION | ADVANTAGE | DISADVANTAGE |
-|-----------|-------------|-----------|--------------|
-| Equivalence Partitioning | Divides input data into valid and invalid categories for testing. | Efficient, covers a wide range of inputs. | May miss edge cases within partitions. |
-| Boundary Value Analysis | Tests values at the edges of input and output boundaries. | Effective for finding errors related to data limits. | May neglect logic within boundaries. |
-| Decision Table Testing | Creates a table mapping input conditions to expected outputs. | Systematic approach, good for complex decision logic. | Time-consuming to create and maintain tables.|
-| State Transition Testing | Tests behavior changes between different system states. | Efficient for state-driven systems, reveals state-related bugs. | Requires a thorough understanding of system states and transitions. |
+# White-Box
 
-# Statement Coverage Testing
-Statement coverage is a white-box testing technique that ensures every line of code in a program is executed at least once during testing. This method focuses on the structure of the code, aiming to cover all statements within it.
+# 1. Statement Coverage Testing
+Statement coverage is a design strategy that ensures every line of code in a program is executed at least once during testing. This method focuses on the structure of the code, aiming to cover all statements within it.
+
+# Why it is important:
+Statement coverage ensures that every line of code is executed at least once, helping to identify untested code areas and reduce the risk of undiscovered bugs.
 
 # How it works:
 1. Identify statements: All executable statements in the code are identified.
@@ -29,11 +27,6 @@ def is_even(number):
 
 To achieve 100% statement coverage, you would need two test cases: one with an even number and one with an odd number.
 
-# Benefits of Statement Coverage:
-1. Identifies dead code: Unreachable code segments can be detected.
-2. Improves code quality: Encourages writing clear and concise code.
-3. Basic code coverage metric: Provides a baseline for measuring test effectiveness.
-
 # Limitations of Statement Coverage:
 1. Ignores logical conditions: It doesn't guarantee that all possible conditions within statements are tested.
 2. Doesn't ensure complete testing: High statement coverage doesn't necessarily mean the software is bug-free.
@@ -42,9 +35,53 @@ To achieve 100% statement coverage, you would need two test cases: one with an e
 1. Other coverage metrics: While statement coverage is a starting point, consider using other metrics like branch coverage, condition coverage, and path coverage for more comprehensive testing.
 2. Tool support: Many testing frameworks and tools provide code coverage analysis capabilities.
 
-# 1. Equivalence Partitioning
+# 2. Decision Coverage
 
-Equivalence partitioning is a software testing technique that divides input data into groups (partitions) based on expected output. Instead of testing every possible input value, you select representative values from each partition. This approach significantly reduces the number of test cases while maintaining effective test coverage.   
+Decision coverage tests every possible outcome of each decision point (e.g., if, else, switch) in the code.
+
+# Why is it important?
+
+Ensuring all decision paths are tested helps uncover potential defects related to conditional logic.   
+
+# How to use it?
+
+1. Identify decision points in the code.
+2. Create test cases to cover both true and false outcomes of each decision.
+3. Execute test cases and analyze results.
+
+# 3. Condition Coverage
+
+Condition coverage ensures that each part of a condition in a decision point (e.g., if, else) is evaluated as both true and false at least once.   
+
+# Why is it important?
+
+It helps identify potential errors in complex conditions by testing all possible outcomes of each condition.   
+
+# How to use it?
+
+1. Identify conditions within decision points.
+2. Create test cases to evaluate each condition as both true and false.
+3. Execute test cases and analyze results.
+
+# Black Box
+
+# 1. Boundary Value Analysis
+Boundary value analysis is a testing technique that focuses on input values at the edges of equivalence partitions. It assumes errors are more likely to occur near these boundaries.   
+
+# Why is it important?
+
+By testing boundary values, you can increase the likelihood of finding defects that might be missed by other testing methods.
+
+# How to use it
+
+- Identify input conditions with ranges.
+- Determine boundary values (minimum, maximum, just inside/outside).
+- Create test cases using these boundary values.   
+- Execute test cases and analyze results.
+
+# 2. Equivalence Partitioning
+
+This strategy divides input data into groups (partitions) based on expected output. Instead of testing every possible input value, representative values are selected from each partition and tested. 
 
 # Why is it important?
 
@@ -56,135 +93,6 @@ This approach significantly reduces the number of test cases while maintaining e
 - Create partitions: Divide input values into groups that produce similar outputs.
 - Select test values: Choose representative values from each partition to create test cases.   
 - Design test cases: Develop test cases to cover all partitions and their boundaries.   
-
-# 2. Boundary Value Analysis
-
-# Exercise: Interest Rate Calculator Testing
-
-An informational interest rate calculator for a fixed-term deposit needs to be tested. The calculator shows the annual interest rate for a given deposit amount and client's age.
-
-_The following rules apply:_
-
-- The minimum deposit amount is $100
-- The maximum deposit amount is $10,000
-- The annual interest rate depends on the deposit amount as follows:
-
-| DEPOSIT AMOUNT | INTEREST RATE |
-|-------|-----------|
-| $100 - $999 | 1% |
-| $1,000 - $4,999 | 1.3% | 
-| $5,000 - $10,000 | 1.5% |
-
-- Only adults (18 and older) can open a term deposit account.
-- Clients aged 60 and older have a fixed interest rate of 2%.
-
-Define the optimal (effective and efficient) set of boundary test cases for a system that calculates the term's deposit interest.
-
-------------
-
-**Test suite effectivenes:** The effectiveness of a solution is how successful the submitted test cases are at identifying potential bugs in a system.
-
-It is calculated as the percentage of the bugs identified compared to the total potential bugs plus the number of incorrect test cases submitted.
-
-_Formula: BugsFound / (BugsTotal + IncorrectTestCases)_
-
-**Test suite efficiency:** The efficiency of a solution decreases as the number of steps taken to be effective increases.
-
-It is calculated as the percentage of the minimum number of test cases required to find all bugs compared to the number submitted, multiplied by the percentage of bugs found.
-
-_Formula: MinimumTestCases / SubmittedTestCases * BugsFound / BugsTotal_
-
-**Total score:** The total score is calculated as the product of effectiveness and efficiency.
-
-_Formula: Effectiveness * Efficiency_
-
-----------------
-
-I'm going to answer this question in different iterations until I get a 100% total score. The first iteration was on July 23, 2024. However, I didn't document it.
-
-### 2nd iteration (07/26/2024)
-
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 18 | 1.5% |
-| TC 04 | $10,000 | 18 | 1.5% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $99 | 18 | Unavailable |
-| TC 07 | $10,001 | 60 | Unavailable | 
-| TC 08 | $5,000 | 17 | Unavailable | 
-
-Test suite effectiveness: 84% - meaning it can identify up to **84% of potential bugs found in the system.**
-
-Test suite efficiency: 100% - we have the **ideal number of test cases** required.
-
-Total score: 84% - the test set is **84% optimal.**
-
-# Exercise: Boundary Value and Equivalence Partitioning for Age Algorithm
-
-A Developer needs to write a function for converting age (a whole number), into a life period using the following algorithm:
-
-- If age is **ZERO**, it should return **INVALID**;
-- If age is **greater than ZERO and less than 16**, the function should return **CHILD**;
-- If age is **greater than or equal to 16**, it should return **ADULT**.
-
-Define the optimal (effective and efficient) set of boundary test cases to test the function.
-
----------
-# EXPLANATION
-
-This question describes a **Boundary value analysis testing technique** - a software testing technique used to identify program defects by focusing on the inputs at the edges of allowable ranges. The idea is that errors are more likely to occur at the boundaries between valid and invalid input values.
-
-The core of BVA is designing test cases that specifically target these boundary values and the values just outside them. This helps identify issues like:
-
-▶️ The program _rejects a valid input_ because it's on the edge of a range.
-
-▶️ The program _does not handle_ unexpected inputs (e.g., negative numbers for age).
-
-▶️ Issues with how the program behaves _when transitioning between partitions_ (e.g., how it handles the value 18 for age).
-
-This technique often comes along with another testing technique called **Equivalence Partitioning**, where you divide the possible input values into groups **(partitions)** where each value within a partition is expected to be treated similarly by the program.
-
-In addition, this question requires a good understanding of **SPECIFICATION ANALYSIS** - understanding the requirements (specifications) is crucial for designing effective test cases. Here, the specification defines how the age-to-life period conversion function should behave based on different age ranges.
- 
-------------
-
-# SOLUTION
-
-In the question above, we find three partition groups with different boundaries:
-
-| PARTITIONS | BOUNDARY VALUES | CLASSIFICATION |
-|---------|-----------|-|
-| **PARTITION 01** | 0 (minimum and maximum values) |INVALID |
-| **PARTITION 02** | 1 (minimum value), 2 - 14 (middle range), and 15 (maximum value) | CHILD |
-| **PARTITION 03** | from 16 (minimum value) on | ADULT |
-
-So below is the `optimal set of boundary test cases` to test the function:
-
-## TEST CASE 01
-
-| AGE | LIFE PERIOD |
-|---|----------|
-| 0 | INVALID |
-
-## TEST CASE 02
-
-| AGE | LIFE PERIOD |
-|---|----------|
-| 1 | CHILD |
-
-## TEST CASE 03
-
-| AGE | LIFE PERIOD |
-|---|----------|
-| 15 | CHILD |
-
-## TEST CASE 04
-
-| AGE | LIFE PERIOD |
-|---|----------|
-| 16 | ADULT |
 
 # 3. Specification Analysis
 

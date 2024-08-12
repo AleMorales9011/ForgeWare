@@ -42,3 +42,42 @@ cp -R * /var/www/html/
 
 # Database
 
+With the growth of the user base, one server is not enough, and we need multiple servers: one for web/mobile traffic, and the other for the database. Separating web/mobile traffic (web tier) and database (data tier) servers allows them to be scaled independently.
+
+![database-server](images/database_server.jpg)
+
+Here's a MySQL database containerized deployment using docker-compose. 
+
+```ruby
+# Mysql deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  selector:   # Select pods with the label "mysql"
+    matchLabels:
+      app: mysql
+  template: # a blueprint for creating pods
+    metadata: # Data about the data
+      labels:  # Identify pods 
+        app: mysql
+    spec:
+      containers:
+      - image: alemorales9011935/projeto-database:1.0 # Docker image used for the deployment
+        args:
+        - "--ignore-db-dir=lost+found"  # Ignores previous deployments
+        imagePullPolicy: Always # Ensure the image is pulled even if exists locally
+        name: mysql
+        ports:
+        - containerPort: 3306
+          name: mysql
+          
+        volumeMounts:
+        - name: mysql-dados
+          mountPath: /var/lib/mysql/ # where the containers will be storaged
+      volumes:
+      - name: mysql-dados
+        persistentVolumeClaim:
+          claimName: mysql-dados
+```

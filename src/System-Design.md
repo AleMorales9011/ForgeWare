@@ -1,4 +1,4 @@
-![]()
+![banner](images/banner_7.jpg)
 # System Design
 
 2 hours

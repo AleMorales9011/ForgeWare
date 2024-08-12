@@ -81,3 +81,15 @@ spec:
         persistentVolumeClaim:
           claimName: mysql-dados
 ```
+
+# Load Balancer
+
+A load balancer evenly distributes incoming traffic among web servers that are defined in a load-balanced set. Users connect directly to the load balancer's public IP. 
+
+With this setup, web servers are no longer directly unreachable by clients. 
+
+![load-balancer](images/load-balancer-server.jpg)
+
+For better security, private IPs are used for communication between servers. A private IP is an IP address reachable only between servers in the same network; however, it is unreachable over the Internet.
+
+

@@ -92,4 +92,19 @@ With this setup, web servers are no longer directly unreachable by clients.
 
 For better security, private IPs are used for communication between servers. A private IP is an IP address reachable only between servers in the same network; however, it is unreachable over the Internet.
 
+The configuration below defines a `php-Service`. This configuration creates a `LoadBalancer` service for PHP applications. The external IP address for accessing the service will be dynamically assigned by the cloud provider and can be retrieved later using `kubectl` get service php.
+
+```ruby
+apiVersion: v1 
+kind: Service # Defines the type of kubernetes object
+metadata:
+  name: php
+spec:
+  selector: # This service will find and route traffic to pods that have the label app: php. 
+    app: php  # Select pods with the label "app: php"
+  ports:
+  - port: 80 # The port users will acces from outside the cluster
+    targetPort: 80 # The port php application listens 
+  type: LoadBalancer # Type of Service
+```
 

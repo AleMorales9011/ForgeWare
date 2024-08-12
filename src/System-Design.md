@@ -7,7 +7,16 @@ System design is the blueprint for a software system. It's about defining the ar
 
 # Single Server Set Up
 
-A single server setup is a configuration where all components of a system, such as the web server, database, application server, and file storage, reside on a single physical or virtual machine.
+A single server setup is a configuration where all system components, such as the web server, database, application server, and file storage, reside on a single physical or virtual machine.
+
+1. The user accesses the website through a domain name(www.website.com)
+2. The IP address is returned to the browser
+3. Hypertext transfer protocol requests are sent to the web server.
+4. The web server returns the HTML to the browser for rendering.
+
+![single-server](images/single_server.jpg)
+
+The script below illustrates an Apache web server deployment.
 
 ```ruby
 
@@ -30,3 +39,6 @@ cp -R * /var/www/html/
 ----------------------------------------------------------------------------------
 
 ```
+
+# Database
+

@@ -1,5 +1,7 @@
 # Test Case Design Strategies
 
+![image](https://github.com/user-attachments/assets/f4cae73d-8573-4484-9d45-61520511d3fc)
+
 | TECHNIQUE | DESCRIPTION | ADVANTAGE | DISADVANTAGE |
 |-----------|-------------|-----------|--------------|
 | Equivalence Partitioning | Divides input data into valid and invalid categories for testing. | Efficient, covers a wide range of inputs. | May miss edge cases within partitions. |
@@ -7,7 +9,54 @@
 | Decision Table Testing | Creates a table mapping input conditions to expected outputs. | Systematic approach, good for complex decision logic. | Time-consuming to create and maintain tables.|
 | State Transition Testing | Tests behavior changes between different system states. | Efficient for state-driven systems, reveals state-related bugs. | Requires a thorough understanding of system states and transitions. |
 
+# Statement Coverage Testing
+Statement coverage is a white-box testing technique that ensures every line of code in a program is executed at least once during testing. This method focuses on the structure of the code, aiming to cover all statements within it.
+
+# How it works:
+1. Identify statements: All executable statements in the code are identified.
+2. Design test cases: Test cases are created to execute each statement at least once.
+3. Execute test cases: The test cases are run, and the code coverage tool records which statements were executed.
+4. Calculate coverage: The percentage of executed statements compared to the total number of statements is calculated.
+
+# Example:
+```Python
+def is_even(number):
+  if number % 2 == 0:
+    return True
+  else:
+    return False
+```
+
+To achieve 100% statement coverage, you would need two test cases: one with an even number and one with an odd number.
+
+# Benefits of Statement Coverage:
+1. Identifies dead code: Unreachable code segments can be detected.
+2. Improves code quality: Encourages writing clear and concise code.
+3. Basic code coverage metric: Provides a baseline for measuring test effectiveness.
+
+# Limitations of Statement Coverage:
+1. Ignores logical conditions: It doesn't guarantee that all possible conditions within statements are tested.
+2. Doesn't ensure complete testing: High statement coverage doesn't necessarily mean the software is bug-free.
+
+# Additional Considerations:
+1. Other coverage metrics: While statement coverage is a starting point, consider using other metrics like branch coverage, condition coverage, and path coverage for more comprehensive testing.
+2. Tool support: Many testing frameworks and tools provide code coverage analysis capabilities.
+
 # 1. Equivalence Partitioning
+
+Equivalence partitioning is a software testing technique that divides input data into groups (partitions) based on expected output. Instead of testing every possible input value, you select representative values from each partition. This approach significantly reduces the number of test cases while maintaining effective test coverage.   
+
+# Why is it important?
+
+This approach significantly reduces the number of test cases while maintaining effective test coverage.   
+
+# How to use it:
+
+- Identify input conditions: Determine the input parameters that affect the system's behavior.   
+- Create partitions: Divide input values into groups that produce similar outputs.
+- Select test values: Choose representative values from each partition to create test cases.   
+- Design test cases: Develop test cases to cover all partitions and their boundaries.   
+
 # 2. Boundary Value Analysis
 
 # Exercise: Interest Rate Calculator Testing

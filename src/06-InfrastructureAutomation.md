@@ -1,5 +1,5 @@
 ![banner](images/banner_9.jpg)
-# Automating Web App deployment with Bash
+# Web App Deployment Automation: Bash
 
 Manually deploying a web server involves running several commands in a specific order. A `Bash script` can automate these steps, saving you time and effort, especially if you need to deploy Apache on multiple servers.
 

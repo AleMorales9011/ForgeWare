@@ -12,7 +12,7 @@
 
 # Exercise: Interest Rate Calculator Testing
 
-An informational interest rate calculator for a fixed term deposit needs to be tested. For a given deposit amount and client's age, the calculator shows the annual interest rate.
+An informational interest rate calculator for a fixed-term deposit needs to be tested. The calculator shows the annual interest rate for a given deposit amount and client's age.
 
 _The following rules apply:_
 
@@ -26,7 +26,7 @@ _The following rules apply:_
 | $1,000 - $4,999 | 1.3% | 
 | $5,000 - $10,000 | 1.5% |
 
-- Only adults (18 and older) are eligible to open a term deposit account.
+- Only adults (18 and older) can open a term deposit account.
 - Clients aged 60 and older have a fixed interest rate of 2%.
 
 Define the optimal (effective and efficient) set of boundary test cases for a system that calculates the term's deposit interest.
@@ -71,165 +71,6 @@ Test suite effectiveness: 84% - meaning it can identify up to **84% of potential
 Test suite efficiency: 100% - we have the **ideal number of test cases** required.
 
 Total score: 84% - the test set is **84% optimal.**
-
-**_Comments:_** Since I'm not covering all limits - such as deposit $100 and age 17 - I believe I could add one more test case to improve effectiveness.
-
--------------
-
-### 3rd iteration (07/26/2024)
-
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 18 | 1.5% |
-| TC 04 | $10,000 | 18 | 1.5% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $99 | 18 | Unavailable |
-| TC 07 | $10,001 | 60 | Unavailable | 
-| TC 08 | $5,000 | 17 | Unavailable | 
-| TC 09 | $100 | 17 | Unavailable |
-
-Test suite effectiveness: 84% - meaning it can identify up to **84% of potential bugs found in the system.**
-
-Test suite efficiency: 94% - we have **more test cases** than required.
-
-Total score: 79% - the test set is **79% optimal.**
-
-**_Comments:_** By increasing the number of test cases when compared to the previous iterations, I actually decreased its performance - it didn't impact the effectiveness, and reduced efficiency, so we had more test cases than necessary. That's an issue because inefficient test cases can increase delivery time and costs. This means I'll have to keep a **maximum of 8 test cases and change the other variables: age, deposit and interest rate.**
-
-----------
-
-### 4th iteration (07/26/2024)
-
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $99 | 18 | Unavailable |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 18 | 1.5% |
-| TC 04 | $10,000 | 18 | 1.5% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-| TC 07| $5,000 | 17 | Unavailable | 
-| TC 08 | $100 | 17 | Unavailable |
-
-Test suite effectiveness: 70% - meaning it can identify up to **70% of potential bugs found in the system.**
-
-Test suite efficiency: 92% - we have **more test cases** than required.
-
-Total score: 64% - the test set is **64% optimal.**
-
-**_Comments:_** This time, the total score was lower even with fewer test cases. So the issue seems to be with the variables in the test cases. Let's change TC 01 back to $100, and TCs 03 and 04 to age 59.
-
-----------
-
-### 5th iteration (07/26/2024)
-
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% |
-| TC 04 | $10,000 | 59 | 1.5% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-| TC 07| $5,000 | 17 | Unavailable | 
-| TC 08 | $100 | 17 | Unavailable |
-
-Test suite effectiveness: 75% - meaning it can identify up to **75% of potential bugs found in the system.**
-
-Test suite efficiency: 99% - we are almost at the ideal number of test cases.
-
-Total score: 74% - the test set is **74% optimal.**
-
-**_Comments:_** Now we changed TC 03 and TC 04 ages to 59, and the total score was lower. We also changed the TC 01 back to $100 with an interest rate of 1%. However, we have two test cases covering 1.5% interest rate and the age 59, so let's change TC 04 to 1%.
-
-----------
-
-### 6th iteration (07/26/2024)
-
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% |
-| TC 04 | $999 | 59 | 1% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-| TC 07| $5,000 | 17 | Unavailable | 
-| TC 08 | $100 | 17 | Unavailable |
-
-Test suite effectiveness: 70% - meaning it can identify up to **70% of potential bugs found in the system.**
-
-Test suite efficiency: 92% - we are almost at the ideal number of test cases.
-
-Total score: 64% - the test set is **64% optimal.**
-
-**_Comments:_** That didn't work 😅 Considering that the test efficiency decreased, I'll then remove the TC 08.
-
-
-----------
-
-### 7th iteration (07/26/2024)
-
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% | 
-| TC 04 | $999 | 59 | 1% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-| TC 07| $5,000 | 17 | Unavailable | 
-
-Test suite effectiveness: 70% - meaning it can identify up to **70% of potential bugs found in the system.** 
-
-Test suite efficiency: 100% - Yeeeyyy, back at 100% efficiency!!
-Total score: 70%.
-
-**_Comments:_** Well, although the test suite effectiveness remained the same, the efficiency actually increased! So since the best result we had was the 2nd iteration, let's try to find a mid-term between the 2nd and the 7th iterations.
-
-----------
-
-### 8th iteration (07/27/2024)
-
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% | 
-| TC 04 | $999 | 17 | Unavailable |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-
-Test suite effectiveness: 74% - meaning it can identify up to **74% of potential bugs found in the system.** 
-
-Test suite efficiency: 100% - The efficiency remained at 100% even though I reduced the number of test cases.
-
-Total score: 74%.
-
-**_Comments:_** In this iteration, we managed to increase effectiveness while maintaining high efficiency and having the lowest number of test cases of all iterations. The main difference between iterations 7 and 8 is that for 8 we only tested ages 17 and 59 once, which I believe increased the effectiveness. Let's try to test age 60 only once for the next iteration.
-
-----------
-
-### 9th iteration (07/27/2024)
-
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% | 
-| TC 04 | $999 | 17 | Unavailable |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-
-Test suite effectiveness: 74% - meaning it can identify up to **74% of potential bugs found in the system.** 
-
-Test suite efficiency: 100% - The efficiency remained at 100% even though I reduced the number of test cases.
-
-Total score: 74%.
-
-**_Comments:_** In this iteration, we managed to increase effectiveness while maintaining high efficiency and having the lowest number of test cases of all iterations. The main difference between iterations 7 and 8 is that for 8 we only tested ages 17 and 59 once, which I believe increased the effectiveness. Let's try to test age 60 only once for the next iteration.
 
 # Exercise: Boundary Value and Equivalence Partitioning for Age Algorithm
 
@@ -329,11 +170,11 @@ The question above is about **state transition testing**, a **black-box testing 
 
 There are **x** important steps to creating optimal State transition tests:
 
-**_1 - Review the specifications/requirements -_** it will help you understand how the system is expected to behave.
+**_1 - Review the specifications/requirements -_** It will help you understand how the system is expected to behave.
 **_2 - Identify system states, events, and transitions -_** Identify all the states the system can be in, the events that trigger them and the transitions that are supposed to occur once those events happen.
-**_3 - Create state transition diagrams -_** They will provide a clear overview of the software expected behavior.
+**_3 - Create state transition diagrams -_** They will provide a clear overview of the software's expected behavior.
 **_4 - Derive the test cases -_** Use the state transition diagrams to derive the necessary test cases.
-**_5 - Execute and analyze the test results -_** Perform the test cases and record the actual system behavior, then compare the actual results with the expected results. Identify any discrepancies or unexpected behavior.Investigate failed test cases to determine the root cause of the issue.
+**_5 - Execute and analyze the test results -_** Perform the test cases and record the actual system behavior, then compare the actual results with the expected results. Identify any discrepancies or unexpected behavior. Investigate failed test cases to determine the root cause of the issue.
 
 ----------
 **ANSWER**

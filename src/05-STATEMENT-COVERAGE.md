@@ -31,6 +31,6 @@ To achieve 100% statement coverage, you would need two test cases: one with an e
 1. Other coverage metrics: While statement coverage is a starting point, consider using other metrics like branch coverage, condition coverage, and path coverage for more comprehensive testing.
 2. Tool support: Many testing frameworks and tools provide code coverage analysis capabilities.
 
-# Conclussion 
+# Conclusion 
 In summary, statement coverage is a valuable technique for ensuring basic code execution, but it should be combined with other testing methods to achieve higher levels of test effectiveness.
 

@@ -19,7 +19,6 @@
   - [Execution](<Execution.md>)
   - [Agile](<02-AGILE.md>)
   - [Design Strategies](<04-DESIGN-STRATEGIES.md>)
-  - [Statement Coverage](<05-STATEMENT-COVERAGE.md>)
   - [Techniques, Types, and Levels](<06-TECHNIQUES-TYPES-AND-LEVELS.md>)
   - [Jira](<07-JIRA.md>)
   - [Automation](<AUTOMATION.md>)

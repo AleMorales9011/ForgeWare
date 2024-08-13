@@ -1,485 +1,287 @@
 # Test Case Design Strategies
 
-| TECHNIQUE | DESCRIPTION | ADVANTAGE | DISADVANTAGE |
-|-----------|-------------|-----------|--------------|
-| Equivalence Partitioning | Divides input data into valid and invalid categories for testing. | Efficient, covers a wide range of inputs. | May miss edge cases within partitions. |
-| Boundary Value Analysis | Tests values at the edges of input and output boundaries. | Effective for finding errors related to data limits. | May neglect logic within boundaries. |
-| Decision Table Testing | Creates a table mapping input conditions to expected outputs. | Systematic approach, good for complex decision logic. | Time-consuming to create and maintain tables.|
-| State Transition Testing | Tests behavior changes between different system states. | Efficient for state-driven systems, reveals state-related bugs. | Requires a thorough understanding of system states and transitions. |
+![image](https://github.com/user-attachments/assets/f4cae73d-8573-4484-9d45-61520511d3fc)
 
-# 1. Equivalence Partitioning
-# 2. Boundary Value Analysis
+# White-Box
 
-# Exercise: Interest Rate Calculator Testing
+# 1. Statement Coverage Testing
+Statement coverage ensures every line of code is executed at least once during testing, focusing on covering all statements within the code.
 
-An informational interest rate calculator for a fixed term deposit needs to be tested. For a given deposit amount and client's age, the calculator shows the annual interest rate.
+# Why it is important:
+Identifying untested code areas helps reduce the risk of undiscovered bugs.
 
-_The following rules apply:_
+# How it works:
+1. Identify statements: All executable statements in the code are identified.
+2. Design test cases: Test cases are created to execute each statement at least once.
+3. Execute test cases: The test cases are run, and the code coverage tool records which statements were executed.
+4. Calculate coverage: The percentage of executed statements compared to the total number of statements is calculated.
 
-- The minimum deposit amount is $100
-- The maximum deposit amount is $10,000
-- The annual interest rate depends on the deposit amount as follows:
+# Example:
+```Python
+def is_even(number):
+  if number % 2 == 0:
+    return True
+  else:
+    return False
+```
 
-| DEPOSIT AMOUNT | INTEREST RATE |
-|-------|-----------|
-| $100 - $999 | 1% |
-| $1,000 - $4,999 | 1.3% | 
-| $5,000 - $10,000 | 1.5% |
+To achieve 100% statement coverage, you would need two test cases: one with an even number and one with an odd number.
 
-- Only adults (18 and older) are eligible to open a term deposit account.
-- Clients aged 60 and older have a fixed interest rate of 2%.
+# Limitations of Statement Coverage:
+1. Ignores logical conditions: It doesn't guarantee that all possible conditions within statements are tested.
+2. Doesn't ensure complete testing: High statement coverage doesn't necessarily mean the software is bug-free.
 
-Define the optimal (effective and efficient) set of boundary test cases for a system that calculates the term's deposit interest.
+# Additional Considerations:
+1. Other coverage metrics: While statement coverage is a starting point, consider using other metrics like branch coverage, condition coverage, and path coverage for more comprehensive testing.
+2. Tool support: Many testing frameworks and tools provide code coverage analysis capabilities.
 
-------------
+# 2. Decision Coverage
 
-**Test suite effectivenes:** The effectiveness of a solution is how successful the submitted test cases are at identifying potential bugs in a system.
+Decision coverage tests every possible outcome of each decision point (typically `if`, `else`, `switch`, or ternary operators) in the code. While it can be applied at other testing levels, its most effective use is at the unit testing stage.
 
-It is calculated as the percentage of the bugs identified compared to the total potential bugs plus the number of incorrect test cases submitted.
+# Why is it important?
 
-_Formula: BugsFound / (BugsTotal + IncorrectTestCases)_
+Ensuring all decision paths are tested helps uncover potential defects related to conditional logic.   
 
-**Test suite efficiency:** The efficiency of a solution decreases as the number of steps taken to be effective increases.
+# How to use it?
 
-It is calculated as the percentage of the minimum number of test cases required to find all bugs compared to the number submitted, multiplied by the percentage of bugs found.
+`1. Create test cases:` Design test cases to cover all possible outcomes for each decision point identified.
 
-_Formula: MinimumTestCases / SubmittedTestCases * BugsFound / BugsTotal_
+`2. Instrument your code:` Use a code coverage tool to track which parts of the code are executed.
 
-**Total score:** The total score is calculated as the product of effectiveness and efficiency.
+`3. Execute test cases:` Run the test cases with the instrumented code.
 
-_Formula: Effectiveness * Efficiency_
+`4. Generate coverage report:` The code coverage tool will produce a report indicating which decision points were covered and which were not.
 
-----------------
+`5. Analyze report:` Review the report to identify areas with low decision coverage and create additional test cases as needed.
 
-I'm going to answer this question in different iterations until I get a 100% total score. The first iteration was on July 23, 2024. However, I didn't document it.
+# Example tools:
 
-### 2nd iteration (07/26/2024)
+_Unit Tests:_
 
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 18 | 1.5% |
-| TC 04 | $10,000 | 18 | 1.5% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $99 | 18 | Unavailable |
-| TC 07 | $10,001 | 60 | Unavailable | 
-| TC 08 | $5,000 | 17 | Unavailable | 
+`Python`: `Coverage.py`
 
-Test suite effectiveness: 84% - meaning it can identify up to **84% of potential bugs found in the system.**
+`Java`: `JaCoCo`
 
-Test suite efficiency: 100% - we have the **ideal number of test cases** required.
+`C#`: `Visual Studio Code Coverage`
 
-Total score: 84% - the test set is **84% optimal.**
+`JavaScript`: `Istanbul`
 
-**_Comments:_** Since I'm not covering all limits - such as deposit $100 and age 17 - I believe I could add one more test case to improve effectiveness.
+_Multiple test types:_
 
--------------
+`Parasoft Jtest:` This tool is designed for thorough testing, including unit, integration, and other test levels. It offers detailed coverage analysis across different test suites.
 
-### 3rd iteration (07/26/2024)
+`SonarQube:` The platform can integrate with testing tools to provide coverage metrics at different test levels, including unit, integration, and system tests.
 
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 18 | 1.5% |
-| TC 04 | $10,000 | 18 | 1.5% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $99 | 18 | Unavailable |
-| TC 07 | $10,001 | 60 | Unavailable | 
-| TC 08 | $5,000 | 17 | Unavailable | 
-| TC 09 | $100 | 17 | Unavailable |
+# Limitations
 
-Test suite effectiveness: 84% - meaning it can identify up to **84% of potential bugs found in the system.**
+This method increases test thoroughness but `may not find all logical errors`, potentially requiring more test cases.
 
-Test suite efficiency: 94% - we have **more test cases** than required.
+# 3. Condition Coverage
 
-Total score: 79% - the test set is **79% optimal.**
+Condition coverage ensures that each part of a condition in a decision point (e.g., if, else) is evaluated as both true and false at least once.   
 
-**_Comments:_** By increasing the number of test cases when compared to the previous iterations, I actually decreased its performance - it didn't impact the effectiveness, and reduced efficiency, so we had more test cases than necessary. That's an issue because inefficient test cases can increase delivery time and costs. This means I'll have to keep a **maximum of 8 test cases and change the other variables: age, deposit and interest rate.**
+# Why is it important?
 
-----------
+It helps identify potential errors in complex conditions by testing all possible outcomes of each condition.   
 
-### 4th iteration (07/26/2024)
+# How to use it?
 
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $99 | 18 | Unavailable |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 18 | 1.5% |
-| TC 04 | $10,000 | 18 | 1.5% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-| TC 07| $5,000 | 17 | Unavailable | 
-| TC 08 | $100 | 17 | Unavailable |
+1. Identify conditions within decision points.
+2. Create test cases to evaluate each condition as both true and false.
+3. Execute test cases and analyze results.
 
-Test suite effectiveness: 70% - meaning it can identify up to **70% of potential bugs found in the system.**
+# Decision Coverage vs. Condition Coverage
 
-Test suite efficiency: 92% - we have **more test cases** than required.
+`Decision coverage` focuses on the overall outcome of a decision (true or false). It ensures that both branches of a decision are executed at least once.   
 
-Total score: 64% - the test set is **64% optimal.**
+`Condition coverage` focuses on the individual conditions within a decision. It requires that each part of a condition is evaluated as both true and false at least once.   
 
-**_Comments:_** This time, the total score was lower even with fewer test cases. So the issue seems to be with the variables in the test cases. Let's change TC 01 back to $100, and TCs 03 and 04 to age 59.
+Example:
 
-----------
+Consider the following code:
 
-### 5th iteration (07/26/2024)
+```java
+if (A && B) {
+  // do something
+} else {
+  // do something else
+}
+```
 
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% |
-| TC 04 | $10,000 | 59 | 1.5% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-| TC 07| $5,000 | 17 | Unavailable | 
-| TC 08 | $100 | 17 | Unavailable |
+Decision coverage would require two test cases: one where A && B is true, and one where A && B is false.
 
-Test suite effectiveness: 75% - meaning it can identify up to **75% of potential bugs found in the system.**
+Condition coverage would require four test cases:
+- A is true, B is true
+- A is true, B is false
+- A is false, B is true
+- A is false, B is false
 
-Test suite efficiency: 99% - we are almost at the ideal number of test cases.
+Condition coverage is a more detailed testing approach for decision logic. Decision coverage ensures both branches are executed, while condition coverage tests every part of the decision's logic.
 
-Total score: 74% - the test set is **74% optimal.**
+# 4. Multiple Condition Coverage (MCC)
 
-**_Comments:_** Now we changed TC 03 and TC 04 ages to 59, and the total score was lower. We also changed the TC 01 back to $100 with an interest rate of 1%. However, we have two test cases covering 1.5% interest rate and the age 59, so let's change TC 04 to 1%.
+MCC is a testing technique that ensures all possible combinations of conditions within a decision point are tested. It's more rigorous than condition coverage, which only requires evaluating each condition as true and false.
 
-----------
+# Why is it important?
 
-### 6th iteration (07/26/2024)
+MCC helps uncover missed defects by finding unexpected condition interactions.
 
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% |
-| TC 04 | $999 | 59 | 1% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-| TC 07| $5,000 | 17 | Unavailable | 
-| TC 08 | $100 | 17 | Unavailable |
+# How it Works
 
-Test suite effectiveness: 70% - meaning it can identify up to **70% of potential bugs found in the system.**
+`1. Identify decision points:` Determine the decision points in the code with multiple conditions.
 
-Test suite efficiency: 92% - we are almost at the ideal number of test cases.
+`2. Create truth table:` For each decision point, create a truth table listing all possible combinations of condition values.
 
-Total score: 64% - the test set is **64% optimal.**
+`3. Design test cases:` Based on the truth table, design test cases to cover every possible combination of conditions.
 
-**_Comments:_** That didn't work 😅 Considering that the test efficiency decreased, I'll then remove the TC 08.
+`4. Instrument the code:` Use a code coverage tool to instrument your code to track condition execution.
 
+`5. Execute test cases:` Run all the designed test cases.
 
-----------
+`6. Generate coverage report:` The code coverage tool will provide a report indicating which condition combinations were covered.
 
-### 7th iteration (07/26/2024)
+`7. Analyze report:` Review the report to identify uncovered combinations and create additional test cases.
 
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% | 
-| TC 04 | $999 | 59 | 1% |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
-| TC 07| $5,000 | 17 | Unavailable | 
+# Limitations
+MCC can lead to a significant increase in test cases, especially with multiple conditions. It's often used in safety-critical systems where thorough testing is essential.
 
-Test suite effectiveness: 70% - meaning it can identify up to **70% of potential bugs found in the system.** 
+# 5. All-Path Coverage
+All-path coverage is a software testing technique that aims to execute every possible path through a program's code. This means testing every combination of decisions, loops, and branches.
 
-Test suite efficiency: 100% - Yeeeyyy, back at 100% efficiency!!
-Total score: 70%.
+# Why is it important?
+It ensures that all code is exercised, potentially revealing hidden defects.
 
-**_Comments:_** Well, although the test suite effectiveness remained the same, the efficiency actually increased! So since the best result we had was the 2nd iteration, let's try to find a mid-term between the 2nd and the 7th iterations.
+# How to use it?
 
-----------
+`1. Create a control flow graph:` Visualize the program's structure to identify all possible paths.
 
-### 8th iteration (07/27/2024)
+`2. Determine path count:` Calculate the number of independent paths using cyclomatic complexity.
 
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% | 
-| TC 04 | $999 | 17 | Unavailable |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
+`3. Design test cases:` Create test cases to cover each identified path.
 
-Test suite effectiveness: 74% - meaning it can identify up to **74% of potential bugs found in the system.** 
+`4. Execute test cases:` Run the test cases and analyze the results.
 
-Test suite efficiency: 100% - The efficiency remained at 100% even though I reduced the number of test cases.
+# Limitations
 
-Total score: 74%.
+All-path coverage is often impractical due to the exponential growth of test cases with increasing code complexity. It's usually applied to small, critical code sections.
 
-**_Comments:_** In this iteration, we managed to increase effectiveness while maintaining high efficiency and having the lowest number of test cases of all iterations. The main difference between iterations 7 and 8 is that for 8 we only tested ages 17 and 59 once, which I believe increased the effectiveness. Let's try to test age 60 only once for the next iteration.
 
-----------
+# Black Box
 
-### 9th iteration (07/27/2024)
+# 1. Boundary Value Analysis
+Boundary value analysis focuses on input values at the edges of equivalence partitions. It assumes errors are more likely to occur near these boundaries.   
 
-| TEST CASE ID | DEPOSIT AMOUNT | CLIENT AGE | EXPECTED INTEREST RATE | 
-|--------|-----------|--------|-------|
-| TC 01 | $100 | 18 | 1% |
-| TC 02 | $1,000 | 18 | 1.3% | 
-| TC 03 | $5,000 | 59 | 1.5% | 
-| TC 04 | $999 | 17 | Unavailable |
-| TC 05 | $5,000 | 60 | 2% |
-| TC 06 | $10,001 | 60 | Unavailable | 
+# Why is it important?
 
-Test suite effectiveness: 74% - meaning it can identify up to **74% of potential bugs found in the system.** 
+It can increase the likelihood of detecting defects missed by other methods.
 
-Test suite efficiency: 100% - The efficiency remained at 100% even though I reduced the number of test cases.
+# How It Works
 
-Total score: 74%.
+`1. Identify input ranges:` Determine the input parameters with defined ranges or limits.
 
-**_Comments:_** In this iteration, we managed to increase effectiveness while maintaining high efficiency and having the lowest number of test cases of all iterations. The main difference between iterations 7 and 8 is that for 8 we only tested ages 17 and 59 once, which I believe increased the effectiveness. Let's try to test age 60 only once for the next iteration.
+`2. Determine boundary values:` Identify the minimum, maximum, and values just inside and outside these boundaries.
 
-# Exercise: Boundary Value and Equivalence Partitioning for Age Algorithm
+`3. Design and execute test cases:` Create and run the test cases using the identified boundary values as input data.
 
-A Developer needs to write a function for converting age (a whole number), into a life period using the following algorithm:
+`4. Analyze results:` Compare the actual output with the expected output to identify defects.
 
-- If age is **ZERO**, it should return **INVALID**;
-- If age is **greater than ZERO and less than 16**, the function should return **CHILD**;
-- If age is **greater than or equal to 16**, it should return **ADULT**.
+# Limitations
 
-Define the optimal (effective and efficient) set of boundary test cases to test the function.
+Boundary value analysis emphasizes the values at the boundaries and may overlook issues within the interior of the input range.
 
----------
-# EXPLANATION
+# 2. Equivalence Partitioning
 
-This question describes a **Boundary value analysis testing technique** - a software testing technique used to identify program defects by focusing on the inputs at the edges of allowable ranges. The idea is that errors are more likely to occur at the boundaries between valid and invalid input values.
+This strategy divides input data into groups (partitions) based on expected output. Instead of testing every possible input value, representative values are selected from each partition and tested. 
 
-The core of BVA is designing test cases that specifically target these boundary values and the values just outside them. This helps identify issues like:
+# Why is it important?
 
-▶️ The program _rejects a valid input_ because it's on the edge of a range.
+This approach significantly reduces the number of test cases while maintaining effective test coverage.   
 
-▶️ The program _does not handle_ unexpected inputs (e.g., negative numbers for age).
+# How to use it:
 
-▶️ Issues with how the program behaves _when transitioning between partitions_ (e.g., how it handles the value 18 for age).
+`1. Identify input conditions:` Determine the input parameters that affect the system's behavior.   
 
-This technique often comes along with another testing technique called **Equivalence Partitioning**, where you divide the possible input values into groups **(partitions)** where each value within a partition is expected to be treated similarly by the program.
+`2. Create partitions:` Divide input values into groups that produce similar outputs.
 
-In addition, this question requires a good understanding of **SPECIFICATION ANALYSIS** - understanding the requirements (specifications) is crucial for designing effective test cases. Here, the specification defines how the age-to-life period conversion function should behave based on different age ranges.
- 
-------------
+`3. Select test values:` Choose representative values from each partition to create test cases.   
 
-# SOLUTION
+`4. Design test cases:` Develop test cases to cover all partitions and their boundaries.   
 
-In the question above, we find three partition groups with different boundaries:
+# Limitations
 
-| PARTITIONS | BOUNDARY VALUES | CLASSIFICATION |
-|---------|-----------|-|
-| **PARTITION 01** | 0 (minimum and maximum values) |INVALID |
-| **PARTITION 02** | 1 (minimum value), 2 - 14 (middle range), and 15 (maximum value) | CHILD |
-| **PARTITION 03** | from 16 (minimum value) on | ADULT |
+Since it assumes all values within a partition behave similarly, it might overlook issues that only occur with specific values within that partition.
 
-So below is the `optimal set of boundary test cases` to test the function:
+# 3. Decision Table Testing
 
-## TEST CASE 01
+Decision table testing is a method to identify test cases based on input conditions and their corresponding actions/outputs, especially used for complex requirements.
 
-| AGE | LIFE PERIOD |
-|---|----------|
-| 0 | INVALID |
+# Why is it important?
 
-## TEST CASE 02
+Decision tables provide comprehensive test coverage by considering all input combinations, helping uncover defects while improving test case design efficiency and clarity.
 
-| AGE | LIFE PERIOD |
-|---|----------|
-| 1 | CHILD |
+# How It Works
 
-## TEST CASE 03
+`1. Identify conditions and actions:` Determine the input conditions and potential outputs (actions) based on the system's behavior.
 
-| AGE | LIFE PERIOD |
-|---|----------|
-| 15 | CHILD |
+`2. Create a decision table:` Construct a table with conditions as columns and rows representing different combinations of conditions.
 
-## TEST CASE 04
+`3. Define rules:` Specify the actions to be performed for each combination of conditions.
 
-| AGE | LIFE PERIOD |
-|---|----------|
-| 16 | ADULT |
+`4. Design and execute test cases:` Create test cases based on the defined rules, then compare the results with the expected outcomes.
 
-# 3. Specification Analysis
+# Limitations
+Decision table testing can become impractical for systems with many conditions, leading to an overwhelming number of test cases due to the exponential growth in possible combinations.
 
 # 4. State Transition
-The workflow of an ATM is defined by the following rules:
 
-- The ATM goes into the **WORKING** state with the **TURN ON** action.
-- When in the WORKING state, the ATM can:
-     1 - **ACCEPT CARD** which switches it to the **CARD ACCEPTED** state.
-     2 - Start the **AUTOMATIC TESTING** action which switches it to the **SELF TESTING** state.
+State transition testing examines how a system moves from one state to another in response to events, focusing on the system's behavior under different input conditions and sequences. State transition testing is particularly useful for systems with complex state-dependent behavior, such as vending machines, traffic lights, or software with multiple user modes.
 
-- Within CARD ACCEPTED the ATM can:
-     1 - CALL POLICE which switches it to the **WAITING POLICE** state.
-     2 - PROCESS TRANSACTION which switches it to the TRANSACTION PROCESSED state.
+# Why is it important?
 
-- From the TRANSACTION PROCESSED state the ATM goes into the SELF TESTING state with the PULL CARD action.
-- When in the SELF TESTING state, the ATM can either:
-     1 - PASS, which switches it to the WORKING STATE.
-     2 - FAIL, which switches it to the WAITING SERVICE state.
+State transition testing is important for identifying system errors caused by unexpected state changes.
 
-- From the WAITING SERVICE state, the ATM can either:
-     1 - Be SERVICED, which puts the ATM into the WORKING state.
-     2 - Be RETESTED, which returns the ATM to the SELF TESTING state.
+# How It Works 
 
-Prepare the optimal (effective and efficient) set of test cases required to test this workflow.
-Cover all state transitions and minimize repeating the same state transitions.
+`1. Review the specifications/requirements:` It will help understand how the system is expected to behave.
 
-----------
-**EXPLANATION**
+`2. Identify system states, events, and transitions:` Identify all the states the system can be in, the events that trigger them, and the transitions that are supposed to occur once those events happen.
 
-The question above is about **state transition testing**, a **black-box testing technique** which focuses on evaluating how a software changes when transitioning from one state to another in response to events.
+`3. Create state transition diagrams:` They will provide a clear overview of the software's expected behavior.
 
-There are **x** important steps to creating optimal State transition tests:
+`4. Derive the test cases:` Use the state transition diagrams to derive the necessary test cases.
 
-**_1 - Review the specifications/requirements -_** it will help you understand how the system is expected to behave.
-**_2 - Identify system states, events, and transitions -_** Identify all the states the system can be in, the events that trigger them and the transitions that are supposed to occur once those events happen.
-**_3 - Create state transition diagrams -_** They will provide a clear overview of the software expected behavior.
-**_4 - Derive the test cases -_** Use the state transition diagrams to derive the necessary test cases.
-**_5 - Execute and analyze the test results -_** Perform the test cases and record the actual system behavior, then compare the actual results with the expected results. Identify any discrepancies or unexpected behavior.Investigate failed test cases to determine the root cause of the issue.
+`5. Execute and analyze the test results:` Perform the test cases and record the actual system behavior, then compare the actual results with the expected results. Identify any discrepancies or unexpected behavior. Investigate failed test cases to determine the root cause of the issue.
 
-----------
-**ANSWER**
+# Example Tools
 
-First, let's identify all the states and events/actions that cause the transitions:
+`Selenium`, `Appium`: Can automate interactions with the system to trigger state transitions and verify outcomes.
 
-**- State Transitions:** WORKING, CARD ACCEPTED, TRANSACTION PROCESSED, SELF TESTING, WAITING SERVICE, WAITING POLICE.
+`JUnit`, `TestNG`: For unit testing and creating test cases based on state transitions.
 
-**- Actions** TURN ON, ACCEPT CARD, AUTOMATIC TESTING, CALL POLICE, PROCESS TRANSACTION, PULL CARD, PASS, FAIL, SERVICED, RETESTED.
+`Cypress`, `Playwright`: Modern end-to-end testing frameworks that can be used for state-based testing.
 
-Second, let's create the State Transition Diagram:
+# Limitations
 
-![workflow-diagram](https://github.com/user-attachments/assets/416efd5d-e848-4b5c-a502-3f4504520917)
-
-(I created the diagram with Eraser.io, but you can use other diagram-making tools such as Draw.io or even Canva).
-
-Third, let's define the test cases!
-
--------
-
-## Defining Test Cases
-
-
-Let's start by prioritizing the test cases. This is crucial in helping maximize the chances of identifying high-impact defects early in the development cycle.
-
-**:bangbang: High Priority**
-**_Test Case 1:_** Normal Operation and Maintenance: Covers core functionalities and system recovery.
-
-**:heavy_exclamation_mark: Medium Priority**
-**_Test Case 2:_** Error Handling: Addresses critical error scenarios and system resilience.
-
-**:question_mark: Low Priority**
-**_Test Case 3:_** Retest function: While important, this test case covers a subset of the first test case's functionality
-
-Now let's build out the test cases considering the priority order.
-
->[!IMPORTANT]
-> I found TWO WAYS to solve this issue:
-> One compromises effectiveness to increase efficiency. The other compromises efficiency to increase effectiveness.
-> I'll explain both ways here, but you should always consider what is more important for your organization.
-
-## 01: Effectiveness Over Efficiency 
-
-Before we move on, let's get one thing straight: in no way this is a sloppy test case. As you will see, the it's total score is 80%, because it achieves a 100% EFFECTIVENESS score, meaning it is 100% successful in finding bugs, even if there is a bit of overlap or redundancy in the sets.
-
-### Test Case 1: Normal Operation and Maintenance
-
-Objective: Verify normal ATM operation, maintenance, and recovery.
-Steps:
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| PROCESS TRANSACTION | TRANSACTION PROCESSED |
-| PULL CARD | SELF TESTING |
-| PASS | WORKING |
-| AUTOMATIC TESTING | SELF TESTING |
-| FAIL | WAITING SERVICE |
-| SERVICED | WORKING |
-
-### Test Case 2: Error Handling
-
-Objective: Verify ATM behavior in case of a police call.
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| CALL POLICE | WAITING POLICE |
-
-
-### Test Case 3: Retest
-
-Objective: Verify the retest process.
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| AUTOMATIC TESTING | SELF TESTING |
-| FAIL | WAITING SERVICE |
-| RETESTED | SELF TESTING |
-
-Test suite effectiveness: 100%
-
-Test suite efficiency: 80%
-
-Overall score: 80%
-
-The interesting thing though is that if we remove test cases 02 and 03, we also get 100% effectiveness and 80% efficiency. So the test would look like this:
-
-### Test Case 1: Normal Operation and Maintenance
-
-Objective: Verify normal ATM operation, maintenance, and recovery.
-Steps:
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| PROCESS TRANSACTION | TRANSACTION PROCESSED |
-| PULL CARD | SELF TESTING |
-| PASS | WORKING |
-| AUTOMATIC TESTING | SELF TESTING |
-| FAIL | WAITING SERVICE |
-| SERVICED | WORKING |
-
-----------
-## 02: Efficiency Over Effectiveness
-
-Here, to increase efficiency while keeping the effectiveness at an acceptable level, we can remove the third test case, which was low priority, and only stick to the first and second cases. 
-
-### Test Case 1: Normal Operation and Maintenance
-
-Objective: Verify normal ATM operation, maintenance, and recovery.
-Steps:
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| PROCESS TRANSACTION | TRANSACTION PROCESSED |
-| PULL CARD | SELF TESTING |
-| PASS | WORKING |
-| AUTOMATIC TESTING | SELF TESTING |
-| FAIL | WAITING SERVICE |
-| SERVICED | WORKING |
-
-### Test Case 2: Error Handling
-
-Objective: Verify ATM behavior in case of a police call.
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| CALL POLICE | WAITING POLICE |
-
-Test suite effectiveness: 90%
-
-Test suite efficiency: 98%
-
-Overall score: 88%
+State transition testing can be complex and time-consuming for systems with many states and transitions.
 
 # 5. Use Case
+
+Use case testing is a black-box testing technique that focuses on testing the system based on user interactions. It involves deriving test cases from the system's use cases, which describe how users interact with the system to achieve specific goals.
+
+Why is it important?
+
+User-centric: Ensures the system meets user needs and expectations.
+Comprehensive testing: Covers various system functionalities and interactions.
+Risk reduction: Helps identify potential issues early in the development process.
+How to use it?
+
+Identify use cases: Determine the primary functions of the system from the user's perspective.
+Create test cases: Develop test cases based on the steps and scenarios outlined in the use cases.
+Execute test cases: Perform tests to verify system behavior according to the use cases.
+Analyze results: Evaluate test results to identify defects and ensure system functionality.
+Use case testing helps to validate the system's behavior from a user's standpoint, increasing the likelihood of delivering a successful product.
+
 # 6. Error Guessing
-# 7. Decision Table
 # 8. Combinatorial
 # 9. Pairwise

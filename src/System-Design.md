@@ -189,5 +189,6 @@ services:
 # CDN (Content Delivery Network)
 
 A CDN is a network of geographically dispersed servers used to deliver static content. CDN servers cache static content like images, videos, CSS, and JavaScript files. 
+
 ![cdn-server](images/cdn-server.jpg)
 

@@ -165,3 +165,12 @@ volumes:
 
 A cache is a temporary storage area that stores the result of expensive responses or frequently accessed data in memory so that subsequent requests are served more quickly. 
 
+Common Use Cases
+
+1. Caching: Improve application performance by storing frequently accessed data in memory.
+2. Session management: Store user session data for faster access.
+3. Messaging: Real-time communication between applications.
+
+![cache-server](images/cache-server.jpg)
+
+

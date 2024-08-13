@@ -173,4 +173,16 @@ Common Use Cases
 
 ![cache-server](images/cache-server.jpg)
 
+Caching with Redis: Redis stands for Remote DIctionary Server. It's an open-source, in-memory data structure store that's primarily used as a cache or quick-response database. Here's a simple Redis deployment using docker-compose.
+
+```ruby
+version: '3.7'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+```
 

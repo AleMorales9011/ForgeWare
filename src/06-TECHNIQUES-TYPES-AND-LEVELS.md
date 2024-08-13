@@ -2,7 +2,7 @@
 
 - Execution: manual or automated.
   
-- Techniques: Specific methods used to execute tests - White Box, Black Box, Grey Box.
+- Techniques: Specific methods used to execute tests - White Box, Black Box, Experience-based.
 
 - Types: Categories of testing based on different objectives - Functional, Non-functional.
 
@@ -34,3 +34,12 @@ Evaluates attributes other than functional characteristics of a component or sys
 | Mutation Testing | Introduces deliberate errors (mutations) in the code and checks if tests detect them. |
 | Capture-Replay Testing | Records user interactions and replays them for regression testing. |
 
+# Black-box 
+Also known as `specification-based` techniques. They are based on an analysis of the specified behavior of the test object without reference to its internal structure. Therefore, the test cases are independent of how the software is implemented. Consequently, if the implementation changes, but the required behavior stays the same, the test cases are still useful. 
+
+# White-box
+Also known as `structure-based` techniques. They are based on analyzing the test object’s internal structure and processing. As the test cases are dependent on how the software is designed, they can only be created after the design or implementation of the test object. 
+
+# Experience-based 
+They use testers' knowledge and experience to design and implement test cases. The effectiveness of these techniques depends heavily on the tester’s skills. Experience-based test techniques can detect defects that may be missed using the black-box and white-box test techniques. Hence, experience-based test techniques are complementary to the 
+black-box and white-box test techniques.

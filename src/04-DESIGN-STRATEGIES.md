@@ -5,10 +5,10 @@
 # White-Box
 
 # 1. Statement Coverage Testing
-Statement coverage is a design strategy that ensures every line of code in a program is executed at least once during testing. This method focuses on the structure of the code, aiming to cover all statements within it.
+Statement coverage ensures every line of code is executed at least once during testing, focusing on covering all statements within the code.
 
 # Why it is important:
-Statement coverage ensures that every line of code is executed at least once, helping to identify untested code areas and reduce the risk of undiscovered bugs.
+Identifying untested code areas helps reduce the risk of undiscovered bugs.
 
 # How it works:
 1. Identify statements: All executable statements in the code are identified.
@@ -37,7 +37,7 @@ To achieve 100% statement coverage, you would need two test cases: one with an e
 
 # 2. Decision Coverage
 
-Decision coverage tests every possible outcome of each decision point (e.g., if, else, switch) in the code.
+Decision coverage tests every possible outcome of each decision point (typically `if`, `else`, `switch`, or ternary operators) in the code. While it can be applied at other testing levels, its most effective use is at the unit testing stage.
 
 # Why is it important?
 
@@ -45,9 +45,37 @@ Ensuring all decision paths are tested helps uncover potential defects related t
 
 # How to use it?
 
-1. Identify decision points in the code.
-2. Create test cases to cover both true and false outcomes of each decision.
-3. Execute test cases and analyze results.
+`1. Create test cases:` Design test cases to cover all possible outcomes for each decision point identified.
+
+`2. Instrument your code:` Use a code coverage tool to track which parts of the code are executed.
+
+`3. Execute test cases:` Run the test cases with the instrumented code.
+
+`4. Generate coverage report:` The code coverage tool will produce a report indicating which decision points were covered and which were not.
+
+`5. Analyze report:` Review the report to identify areas with low decision coverage and create additional test cases as needed.
+
+# Example tools:
+
+_Unit Tests:_
+
+`Python`: `Coverage.py`
+
+`Java`: `JaCoCo`
+
+`C#`: `Visual Studio Code Coverage`
+
+`JavaScript`: `Istanbul`
+
+_Multiple test types:_
+
+`Parasoft Jtest:` This tool is designed for thorough testing, including unit, integration, and other test levels. It offers detailed coverage analysis across different test suites.
+
+`SonarQube:` The platform can integrate with testing tools to provide coverage metrics at different test levels, including unit, integration, and system tests.
+
+# Limitations
+
+This method increases test thoroughness but `may not find all logical errors`, potentially requiring more test cases.
 
 # 3. Condition Coverage
 
@@ -63,21 +91,104 @@ It helps identify potential errors in complex conditions by testing all possible
 2. Create test cases to evaluate each condition as both true and false.
 3. Execute test cases and analyze results.
 
-# Black Box
+# Decision Coverage vs. Condition Coverage
 
-# 1. Boundary Value Analysis
-Boundary value analysis is a testing technique that focuses on input values at the edges of equivalence partitions. It assumes errors are more likely to occur near these boundaries.   
+`Decision coverage` focuses on the overall outcome of a decision (true or false). It ensures that both branches of a decision are executed at least once.   
+
+`Condition coverage` focuses on the individual conditions within a decision. It requires that each part of a condition is evaluated as both true and false at least once.   
+
+Example:
+
+Consider the following code:
+
+```java
+if (A && B) {
+  // do something
+} else {
+  // do something else
+}
+```
+
+Decision coverage would require two test cases: one where A && B is true, and one where A && B is false.
+
+Condition coverage would require four test cases:
+- A is true, B is true
+- A is true, B is false
+- A is false, B is true
+- A is false, B is false
+
+Condition coverage is a more detailed testing approach for decision logic. Decision coverage ensures both branches are executed, while condition coverage tests every part of the decision's logic.
+
+# 4. Multiple Condition Coverage (MCC)
+
+MCC is a testing technique that ensures all possible combinations of conditions within a decision point are tested. It's more rigorous than condition coverage, which only requires evaluating each condition as true and false.
 
 # Why is it important?
 
-By testing boundary values, you can increase the likelihood of finding defects that might be missed by other testing methods.
+MCC helps uncover missed defects by finding unexpected condition interactions.
 
-# How to use it
+# How it Works
 
-- Identify input conditions with ranges.
-- Determine boundary values (minimum, maximum, just inside/outside).
-- Create test cases using these boundary values.   
-- Execute test cases and analyze results.
+`1. Identify decision points:` Determine the decision points in the code with multiple conditions.
+
+`2. Create truth table:` For each decision point, create a truth table listing all possible combinations of condition values.
+
+`3. Design test cases:` Based on the truth table, design test cases to cover every possible combination of conditions.
+
+`4. Instrument the code:` Use a code coverage tool to instrument your code to track condition execution.
+
+`5. Execute test cases:` Run all the designed test cases.
+
+`6. Generate coverage report:` The code coverage tool will provide a report indicating which condition combinations were covered.
+
+`7. Analyze report:` Review the report to identify uncovered combinations and create additional test cases.
+
+# Limitations
+MCC can lead to a significant increase in test cases, especially with multiple conditions. It's often used in safety-critical systems where thorough testing is essential.
+
+# 5. All-Path Coverage
+All-path coverage is a software testing technique that aims to execute every possible path through a program's code. This means testing every combination of decisions, loops, and branches.
+
+# Why is it important?
+It ensures that all code is exercised, potentially revealing hidden defects.
+
+# How to use it?
+
+`1. Create a control flow graph:` Visualize the program's structure to identify all possible paths.
+
+`2. Determine path count:` Calculate the number of independent paths using cyclomatic complexity.
+
+`3. Design test cases:` Create test cases to cover each identified path.
+
+`4. Execute test cases:` Run the test cases and analyze the results.
+
+# Limitations
+
+All-path coverage is often impractical due to the exponential growth of test cases with increasing code complexity. It's usually applied to small, critical code sections.
+
+
+# Black Box
+
+# 1. Boundary Value Analysis
+Boundary value analysis focuses on input values at the edges of equivalence partitions. It assumes errors are more likely to occur near these boundaries.   
+
+# Why is it important?
+
+It can increase the likelihood of detecting defects missed by other methods.
+
+# How It Works
+
+`1. Identify input ranges:` Determine the input parameters with defined ranges or limits.
+
+`2. Determine boundary values:` Identify the minimum, maximum, and values just inside and outside these boundaries.
+
+`3. Design and execute test cases:` Create and run the test cases using the identified boundary values as input data.
+
+`4. Analyze results:` Compare the actual output with the expected output to identify defects.
+
+# Limitations
+
+Boundary value analysis emphasizes the values at the boundaries and may overlook issues within the interior of the input range.
 
 # 2. Equivalence Partitioning
 
@@ -89,195 +200,88 @@ This approach significantly reduces the number of test cases while maintaining e
 
 # How to use it:
 
-- Identify input conditions: Determine the input parameters that affect the system's behavior.   
-- Create partitions: Divide input values into groups that produce similar outputs.
-- Select test values: Choose representative values from each partition to create test cases.   
-- Design test cases: Develop test cases to cover all partitions and their boundaries.   
+`1. Identify input conditions:` Determine the input parameters that affect the system's behavior.   
 
-# 3. Specification Analysis
+`2. Create partitions:` Divide input values into groups that produce similar outputs.
+
+`3. Select test values:` Choose representative values from each partition to create test cases.   
+
+`4. Design test cases:` Develop test cases to cover all partitions and their boundaries.   
+
+# Limitations
+
+Since it assumes all values within a partition behave similarly, it might overlook issues that only occur with specific values within that partition.
+
+# 3. Decision Table Testing
+
+Decision table testing is a method to identify test cases based on input conditions and their corresponding actions/outputs, especially used for complex requirements.
+
+# Why is it important?
+
+Decision tables provide comprehensive test coverage by considering all input combinations, helping uncover defects while improving test case design efficiency and clarity.
+
+# How It Works
+
+`1. Identify conditions and actions:` Determine the input conditions and potential outputs (actions) based on the system's behavior.
+
+`2. Create a decision table:` Construct a table with conditions as columns and rows representing different combinations of conditions.
+
+`3. Define rules:` Specify the actions to be performed for each combination of conditions.
+
+`4. Design and execute test cases:` Create test cases based on the defined rules, then compare the results with the expected outcomes.
+
+# Limitations
+Decision table testing can become impractical for systems with many conditions, leading to an overwhelming number of test cases due to the exponential growth in possible combinations.
 
 # 4. State Transition
-The workflow of an ATM is defined by the following rules:
 
-- The ATM goes into the **WORKING** state with the **TURN ON** action.
-- When in the WORKING state, the ATM can:
-     1 - **ACCEPT CARD** which switches it to the **CARD ACCEPTED** state.
-     2 - Start the **AUTOMATIC TESTING** action which switches it to the **SELF TESTING** state.
+State transition testing examines how a system moves from one state to another in response to events, focusing on the system's behavior under different input conditions and sequences. State transition testing is particularly useful for systems with complex state-dependent behavior, such as vending machines, traffic lights, or software with multiple user modes.
 
-- Within CARD ACCEPTED the ATM can:
-     1 - CALL POLICE which switches it to the **WAITING POLICE** state.
-     2 - PROCESS TRANSACTION which switches it to the TRANSACTION PROCESSED state.
+# Why is it important?
 
-- From the TRANSACTION PROCESSED state the ATM goes into the SELF TESTING state with the PULL CARD action.
-- When in the SELF TESTING state, the ATM can either:
-     1 - PASS, which switches it to the WORKING STATE.
-     2 - FAIL, which switches it to the WAITING SERVICE state.
+State transition testing is important for identifying system errors caused by unexpected state changes.
 
-- From the WAITING SERVICE state, the ATM can either:
-     1 - Be SERVICED, which puts the ATM into the WORKING state.
-     2 - Be RETESTED, which returns the ATM to the SELF TESTING state.
+# How It Works 
 
-Prepare the optimal (effective and efficient) set of test cases required to test this workflow.
-Cover all state transitions and minimize repeating the same state transitions.
+`1. Review the specifications/requirements:` It will help understand how the system is expected to behave.
 
-----------
-**EXPLANATION**
+`2. Identify system states, events, and transitions:` Identify all the states the system can be in, the events that trigger them, and the transitions that are supposed to occur once those events happen.
 
-The question above is about **state transition testing**, a **black-box testing technique** which focuses on evaluating how a software changes when transitioning from one state to another in response to events.
+`3. Create state transition diagrams:` They will provide a clear overview of the software's expected behavior.
 
-There are **x** important steps to creating optimal State transition tests:
+`4. Derive the test cases:` Use the state transition diagrams to derive the necessary test cases.
 
-**_1 - Review the specifications/requirements -_** It will help you understand how the system is expected to behave.
-**_2 - Identify system states, events, and transitions -_** Identify all the states the system can be in, the events that trigger them and the transitions that are supposed to occur once those events happen.
-**_3 - Create state transition diagrams -_** They will provide a clear overview of the software's expected behavior.
-**_4 - Derive the test cases -_** Use the state transition diagrams to derive the necessary test cases.
-**_5 - Execute and analyze the test results -_** Perform the test cases and record the actual system behavior, then compare the actual results with the expected results. Identify any discrepancies or unexpected behavior. Investigate failed test cases to determine the root cause of the issue.
+`5. Execute and analyze the test results:` Perform the test cases and record the actual system behavior, then compare the actual results with the expected results. Identify any discrepancies or unexpected behavior. Investigate failed test cases to determine the root cause of the issue.
 
-----------
-**ANSWER**
+# Example Tools
 
-First, let's identify all the states and events/actions that cause the transitions:
+`Selenium`, `Appium`: Can automate interactions with the system to trigger state transitions and verify outcomes.
 
-**- State Transitions:** WORKING, CARD ACCEPTED, TRANSACTION PROCESSED, SELF TESTING, WAITING SERVICE, WAITING POLICE.
+`JUnit`, `TestNG`: For unit testing and creating test cases based on state transitions.
 
-**- Actions** TURN ON, ACCEPT CARD, AUTOMATIC TESTING, CALL POLICE, PROCESS TRANSACTION, PULL CARD, PASS, FAIL, SERVICED, RETESTED.
+`Cypress`, `Playwright`: Modern end-to-end testing frameworks that can be used for state-based testing.
 
-Second, let's create the State Transition Diagram:
+# Limitations
 
-![workflow-diagram](https://github.com/user-attachments/assets/416efd5d-e848-4b5c-a502-3f4504520917)
-
-(I created the diagram with Eraser.io, but you can use other diagram-making tools such as Draw.io or even Canva).
-
-Third, let's define the test cases!
-
--------
-
-## Defining Test Cases
-
-
-Let's start by prioritizing the test cases. This is crucial in helping maximize the chances of identifying high-impact defects early in the development cycle.
-
-**:bangbang: High Priority**
-**_Test Case 1:_** Normal Operation and Maintenance: Covers core functionalities and system recovery.
-
-**:heavy_exclamation_mark: Medium Priority**
-**_Test Case 2:_** Error Handling: Addresses critical error scenarios and system resilience.
-
-**:question_mark: Low Priority**
-**_Test Case 3:_** Retest function: While important, this test case covers a subset of the first test case's functionality
-
-Now let's build out the test cases considering the priority order.
-
->[!IMPORTANT]
-> I found TWO WAYS to solve this issue:
-> One compromises effectiveness to increase efficiency. The other compromises efficiency to increase effectiveness.
-> I'll explain both ways here, but you should always consider what is more important for your organization.
-
-## 01: Effectiveness Over Efficiency 
-
-Before we move on, let's get one thing straight: in no way this is a sloppy test case. As you will see, the it's total score is 80%, because it achieves a 100% EFFECTIVENESS score, meaning it is 100% successful in finding bugs, even if there is a bit of overlap or redundancy in the sets.
-
-### Test Case 1: Normal Operation and Maintenance
-
-Objective: Verify normal ATM operation, maintenance, and recovery.
-Steps:
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| PROCESS TRANSACTION | TRANSACTION PROCESSED |
-| PULL CARD | SELF TESTING |
-| PASS | WORKING |
-| AUTOMATIC TESTING | SELF TESTING |
-| FAIL | WAITING SERVICE |
-| SERVICED | WORKING |
-
-### Test Case 2: Error Handling
-
-Objective: Verify ATM behavior in case of a police call.
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| CALL POLICE | WAITING POLICE |
-
-
-### Test Case 3: Retest
-
-Objective: Verify the retest process.
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| AUTOMATIC TESTING | SELF TESTING |
-| FAIL | WAITING SERVICE |
-| RETESTED | SELF TESTING |
-
-Test suite effectiveness: 100%
-
-Test suite efficiency: 80%
-
-Overall score: 80%
-
-The interesting thing though is that if we remove test cases 02 and 03, we also get 100% effectiveness and 80% efficiency. So the test would look like this:
-
-### Test Case 1: Normal Operation and Maintenance
-
-Objective: Verify normal ATM operation, maintenance, and recovery.
-Steps:
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| PROCESS TRANSACTION | TRANSACTION PROCESSED |
-| PULL CARD | SELF TESTING |
-| PASS | WORKING |
-| AUTOMATIC TESTING | SELF TESTING |
-| FAIL | WAITING SERVICE |
-| SERVICED | WORKING |
-
-----------
-## 02: Efficiency Over Effectiveness
-
-Here, to increase efficiency while keeping the effectiveness at an acceptable level, we can remove the third test case, which was low priority, and only stick to the first and second cases. 
-
-### Test Case 1: Normal Operation and Maintenance
-
-Objective: Verify normal ATM operation, maintenance, and recovery.
-Steps:
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| PROCESS TRANSACTION | TRANSACTION PROCESSED |
-| PULL CARD | SELF TESTING |
-| PASS | WORKING |
-| AUTOMATIC TESTING | SELF TESTING |
-| FAIL | WAITING SERVICE |
-| SERVICED | WORKING |
-
-### Test Case 2: Error Handling
-
-Objective: Verify ATM behavior in case of a police call.
-
-| ACTION | NEXT STATE |
-|--------|------------|
-| TURN ON | WORKING |
-| ACCEPT CARD | CARD ACCEPTED |
-| CALL POLICE | WAITING POLICE |
-
-Test suite effectiveness: 90%
-
-Test suite efficiency: 98%
-
-Overall score: 88%
+State transition testing can be complex and time-consuming for systems with many states and transitions.
 
 # 5. Use Case
+
+Use case testing is a black-box testing technique that focuses on testing the system based on user interactions. It involves deriving test cases from the system's use cases, which describe how users interact with the system to achieve specific goals.
+
+Why is it important?
+
+User-centric: Ensures the system meets user needs and expectations.
+Comprehensive testing: Covers various system functionalities and interactions.
+Risk reduction: Helps identify potential issues early in the development process.
+How to use it?
+
+Identify use cases: Determine the primary functions of the system from the user's perspective.
+Create test cases: Develop test cases based on the steps and scenarios outlined in the use cases.
+Execute test cases: Perform tests to verify system behavior according to the use cases.
+Analyze results: Evaluate test results to identify defects and ensure system functionality.
+Use case testing helps to validate the system's behavior from a user's standpoint, increasing the likelihood of delivering a successful product.
+
 # 6. Error Guessing
-# 7. Decision Table
 # 8. Combinatorial
 # 9. Pairwise

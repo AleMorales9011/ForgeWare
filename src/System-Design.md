@@ -108,4 +108,60 @@ spec:
   type: LoadBalancer # Type of Service
 ```
 
+# Database Replication
+
+Database replication can be used in many database management systems, usually with a master/slave relationship between the original (master) and the copies
+(slaves). This architecture allows for failover and redundancy.
+
+![banner](images/database-replication.jpg)
+
+Here's a Data replication Deployment with docker-compose. 
+
+```ruby
+version: '3.7'
+
+services:
+  mysql-master:
+    image: mysql:latest
+    container_name: mysql-master
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: your_database
+      MYSQL_USER: your_user
+      MYSQL_PASSWORD: your_password
+      MYSQL_REPLICATION_MODE: master
+      MYSQL_REPLICATION_USER: repl_user
+      MYSQL_REPLICATION_PASSWORD: repl_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  mysql-slave:
+    image: mysql:latest
+    container_name: mysql-slave
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: your_database
+      MYSQL_USER: your_user
+      MYSQL_PASSWORD: your_password
+      MYSQL_REPLICATION_MODE: slave
+      MYSQL_REPLICATION_USER: repl_user
+      MYSQL_REPLICATION_PASSWORD: repl_password
+      MYSQL_MASTER_HOST: mysql-master
+      MYSQL_MASTER_PORT: 3306
+    ports:
+      - "3307:3306"
+    depends_on:
+      - mysql-master
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
+
+```
+# Cache
+
+A cache is a temporary storage area that stores the result of expensive responses or frequently accessed data in memory so that subsequent requests are served more quickly. 
 

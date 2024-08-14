@@ -238,3 +238,7 @@ http {
 6. `proxy_cache_valid:` Sets the cache expiration time for successful responses.
 7. `proxy_cache_use_stale:` Defines behavior when the cache is stale.
 
+# Stateless vs Statesfull
+
+A stateful server remembers client data (state) from one request to the next. A stateless server keeps no state information.
+![]()

@@ -200,8 +200,7 @@ A CDN is a network of geographically dispersed servers used to deliver static co
 
 ![cdn-server](images/cdn-server.jpg)
 
-1. User A tries to get image.png by using an image URL. The URL’s domain is provided
-by the CDN provider. 
+1. User A tries to get image.png by using an image URL. The CDN provider provides the URL’s domain. 
 2. If the CDN server does not have image.png in the cache, the CDN server requests the
 file from the origin, which can be a web server or online storage like Amazon S3.
 3. The origin returns image.png to the CDN server, which includes an optional HTTP header
@@ -210,4 +209,32 @@ Time-to-Live (TTL) which describes how long the image is cached.
 CDN until the TTL expires.
 5. User B sends a request to get the same image.
 6. The image is returned from the cache as long as the TTL has not expired.
+
+Here's a basic implementation of a CDN using Nginx:
+
+```ruby
+http {
+    proxy_cache_path /var/cache/nginx/proxy_cache levels=1 keys_zone=my_cache:10m max_size=10g inactive=60m use_temp_path=off;
+
+    server {
+        listen 80;
+        server_name cdn.example.com;
+
+        location /images/ {
+            proxy_pass http://origin_server;
+            proxy_cache my_cache;
+            proxy_cache_valid 200 1h;
+            proxy_cache_use_stale error timeout invalid_header;
+        }
+    }
+}
+
+```
+1. `proxy_cache_path:` Defines the cache directory, size, and other parameters.
+2. `server block:` Configures the CDN server listening on port 80.
+3. `location blocks:` Define specific paths for different content types.
+4. `proxy_pass:` Specifies the origin server where the content resides.
+5. `proxy_cache:` Enables caching for the specified location.
+6. `proxy_cache_valid:` Sets the cache expiration time for successful responses.
+7. `proxy_cache_use_stale:` Defines behavior when the cache is stale.
 

@@ -5,6 +5,14 @@
 
 System design is the blueprint for a software system. It's about `defining the architecture`, components, modules, interfaces, and data flow to achieve specific goals.
 
+<div class="warning">
+
+Please Notice
+
+This project is inspired by concepts from "System Design Interview" by Alex Xu. The book provided invaluable insights into system design fundamentals.
+
+</div>
+
 # Single Server Set Up
 
 A single server setup is a `configuration` where all system components, such as the web server, database, application server, and file storage, reside on a single physical or virtual machine.
@@ -191,4 +199,15 @@ services:
 A CDN is a network of geographically dispersed servers used to deliver static content. CDN servers cache static content like images, videos, CSS, and JavaScript files. 
 
 ![cdn-server](images/cdn-server.jpg)
+
+1. User A tries to get image.png by using an image URL. The URL’s domain is provided
+by the CDN provider. 
+2. If the CDN server does not have image.png in the cache, the CDN server requests the
+file from the origin, which can be a web server or online storage like Amazon S3.
+3. The origin returns image.png to the CDN server, which includes an optional HTTP header
+Time-to-Live (TTL) which describes how long the image is cached.
+4. The CDN caches the image and returns it to User A. The image remains cached in the
+CDN until the TTL expires.
+5. User B sends a request to get the same image.
+6. The image is returned from the cache as long as the TTL has not expired.
 

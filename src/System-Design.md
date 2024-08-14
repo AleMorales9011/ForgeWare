@@ -241,4 +241,12 @@ http {
 # Stateless vs Statesfull
 
 A stateful server remembers client data (state) from one request to the next. A stateless server keeps no state information.
-![]()
+
+![statesless-vs-statefull](images/stateless-architecture.jpg)
+
+We move the session data out of the web tier and store them in the `persistent` data store. The shared data store could be a relational database, `Memcached/Redis, NoSQL`, etc. The NoSQL data store was chosen because it is easy to scale. 
+
+`Autoscaling` means adding or removing web servers automatically based on the traffic load. After the state data is removed from web servers, `auto-scaling` of the web tier is easily achieved by adding or removing `servers` based on traffic load.
+
+
+

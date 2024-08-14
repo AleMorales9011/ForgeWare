@@ -16,7 +16,6 @@
   - [Metrics and Analytics](<10-Metrics & Analytics.md>)
 - [SGBD](10-SGBD.md)
 - [QA](<SLDC & Testing.md>)
-  - [Jira](<07-JIRA.md>)
   - [Automation](<AUTOMATION.md>)
 - [POO](08-POO_1.md)
   - [POO](09-POO_2.md)

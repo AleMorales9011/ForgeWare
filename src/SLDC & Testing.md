@@ -1,4 +1,5 @@
 ![banner](images/6.jpg)
+
 # SDLC & Testing
 
 10 minutes
@@ -37,7 +38,7 @@ Testing & QA throughout the entire SDLC:
 
 - Levels: Stages of testing within the software development lifecycle - Unit, Integration, System, Performance, Acceptance, UI.
 
-- Design Strategies: Approaches used to create test cases (not in the image).
+- Design Strategies: Approaches used to create test cases - a subset of black-box, white-box, and experience-based. (not in the image).
 
 <img width="723" alt="stw test types" src="https://github.com/user-attachments/assets/801d246a-ccbf-4927-920b-57acaaabe740">
 
@@ -64,6 +65,7 @@ Evaluates attributes other than functional characteristics of a component or sys
 | Capture-Replay Testing | Records user interactions and replays them for regression testing. |
 
 # Black-box 
+
 Also known as `specification-based` techniques. They are based on the behavior of the test object without reference to its internal structure. Therefore, they are independent of how the software is implemented. Consequently, if the implementation changes, but the required behavior stays the same, the test cases are still useful. 
 
 # Example: Decision Table Testing
@@ -106,10 +108,29 @@ Comprehensive Coverage - testing all branches helps to ensure that all possible 
 `5. Measure Coverage:` Calculate the branch coverage percentage to assess test effectiveness.
 
 # Limitation
-"While high branch coverage is good for testing, 100% branch coverage can still miss verifying the correct behavior of the code if the test cases lack proper assertions or only use trivial input values."
+While high branch coverage is good for testing, 100% branch coverage can still miss verifying the correct behavior of the code if the test cases lack proper assertions or only use trivial input values.
 
 # Experience-based 
 They use testers' knowledge and experience to design and implement test cases. Experience-based testing can detect defects that may be missed with black-box and white-box. Hence, they are complementary to the other techniques.
+
+# Example: Error Guessing 
+
+Error Guessing is a software testing strategy where testers use their experience and intuition to `predict potential errors or defects` in an application. It's an informal approach based on the tester's ability to anticipate issues from past encounters with similar systems. 
+
+# Why It Is Important
+
+ Testers can focus on areas that might not be covered by formal test cases, providing a different perspective on the software.   
+
+ # How It Works
+
+Error guessing is a relatively unstructured process. Testers typically follow these steps:   
+
+1. `Analyze the software`: Understand the system's functionality, requirements, and design.
+2. `Identify potential problem areas`: Based on experience, intuition, and domain knowledge, guess where errors might occur.   
+3. `Design and execute test cases`: Create and run test cases to specifically target these areas.
+4. `Report and track defects`: Document found issues and track their resolution.
+
+`Important Note`: While error guessing is valuable, it should not replace structured testing methods. A combination of both approaches is essential for comprehensive test coverage.   
 
 # Bug Reporting
 

@@ -1,12 +1,12 @@
 ![banner](images/2.jpg)
 
-# Learning Theory
+# Lean Learning
 
 The `software engineering` landscape is constantly evolving. 
 
 Understanding learning theory empowers one to `learn faster` and fosters continuous growth and adaptation.
 
-# 1. Simulation Based Training
+# 1. Simulation-Based Training
 
 `Simulation-based training`, as the name suggests, is a training method that creates `realistic imitations` of real-world scenarios. 
 

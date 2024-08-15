@@ -253,6 +253,8 @@ We move the session data out of the web tier and store them in the `persistent` 
 To improve availability and provide a better user experience across wider geographical areas, supporting multiple data centers is crucial. In normal operation, users are `geoDNS-routed`, also known as `geo-routed`, to the closest data center, with split traffic of x% in `US-East` and (100 – x)% in US-West. `geoDNS` is a DNS service that allows domain
 names to be resolved to IP addresses based on the location of a user.
 
+![data-centers-architecture](images/data-centers-architecture.jpg)
+
 # Message Queue
 
 A message queue is a durable component, stored in memory, that supports asynchronous communication. It serves as a buffer and distributes asynchronous requests. 
@@ -270,4 +272,17 @@ Common Use Cases:
 
 # Monitoring
 
-![]()
+1. `Logging:` Monitoring error logs is important because it helps to identify errors and problems in the system. 
+2. `Metrics:` Collecting different types of metrics helps us to gain business insights and understand the health status of the system.
+3. `Automation:` When a system gets big and complex, we need to build or leverage automation tools to improve productivity.
+
+![logging-metrics-automation](images/logging-metrics-automation.jpg)
+
+# Vertical vs Horizontal Scaling
+
+`Vertical scaling:` Switching for a more capable server(scaling up). Simple-"expensive"
+`Horizontal Scaling:` Adding more servers(sharding). Complex-"cheaper"
+
+# Conclussion
+
+System design is the blueprint for a software system, outlining its components, architecture, and how they interact. It's the foundation upon which `software development` and `DevOps` processes are built.

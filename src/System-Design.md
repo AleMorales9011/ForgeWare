@@ -248,5 +248,26 @@ We move the session data out of the web tier and store them in the `persistent` 
 
 `Autoscaling` means adding or removing web servers automatically based on the traffic load. After the state data is removed from web servers, `auto-scaling` of the web tier is easily achieved by adding or removing `servers` based on traffic load.
 
+# Data Centers
 
+To improve availability and provide a better user experience across wider geographical areas, supporting multiple data centers is crucial. In normal operation, users are `geoDNS-routed`, also known as `geo-routed`, to the closest data center, with split traffic of x% in `US-East` and (100 – x)% in US-West. `geoDNS` is a DNS service that allows domain
+names to be resolved to IP addresses based on the location of a user.
 
+# Message Queue
+
+A message queue is a durable component, stored in memory, that supports asynchronous communication. It serves as a buffer and distributes asynchronous requests. 
+
+![message-queue](images/message-queue-server.jpg)
+
+Input services, called producers/publishers, create messages and publish them to a message queue. Other services or servers, called consumers/subscribers, connect to the queue and perform actions defined by the messages.
+
+Common Use Cases:
+
+1. `Order Processing:` Handling order placement, inventory updates, shipping notifications, etc.
+2. `Data Processing:` Batching and processing large datasets.
+3. `Microservices Architecture:` Enabling communication between services.
+4. `Event-Driven Architectures:` Processing events and triggering actions.
+
+# Monitoring
+
+![]()

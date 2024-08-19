@@ -1,6 +1,6 @@
 # Test Automation
 
-Test automation is the use of software to execute test cases, validate results, and provide feedback. 
+Test automation uses software to execute test cases, validate results, and provide feedback. 
 
 # Why It Is Important
 
@@ -59,54 +59,47 @@ The table compares Selenium, Appium & SoapUI for test automation, highlighting t
 
 The choice between Selenium, Appium, and SoapUI depends on the target application type and the desired functionalities like browser automation or API testing. All three tools offer robust solutions for test automation within their respective domains.
 
-# SELENIUM 
-# Selenium Basics
-Selenium WebDriver: Grasp its architecture, how it interacts with browsers, and core commands.
-Locators: Master different locator strategies (ID, name, XPath, CSS selector) for efficient element identification.
-Web Elements: Learn to interact with various web elements (text boxes, buttons, links, etc.)
-Waits: Understand implicit, explicit, and fluent waits to handle asynchronous operations.
-Handling Frames and Windows: Practice switching between frames and windows.
 
-# Test Automation Framework
-Test Automation Framework Design: Learn about the importance of a good framework structure.
-Page Object Model (POM): Implement POM for better code organization and maintainability.
-Data-Driven Testing: Parameterize tests with data for efficient test execution.
-TestNG or JUnit: Choose a testing framework for test management and reporting.
 
-# Phase 4: Advanced Selenium Topics
-Cross-Browser Testing: Explore tools and techniques for testing on different browsers.
-Selenium Grid: Learn how to distribute test execution across multiple machines.
-Test Automation Best Practices: Follow industry standards for robust and efficient automation.
-Continuous Integration (CI): Integrate Selenium tests into CI pipelines.
 
-# Phase 5: Specialization
-Performance Testing with Selenium: Combine Selenium with performance testing tools (optional).
-Mobile Testing with Selenium: Explore Selenium's capabilities for mobile app testing (optional).
-Image-Based Testing: Learn techniques for handling image verification (if required).
-Cloud-Based Testing Platforms: Explore platforms like Sauce Labs or BrowserStack (optional).
 
-# Getting Started With Selenium WebDriver (Using Java)
+# Test Case Design: Login
 
-Follow these steps to build and execute your first script with Selenium WebDriver.
+1. `Test Case Selection`: Identify test cases suitable for automation, prioritizing those with high execution frequency, critical business logic, or prone to human error.
 
-# Set Up
-- Using `IntelliJ Idea Community`, create a new project and select the option `Maven`.
-- Go to the `mvnrepository` website and look for `Selenium Java`.
-- Select the latest version of the Selenium Java dependency for Maven - the 4.23.1 version was used for this repository.
-- 
-First Steps in Selenium
+Button
 
-Test Case Design: Login
+3. `Tool Selection`: Choose test automation tools that align with project requirements, team expertise, and budget constraints. Consider factors such as ease of use, test coverage, reporting capabilities, and integration with other tools.
+ 
+Selenium
+
+5. `Test Environment Setup`: Establish a stable test environment to ensure reliable test execution.
+
+Dependencies--pomxml  
+
+7. `Test Script Development`: Create reusable test scripts using appropriate scripting languages and frameworks.
+
+SCript
+
+9. `Test Execution and Analysis`: Integrate test automation into the development lifecycle, and analyze test results.s.
+
+    How to execute
+
+11. `Continuous Improvement`: Refine test automation processes to optimize efficiency and effectiveness.
+
+    Expand the script
+
+   
 Steps
 1.	Open the URL
 2.	Find the email field
 3.	Write the email
 4.	Find the pass field
 5.	Write the pass
-6.	Find the “Ingresar”button
-7.	Click in the “Ingresar”button
+6.	Find the “Ingresar” button
+7.	Click on the “Ingresar” button
 
-Folder structure
+# Folder Structure
 Main: Only for software development
 Test: Only for test
 Pom.xml: For dependencies configuration

@@ -112,7 +112,7 @@ Test: Only for test
 Pom.xml: For dependencies configuration
 
 Search dependencies 
-1.	https://mvnrepository.com
+1.	Go to mvnrepository
 2.	Search selenium
 3.	Find the last version and copy maven dependency
 

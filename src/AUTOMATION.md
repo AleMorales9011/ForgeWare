@@ -85,15 +85,15 @@ Mobile Testing with Selenium: Explore Selenium's capabilities for mobile app tes
 Image-Based Testing: Learn techniques for handling image verification (if required).
 Cloud-Based Testing Platforms: Explore platforms like Sauce Labs or BrowserStack (optional).
 
+# Getting Started With Selenium WebDriver (Using Java)
 
+Follow these steps to build and execute your first script with Selenium WebDriver.
 
-
-
-
-
-
-Introduction Selenium
-
+# Set Up
+- Using `IntelliJ Idea Community`, create a new project and select the option `Maven`.
+- Go to the `mvnrepository` website and look for `Selenium Java`.
+- Select the latest version of the Selenium Java dependency for Maven - the 4.23.1 version was used for this repository.
+- 
 First Steps in Selenium
 
 Test Case Design: Login
@@ -111,10 +111,6 @@ Main: Only for software development
 Test: Only for test
 Pom.xml: For dependencies configuration
 
-Search dependencies 
-1.	https://mvnrepository.com
-2.	Search selenium
-3.	Find the last version and copy maven dependency
 
 Selenium dependencies is the VIP
  
@@ -190,10 +186,6 @@ As part of Automation, Selenium Performs actions (such as click, typing) on the 
 8.	Partial Link Text
 
 How to extract those locators from each element of the web? You just have to inspect the page and with the pointer activated, select on the web the component to which we want to copy its locator and we will find that information in the Elements tab
-
- 
-
-How to extract those locators from each element of the web? You just have to inspect the page and with the pointer activated, select on the web the component to which we want to copy its locator and we will find that information in the Elements tab.
 
 You should find something like this, depending on the item you select.
 <input type="text" placeholder="Username" id= “inputUsername” value=" ">

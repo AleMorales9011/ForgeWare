@@ -202,4 +202,35 @@ Way to create a Xpath:
 
 
 
+Test Login Code
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class logintest {
+
+    private WebDriver driver; // Declare driver as a member variable
+
+    @Before
+    public void setUp() {
+        driver = new ChromeDriver();
+    }
+
+    @Test
+    public void loginTestRP() {
+        driver.get(url);
+        driver.findElement(By.id("mat-input-0")).sendKeys(email);
+        driver.findElement(By.id("mat-input-1")).sendKeys(password);
+        driver.findElement(By.id("kt_login_signin_submit")).click();
+    }
+
+    @After
+    public void close() {
+        driver.quit(); // Use quit() to close browser and WebDriver resources
+    }
+}
 

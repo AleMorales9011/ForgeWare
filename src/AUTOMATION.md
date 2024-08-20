@@ -68,12 +68,21 @@ The following dependency should be added to the `pom.xml` file, inside the <depe
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.x.x</version> (Replace with your desired version)
+    <version>4.x.x</version> //Replace with latest version
 </dependency>
 ```
 This line tells Maven to download the Selenium Java library, which provides the necessary classes for interacting with web browsers.
 
-In some situations, it's common to use test frameworks like JUnit or TestNG along with Selenium for writing and executing test cases.
+In some situations, it's common to use test frameworks like JUnit or TestNG along with Selenium for writing and executing test cases. For this script, JUnit was implemented.
+
+```xml
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.x.x</version> //Replace with latest version
+    <scope>test</scope>
+</dependency>
+```
 
 # 4.3 Folder Structure
 
@@ -138,7 +147,7 @@ public class LoginTest { // Class name changed to follow CamelCase convention
     @Test
     public void loginTestRP() {
         // Open the target URL (replace "url" with the actual URL)
-        driver.get(url);
+        driver.get("https://www.selenium.dev/selenium/web/web-form.html");
 
         // Find the email field using its ID and enter the email address
         driver.findElement(By.id("mat-input-0")).sendKeys(email);

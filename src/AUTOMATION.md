@@ -45,26 +45,35 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class logintest {
+public class LoginTest { // Class name changed to follow CamelCase convention
 
     private WebDriver driver; // Declare driver as a member variable
 
     @Before
     public void setUp() {
+        // Initialize ChromeDriver instance to automate Chrome browser
         driver = new ChromeDriver();
     }
 
     @Test
     public void loginTestRP() {
+        // Open the target URL (replace "url" with the actual URL)
         driver.get(url);
+
+        // Find the email field using its ID and enter the email address
         driver.findElement(By.id("mat-input-0")).sendKeys(email);
+
+        // Find the password field using its ID and enter the password
         driver.findElement(By.id("mat-input-1")).sendKeys(password);
+
+        // Find the login button using its ID and click it
         driver.findElement(By.id("kt_login_signin_submit")).click();
     }
 
     @After
     public void close() {
-        driver.quit(); // Use quit() to close browser and WebDriver resources
+        // Close the browser and quit WebDriver resources
+        driver.quit();
     }
 }
 ```

@@ -22,8 +22,7 @@ Test automation uses software to execute test cases, validate results, and provi
 
 # Automation Tools vs. Frameworks
 
-This table clarifies the distinction between testing automation tools that directly interact with the application and testing automation frameworks that provide structure and support for building those tests.
-
+1
 | FEATURE | TESTING AUTOMATION TOOLS | TESTING AUTOMATION FRAMEWORKS | 
 |---------|-----------------------------|--------------------------|
 | **PURPOSE** | Provides functionalities to _automate test actions_ | Provides a structure and best practices for _building and managing test scripts_ |
@@ -79,7 +78,7 @@ Dependencies--pomxml 
 
 7. `Test Script Development`: Create reusable test scripts using appropriate scripting languages and frameworks.
 
-SCript
+Script
 
 9. `Test Execution and Analysis`: Integrate test automation into the development lifecycle, and analyze test results.s.
 

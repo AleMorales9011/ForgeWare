@@ -22,7 +22,7 @@ For demonstration, the test case below was created based on the sample URL Selen
 
 `Test Steps:`
 
-1. Run _FirstScript.java_ (replace FirstScript.java with the name of the test file).
+1. Run _SeleniumJunitTest.java_ (replace `SeleniumJunitTest.java` with the name of the test file).
 
 2. Verify Chrome opens the URL and script interacts with the "my-text" box, entering "Selenium".
 

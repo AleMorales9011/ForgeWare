@@ -62,7 +62,7 @@ Selenium will be used for demonstration purposes.
 
 # 4.2 Adding Selenium Dependency:
 
-The following dependency should be added to the `pom.xml` file, inside the <dependencies> section:
+The following dependency should be added to the `pom.xml` file, inside the <`dependencies`> section:
 
 ```xml
 <dependency>

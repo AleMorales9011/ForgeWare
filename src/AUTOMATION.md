@@ -22,7 +22,7 @@ For demonstration, the test case below was created based on the sample URL Selen
 
 `Test Steps:`
 
-1. Run _FirstScript.java_ (replace FirstScript.java with the name of the test file).
+1. Run _SeleniumJunitTest.java_ (replace `SeleniumJunitTest.java` with the name of the test file).
 
 2. Verify Chrome opens the URL and script interacts with the "my-text" box, entering "Selenium".
 
@@ -62,7 +62,7 @@ Selenium will be used for demonstration purposes.
 
 # 4.2 Adding Selenium Dependency:
 
-The following dependency should be added to the `pom.xml` file, inside the <dependencies> section:
+The following dependency should be added to the `pom.xml` file, inside the <`dependencies`> section:
 
 ```xml
 <dependency>
@@ -73,7 +73,7 @@ The following dependency should be added to the `pom.xml` file, inside the <depe
 ```
 This line tells Maven to download the Selenium Java library, which provides the necessary classes for interacting with web browsers.
 
-In some situations, it's common to use test frameworks like JUnit or TestNG along with Selenium for writing and executing test cases. For this script, JUnit was implemented.
+In some situations, it's common to use test frameworks like JUnit or TestNG along with Selenium for writing and executing test cases to improve organization and readability. For this script, JUnit was implemented.
 
 ```xml
 <dependency>
@@ -109,21 +109,7 @@ Maven provides a standardized directory structure for Java projects.
 
 # 4.4 Build the Script
 
-Inside `src/test/java` create a class to encapsulate the test.
-
-
-
-
-5. `Test Execution and Analysis`: Integrate test automation into the development lifecycle, and analyze test results.s.
-
-
-6. `Continuous Improvement`: Refine test automation processes to optimize efficiency and effectiveness.
-
-
-
-# Test Login Code Example
-
-This example demonstrates a basic login test script using Selenium WebDriver in Java. It opens the URL, finds email and password fields using IDs, enters credentials, and clicks the login button.
+This example demonstrates the basic test script using Selenium WebDriver in Java. It opens the URL, finds the text box, inserts the credential and clicks the "submit" button.
 
 ```java
 
@@ -132,39 +118,62 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginTest { // Class name changed to follow CamelCase convention
+import java.time.Duration;
 
-    private WebDriver driver; // Declare driver as a member variable
+public class SeleniumJunitTest {
+
+    private WebDriver driver;
 
     @Before
     public void setUp() {
-        // Initialize ChromeDriver instance to automate Chrome browser
+        // Create a new Chrome WebDriver instance
         driver = new ChromeDriver();
+
+        // Set implicit wait (optional)
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
     }
 
     @Test
-    public void loginTestRP() {
-        // Open the target URL (replace "url" with the actual URL)
+    public void testSeleniumForm() {
+        //  Navigate to the URL being tested
+        //  In this case, this is the test URL provided by Selenium
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
 
-        // Find the email field using its ID and enter the email address
-        driver.findElement(By.id("mat-input-0")).sendKeys(email);
+        //  Find the 'text box' and 'button' elements by their locators
+        WebElement textBox = driver.findElement(By.name("my-text"));
+        WebElement submitButton = driver.findElement(By.cssSelector("button"));
 
-        // Find the password field using its ID and enter the password
-        driver.findElement(By.id("mat-input-1")).sendKeys(password);
+        //  The script will automatically type "Selenium" and click the page button
+        textBox.sendKeys("Selenium");
+        submitButton.click();
 
-        // Find the login button using its ID and click it
-        driver.findElement(By.id("kt_login_signin_submit")).click();
+        //  Find the element displaying the message by its ID
+        // Wait for message element to be visible (recommended)
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("message")));
+
+        String messageText = message.getText();
+
     }
 
     @After
-    public void close() {
-        // Close the browser and quit WebDriver resources
+    public void tearDown() {
+        //  Close the browser window
         driver.quit();
     }
 }
 ```
-# Conclussion
+
+# 5. Test Execution and Analysis 
+Integrate test automation into the development lifecycle, and analyze test results. Use tools like Jira for bug tracking and report.
+
+# 6. Continuous Improvement
+Refine test automation processes to optimize efficiency and effectiveness.
+
+# Conclusion
 In summary, test automation is essential for improving software quality, efficiency, and speed while reducing costs and risks. 

@@ -7,18 +7,56 @@ An ARM (Azure Resource Manager) template allows you to define Azure resources de
   "contentVersion": "1.0.0.0",
   "resources": [
     {
-      "type": "Microsoft.Compute/virtualMachines",
-      "apiVersion": "2021-07-01",
-      "name": "[parameters('vmName')]",
+      "type": "Microsoft.Network/virtualNetworks",
+      "apiVersion": "2020-11-01",
+      "name": "myVNet",
       "location": "[resourceGroup().location]",
       "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Network/networkInterfaces",
+      "apiVersion": "2020-11-01",
+      "name": "myNic",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', 'myVNet')]"
+      ],
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipConfig1",
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'myVNet', 'default')]"
+              },
+              "privateIPAllocationMethod": "Dynamic"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines",
+      "apiVersion": "2021-03-01",
+      "name": "myVM",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces', 'myNic')]"
+      ],
+      "properties": {
         "hardwareProfile": {
-          "vmSize": "[parameters('vmSize')]"
+          "vmSize": "Standard_DS1_v2"
         },
         "osProfile": {
-          "computerName": "[parameters('vmName')]",
-          "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
+          "computerName": "myVM",
+          "adminUsername": "azureuser",
+          "adminPassword": "YourP@ssw0rd!"  // Replace with your password
         },
         "storageProfile": {
           "imageReference": {
@@ -34,77 +72,30 @@ An ARM (Azure Resource Manager) template allows you to define Azure resources de
         "networkProfile": {
           "networkInterfaces": [
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('nicName'))]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', 'myNic')]"
             }
           ]
         }
       }
-    },
-    {
-      "type": "Microsoft.Network/networkInterfaces",
-      "apiVersion": "2021-08-01",
-      "name": "[parameters('nicName')]",
-      "location": "[resourceGroup().location]",
-      "properties": {
-        "ipConfigurations": [
-          {
-            "name": "ipconfig1",
-            "properties": {
-              "subnet": {
-                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('vnetName'), 'default')]"
-              },
-              "privateIPAllocationMethod": "Dynamic"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2021-08-01",
-      "name": "[parameters('vnetName')]",
-      "location": "[resourceGroup().location]",
-      "properties": {
-        "addressSpace": {
-          "addressPrefixes": [
-            "10.0.0.0/16"
-          ]
-        },
-        "subnets": [
-          {
-            "name": "default",
-            "properties": {
-              "addressPrefix": "10.0.0.0/24"
-            }
-          }
-        ]
-      }
     }
-  ],
-  "parameters": {
-    "vmName": {
-      "type": "string",
-      "defaultValue": "myVM"
-    },
-    "vmSize": {
-      "type": "string",
-      "defaultValue": "Standard_DS1_v2"
-    },
-    "adminUsername": {
-      "type": "string",
-      "defaultValue": "azureuser"
-    },
-    "adminPassword": {
-      "type": "securestring"
-    },
-    "nicName": {
-      "type": "string",
-      "defaultValue": "myNic"
-    },
-    "vnetName": {
-      "type": "string",
-      "defaultValue": "myVnet"
-    }
-  }
+  ]
 }
 ```
+
+# Key Components:
+
+1. **Virtual Network (VNet)**: Defines a virtual network (`myVNet`) with an address space of `10.0.0.0/16`.
+2. **Network Interface (NIC)**: Creates a network interface (`myNic`) attached to the virtual network.
+3. **Virtual Machine (VM)**: Deploys a virtual machine (`myVM`) using the **Ubuntu 18.04-LTS** image. It uses the **Standard_DS1_v2** size and is connected to the network interface.
+
+# Steps to Deploy:
+
+1. Save the template in a JSON file (e.g., `azuredeploy.json`).
+2. Use the Azure CLI to deploy it:
+
+```bash
+   az group create --name myResourceGroup --location eastus
+   az deployment group create --resource-group myResourceGroup --template-file azuredeploy.json
+```
+
+

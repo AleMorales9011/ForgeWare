@@ -214,3 +214,98 @@ stages:
 
 # Conclussion
 This YAML configuration provides a basic pipeline setup. Depending on your specific requirements and application, you may need to adjust the details, such as paths, variables, and deployment strategies.
+
+
+Here’s a simple Jenkins pipeline script for deploying a web application. This example assumes you are using a basic Jenkins setup with a pipeline job and includes steps for building, testing, and deploying a web application. The pipeline script uses a declarative pipeline syntax.
+
+# **Jenkins Pipeline Script (Declarative Syntax)**
+
+```groovy
+pipeline {
+    agent any  // Run on any available agent
+
+    environment {
+        // Define environment variables if needed
+        DEPLOYMENT_DIR = '/var/www/html/my-web-app'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from the repository
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    // Build the web application
+                    sh 'npm install'  // Assuming a Node.js app; adjust as needed
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                script {
+                    // Run tests
+                    sh 'npm test'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                script {
+                    // Deploy the application
+                    sh 'rsync -avz --delete ./build/ user@your-server:$DEPLOYMENT_DIR'
+                    // Alternatively, use scp if you prefer
+                    // sh 'scp -r ./build/ user@your-server:$DEPLOYMENT_DIR'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment was successful!'
+        }
+        failure {
+            echo 'Deployment failed!'
+        }
+    }
+}
+```
+
+# **Explanation**
+
+1. **Agent**:
+   - **`agent any`**: Specifies that the pipeline can run on any available Jenkins agent.
+
+2. **Environment**:
+   - **`DEPLOYMENT_DIR`**: Environment variable for the deployment directory on the target server.
+
+3. **Stages**:
+   - **`Checkout`**: Checks out the code from the source code repository using the `scm` (Source Code Management) configuration in Jenkins.
+   
+   - **`Build`**: Runs commands to build the application. In this example, it uses `npm` commands for a Node.js application, but you should adjust these commands based on your application's build process.
+
+   - **`Test`**: Runs tests on the application to ensure that the build is functioning as expected.
+
+   - **`Deploy`**: Deploys the built application to the target server. This example uses `rsync` for deployment, but you can use other tools like `scp` or deployment scripts depending on your setup.
+
+4. **Post**:
+   - **`success`**: Executes a script when the pipeline completes successfully.
+   - **`failure`**: Executes a script if the pipeline fails.
+
+# **Customizing the Pipeline**
+
+- **Build and Test Commands**: Adjust the build and test commands based on your application’s requirements and technology stack.
+  
+- **Deployment Method**: Modify the deployment step according to your preferred deployment method. You might use tools like `kubectl` for Kubernetes, `aws-cli` for AWS deployments, or other deployment strategies.
+
+- **Server Configuration**: Ensure the server (`your-server`) is correctly configured to receive deployments and that the necessary SSH keys or credentials are set up in Jenkins for authentication.
+
+This simple pipeline can be extended with additional stages and steps depending on the complexity of your application and deployment requirements.

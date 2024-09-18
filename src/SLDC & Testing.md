@@ -7,10 +7,6 @@
 The `Software Development Lifecycle` is a process used to create software that meets the stakeholders' requirements.
 It comprises six core phases: `Planning`, `Design`, `Development`, `Testing`, `Deployment`, and `Maintenance`.
 
-Testing & QA throughout the entire SDLC:
-
-![image](https://github.com/amandaestevez/softwareqa/assets/123298275/1e9d2107-61f6-4e98-ad4f-14ecb8ef0fdf)
-
 # Testing Throughout the SDLC
 
 |  Planning       |  Design             |  Development        | Testing            | Deployment       | Maintenance        |

@@ -15,7 +15,7 @@ Testing & QA throughout the entire SDLC:
 
 |  Planning       |  Design             |  Development        | Testing            | Deployment       | Maintenance        |
 |-----------------|---------------------|---------------------|--------------------|------------------|--------------------|
-| `Feedback`      | `Feedback`          | `Write` Test Cases     |`Execute` Cases   | Analysis & Reporting of Test Cases| `Regression`       |
+| `Requirement` Analysis      | `Feedback`          | `Write` Test Cases     |`Execute` Cases   | Analysis & Reporting of Test Cases| `Regression`       |
 |                 | `Write` Test Plan     |  `Write` Traceability Matrix| `Track` Defects | Fix Bugs & Retest        |  Monitoring  |
 |                 |                     | `Set up` Test Environment |   |                     |        |
 

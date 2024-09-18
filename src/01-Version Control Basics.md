@@ -74,6 +74,18 @@ Sometimes when pushing changes you can get an error. Usually means that the remo
 git pull origin <branch_name> --rebase
 ```
 
+# Checking Remote Repositories
+This will display a list of all remote repositories associated with your project, along with their URL and fetch/push specifications.
+```bash
+git remote -v
+```
+
+# Erasing a Remote Repository
+This will completely remove the specified remote repository from your local project configuration.
+```bash
+git remote rm <remote_name>
+```
+
 # Conclusion
 
 This `Git tutorial` has equipped you with the essential tools to manage your code effectively. By mastering these core Git concepts, you've unlocked a powerful way to manage projects, track progress, and collaborate efficiently. This foundation will serve you well as you explore more advanced Git features and delve deeper into the world of version control.

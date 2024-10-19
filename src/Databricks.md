@@ -30,8 +30,45 @@ Databricks is a managed, cloud-based platform built on Apache Spark that simplif
 
 Azure Databricks streamlines many aspects of Spark-based data pipelines, providing a managed service that automates infrastructure, job scheduling, and collaboration, reducing manual effort required in traditional Apache Spark setups.
 
+# Data Bricks: Data Pipeline Deployment
+Below there's a clear, structured approach to automating data workflows, ensuring efficient data ingestion, processing, and storage to help understand how to leverage Databricks’ capabilities.
 
-# Data Bricks: Cluster Management
+# Step 1: Infrastructure Set UP
+Infrastructure setup in Azure Databricks involves provisioning managed clusters, integrating with Azure services like storage and security, and configuring the environment for seamless data processing and analytics with minimal manual intervention.
+
+```bash
+#!/bin/bash
+
+# Set Databricks configuration details
+DATABRICKS_HOST="https://<databricks-instance>.azuredatabricks.net"
+DATABRICKS_TOKEN="<your-databricks-api-token>"
+
+# Configure the Databricks CLI with host and token
+databricks configure --token <<EOF
+$DATABRICKS_HOST
+$DATABRICKS_TOKEN
+EOF
+
+# Create a Databricks cluster
+databricks clusters create --json '{
+  "cluster_name": "my-sample-cluster",
+  "spark_version": "15.4.x-scala2.12",
+  "node_type_id": "Standard_D3_v2",
+  "autoscale": {
+    "min_workers": 2,
+    "max_workers": 8
+  },
+  "autotermination_minutes": 60,
+  "spark_env_vars": {
+    "PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+  }
+}'
+
+# Output message to indicate cluster creation request has been submitted
+echo "Cluster creation request submitted."
+```
+
+# Step 2: Cluster Management
 Databricks cluster management automates the creation, scaling, and termination of clusters, optimizing resources and performance while allowing users to easily configure and monitor clusters for data processing and analytics tasks.
 > Note: For it to work the min require of compute resources are needed. So, it's nescessary to check the azure subscription compute quotes in the region where the databricks resource
 > live otherwise the cluster will not be created. Resources can be requested via a "resource request" made to azure.
@@ -64,5 +101,6 @@ Databricks cluster management automates the creation, scaling, and termination o
 }
 
 ```
+# Step 3: Data Ingestion
 
 

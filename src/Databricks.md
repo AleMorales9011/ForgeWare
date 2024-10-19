@@ -33,6 +33,12 @@ Azure Databricks streamlines many aspects of Spark-based data pipelines, providi
 # Data Bricks: Data Pipeline Deployment
 Below there's a clear, structured approach to automating data workflows, ensuring efficient data ingestion, processing, and storage to help understand how to leverage Databricks’ capabilities.
 
+# Components
+1. Workspace: Data Bricks project.
+2. Catalog: Centralized Metadata and user management across workspaces. 
+3. Workloads: Configure ETL processes.
+4. Compute: Set up the compute that will run the pipeline.
+
 # Step 1: Infrastructure Set UP
 Infrastructure setup in Azure Databricks involves provisioning managed clusters, integrating with Azure services like storage and security, and configuring the environment for seamless data processing and analytics with minimal manual intervention.
 
@@ -102,5 +108,6 @@ Databricks cluster management automates the creation, scaling, and termination o
 
 ```
 # Step 3: Data Ingestion
+In the data ingestion phase, you collect data from different sources (such as databases, APIs, sensors, or files) and typically load it into a unified storage system, like a data lake or database. This unified repository serves as the foundation for further processing, transformation, and analysis in the data pipeline.
 
 

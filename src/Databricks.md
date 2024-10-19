@@ -32,6 +32,10 @@ Azure Databricks streamlines many aspects of Spark-based data pipelines, providi
 
 
 # Data Bricks: Cluster Management
+Databricks cluster management automates the creation, scaling, and termination of clusters, optimizing resources and performance while allowing users to easily configure and monitor clusters for data processing and analytics tasks.
+> Note: For it to work the min require of compute resources are needed. So, it's nescessary to check the azure subscription compute quotes in the region where the databricks resource
+> live otherwise the cluster will not be created. Resources can be requested via a "resource request" made to azure.
+
 ```json
 {
     "autoscale": {  // Configuration for auto-scaling the cluster

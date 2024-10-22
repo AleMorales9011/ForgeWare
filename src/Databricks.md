@@ -58,4 +58,23 @@ Azure Databricks streamlines many aspects of Spark-based data pipelines, providi
 3. Load: Write the transformed data into a target destination, such as a data lake, data warehouse, or other storage systems (e.g., Delta Lake, Azure SQL, or Snowflake).
 
 # Data Bricks: CI-CD
-![dbrks-cicd]()
+![dbrks-cicd](https://github.com/AleMorales9011/ForgeWare/blob/9800bc00153d62246cda7550e554a405b9bd0525/src/images/dbkrs-cicd-001.jpg)
+
+The image shows a **CI/CD pipeline** for deploying Databricks jobs in Azure Databricks. Here’s a breakdown of the process:
+
+1. **Development and Testing**: 
+   - Developers create and test data pipelines in the **Dev & Test** environment within **Azure Databricks**.
+   - After the data pipelines are developed, the **CI pipeline** is triggered.
+
+2. **CI Pipeline (Continuous Integration)**:
+   - **Run Unit Tests**: The pipeline runs both local unit tests and remote notebook tests (using tools like Nutter).
+   - **Publish Artifacts**: After successful tests, the artifacts (output of the tests or notebooks) are published.
+   - The CI pipeline concludes by triggering the **CD pipeline**.
+
+3. **CD Pipeline (Continuous Deployment)**:
+   - **Deploy to STG**: Databricks jobs are deployed to the **STG (Staging)** environment in Azure Databricks.
+   - **Run Integration Tests**: After deployment, integration tests are run in the staging environment.
+   - **Deploy to PROD**: If integration tests are successful, the Databricks jobs are deployed to the **PROD (Production)** environment in Azure Databricks.
+
+# Next Steps
+Learn more about Azure Databricks, a unified analytics platform for data analysts, data engineers, data scientists, and machine learning engineers at [Azure Databricks Documentation](https://learn.microsoft.com/en-us/azure/databricks/)

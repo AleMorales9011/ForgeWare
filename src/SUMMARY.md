@@ -14,7 +14,7 @@
   - [Security](<08-Security.md>)
   - [Disaster Recovery Plan](<09-Disaster Recovery Plan.md>)
   - [Metrics and Analytics](<10-Metrics & Analytics.md>)
-- [SGBD](10-SGBD.md)
+- [SGBD](10-DBMS.md)
 - [QA](<SLDC & Testing.md>)
   - [Automation](<AUTOMATION.md>)
 - [POO](08-POO_1.md)

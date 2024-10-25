@@ -40,13 +40,15 @@ In SQL, there are five main categories of commands, each serving a specific purp
 
 ![SQL_101](images/SQL_101.jpeg)
 
-| DML(Data Manipulation)                                         | DDL(Data Definition Language)                                                                 |   
-|--------------------------------------------------------------- |-----------------------------------------------------------------------------------------------|
-| `SELECT` column1 `FROM` table;                                 | `CREATE VIEW` view_name `AS SELECT` column1, column2, `FROM` table_name `WHERE` condition;    |                      
-| `INSERT INTO` table_name `VALUES` value1;                      | 
-| `UPDATE` table_name `SET` column1 = value1, `WHERE` condition; |              
-| `DELETE FROM` table_name `WHERE` condition;                    |                    
-
+| DML(Data Manipulation)                                         | DDL(Data Definition Language)                                                                          |   
+|--------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------|
+| `SELECT` column1 `FROM` table;                                 | `CREATE VIEW` view_name `AS SELECT` column1, column2, `FROM` table_name `WHERE` condition;             |     
+| `INSERT INTO` table_name `VALUES` value1;                      | `CREATE DATABASE` my_database; `CREATE TABLE` employees (id INT PRIMARY KEY, name VARCHAR(100));       |
+| `UPDATE` table_name `SET` column1 = value1, `WHERE` condition; | `ALTER TABLE` employees `ADD`/`MODIFY` email VARCHAR(100); `ALTER TABLE` employees `DROP COLUMN` email;|             
+| `DELETE FROM` table_name `WHERE` condition;                    | `TRUNCATE` TABLE employees;                                                                            |
+|                                                                | `DROP DATABASE` my_database; `DROP TABLE` employees; `DROP VIEW` employee_view;                        |
+|                                                                | `ALTER TABLE` orders `ADD CONSTRAINT` fk_employee `FOREIGN KEY` (emp_id) `REFERENCES` employees(id);   |
+|                                                                | `ALTER TABLE` employees `ADD CONSTRAINT` unique_name `UNIQUE` (name);                                  |                |                                                                | `ALTER TABLE` employees `ADD CONSTRAINT` check_age `CHECK` (age > 18);                                 |
 
 
 # Conclusion

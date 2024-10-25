@@ -48,7 +48,7 @@ In SQL, there are five main categories of commands, each serving a specific purp
 | `DELETE FROM` table_name `WHERE` condition;                    | `TRUNCATE` TABLE employees;                                                                            |
 |                                                                | `DROP DATABASE` my_database; `DROP TABLE` employees; `DROP VIEW` employee_view;                        |
 |                                                                | `ALTER TABLE` orders `ADD CONSTRAINT` fk_employee `FOREIGN KEY` (emp_id) `REFERENCES` employees(id);   |
-|                                                                | `ALTER TABLE` employees `ADD CONSTRAINT` unique_name `UNIQUE` (name);                                  |                |                                                                | `ALTER TABLE` employees `ADD CONSTRAINT` check_age `CHECK` (age > 18);                                 |
+|                                                                | `ALTER TABLE` employees `ADD CONSTRAINT` unique_name `UNIQUE` (name);                                  |                |                                                                | `ALTER TABLE` employees `ADD CONSTRAINT` check_age `CHECK` (age > 18);                                |
 |                                                                | `ALTER TABLE` employees `ALTER COLUMN` status `SET DEFAULT` 'active';                                  |
 
 

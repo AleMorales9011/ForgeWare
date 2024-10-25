@@ -1,9 +1,10 @@
 ![Banner](images/futurism-perspective-digital-nomads-lifestyle.jpg)
-# DBMS: Data base Management System
+# DBMS: Data Base Management System
 
 120 minutes
 
-SGBD (Database Management Databases are one of the core pillars of every `system architecture`. They are essential for managing data. 
+# Introduction
+DBMS are important to software engineers because they provide efficient, scalable, and secure ways to store, manage, and retrieve data, enabling the development of reliable, data-driven applications
 
 # Table of Contents
 
@@ -17,8 +18,8 @@ SGBD (Database Management Databases are one of the core pillars of every `system
 
 # Prerequisites
 
-1. MySQL Community Server
-2. MySQL Workbench
+1. MySQL Community Server: MySQL Community Server is a free, open-source version of the MySQL relational database management system, widely used for web applications and data-driven platforms, offering essential database features for developers and organizations.
+2. MySQL Workbench: MySQL Workbench is a visual design tool for MySQL databases, providing a unified interface for database modeling, SQL development, administration, and data migration tasks.
 
 # Connecting Via CLI
 

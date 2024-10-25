@@ -31,7 +31,7 @@ mysql -u root -p
 
 # Modeling With MySql Workbench
 
-MySQL Workbench offers a set of tools for modeling and `designing databases`. 
+Modeling with MySQL Workbench is valuable because it allows developers and database administrators to visually design, create, and manage database schemas, making it easier to understand complex relationships, generate SQL scripts, and ensure database structure consistency before implementation.
 
 ![DER_Loja](images/der_database_loja.png)
 

@@ -1,15 +1,9 @@
-![banner](images/6.jpg)
-
 # SDLC & Testing
 
 10 minutes
 
 The `Software Development Lifecycle` is a process used to create software that meets the stakeholders' requirements.
 It comprises six core phases: `Planning`, `Design`, `Development`, `Testing`, `Deployment`, and `Maintenance`.
-
-Testing & QA throughout the entire SDLC:
-
-![image](https://github.com/amandaestevez/softwareqa/assets/123298275/1e9d2107-61f6-4e98-ad4f-14ecb8ef0fdf)
 
 # Testing Throughout the SDLC
 
@@ -131,10 +125,6 @@ Error guessing is a relatively unstructured process. Testers typically follow th
 4. `Report and track defects`: Document found issues and track their resolution.
 
 `Important Note`: While error guessing is valuable, it should not replace structured testing methods. A combination of both approaches is essential for comprehensive test coverage.   
-
-# Bug Reporting
-
-![image](https://github.com/amandaestevez/softwareqa/assets/123298275/a2154d32-a72f-410b-b941-298b9680a1aa)
 
 # API Testing
 

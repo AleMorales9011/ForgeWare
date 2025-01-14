@@ -1,4 +1,4 @@
-![Image](/images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
+![Image](images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
 
 # ForgeGuard
 2 hours

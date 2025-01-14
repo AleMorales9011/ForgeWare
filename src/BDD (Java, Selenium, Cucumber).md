@@ -1,8 +1,10 @@
+![Image](src/images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
+
 # ForgeGuard
 2 hours
 
 # Objective
-Create automated test cases using Selenium, Java, and Cucumber to verify the functionality this a login page.
+Create automated test cases using Selenium, Java, and Cucumber to verify the login page's functionality.
 "https://practice.expandtesting.com/login"
 These tests will:
 
@@ -23,7 +25,7 @@ These tests will:
 # Step 01 Understanding Automation Workflow(Java, Selenium,Cucumber)
 Imagine you're automating how someone interacts with a website—Java, Selenium, and Cucumber each play a unique role
 in making this happen. Java is the programming language you use to write instructions for the automation. Selenium acts
-as the "robot" that opens a browser, clicks buttons, fills out forms, and verifies things on the webpage as per your
+as the "robot" that opens a browser, clicks buttons, fills out forms and verifies things on the webpage as per your
 Java code. Cucumber lets you write those instructions in plain English (called feature files) using a style called
 Behavior-Driven Development (BDD). 
 
@@ -32,7 +34,7 @@ you can write it as `Given I am on the login page`, `When I enter valid credenti
 Cucumber links this plain English text to your Java code (called `step definitions`) that uses Selenium to perform the
 actual actions in the browser. Together, they make testing clear, readable, and efficient!
 
-- Here's a workflow diagram that illustrate the whole process.
+- Here's a workflow diagram that illustrates the whole process.
 ```
   [Feature File (Cucumber)]
   ↓
@@ -41,12 +43,12 @@ actual actions in the browser. Together, they make testing clear, readable, and 
   ↓
   [Cucumber Step Definitions (Java)]
   ↓
-  Links scenarios to Java code (e.g., actual method like navigateToLoginPage())
+  Links scenarios to Java code (e.g., an actual method like navigateToLoginPage())
 
   ↓
   [Selenium WebDriver (Java)]
   ↓
-  Automates browser actions (e.g., opens the login page, fills forms, clicks buttons)
+  Automates browser actions (e.g., open the login page, fills forms, clicks buttons)
 
   ↓
   [Browser]
@@ -59,9 +61,9 @@ actual actions in the browser. Together, they make testing clear, readable, and 
   Reports success or failure of scenarios (e.g., "Login successful")
 ```
 # Set Up
-After understanding the whole stack workflow, it's time to set up all these technologies in our local environment.
+After understanding the stack workflow, it's time to set up all these technologies in our local environment.
 The setup involves several moving parts and depending on experience can take between 1-15 days to complete. That is why
-it's helpful do split it on steps such as:
+it's helpful to split it into steps such as:
 
 1. Environment Set Up
 2. IDE and Plugin Configuration Set Up
@@ -74,7 +76,7 @@ it's helpful do split it on steps such as:
 
 Objective: Install and verify foundational tools.
 Tasks:
-- Install Java and ensure it’s properly configured `java -version`. 
+- Install Java and ensure it’s properly configured with `java -version`. 
 **Without this**: You won't be able to write or execute any Java code, as Java is the foundation of
   the entire project.
 - Install the JDK and confirm its functionality `javac -version`.
@@ -96,7 +98,7 @@ Tasks:
   making development harder and slower.
 - Add the Cucumber for Java Plugin to enable Gherkin and Cucumber support.
 
-> Note: Intellij comes with Java and maven installed, however their system wise installation is needed to be
+> Note: Intellij comes with Java and Maven installed, however, their system wise installation is needed to be
 > able to execute mvn commands from the terminal.
 
 - **Cucumber-java**:

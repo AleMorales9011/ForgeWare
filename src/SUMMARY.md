@@ -23,6 +23,6 @@
   - [POO](09-POO_2.md)
   - [POO](10-POO_3.md)
 - [System Design](<System-Design.md>)
-- [Data Structures and Algorythms]()
+- [Data Structures and Algorithms](<DSA.md>)
 - [Learning Theory](<Learning Theory.md>)
   

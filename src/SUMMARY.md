@@ -18,6 +18,7 @@
 - [QA](<SLDC & Testing.md>)
   - [Automation](<AUTOMATION.md>)
   - [BDD](<BDD (Java, Selenium, Cucumber).md>)
+  - [Database Testing](<ForgeGuard - Database Testing.md>)
 - [POO](08-POO_1.md)
   - [POO](09-POO_2.md)
   - [POO](10-POO_3.md)

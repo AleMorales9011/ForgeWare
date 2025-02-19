@@ -1,5 +1,4 @@
-![Image](images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
-# ForgeGuard
+# ForgeGuard - Functionality Testing - Login
 Estimated Time: 2 hours<br>
 Tech Stack: Selenium - Java - Cucumber<br>
 Keywords: Automation - Testing - QA - BDD<br>
@@ -30,17 +29,25 @@ Progress in automation testing requires persistence, and each effort lays a soli
 
 # Table Of Contents
 
-1. Step 01 Understanding Automation Workflow(Java, Selenium,Cucumber)
-2. Step 02 Environment Set Up
-3. Step 03 IDE and Plugin Configuration Set Up
-4. Step 04 Project Initialization Set Up
-5. Step 05 Core Library Installation Set Up
-6. Step 06 Basic Selenium Test Set up
-7. Step 07 Basic Cucumber Set Up
-8. Step 08 Understand Automation Logic: Selenium
-9. Step 09 Scripting
-    
-![Image](images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
+1.  Functionality Testing 
+2.  Step 01 Understanding Automation Workflow(Java, Selenium,Cucumber)
+3.  Step 02 Environment Set Up
+4.  Step 03 IDE and Plugin Configuration Set Up
+5.  Step 04 Project Initialization Set Up
+6.  Step 05 Core Library Installation Set Up
+7.  Step 06 Basic Selenium Test Set up
+8.  Step 07 Basic Cucumber Set Up
+9.  Step 08 Understand Automation Logic: Selenium
+10. Step 09 Scripting
+11. Conclusion
+
+
+# Functionality Testing
+Functionality testing is the first step of the automation journey as it is the main objective of testing in general to
+verify that a software application performs as intended, meeting all specified functionalities and user requirements, 
+ensuring the delivered product is reliable and free from major defects by identifying and fixing issues early in the 
+development cycle.
+
 # Step 01 Understanding Automation Workflow(Java, Selenium,Cucumber)
 
 When automating how someone interacts with a `website—Java`, `Selenium`, and `Cucumber` each play a unique role
@@ -357,7 +364,7 @@ public class BasicTest {
 To execute the `BasicTest.java` file the code below should be pasted in a new terminal.
 
 ```bash
-mvn -Dtest=BasicTest test
+mvn test -Dtest=DatabaseTest
 ```
 > Note: For some reason mvn commands don't work sometimes in `pwsh` terminals make sure you use bash instead.
 
@@ -468,8 +475,14 @@ mvn test -Dcucumber.features=src/test/resources/ForgeGuard/is_it_friday_yet.feat
 ```bash
 mvn test -Dcucumber.filter.tags="@WeekendCheck"
 ```
-
-![Image](images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
+- Re-install dependencies and compiling test code without executing tests.
+```bash
+mvn clean install -DskipTests
+```
+- Re-install dependencies without compiling and executing test code
+```bash
+mvn clean install -Dmaven.test.skip=true
+```
 # Congratulations! Set Up Completed
 Now, the setup is completed and is time start testing. You're doing a `fantastic job!` Every new test you write is 
 another step toward mastering automation testing. Keep building momentum—you’ve got this! 😊
@@ -582,8 +595,7 @@ guarantees a step-by-step process that can be followed for writing the `stepdefi
 6. `Interact`:                   Interact with elements by clicking, typing, or selecting
 7. `Request Information`:        Extract details like text or attributes from elements
 8. `End Session`:                Close the browser and clean up resources
-   
-![Image](images/young-adult-businessman-working-late-night-computer-technology-generated-by-artificial-intelligence.jpg)
+
 # Step 09 Scripting
 Understanding Selenium WebDriver 6 components and Selenium's script 8 components are the first steps to master
 web-browser automation scripting. The next step is to write the first script. The objective of this project is to
@@ -653,11 +665,11 @@ public class ValidLogin {  // Declares the main class. This is the file name tha
         WebDriverManager.chromedriver().setup(); // Call the WebDriverManager library to set up the Chrome-driver.
         ChromeOptions options = new ChromeOptions(); // Object  of ChromeOptions class that customize driver behaviour.
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080"); // Pass arguments.
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options); // Initializes the driver object as a new class of ChromeDriver.
 
-        driver.get("https://practice.expandtesting.com/login");
+        driver.get("https://practice.expandtesting.com/login"); // Get method of the WebDriver
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Initializes the wait object.
     }
 
     @When("I enter the valid credentials {string} and {string}")
@@ -710,6 +722,10 @@ public class ValidLogin {  // Declares the main class. This is the file name tha
 
 ```
 
-# Conclusion
-The next steps involve expanding test coverage and ensuring robust handling of edge cases for the login functionality. 
-Keep up the great momentum! This project is a great first step, and every effort is bringing it closer to excellence!🚀
+# Congratulations - Functionality Test Completed!🚀✨
+You're making steady progress toward building a robust test automation framework! Every refinement you make brings you 
+closer to a more polished and professional setup. Stay focused, and don't forget to celebrate your wins—no 
+matter how small! 🚀✨ Keep up the great momentum! This project is a great first step, and every effort is bringing
+it closer to excellence!🚀 Next step is to add database interactions to functionality tests. 
+
+

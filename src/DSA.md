@@ -2,7 +2,7 @@
 
 
 # Principle 01 Engineering Mindset
-DSA is a fully academic topic used by organizations to measure software engineering competence. To be able to solve 
+DSA is a fully academic topic organizations use to measure software engineering competence. To be able to solve 
 their challenges I will use an engineering approach. Min information I need to solve the problem. 
 
 # Step 01 Lean Approach
@@ -149,8 +149,7 @@ public static void main(String[] arg) {
 
     //The 'for' loop iterates through each string in the array
     for(String test : testCase) {
-        System.out.println("Input \n" + test);
-        System.out.println("\nIs it Palindrome...? \n" + isPalindrome(test));
+        System.out.println("\n Input: \n" + test + "\n Is it a Palindrome...? \n" + isPalindrome(test));
     }
 }
 

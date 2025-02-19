@@ -1,4 +1,4 @@
-# ForgeGuard - Database Testing
+# ForgeGuard - Functionality Testing - Database Interactions - Login
 Estimated Time: 2 hours<br>
 Tech Stack: Selenium - Java - Cucumber<br>
 Keywords: Automation - Testing - QA - BDD<br>
@@ -6,7 +6,7 @@ Experience Level: Beginner - Advanced
 
 > Note: This project is a continuation of the project `ForgeGuard - Functionality Testing`
 
-# Why Database Testing
+# Why Database Interactions
 When automating tests for modern applications is crucial to interact with a database to extract and validate data 
 following business logic (mostly for fill up forms, and login) since the operations the user will be able to perform in
 the app will depend mostly on information from the database. 
@@ -28,29 +28,28 @@ Progress in automation testing requires persistence, and each effort lays a soli
 
 # Table Of Contents
 
-1.  Why Database Testing
+1.  Why Database Interactions
 2.  Objective
 3.  Database Testing
 4.  Database Testing With H2
 5.  Step 01 Set Up H2 in Your Project
 6.  Step 02 Write a Test Scenario
 7.  Step 03 Write The Step Definition File
-8.  Step 04 Login Test With Database Interaction
-9.  
+8.  Step 04 Login Test With Database Interaction 
 
 # Database Testing
 Database testing is crucial because it verifies the accuracy, consistency, and integrity of data stored within a
-database, ensuring the reliability and credibility of an application by identifying issues like missing or duplicate
+database, ensuring the reliability and credibility of an application by `identifying issues` like missing or duplicate
 records, incorrect data types, or inconsistent data relationships, ultimately preventing faulty decision-making based on
 inaccurate data.
 
 # Database Testing With H2
 `H2 Database:` It's an in-memory, lightweight, and Java-based database ideal for testing purposes. It simulates a real
-database environment without needing a full-fledged database installation. Perfect for integration testing where test
+database environment without needing a full-fledged database installation. Perfect for `integration testing` where test
 data is crucial.
 
 # Step 01 Set Up H2 in Your Project
-First step to set up H2 database is to add the H2 dependency to the pom.xml: 
+First step to set up H2 database is to add the H2 dependency to the `pom.xml`: 
 ```xml
 <dependency>
     <groupId>com.h2database</groupId>
@@ -60,7 +59,7 @@ First step to set up H2 database is to add the H2 dependency to the pom.xml:
 </dependency>
 ```
 # Step 02 Write a Test Scenario
-Next step is to write a configuration file to test the database is working correctly.
+Next step is to write a `test scenario` to test the database is working correctly.
 ```gherkin
 Feature: H2 Database Testing
   As a developer
@@ -283,9 +282,24 @@ public class ValidLogin {
 }
 
 ```
-# Conclusion🪘
+# Conclusion🏆
 This `Database Testing project` is a fantastic step forward in combining data management with testing workflows.
-Integrating `H2`, `Selenium`, and `Cucumber` demonstrates how dynamic database connections can enhance testing 
+By integrating `H2`, `Selenium`, and `Cucumber`, it demonstrates how dynamic database connections can enhance testing 
 efficiency and realism. This success lays a strong foundation for tackling more complex scenarios and ensures 
 confidence in your application's functionality. Great work—keep building on this momentum!😊
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

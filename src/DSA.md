@@ -136,7 +136,7 @@ public static boolean isPalindrome(String s) {
 ```java
 public static void main(String[] arg) {
     //TEST
-    // The array of strings to test the method as it iterates through test cases
+    // The array of strings are passed to test the method as it iterates through test cases
     String[] testCase = {
         "RACEACAR",
         "A",

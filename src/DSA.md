@@ -2,11 +2,11 @@
 
 
 # Principle 01 Engineering Mindset
-DSA is a fully academic topic used to measure software engineering competence by organizations. To be able to solve 
+DSA is a fully academic topic used by organizations to measure software engineering competence. To be able to solve 
 their challenges I will use an engineering approach. Min information I need to solve the problem. 
 
 # Step 01 Lean Approach
-Apply the pareto's law to learn the least amount of solutions that solve the most amount of problems.
+Apply Pareto's law to learn the least amount of solutions that solve the most amount of problems.
 
 - Who are they
 - How I will sort them
@@ -111,7 +111,7 @@ public static boolean isPalindrome(String s) {
     //Ensures the loop should continue while the left pointer is less than/before the right pointer.     
     while (left < right) {
        
-            // If chart at left is different than chart at right, it returns false, meaning the string isn't a palindrome.
+            // If the character at left is different from the character at right, it returns false, meaning the string isn't a palindrome.
             if (s.charAt(left) != s.charAt(right))
             {
                 return false;

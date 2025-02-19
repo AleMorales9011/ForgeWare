@@ -1,91 +1,131 @@
 # Data Structure and Algorithms
 
-### Objective
 
-This repository aims to simplify DSA specifically for job interview purposes, focusing on practice rather than only theory.
+# Principle 01 Engineering Mindset
+DSA is a fully academic topic used by organizations to measure software engineering competence. To be able to solve 
+their challenges I will use an engineering approach. Min information I need to solve the problem. 
 
-## Pattern 01: Two Pointers
+# Step 01 Lean Approach
+Apply Pareto's law to learn the least amount of solutions that solve the most amount of problems.
 
-A pattern where two indices/pointers traverse a data structure.
+- Who are they
+- How I will sort them
+  
+ ## 🔥 Most Common (Almost Always Asked)
+  Two Pointers
+  Sliding Window
+  Hash Maps
+  Modified Binary Search
+  Dynamic Programming
+  Backtracking
+  Tree Depth-First Search (DFS)
+  Tree Breadth-First Search (BFS)
+  Graphs
+  Heaps
+  These are high-priority topics. You’ll almost certainly see them in interviews at companies like Google, Amazon, Facebook, and Microsoft.
 
-It optimizes time complexity in problems like searching, partitioning, or comparing elements.
+## ⚡ Very Common (Frequently Asked)
+Fast and Slow Pointers
+Sort and Search
+Stacks
+Greedy Techniques
+Subsets (Power Set Problems)
+Top K Elements
+Union Find
+Merge Intervals
+These are important but secondary. They often appear in medium-to-hard difficulty problems but are less fundamental than the first category.
 
-```java
-public static boolean isPalindromeWithoutTwoPointers(String s) {
-    StringBuilder filtered = new StringBuilder();
-    for (char c : s.toCharArray()) {
-        if (Character.isLetterOrDigit(c)) {
-            filtered.append(Character.toLowerCase(c));
-        }
-    }
-    String original = filtered.toString();
-    String reversed = filtered.reverse().toString();
-    return original.equals(reversed);
-}
-```
+## 🧐 Occasionally Asked (Advanced Problems)
+Topological Sort
+Trie (Prefix Tree)
+Bitwise Manipulation
+K-way Merge
+Cyclic Sort
+Matrices
+In-Place Manipulation of a Linked List
+These topics appear occasionally in specialized problems, usually in system design interviews or hard problems.
 
-```java
-public static boolean isPalindromeWithTwoPointers(String s) {
-    int left = 0, right = s.length() - 1;
-    while (left < right) {
-        while (left < right && !Character.isLetterOrDigit(s.charAt(left))) left++;
-        while (left < right && !Character.isLetterOrDigit(s.charAt(right))) right--;
-        if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) return false;
-        left++;
-        right--;
-    }
-    return true;
-}
-```
+# Step 02 Reuse not Redo
+I will reuse solutions and work to fit those into problems.
+- Learn the solution
+  - Mnemonics
+  - Rhythm
+- Try to solve similar challenges with it.
+Treat problems like algebra where there are variables(data structures), and formulas (algorithms).
+  - Understand variables
+  - Substitute variables into solution
 
-**Data structures:**
-The two pointers pattern is most commonly applied to **_arrays and strings_**.
-It also adapts well to linked lists, matrices, and other **linear-like** structures. 
+# Step 03 Simulation (Test)
+- Step 01 Learn - Define MVS
+- Step 02 Measure - Memorize
+- Step 03 Build - Implement
 
-**Types of problems it solves:**
-It’s particularly effective for problems requiring comparisons, traversals, or conditional element selections.
 
-## HOW TO USE IT:
+# Step 01 Define MVS
+Define the components of the solution that are common for all challenges.
 
-#### 01. Exercise one - Valid Palindrome
+### Two Pointers Algorithm Components
 
-This is one example of how to use the Two Pointers pattern to solve a common problem asked in interviews - the Valid Palindrome:
- 
-> A palindrome is a word, phrase, or sequence of characters that reads the same backward as forward.
+| Nº  | **Component**             | **Description** |
+|-----|---------------------------|----------------|
+| 01  | **Class & Methods**       | Implements the algorithm inside a class with: <br> - **Core Algorithm Method** (contains the two pointers logic). <br> - **Main Method** (defines test cases and calls the algorithm). |
+| 02  | **Data Structure**        | Works with **arrays, strings, or linked lists** for linear traversal. |
+| 03  | **Two Pointers Initialization** | Define two pointers: <br> - `low = 0` (**left pointer**). <br> - `high = length - 1` (**right pointer**). |
+| 04  | **Loop Execution & Termination** | Run a **loop** while `low < high`. <br> - Compare values at `low` and `high` to determine movement. <br> - Adjust pointers: `low++` (right) or `high--` (left). <br> - Loop **stops when pointers meet or cross**. |
+| 05  | **Processing & Output**   | Store valid results (if needed). <br> Return or print the processed result. |
 
-1. Step 01: Create the class that will encapsulate the palindrome validation.
 
-```java
-public class ValidPalindromeForProduction {
-```
+# Memorize
+- Mnemonics
+- Rhythm
 
-2. Step 02: Create the method that checks whether the given String is a palindrome:
+# TWO POINTERS - STRUCTURE MEMORIZATION
 
+### Mnemonic: "CLEAN → PLACE → MATCH → MOVE → DONE → TEST"
+
+| **Step**                       | **Mnemonic**  | **What You Do**                                                                 | **Where It Happens**  |
+|--------------------------------|--------------|---------------------------------------------------------------------------------|----------------------|
+| **1. Clean the string**        | **CLEAN**  | Ignore non-alphanumeric characters and convert to lowercase. Not always needed. | Adjust `low` and `high` if needed. |
+| **2. Place the pointers**      | **PLACE**  | Set `low = 0` (**left pointer**) and `high = length - 1` (**right pointer**).   | `low` → **first character**, `high` → **last character**. |
+| **3. Compare characters**      | **MATCH**  | Check if `s[low] == s[high]`. If not, return `false`.                           | `low` and `high` are pointing at characters being compared. |
+| **4. Move pointers**           | **MOVE**  | Shift `low++` (**move right**) and `high--` (**move left**).                    | `low` moves toward the center, `high` moves toward the center. |
+| **5. Stop when pointers meet** | **DONE**  | If the loop finishes, return `true` (it's a palindrome).                        | Pointers **meet or cross**. |
+| **6. Run the test cases**      | **TEST**  | The main method defines test cases and calls the algorithm.                     | **Main method (`public static void main`)**. |
+
+
+
+# Component
 ```java
 
 // Boolean - the method only returns true or false
 public static boolean isPalindrome(String s) {
-  
+    //CLEAN
+    s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+    
+    //PLACE
     //First pointer - starts on the left (beginning) of the string
     // Second pointer - points to the index of the last character in the string
-        int left = 0, right = s.length() - 1;
+    int left = 0, right = s.length() -1;
         
+        //MATCH
     //Ensures the loop should continue while the left pointer is less than/before the right pointer.     
-        while (left < right) {
+    while (left < right) {
        
-            // If chart at left is different than chart at right, it returns false, meaning the string isn't a palindrome.
+            // If the character at left is different from the character at right, it returns false, meaning the string isn't a palindrome.
             if (s.charAt(left) != s.charAt(right))
             {
                 return false;
             }
             
+            //MOVE
             //Moves the pointer one step to the left
-            left = left + 1;
+            left += 1;
             
-            //Move~~~~s the pointer one step to the right
-            right = right - 1;
+            //Moves the pointer one step to the right
+             right -= 1;
         }
         
+        //DONE
         //If the loop completes without finding any mismatched characters, it returns 'true'.
         return true;
     }
@@ -95,8 +135,8 @@ public static boolean isPalindrome(String s) {
 
 ```java
 public static void main(String[] arg) {
-    
-    // The array of strings to test the method as it iterates through test cases
+    //TEST
+    // The array of strings are passed to test the method as it iterates through test cases
     String[] testCase = {
         "RACEACAR",
         "A",
@@ -108,21 +148,9 @@ public static void main(String[] arg) {
     };
 
     //The 'for' loop iterates through each string in the array
-    //While 'k' is less than the length of the array of strings, the iteration will continue
-    for (int k = 0; k < testCase.length; k++) {
-  
-        //Prints the iteration
-        System.out.println("Test Case #" + (k + 1));
-        
-        //Prints the dotted lines
-        System.out.println(new String(new char[100]).replace('\0', '-'));
-        
-        //Prints the string being tested and its length
-        System.out.println("The input string is '" + testCase[k] + "' and the length of the string is " + testCase[k].length() + ".");
-        
-        //Returns 'true' or 'false' based on the method 'isPalindrome'
-        System.out.println("\nIs it a palindrome? " + isPalindrome(testCase[k]));
-        System.out.println(new String(new char[100]).replace('\0', '-'));
+    for(String test : testCase) {
+        System.out.println("Input \n" + test);
+        System.out.println("\nIs it Palindrome...? \n" + isPalindrome(test));
     }
 }
 

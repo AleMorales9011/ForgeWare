@@ -149,8 +149,7 @@ public static void main(String[] arg) {
 
     //The 'for' loop iterates through each string in the array
     for(String test : testCase) {
-        System.out.println("Input \n" + test);
-        System.out.println("\nIs it Palindrome...? \n" + isPalindrome(test));
+        System.out.println("\n Input: \n" + test + "\n Is it a Palindrome...? \n" + isPalindrome(test));
     }
 }
 

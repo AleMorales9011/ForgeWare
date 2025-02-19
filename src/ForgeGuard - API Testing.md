@@ -1,3 +1,4 @@
+![Image](images/04- Testing- gamer-playing-video-game.jpg)
 # ForgeGuard - API Testing
 Estimated Time: 2 hours<br>
 Tech Stack: Selenium - Java - Cucumber - RestAssured<br>

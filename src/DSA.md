@@ -2,7 +2,7 @@
 
 
 # Principle 01 Engineering Mindset
-DSA is a fully academic topic used by organizations to measure software engineering competence. To be able to solve 
+DSA is a fully academic topic organizations use to measure software engineering competence. To be able to solve 
 their challenges I will use an engineering approach. Min information I need to solve the problem. 
 
 # Step 01 Lean Approach

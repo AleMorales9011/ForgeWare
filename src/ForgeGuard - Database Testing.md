@@ -1,4 +1,4 @@
-![Image](images/03- Testing- scene-with-diverse-young-people-being-digital-nomads-working-remotely-from-dreamy-locations.jpg)
+![Image](images/03-%20Testing-%20scene-with-diverse-young-people-being-digital-nomads-working-remotely-from-dreamy-locations.jpg)
 # ForgeGuard - Functionality Testing - Database Interactions - Login
 Estimated Time: 2 hours<br>
 Tech Stack: Selenium - Java - Cucumber<br>

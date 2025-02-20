@@ -1,4 +1,4 @@
-![Image](/images/01- Testing- programmer-night.jpg)
+![Image](images/01-%20Testing-%20programmer-night.jpg)
 # ForgeGuard - Functionality Testing - Login
 Estimated Time: 2 hours<br>
 Tech Stack: Selenium - Java - Cucumber<br>

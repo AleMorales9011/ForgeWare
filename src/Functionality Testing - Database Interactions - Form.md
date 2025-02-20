@@ -1,4 +1,4 @@
-![Image](images/02- Testing- female-programmer-coding-night.jpg)
+![Image](images/02-%20Testing-%20female-programmer-coding-night.jpg)
 # Functionality Testing - Database Interactions - Form
 Estimated Time: 2 hours<br>
 Tech Stack: Selenium - Java - Cucumber - H2<br>

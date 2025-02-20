@@ -1,3 +1,4 @@
+![banner](images/05-%20Testing-%20gamer-celebrating-victory.jpg)
 # ForgeAlgo - DSA
 Estimated Time: 10 hours<br>
 Tech Stack: Java

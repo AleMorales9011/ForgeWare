@@ -31,5 +31,6 @@
   - [Three Sum](13-FaAsTp_ThreeSum.md)
   - [Dna Sequnce](14-FaAsTp_DnaSequence.md)
   - [Hello World Function](17-Helloworld.md)
+  - [Word Abbreviation](18-WordAbbr.md)
 - [Learning Theory](<Learning Theory.md>)
   

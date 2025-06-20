@@ -58,7 +58,7 @@ Azure Databricks streamlines many aspects of Spark-based data pipelines, providi
 3. Load: Write the transformed data into a target destination, such as a data lake, data warehouse, or other storage systems (e.g., Delta Lake, Azure SQL, or Snowflake).
 
 # Data Bricks: CI-CD
-![dbrks-cicd](https://github.com/AleMorales9011/ForgeWare/blob/9800bc00153d62246cda7550e554a405b9bd0525/src/images/dbkrs-cicd-001.jpg)
+
 
 The image shows a **CI/CD pipeline** for deploying Databricks jobs in Azure Databricks. Here’s a breakdown of the process:
 
